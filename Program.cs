@@ -5,10 +5,13 @@ namespace CodeExperiment
 {
    internal class Program
    {
-      public const double Tau = 6.2831853071795862;
-      public const double Pi = 3.1415926535897931;
-      public const double E = 2.7182818284590451;
+      public const double Tau = 6.283185307179586;
+      public const double Pi = 3.141592653589793;
+      public const double E = 2.718281828459045;
+      // Божественная пропорция
       public const double Fi = 1.618033988749895;
+      // Постоянная Гаусса
+      public const double G = 0.834626841674073;
 
       static void Main()
       {
@@ -16,6 +19,8 @@ namespace CodeExperiment
          Console.WriteLine(Pi);
          Console.WriteLine(E);
          Console.WriteLine(Fi);
+         Console.WriteLine(Fi/2);
+         Console.WriteLine(G);
 
          //double fi = (1 + Math.Sqrt(5)) / 2;
          //Console.WriteLine(fi);
