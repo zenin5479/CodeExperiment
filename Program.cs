@@ -25,14 +25,25 @@ namespace CodeExperiment
          double[] x = { 100, 150, 170, 91, 30, 67, 79, 87, 96, 200 };
          double s = x.Average();
          Console.WriteLine(s);
-         double tau = s / Tau;
-         Console.WriteLine(tau);
-         double pi = s / Pi;
-         Console.WriteLine(pi);
-         double e = s / E;
-         Console.WriteLine(e);
-         double fi = s / Fi;
-         Console.WriteLine(fi);
+         double tau1 = s / Tau;
+         Console.WriteLine(tau1);
+         double pi1 = s / Pi;
+         Console.WriteLine(pi1);
+         double e1 = s / E;
+         Console.WriteLine(e1);
+         double fi1 = s / Fi;
+         Console.WriteLine(fi1);
+
+         Console.WriteLine();
+
+         double tau2 = s * Tau;
+         Console.WriteLine(tau2);
+         double pi2 = s * Pi;
+         Console.WriteLine(pi2);
+         double e2 = s * E;
+         Console.WriteLine(e2);
+         double fi2 = s * Fi;
+         Console.WriteLine(fi2);
 
          Console.ReadKey();
       }
