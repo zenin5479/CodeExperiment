@@ -11,7 +11,9 @@ namespace CodeExperiment
       static void Main()
       {
          //double pi = ?;
-         
+
+         Console.WriteLine(Pi);
+         Console.WriteLine(E);
          double fi = (1 + Math.Sqrt(5)) / 2;
          Console.WriteLine(fi);
          double exp = Math.Exp(1);
