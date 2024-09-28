@@ -19,9 +19,11 @@ namespace CodeExperiment
          double s = x.Average();
          Console.WriteLine(s);
 
+         // Если меньше этого знчения среднее
          double fihalfdata = data * Fihalf;
          Console.WriteLine(fihalfdata);
 
+         // Тогда уменьшаем заданное значение на процент
          double datafipercent = data * (Fi / 10);
          Console.WriteLine(datafipercent);
 
