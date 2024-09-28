@@ -25,7 +25,7 @@ namespace CodeExperiment
          double datafipercent = data * (Fi / 10);
          Console.WriteLine(datafipercent);
 
-        int result = Convert.ToInt32(data - datafipercent);
+         int result = Convert.ToInt32(data - datafipercent);
          Console.WriteLine(result);
 
          Console.ReadKey();
