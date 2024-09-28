@@ -27,7 +27,7 @@ namespace CodeExperiment
          //double exp = Math.Exp(1);
          //Console.WriteLine(exp);
 
-         double[] x = { 100, 150, 170, 91, 30, 67, 79, 87, 96, 200 };
+         double[] x = { 100, 150, 170, 250, 30, 280, 190, 87, 96, 200 };
          double s = x.Average();
          Console.WriteLine(s);
 
