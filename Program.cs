@@ -22,26 +22,13 @@ namespace CodeExperiment
          double fihalfdata = data * Fihalf;
          Console.WriteLine(fihalfdata);
 
-         double fi1 = Convert.ToInt32(s / Fi);
-         Console.WriteLine(fi1);
-         double result = Convert.ToInt32(data / (Fi * 10));
+         double datafipercent = data * (Fi / 10);
+         Console.WriteLine(datafipercent);
+
+        int result = Convert.ToInt32(data - datafipercent);
          Console.WriteLine(result);
 
-         Console.WriteLine();
-
-         double fi2 = Convert.ToInt32(s * Fi);
-         Console.WriteLine(fi2);
-         Console.WriteLine(GetPercent(s, data));
-
          Console.ReadKey();
-      }
-
-      public static double GetPercent(double s, int data)
-      {
-         if (s == 0) return 0;
-         if (data == 0) return 0;
-
-         return s / (data / 100f);
       }
    }
 }
