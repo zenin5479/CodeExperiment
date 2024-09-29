@@ -16,15 +16,15 @@ namespace CodeExperiment
 
          int data = 300;
          double[] x = { 100, 150, 170, 250, 30, 280, 190, 87, 96, 200 };
-         double s = x.Average();
+         int s = (int)x.Average();
          Console.WriteLine(s);
 
          // Если меньше этого знчения среднее
-         double fihalfdata = data * Fihalf;
+         int fihalfdata = (int)(data * Fihalf);
          Console.WriteLine(fihalfdata);
 
          // Тогда уменьшаем заданное значение на процент
-         double datafipercent = data * (Fi / 10);
+         int datafipercent = (int)(data * (Fi / 10));
          Console.WriteLine(datafipercent);
 
          int result = Convert.ToInt32(data - datafipercent);
