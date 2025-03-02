@@ -19,7 +19,7 @@ namespace CodeExperiment
             Console.WriteLine();
          }
 
-         Console.WriteLine(number[1, 3]);
+         //Console.WriteLine(number[1, 3]);
          Console.WriteLine(number[0, 2]);
          Console.WriteLine(number[2, 1]);
 
