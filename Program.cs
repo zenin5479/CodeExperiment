@@ -6,7 +6,7 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         string[,] txtNum = { { "21,5", "123,1", "87,8", "5,6" }, { "54,3", "2,7", "0,8", "0,7" }, { "0,3", "7,9", "128,9", "4,5" } };
+         string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
          double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
          for (int i = 0; i < txtNum.GetLength(0); i++)
          {
@@ -19,12 +19,11 @@ namespace CodeExperiment
             Console.WriteLine();
          }
 
-         //Console.WriteLine(number[1, 3]);
-         Console.WriteLine(number[0, 2]);
-         Console.WriteLine(number[2, 1]);
+         Console.WriteLine(number[0, 0]);
+         Console.WriteLine(number[1, 1]);
+         Console.WriteLine(number[2, 2]);
 
          Console.ReadKey();
-
       }
    }
 }
