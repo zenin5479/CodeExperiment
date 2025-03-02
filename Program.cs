@@ -19,6 +19,7 @@ namespace CodeExperiment
             Console.WriteLine();
          }
 
+         Console.WriteLine("Диагональ массива");
          Console.WriteLine(number[0, 0]);
          Console.WriteLine(number[1, 1]);
          Console.WriteLine(number[2, 2]);
