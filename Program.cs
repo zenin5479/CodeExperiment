@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace CodeExperiment
 {
@@ -8,14 +6,6 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         string str = "6,0 5,0 9,3 7,8 5,7 8,1 1,2";
-         string[] s = str.Split();
-         List<double> list = s.Select(double.Parse).ToList();
-         foreach (double rs in list)
-         {
-            Console.WriteLine(rs);
-         }
-
          string[,] txtNum = { { "21,5", "123,1", "87,8", "5,6" }, { "54,3", "2,7", "0,8", "0,7" }, { "0,3", "7,9", "128,9", "4,5" } };
          double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
          for (int i = 0; i < txtNum.GetLength(0); i++)
