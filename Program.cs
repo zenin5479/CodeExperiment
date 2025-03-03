@@ -36,6 +36,19 @@ namespace CodeExperiment
                }
          }
 
+
+         using (FileStream fs = new FileStream("a.txt", FileMode.Open, FileAccess.Read))
+         {
+            using (BinaryReader r = new BinaryReader(fs))
+            {
+               for (int i = 0; i < 10; i++)
+               {
+                  Console.WriteLine(r.ReadInt32());
+               }
+            }
+         }
+
+
          Console.ReadKey();
       }
    }
