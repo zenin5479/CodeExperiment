@@ -49,6 +49,53 @@ namespace CodeExperiment
          }
 
 
+         //string textFilePath = "a.txt";
+
+         //// Read double values from the text file
+         //using (StreamReader reader = new StreamReader(textFilePath))
+         //{
+         //   string line;
+         //   while ((line = reader.ReadLine()) != null)
+         //   {
+         //      // Convert the read string to a double
+         //      if (double.TryParse(line, out double doubleValue))
+         //      {
+         //         // Process the double value
+         //         Console.WriteLine(doubleValue);
+         //      }
+         //      else
+         //      {
+         //         Console.WriteLine($"Invalid double value: {line}");
+         //      }
+         //   }
+         //}
+
+
+         // Specify the path to the text file
+         string textFilePath = "a.txt";
+
+         // Read and parse double values from the text file
+         using (StreamReader reader = new StreamReader(textFilePath))
+         {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+               try
+               {
+                  // Parse the line as a double
+                  double doubleValue = double.Parse(line);
+
+                  // Process the double value
+                  Console.WriteLine(doubleValue);
+               }
+               catch (FormatException)
+               {
+                  Console.WriteLine($"Invalid double format: {line}");
+               }
+            }
+         }
+
+
          Console.ReadKey();
       }
    }
