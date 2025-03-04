@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 
 namespace CodeExperiment
@@ -7,6 +8,32 @@ namespace CodeExperiment
    {
       static void Main()
       {
+         // Правильно обрабатывает все строки
+         Stopwatch sw = Stopwatch.StartNew();
+         using (TextReader reader = File.OpenText("a.txt"))
+         {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+               string[] bits = line.Split(' ');
+               foreach (string bit in bits)
+               {
+                  double value;
+                  if (!double.TryParse(bit, out value))
+                  {
+                     Console.WriteLine("Неудовлетворительное значение");
+                  }
+                  else
+                  {
+                     Console.Write(bit + " ");
+                  }
+               }
+               Console.WriteLine();
+            }
+         }
+         sw.Stop();
+         Console.WriteLine("Общее время: {0} ms", sw.ElapsedMilliseconds);
+
          // Правильно обрабатывает 3 строки
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
          double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
@@ -68,6 +95,9 @@ namespace CodeExperiment
                }
             }
          }
+
+
+
 
          Console.ReadKey();
       }
