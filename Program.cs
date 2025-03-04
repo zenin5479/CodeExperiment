@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace CodeExperiment
 {
@@ -7,63 +9,75 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         //string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
-         //double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
-         //for (int i = 0; i < txtNum.GetLength(0); i++)
+         //double MyParse(string x)
          //{
-         //   for (int j = 0; j < txtNum.GetLength(1); j++)
-         //   {
-         //      number[i, j] = Convert.ToDouble(txtNum[i, j]);
-         //      Console.Write(number[i, j] + " ");
-         //   }
-
-         //   Console.WriteLine();
+         //   double y = double.Parse(x);
+         //   return y;
          //}
 
-         //Console.WriteLine("Диагональ массива");
-         //Console.WriteLine(number[0, 0]);
-         //Console.WriteLine(number[1, 1]);
-         //Console.WriteLine(number[2, 2]);
+         //string str = "6,0 5,0 9,3 7,8 5,7 8,1 1,2";
+         //string[] s = str.Split();
+         //List<double> list = s.Select(MyParse).ToList();
+         //foreach (double rs in list)
+         //{
+         //   Console.WriteLine(rs);
+         //}
+
+         string str = "6,0 5,0 9,3 7,8 5,7 8,1 1,2";
+         string[] s = str.Split();
+         List<double> list = s.Select(double.Parse).ToList();
+         foreach (double rs in list)
+         {
+            Console.WriteLine(rs);
+         }
+
+         string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
+         double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
+         for (int i = 0; i < txtNum.GetLength(0); i++)
+         {
+            for (int j = 0; j < txtNum.GetLength(1); j++)
+            {
+               number[i, j] = Convert.ToDouble(txtNum[i, j]);
+               Console.Write(number[i, j] + " ");
+            }
+
+            Console.WriteLine();
+         }
+
+         Console.WriteLine("Диагональ массива");
+         Console.WriteLine(number[0, 0]);
+         Console.WriteLine(number[1, 1]);
+         Console.WriteLine(number[2, 2]);
 
 
          using (StreamReader sr = new StreamReader("a.txt"))
          {
             string num = sr.ReadLine();
             if (num != null)
-               foreach (string number in num.Split())
+               foreach (string numbers in num.Split())
                {
-                  Console.WriteLine(number);
+                  Console.WriteLine(numbers);
                }
          }
 
-
-
          string textFilePath = "a.txt";
-
-         // Read double values from the text file
          using (StreamReader reader = new StreamReader(textFilePath))
          {
             string line;
             while ((line = reader.ReadLine()) != null)
             {
-               // Convert the read string to a double
                if (double.TryParse(line, out double doubleValue))
                {
-                  // Process the double value
                   Console.WriteLine(doubleValue);
                }
                else
                {
-                  Console.WriteLine($"Invalid double value: {line}");
+                  Console.WriteLine($"Недопустимое значение double: {line}");
                }
             }
          }
 
-
-         // Specify the path to the text file
          string textFilePath2 = "a.txt";
-
-         // Read and parse double values from the text file
          using (StreamReader reader2 = new StreamReader(textFilePath2))
          {
             string line2;
@@ -71,19 +85,15 @@ namespace CodeExperiment
             {
                try
                {
-                  // Parse the line as a double
                   double doubleValue2 = double.Parse(line2);
-
-                  // Process the double value
                   Console.WriteLine(doubleValue2);
                }
                catch (FormatException)
                {
-                  Console.WriteLine($"Invalid double format: {line2}");
+                  Console.WriteLine($"Недопустимый формат double: {line2}");
                }
             }
          }
-
 
          Console.ReadKey();
       }
