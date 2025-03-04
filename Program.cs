@@ -10,7 +10,6 @@ namespace CodeExperiment
       static void Main()
       {
          // Правильно обрабатывает все строки
-         Stopwatch sw = Stopwatch.StartNew();
          using (TextReader reader = File.OpenText("a.txt"))
          {
             string line;
@@ -32,8 +31,6 @@ namespace CodeExperiment
                Console.WriteLine();
             }
          }
-         sw.Stop();
-         Console.WriteLine("Общее время: {0} ms", sw.ElapsedMilliseconds);
 
          // Правильно обрабатывает 3 строки
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
