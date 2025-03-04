@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
@@ -96,8 +97,10 @@ namespace CodeExperiment
             }
          }
 
+         string[] lines1 = File.ReadAllLines("a.txt");
+         IEnumerable<string> lines2 = File.ReadLines("a.txt");
 
-
+         Console.WriteLine();
 
          Console.ReadKey();
       }
