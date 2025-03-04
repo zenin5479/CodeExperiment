@@ -12,7 +12,7 @@ namespace CodeExperiment
          {
             string num = sr.ReadLine();
             if (num != null)
-               foreach (string numbers in num.Split())
+               foreach (string numbers in num.Split(" "))
                {
                   Console.WriteLine(numbers);
                }
