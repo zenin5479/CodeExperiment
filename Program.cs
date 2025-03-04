@@ -37,60 +37,49 @@ namespace CodeExperiment
          }
 
 
-         using (FileStream fs = new FileStream("a.txt", FileMode.Open, FileAccess.Read))
-         {
-            using (BinaryReader r = new BinaryReader(fs))
-            {
-               for (int i = 0; i < 10; i++)
-               {
-                  Console.WriteLine(r.ReadInt32());
-               }
-            }
-         }
 
-
-         //string textFilePath = "a.txt";
-
-         //// Read double values from the text file
-         //using (StreamReader reader = new StreamReader(textFilePath))
-         //{
-         //   string line;
-         //   while ((line = reader.ReadLine()) != null)
-         //   {
-         //      // Convert the read string to a double
-         //      if (double.TryParse(line, out double doubleValue))
-         //      {
-         //         // Process the double value
-         //         Console.WriteLine(doubleValue);
-         //      }
-         //      else
-         //      {
-         //         Console.WriteLine($"Invalid double value: {line}");
-         //      }
-         //   }
-         //}
-
-
-         // Specify the path to the text file
          string textFilePath = "a.txt";
 
-         // Read and parse double values from the text file
+         // Read double values from the text file
          using (StreamReader reader = new StreamReader(textFilePath))
          {
             string line;
             while ((line = reader.ReadLine()) != null)
             {
-               try
+               // Convert the read string to a double
+               if (double.TryParse(line, out double doubleValue))
                {
-                  // Parse the line as a double
-                  double doubleValue = double.Parse(line);
-
                   // Process the double value
                   Console.WriteLine(doubleValue);
                }
+               else
+               {
+                  Console.WriteLine($"Invalid double value: {line}");
+               }
+            }
+         }
+
+
+         // Specify the path to the text file
+         string textFilePath2 = "a.txt";
+
+         // Read and parse double values from the text file
+         using (StreamReader reader2 = new StreamReader(textFilePath2))
+         {
+            string line2;
+            while ((line2 = reader2.ReadLine()) != null)
+            {
+               try
+               {
+                  // Parse the line as a double
+                  double doubleValue2 = double.Parse(line2);
+
+                  // Process the double value
+                  Console.WriteLine(doubleValue2);
+               }
                catch (FormatException)
                {
-                  Console.WriteLine($"Invalid double format: {line}");
+                  Console.WriteLine($"Invalid double format: {line2}");
                }
             }
          }
