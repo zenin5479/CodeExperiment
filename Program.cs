@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace CodeExperiment
 {
@@ -9,47 +7,7 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         double MyParse(string x)
-         {
-            double y = double.Parse(x);
-            return y;
-         }
-
-         string str = "6,0 5,0 9,3 7,8 5,7 8,1 1,2";
-         string[] s = str.Split();
-         List<double> list = s.Select(MyParse).ToList();
-         foreach (double rs in list)
-         {
-            Console.WriteLine(rs);
-         }
-
-         string str2 = "6,0 5,0 9,3 7,8 5,7 8,1 1,2";
-         string[] s2 = str2.Split();
-         List<double> list2 = s2.Select(double.Parse).ToList();
-         foreach (double rx in list2)
-         {
-            Console.WriteLine(rx);
-         }
-
-         string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
-         double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
-         for (int i = 0; i < txtNum.GetLength(0); i++)
-         {
-            for (int j = 0; j < txtNum.GetLength(1); j++)
-            {
-               number[i, j] = Convert.ToDouble(txtNum[i, j]);
-               Console.Write(number[i, j] + " ");
-            }
-
-            Console.WriteLine();
-         }
-
-         Console.WriteLine("Диагональ массива");
-         Console.WriteLine(number[0, 0]);
-         Console.WriteLine(number[1, 1]);
-         Console.WriteLine(number[2, 2]);
-
-
+         // Правильно обрабатывает одну строку
          using (StreamReader sr = new StreamReader("a.txt"))
          {
             string num = sr.ReadLine();
@@ -94,6 +52,27 @@ namespace CodeExperiment
                }
             }
          }
+
+
+
+
+
+
+         string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
+         double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
+         for (int i = 0; i < txtNum.GetLength(0); i++)
+         {
+            for (int j = 0; j < txtNum.GetLength(1); j++)
+            {
+               number[i, j] = Convert.ToDouble(txtNum[i, j]);
+               Console.Write(number[i, j] + " ");
+            }
+
+            Console.WriteLine();
+         }
+
+
+
 
          Console.ReadKey();
       }
