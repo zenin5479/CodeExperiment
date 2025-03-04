@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 
 namespace CodeExperiment
@@ -32,6 +31,8 @@ namespace CodeExperiment
             }
          }
 
+         Console.WriteLine();
+
          // Правильно обрабатывает 3 строки
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
          double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
@@ -46,6 +47,8 @@ namespace CodeExperiment
             Console.WriteLine();
          }
 
+         Console.WriteLine();
+
          // Правильно обрабатывает 1 строку
          using (StreamReader sr = new StreamReader("a.txt"))
          {
@@ -54,9 +57,11 @@ namespace CodeExperiment
             {
                foreach (string numbers in num.Split(" "))
                {
-                  Console.WriteLine(numbers);
+                  Console.Write(numbers + " ");
                }
             }
+
+            Console.WriteLine();
          }
 
          string textFilePath = "a.txt";
@@ -76,6 +81,8 @@ namespace CodeExperiment
             }
          }
 
+         Console.WriteLine();
+
          string textFilePath2 = "a.txt";
          using (StreamReader reader2 = new StreamReader(textFilePath2))
          {
@@ -94,11 +101,7 @@ namespace CodeExperiment
             }
          }
 
-         string[] lines1 = File.ReadAllLines("a.txt");
-         IEnumerable<string> lines2 = File.ReadLines("a.txt");
-
          Console.WriteLine();
-
          Console.ReadKey();
       }
    }
