@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection.PortableExecutable;
 
 namespace CodeExperiment
 {
@@ -7,30 +8,62 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         // Правильно обрабатывает все строки
-         using (TextReader reader = File.OpenText("a.txt"))
+         int n = 3;
+         int m = 3;
+         bool fl = false;
+
+         double[,] a = new double[n, m];
+
+         string path = AppContext.BaseDirectory;
+         string filePath = path + "a.txt";
+         FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
+         if (fpA == null)
          {
-            string line;
-            while ((line = reader.ReadLine()) != null)
+            Console.WriteLine("Ошибка при открытии файла для чтения");
+         }
+         string lines;
+         while ((lines = fpA.Read()) != null)
+         {
+            string[] bits = lines.Split(' ');
+            foreach (string bit in bits)
             {
-               string[] bits = line.Split(' ');
-               foreach (string bit in bits)
+               double value;
+               if (!double.TryParse(bit, out value))
                {
-                  double value;
-                  if (!double.TryParse(bit, out value))
-                  {
-                     Console.WriteLine("Неудовлетворительное значение");
-                  }
-                  else
-                  {
-                     Console.Write(bit + " ");
-                  }
+                  Console.WriteLine("Неудовлетворительное значение");
                }
-               Console.WriteLine();
+               else
+               {
+                  Console.Write(bit + " ");
+               }
             }
+            Console.WriteLine();
          }
 
-         Console.WriteLine();
+         // Правильно обрабатывает все строки
+         //using (TextReader reader = File.OpenText("a.txt"))
+         //{
+         //   string line;
+         //   while ((line = reader.ReadLine()) != null)
+         //   {
+         //      string[] bits = line.Split(' ');
+         //      foreach (string bit in bits)
+         //      {
+         //         double value;
+         //         if (!double.TryParse(bit, out value))
+         //         {
+         //            Console.WriteLine("Неудовлетворительное значение");
+         //         }
+         //         else
+         //         {
+         //            Console.Write(bit + " ");
+         //         }
+         //      }
+         //      Console.WriteLine();
+         //   }
+         //}
+
+         //Console.WriteLine();
 
          // Правильно обрабатывает 3 строки
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
