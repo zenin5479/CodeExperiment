@@ -21,8 +21,10 @@ namespace CodeExperiment
          {
             Console.WriteLine("Ошибка при открытии файла для чтения");
          }
-         string lines;
-         while ((lines = fpA.Read()) != null)
+
+
+         string[] lines = fpA.ReadAsync();
+         while ((lines != null))
          {
             string[] bits = lines.Split(' ');
             foreach (string bit in bits)
