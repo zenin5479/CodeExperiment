@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace CodeExperiment
 {
@@ -24,9 +23,6 @@ namespace CodeExperiment
          //}
 
          // Calling the ReadLines(String) function 
-
-         string secondLine = File.ReadLines("a.txt").ElementAtOrDefault(0);
-         Console.WriteLine(secondLine);
 
          IEnumerable<string> lines = File.ReadLines("a.txt");
          //Console.WriteLine(string.Join(Environment.NewLine, lines));
