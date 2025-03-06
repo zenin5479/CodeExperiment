@@ -23,15 +23,11 @@ namespace CodeExperiment
          //}
 
          // Calling the ReadLines(String) function 
-         
-         
-         
-         for (int i = 0; i < n; i++)
-         {
-            IEnumerable<string> lines = File.ReadLines("a.txt");
-            Console.WriteLine(lines);
-         }
-         
+
+
+         IEnumerable<string> lines = File.ReadLines("a.txt");
+         Console.WriteLine(string.Join(Environment.NewLine, lines));
+
          foreach (string line in File.ReadLines("a.txt"))
          {
             // Printing the file contents 
