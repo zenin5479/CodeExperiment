@@ -22,17 +22,13 @@ namespace CodeExperiment
          //   Console.WriteLine("Ошибка при открытии файла для чтения");
          //}
 
-         // Calling the ReadLines(String) function 
-
          IEnumerable<string> lines = File.ReadLines("a.txt");
-         //Console.WriteLine(string.Join(Environment.NewLine, lines));
+         Console.WriteLine(string.Join(Environment.NewLine, lines));
 
          foreach (string line in File.ReadLines("a.txt"))
          {
-            // Printing the file contents 
-            //Console.WriteLine(line);
+            Console.WriteLine(line);
          }
-
 
          // Правильно обрабатывает все строки
          //using (TextReader reader = File.OpenText("a.txt"))
