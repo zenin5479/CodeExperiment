@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Reflection.PortableExecutable;
 
 namespace CodeExperiment
 {
@@ -14,33 +14,33 @@ namespace CodeExperiment
 
          double[,] a = new double[n, m];
 
-         string path = AppContext.BaseDirectory;
-         string filePath = path + "a.txt";
-         FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
-         if (fpA == null)
+         //string path = AppContext.BaseDirectory;
+         //string filePath = path + "a.txt";
+         //FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
+         //if (fpA == null)
+         //{
+         //   Console.WriteLine("Ошибка при открытии файла для чтения");
+         //}
+
+         // Calling the ReadLines(String) function 
+         
+         
+         
+         for (int i = 0; i < n; i++)
          {
-            Console.WriteLine("Ошибка при открытии файла для чтения");
+            IEnumerable<string> lines = File.ReadLines("a.txt");
+            Console.WriteLine(lines);
+         }
+         
+         foreach (string line in File.ReadLines("a.txt"))
+         {
+            // Printing the file contents 
+            Console.WriteLine(line);
          }
 
 
-         string[] lines = fpA.ReadAsync();
-         while ((lines != null))
-         {
-            string[] bits = lines.Split(' ');
-            foreach (string bit in bits)
-            {
-               double value;
-               if (!double.TryParse(bit, out value))
-               {
-                  Console.WriteLine("Неудовлетворительное значение");
-               }
-               else
-               {
-                  Console.Write(bit + " ");
-               }
-            }
-            Console.WriteLine();
-         }
+
+
 
          // Правильно обрабатывает все строки
          //using (TextReader reader = File.OpenText("a.txt"))
