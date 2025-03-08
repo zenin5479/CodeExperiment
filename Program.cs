@@ -10,7 +10,6 @@ namespace CodeExperiment
       {
          int n = 3;
          int m = 3;
-         bool fl = false;
 
          double[,] a = new double[n, m];
 
