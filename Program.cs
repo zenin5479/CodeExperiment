@@ -114,8 +114,10 @@ namespace CodeExperiment
             string num = sr.ReadLine();
             if (num != null)
             {
-               foreach (string numbers in num.Split(" "))
+               string[] split = num.Split(" ");
+               for (int i = 0; i < split.Length; i++)
                {
+                  string numbers = split[i];
                   Console.Write(numbers + " ");
                }
             }
