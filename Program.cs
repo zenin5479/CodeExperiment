@@ -14,21 +14,59 @@ namespace CodeExperiment
 
          double[,] a = new double[n, m];
 
-         //string path = AppContext.BaseDirectory;
-         //string filePath = path + "a.txt";
-         //FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
-         //if (fpA == null)
-         //{
-         //   Console.WriteLine("Ошибка при открытии файла для чтения");
-         //}
-
-         IEnumerable<string> lines = File.ReadLines("a.txt");
-         Console.WriteLine(string.Join(Environment.NewLine, lines));
-
-         foreach (string line in File.ReadLines("a.txt"))
+         string path = AppContext.BaseDirectory;
+         string filePath = path + "a.txt";
+         FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
+         if (fpA == null)
          {
-            Console.WriteLine(line);
+            Console.WriteLine("Ошибка при открытии файла для чтения");
          }
+
+         // Cвязываем StreamReader c файловыйм потоком
+         if (fpA != null)
+         {
+            StreamReader stream = new StreamReader(fpA);
+            for (int i = 0; i < n; i++)
+            {
+               // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки
+               string singleLine = stream.ReadLine();
+               Console.WriteLine(singleLine);
+
+            }
+            Console.WriteLine();
+            // Закрытие потока
+            stream.Close();
+         }
+
+         // Создаем новый список
+         List<string> lines = new List<string>();
+         // Используем ключевое слово using для удаления
+         using (StreamReader reader = new StreamReader(filePath))
+         {
+            // Используем шаблон while not null в цикле while
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+               // Вставляем сюда логику
+               // Переменная "line" - это строка в файле
+               // Добавляем её в список
+               lines.Add(line);
+            }
+         }
+         // Распечатываем все строки в списке
+         foreach (string value in lines)
+         {
+            Console.WriteLine(value);
+         }
+
+
+         //IEnumerable<string> lines = File.ReadLines("a.txt");
+         //Console.WriteLine(string.Join(Environment.NewLine, lines));
+
+         //foreach (string line in File.ReadLines("a.txt"))
+         //{
+         //   Console.WriteLine(line);
+         //}
 
          // Правильно обрабатывает все строки
          //using (TextReader reader = File.OpenText("a.txt"))
