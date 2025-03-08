@@ -31,11 +31,11 @@ namespace CodeExperiment
                string singleLine = stream.ReadLine();
                Console.WriteLine(singleLine);
             }
-
-            Console.WriteLine();
             // Закрытие потока
             stream.Close();
          }
+
+         Console.WriteLine();
 
          // Создаем новый список
          List<string> linesone = new List<string>();
@@ -58,6 +58,8 @@ namespace CodeExperiment
             Console.WriteLine(value);
          }
 
+         Console.WriteLine();
+
 
          IEnumerable<string> linestwo = File.ReadLines("a.txt");
          Console.WriteLine(string.Join(Environment.NewLine, linestwo));
@@ -66,6 +68,8 @@ namespace CodeExperiment
          {
             Console.WriteLine(linetwo);
          }
+
+         Console.WriteLine();
 
          // Правильно обрабатывает все строки
          using (TextReader reader = File.OpenText("a.txt"))
@@ -86,7 +90,8 @@ namespace CodeExperiment
                      Console.Write(bitthree + " ");
                   }
                }
-               Console.WriteLine();
+
+               //Console.WriteLine();
             }
          }
 
@@ -103,7 +108,7 @@ namespace CodeExperiment
                Console.Write(number[i, j] + " ");
             }
 
-            Console.WriteLine();
+            //Console.WriteLine();
          }
 
          Console.WriteLine();
@@ -122,8 +127,10 @@ namespace CodeExperiment
                }
             }
 
-            Console.WriteLine();
+            //Console.WriteLine();
          }
+
+         Console.WriteLine();
 
          string textFilePath = "a.txt";
          using (StreamReader reader = new StreamReader(textFilePath))
