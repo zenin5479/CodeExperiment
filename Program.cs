@@ -38,57 +38,57 @@ namespace CodeExperiment
          }
 
          // Создаем новый список
-         List<string> lines = new List<string>();
+         List<string> linesone = new List<string>();
          // Используем ключевое слово using для удаления
          using (StreamReader reader = new StreamReader(filePath))
          {
             // Используем шаблон while not null в цикле while
-            string line;
-            while ((line = reader.ReadLine()) != null)
+            string lineone;
+            while ((lineone = reader.ReadLine()) != null)
             {
                // Вставляем сюда логику
                // Переменная "line" - это строка в файле
                // Добавляем её в список
-               lines.Add(line);
+               linesone.Add(lineone);
             }
          }
          // Распечатываем все строки в списке
-         foreach (string value in lines)
+         foreach (string value in linesone)
          {
             Console.WriteLine(value);
          }
 
 
-         //IEnumerable<string> lines = File.ReadLines("a.txt");
-         //Console.WriteLine(string.Join(Environment.NewLine, lines));
+         IEnumerable<string> linestwo = File.ReadLines("a.txt");
+         Console.WriteLine(string.Join(Environment.NewLine, linestwo));
 
-         //foreach (string line in File.ReadLines("a.txt"))
-         //{
-         //   Console.WriteLine(line);
-         //}
+         foreach (string linetwo in File.ReadLines("a.txt"))
+         {
+            Console.WriteLine(linetwo);
+         }
 
          // Правильно обрабатывает все строки
-         //using (TextReader reader = File.OpenText("a.txt"))
-         //{
-         //   string line;
-         //   while ((line = reader.ReadLine()) != null)
-         //   {
-         //      string[] bits = line.Split(' ');
-         //      foreach (string bit in bits)
-         //      {
-         //         double value;
-         //         if (!double.TryParse(bit, out value))
-         //         {
-         //            Console.WriteLine("Неудовлетворительное значение");
-         //         }
-         //         else
-         //         {
-         //            Console.Write(bit + " ");
-         //         }
-         //      }
-         //      Console.WriteLine();
-         //   }
-         //}
+         using (TextReader reader = File.OpenText("a.txt"))
+         {
+            string linethree;
+            while ((linethree = reader.ReadLine()) != null)
+            {
+               string[] bitsthree = linethree.Split(' ');
+               foreach (string bitthree in bitsthree)
+               {
+                  double value;
+                  if (!double.TryParse(bitthree, out value))
+                  {
+                     Console.WriteLine("Неудовлетворительное значение");
+                  }
+                  else
+                  {
+                     Console.Write(bitthree + " ");
+                  }
+               }
+               Console.WriteLine();
+            }
+         }
 
          Console.WriteLine();
 
@@ -128,16 +128,16 @@ namespace CodeExperiment
          string textFilePath = "a.txt";
          using (StreamReader reader = new StreamReader(textFilePath))
          {
-            string line;
-            while ((line = reader.ReadLine()) != null)
+            string line1;
+            while ((line1 = reader.ReadLine()) != null)
             {
-               if (double.TryParse(line, out double doubleValue))
+               if (double.TryParse(line1, out double doubleValue))
                {
                   Console.WriteLine(doubleValue);
                }
                else
                {
-                  Console.WriteLine($"Недопустимое значение double: {line}");
+                  Console.WriteLine($"Недопустимое значение double: {line1}");
                }
             }
          }
