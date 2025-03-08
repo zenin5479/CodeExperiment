@@ -34,7 +34,6 @@ namespace CodeExperiment
             // Закрытие потока
             stream.Close();
          }
-
          Console.WriteLine();
 
          // Создаем новый список
@@ -57,18 +56,16 @@ namespace CodeExperiment
          {
             Console.WriteLine(value);
          }
-
          Console.WriteLine();
-
 
          IEnumerable<string> linestwo = File.ReadLines("a.txt");
          Console.WriteLine(string.Join(Environment.NewLine, linestwo));
+         Console.WriteLine();
 
          foreach (string linetwo in File.ReadLines("a.txt"))
          {
             Console.WriteLine(linetwo);
          }
-
          Console.WriteLine();
 
          // Правильно обрабатывает все строки
@@ -90,11 +87,9 @@ namespace CodeExperiment
                      Console.Write(bitthree + " ");
                   }
                }
-
-               //Console.WriteLine();
+               Console.WriteLine();
             }
          }
-
          Console.WriteLine();
 
          // Правильно обрабатывает 3 строки
@@ -107,10 +102,8 @@ namespace CodeExperiment
                number[i, j] = Convert.ToDouble(txtNum[i, j]);
                Console.Write(number[i, j] + " ");
             }
-
-            //Console.WriteLine();
+            Console.WriteLine();
          }
-
          Console.WriteLine();
 
          // Правильно обрабатывает 1 строку
