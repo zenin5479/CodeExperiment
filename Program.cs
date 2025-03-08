@@ -30,8 +30,8 @@ namespace CodeExperiment
                // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки
                string singleLine = stream.ReadLine();
                Console.WriteLine(singleLine);
-
             }
+
             Console.WriteLine();
             // Закрытие потока
             stream.Close();
