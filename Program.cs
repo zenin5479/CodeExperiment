@@ -119,10 +119,8 @@ namespace CodeExperiment
                   Console.Write(numbers + " ");
                }
             }
-
-            //Console.WriteLine();
+            Console.WriteLine();
          }
-
          Console.WriteLine();
 
          string textFilePath = "a.txt";
@@ -141,7 +139,6 @@ namespace CodeExperiment
                }
             }
          }
-
          Console.WriteLine();
 
          string textFilePath2 = "a.txt";
@@ -161,8 +158,8 @@ namespace CodeExperiment
                }
             }
          }
-
          Console.WriteLine();
+
          Console.ReadKey();
       }
    }
