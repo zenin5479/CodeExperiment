@@ -16,24 +16,29 @@ namespace CodeExperiment
          string path = AppContext.BaseDirectory;
          string filePath = path + "a.txt";
 
+         // Считывает все символы, начиная с текущей позиции до конца потока
+         using StreamReader readerone = new StreamReader(filePath);
+         string text = readerone.ReadToEnd();
+         Console.WriteLine(text);
+
          // Классический вариант чтения файла построчно
-         StreamReader f = new StreamReader(filePath);
-         while (!f.EndOfStream)
+         StreamReader readertwo = new StreamReader(filePath);
+         while (!readertwo.EndOfStream)
          {
-            string s = f.ReadLine();
+            string s = readertwo.ReadLine();
             Console.WriteLine(s);
          }
-         f.Close();
+         readertwo.Close();
          Console.WriteLine();
 
          // Еще один пример, как можно организовать цикл построчного чтения
          string r;
-         StreamReader t = new StreamReader(filePath);
-         while ((r = t.ReadLine()) != null)
+         StreamReader readerthree = new StreamReader(filePath);
+         while ((r = readerthree.ReadLine()) != null)
          {
             Console.WriteLine(r);
          }
-         t.Close();
+         readerthree.Close();
          Console.WriteLine();
 
          // Прочитать весь файл целиком в массив строк
@@ -52,26 +57,26 @@ namespace CodeExperiment
          // Cвязываем StreamReader c файловыйм потоком
          if (fpA != null)
          {
-            StreamReader stream = new StreamReader(fpA);
+            StreamReader readerfour = new StreamReader(fpA);
             for (int i = 0; i < n; i++)
             {
                // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки
-               string singleLine = stream.ReadLine();
+               string singleLine = readerfour.ReadLine();
                Console.WriteLine(singleLine);
             }
             // Закрытие потока
-            stream.Close();
+            readerfour.Close();
          }
          Console.WriteLine();
 
          // Создаем новый список
          List<string> linesone = new List<string>();
          // Используем ключевое слово using для удаления
-         using (StreamReader reader = new StreamReader(filePath))
+         using (StreamReader readerfive = new StreamReader(filePath))
          {
             // Используем шаблон while not null в цикле while
             string lineone;
-            while ((lineone = reader.ReadLine()) != null)
+            while ((lineone = readerfive.ReadLine()) != null)
             {
                // Переменная line - это строка в файле добавляем её в список
                linesone.Add(lineone);
@@ -95,10 +100,10 @@ namespace CodeExperiment
          Console.WriteLine();
 
          // Обрабатывает все строки файла
-         using (TextReader reader = File.OpenText("a.txt"))
+         using (TextReader readersix = File.OpenText("a.txt"))
          {
             string linethree;
-            while ((linethree = reader.ReadLine()) != null)
+            while ((linethree = readersix.ReadLine()) != null)
             {
                string[] bitsthree = linethree.Split(' ');
                foreach (string bitthree in bitsthree)
@@ -133,9 +138,9 @@ namespace CodeExperiment
          Console.WriteLine();
 
          // Обрабатывает строку файла
-         using (StreamReader sr = new StreamReader("a.txt"))
+         using (StreamReader readerseven = new StreamReader("a.txt"))
          {
-            string num = sr.ReadLine();
+            string num = readerseven.ReadLine();
             if (num != null)
             {
                string[] split = num.Split(" ");
@@ -150,10 +155,10 @@ namespace CodeExperiment
          Console.WriteLine();
 
          string textFilePath = "a.txt";
-         using (StreamReader reader = new StreamReader(textFilePath))
+         using (StreamReader readereight = new StreamReader(textFilePath))
          {
             string line1;
-            while ((line1 = reader.ReadLine()) != null)
+            while ((line1 = readereight.ReadLine()) != null)
             {
                if (double.TryParse(line1, out double doubleValue))
                {
@@ -168,10 +173,10 @@ namespace CodeExperiment
          Console.WriteLine();
 
          string textFilePath2 = "a.txt";
-         using (StreamReader reader2 = new StreamReader(textFilePath2))
+         using (StreamReader readernine = new StreamReader(textFilePath2))
          {
             string line2;
-            while ((line2 = reader2.ReadLine()) != null)
+            while ((line2 = readernine.ReadLine()) != null)
             {
                try
                {
