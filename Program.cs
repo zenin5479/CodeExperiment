@@ -15,6 +15,7 @@ namespace CodeExperiment
 
          string path = AppContext.BaseDirectory;
          string filePath = path + "a.txt";
+
          // Классический вариант чтения файла построчно
          StreamReader f = new StreamReader(filePath);
          while (!f.EndOfStream)
@@ -25,17 +26,29 @@ namespace CodeExperiment
          f.Close();
          Console.WriteLine();
 
+         // Еще один пример, как можно организовать цикл построчного чтения
+         string r;
+         StreamReader t = new StreamReader(filePath);
+         while ((r = t.ReadLine()) != null)
+         {
+            Console.WriteLine(r);
+         }
+         t.Close();
+         Console.WriteLine();
+
+         // Прочитать весь файл целиком в массив строк
+         string[] lines = File.ReadAllLines(filePath);
+         foreach (string s in lines)
+         {
+            Console.WriteLine(s);
+         }
+         Console.WriteLine();
 
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fpA == null)
          {
             Console.WriteLine("Ошибка при открытии файла для чтения");
          }
-
-
-
-
-
          // Cвязываем StreamReader c файловыйм потоком
          if (fpA != null)
          {
