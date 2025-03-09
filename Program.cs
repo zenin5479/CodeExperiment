@@ -10,9 +10,7 @@ namespace CodeExperiment
       {
          int n = 3;
          int m = 3;
-
          double[,] a = new double[n, m];
-
          string path = AppContext.BaseDirectory;
          string filePath = path + "a.txt";
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
