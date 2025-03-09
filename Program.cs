@@ -19,6 +19,7 @@ namespace CodeExperiment
          // Считывает все символы, начиная с текущей позиции до конца потока
          using StreamReader readerone = new StreamReader(filePath);
          string text = readerone.ReadToEnd();
+         readerone.Close();
          Console.WriteLine(text);
 
          // Классический вариант чтения файла построчно
@@ -89,37 +90,13 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         IEnumerable<string> linestwo = File.ReadLines("a.txt");
+         IEnumerable<string> linestwo = File.ReadLines(filePath);
          Console.WriteLine(string.Join(Environment.NewLine, linestwo));
          Console.WriteLine();
 
-         foreach (string linetwo in File.ReadLines("a.txt"))
+         foreach (string linetwo in File.ReadLines(filePath))
          {
             Console.WriteLine(linetwo);
-         }
-         Console.WriteLine();
-
-         // Обрабатывает все строки файла
-         using (TextReader readersix = File.OpenText("a.txt"))
-         {
-            string linethree;
-            while ((linethree = readersix.ReadLine()) != null)
-            {
-               string[] bitsthree = linethree.Split(' ');
-               foreach (string bitthree in bitsthree)
-               {
-                  double value;
-                  if (!double.TryParse(bitthree, out value))
-                  {
-                     Console.WriteLine("Неудовлетворительное значение");
-                  }
-                  else
-                  {
-                     Console.Write(bitthree + " ");
-                  }
-               }
-               Console.WriteLine();
-            }
          }
          Console.WriteLine();
 
@@ -138,7 +115,7 @@ namespace CodeExperiment
          Console.WriteLine();
 
          // Обрабатывает строку файла
-         using (StreamReader readerseven = new StreamReader("a.txt"))
+         using (StreamReader readerseven = new StreamReader(filePath))
          {
             string num = readerseven.ReadLine();
             if (num != null)
@@ -155,7 +132,7 @@ namespace CodeExperiment
          Console.WriteLine();
 
          string textFilePath = "a.txt";
-         using (StreamReader readereight = new StreamReader(textFilePath))
+         using (StreamReader readereight = new StreamReader(filePath))
          {
             string line1;
             while ((line1 = readereight.ReadLine()) != null)
@@ -172,8 +149,7 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         string textFilePath2 = "a.txt";
-         using (StreamReader readernine = new StreamReader(textFilePath2))
+         using (StreamReader readernine = new StreamReader(filePath))
          {
             string line2;
             while ((line2 = readernine.ReadLine()) != null)
