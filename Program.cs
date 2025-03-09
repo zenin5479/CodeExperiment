@@ -131,7 +131,6 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         string textFilePath = "a.txt";
          using (StreamReader readereight = new StreamReader(filePath))
          {
             string line1;
