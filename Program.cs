@@ -92,7 +92,7 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         // Правильно обрабатывает 3 строки
+         // Правильно обрабатывает все строки (массив строк)
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
          double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
          for (int i = 0; i < txtNum.GetLength(0); i++)
