@@ -45,9 +45,7 @@ namespace CodeExperiment
             string lineone;
             while ((lineone = reader.ReadLine()) != null)
             {
-               // Вставляем сюда логику
-               // Переменная "line" - это строка в файле
-               // Добавляем её в список
+               // Переменная line - это строка в файле добавляем её в список
                linesone.Add(lineone);
             }
          }
@@ -68,7 +66,7 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         // Правильно обрабатывает все строки
+         // Обрабатывает все строки файла
          using (TextReader reader = File.OpenText("a.txt"))
          {
             string linethree;
@@ -106,7 +104,7 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         // Правильно обрабатывает 1 строку
+         // Обрабатывает строку файла
          using (StreamReader sr = new StreamReader("a.txt"))
          {
             string num = sr.ReadLine();
