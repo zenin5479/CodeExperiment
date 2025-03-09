@@ -15,11 +15,26 @@ namespace CodeExperiment
 
          string path = AppContext.BaseDirectory;
          string filePath = path + "a.txt";
+         // Классический вариант чтения файла построчно
+         StreamReader f = new StreamReader(filePath);
+         while (!f.EndOfStream)
+         {
+            string s = f.ReadLine();
+            Console.WriteLine(s);
+         }
+         f.Close();
+         Console.WriteLine();
+
+
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fpA == null)
          {
             Console.WriteLine("Ошибка при открытии файла для чтения");
          }
+
+
+
+
 
          // Cвязываем StreamReader c файловыйм потоком
          if (fpA != null)
