@@ -8,8 +8,8 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         int n = 3;
-         int m = 3;
+         int n = 10;
+         int m = 20;
 
          double[,] a = new double[n, m];
 
@@ -96,12 +96,6 @@ namespace CodeExperiment
          Console.WriteLine(string.Join(Environment.NewLine, linestwo));
          Console.WriteLine();
 
-         foreach (string linetwo in File.ReadLines(filePath))
-         {
-            Console.WriteLine(linetwo);
-         }
-         Console.WriteLine();
-
          // Конвертирует массив строк
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
          double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
@@ -131,7 +125,7 @@ namespace CodeExperiment
             }
             Console.WriteLine();
          }
-         Console.WriteLine();
+         //Console.WriteLine();
 
          Console.ReadKey();
       }
