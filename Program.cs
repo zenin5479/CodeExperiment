@@ -32,7 +32,7 @@ namespace CodeExperiment
          readertwo.Close();
          Console.WriteLine();
 
-         // Еще один пример, как можно организовать цикл построчного чтения
+         // Пример организации цикла построчного чтения
          string r;
          StreamReader readerthree = new StreamReader(filePath);
          while ((r = readerthree.ReadLine()) != null)
