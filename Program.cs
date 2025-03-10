@@ -44,10 +44,12 @@ namespace CodeExperiment
 
          // Прочитать весь файл целиком в массив строк
          string[] lines = File.ReadAllLines(filePath);
-         foreach (string s in lines)
+         for (int i = 0; i < lines.Length; i++)
          {
+            var s = lines[i];
             Console.WriteLine(s);
          }
+
          Console.WriteLine();
 
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
