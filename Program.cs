@@ -86,10 +86,12 @@ namespace CodeExperiment
             }
          }
          // Распечатываем все строки в списке
-         foreach (string value in linesone)
+         for (int i = 0; i < linesone.Count; i++)
          {
+            string value = linesone[i];
             Console.WriteLine(value);
          }
+
          Console.WriteLine();
 
          IEnumerable<string> linestwo = File.ReadLines(filePath);
