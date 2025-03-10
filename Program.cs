@@ -46,7 +46,7 @@ namespace CodeExperiment
          string[] lines = File.ReadAllLines(filePath);
          for (int i = 0; i < lines.Length; i++)
          {
-            var s = lines[i];
+            string s = lines[i];
             Console.WriteLine(s);
          }
 
