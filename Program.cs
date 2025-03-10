@@ -135,41 +135,6 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         using (StreamReader readereight = new StreamReader(filePath))
-         {
-            string line1;
-            while ((line1 = readereight.ReadLine()) != null)
-            {
-               if (double.TryParse(line1, out double doubleValue))
-               {
-                  Console.WriteLine(doubleValue);
-               }
-               else
-               {
-                  Console.WriteLine($"Недопустимое значение double: {line1}");
-               }
-            }
-         }
-         Console.WriteLine();
-
-         using (StreamReader readernine = new StreamReader(filePath))
-         {
-            string line2;
-            while ((line2 = readernine.ReadLine()) != null)
-            {
-               try
-               {
-                  double doubleValue2 = double.Parse(line2);
-                  Console.WriteLine(doubleValue2);
-               }
-               catch (FormatException)
-               {
-                  Console.WriteLine($"Недопустимый формат double: {line2}");
-               }
-            }
-         }
-         Console.WriteLine();
-
          Console.ReadKey();
       }
    }
