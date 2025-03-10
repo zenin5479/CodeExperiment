@@ -49,7 +49,6 @@ namespace CodeExperiment
             string s = lines[i];
             Console.WriteLine(s);
          }
-
          Console.WriteLine();
 
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
@@ -91,10 +90,9 @@ namespace CodeExperiment
             string value = linesone[i];
             Console.WriteLine(value);
          }
-
          Console.WriteLine();
 
-         IEnumerable<string> linestwo = File.ReadLines(filePath);
+         List<string> linestwo = new List<string>(File.ReadLines(filePath));
          Console.WriteLine(string.Join(Environment.NewLine, linestwo));
          Console.WriteLine();
 
