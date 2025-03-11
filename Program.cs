@@ -18,11 +18,20 @@ namespace CodeExperiment
 
          // Классический вариант чтения файла построчно
          StreamReader readertwo = new StreamReader(filePath);
+         List<string> lst1 = new List<string>();
          while (!readertwo.EndOfStream)
          {
             string s = readertwo.ReadLine();
+            lst1.Add(s);
             Console.WriteLine(s);
          }
+
+         for (var i = 0; i < lst1.Count; i++)
+         {
+            string cv = lst1[i];
+            Console.WriteLine(cv);
+         }
+
          readertwo.Close();
          Console.WriteLine();
 
