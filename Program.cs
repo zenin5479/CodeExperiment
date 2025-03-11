@@ -25,13 +25,18 @@ namespace CodeExperiment
             lst1.Add(s);
             Console.WriteLine(s);
          }
+         Console.WriteLine();
 
-         for (var i = 0; i < lst1.Count; i++)
+         for (int i = 0; i < lst1.Count; i++)
          {
-            string cv = lst1[i];
-            Console.WriteLine(cv);
+            string[] split = lst1[i].Split(" ");
+            for (int j = 0; j < split.Length; j++)
+            {
+               a[i, j] = Convert.ToDouble(split[j]);
+               Console.Write(a[i, j] + " ");
+            }
+            Console.WriteLine();
          }
-
          readertwo.Close();
          Console.WriteLine();
 
