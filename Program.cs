@@ -18,18 +18,19 @@ namespace CodeExperiment
 
          // Классический вариант чтения файла построчно
          StreamReader readertwo = new StreamReader(filePath);
-         List<string> lst1 = new List<string>();
+         List<string> listone = new List<string>();
          while (!readertwo.EndOfStream)
          {
             string s = readertwo.ReadLine();
-            lst1.Add(s);
+            listone.Add(s);
             Console.WriteLine(s);
          }
          Console.WriteLine();
 
-         for (int i = 0; i < lst1.Count; i++)
+         // Разделение строки на прдстроки и конвертация подстрок в double
+         for (int i = 0; i < listone.Count; i++)
          {
-            string[] split = lst1[i].Split(" ");
+            string[] split = listone[i].Split(" ");
             for (int j = 0; j < split.Length; j++)
             {
                a[i, j] = Convert.ToDouble(split[j]);
