@@ -16,7 +16,7 @@ namespace CodeExperiment
          string path = AppContext.BaseDirectory;
          string filePath = path + "a.txt";
 
-        // Классический вариант чтения файла построчно
+         // Классический вариант чтения файла построчно
          StreamReader readertwo = new StreamReader(filePath);
          while (!readertwo.EndOfStream)
          {
