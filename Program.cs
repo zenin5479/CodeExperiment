@@ -16,13 +16,7 @@ namespace CodeExperiment
          string path = AppContext.BaseDirectory;
          string filePath = path + "a.txt";
 
-         // Считывает все символы, начиная с текущей позиции до конца потока
-         using StreamReader readerone = new StreamReader(filePath);
-         string text = readerone.ReadToEnd();
-         readerone.Close();
-         Console.WriteLine(text);
-
-         // Классический вариант чтения файла построчно
+        // Классический вариант чтения файла построчно
          StreamReader readertwo = new StreamReader(filePath);
          while (!readertwo.EndOfStream)
          {
