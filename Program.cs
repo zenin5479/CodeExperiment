@@ -6,7 +6,6 @@ namespace CodeExperiment
 {
    internal class Program
    {
-
       static void Main()
       {
          int n = 10;
