@@ -25,7 +25,6 @@ namespace CodeExperiment
       {
          int[] first = { 10, 20, 30, 40, 50 };
          int[] second = { 10, 21, 30, 40, 50 };
-
          if (AreArraysEqual(first, second))
          {
             Console.WriteLine("Массивы равны");
@@ -34,11 +33,10 @@ namespace CodeExperiment
          {
             Console.WriteLine("Массивы не равны");
          }
-         bool isEqual = true;
 
+         bool isEqual = true;
          int[] array1 = { 10, 20, 30, 40, 50 };
          int[] array2 = { 10, 20, 30, 40, 50 };
-
          if (array1.Length == array2.Length)
          {
             for (int i = 0; i < array1.Length; i++)
