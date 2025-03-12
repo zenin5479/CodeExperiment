@@ -6,34 +6,9 @@ namespace CodeExperiment
 {
    internal class Program
    {
-      public static bool AreArraysEqual<T>(T[] first, T[] second)
-      {
-         EqualityComparer<T> comparer = EqualityComparer<T>.Default;
-
-         for (int i = 0; i < first.Length; i++)
-         {
-            if (!comparer.Equals(first[i], second[i]))
-            {
-               return false;
-            }
-         }
-
-         return true;
-      }
 
       static void Main()
       {
-         int[] first = { 10, 20, 30, 40, 50 };
-         int[] second = { 10, 21, 30, 40, 50 };
-         if (AreArraysEqual(first, second))
-         {
-            Console.WriteLine("Массивы равны");
-         }
-         else
-         {
-            Console.WriteLine("Массивы не равны");
-         }
-
          bool isEqual = true;
          int[] array1 = { 10, 20, 30, 40, 50 };
          int[] array2 = { 10, 20, 30, 40, 50 };
