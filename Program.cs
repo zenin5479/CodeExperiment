@@ -13,8 +13,7 @@ namespace CodeExperiment
 
          double[,] a = new double[n, m];
 
-         string path = AppContext.BaseDirectory;
-         string filePath = path + "a.txt";
+         string filePath = AppContext.BaseDirectory + "a.txt";
 
          // Классический вариант чтения файла построчно
          StreamReader readerone = new StreamReader(filePath);
