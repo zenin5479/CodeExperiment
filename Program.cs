@@ -17,22 +17,22 @@ namespace CodeExperiment
          string filePath = path + "a.txt";
 
          // Классический вариант чтения файла построчно
-         StreamReader readertwo = new StreamReader(filePath);
-         string[] listone = new string[n];
+         StreamReader readerone = new StreamReader(filePath);
+         string[] arrayone = new string[n];
          int p = 0;
-         while (!readertwo.EndOfStream && p < n)
+         while (!readerone.EndOfStream && p < n)
          {
-            string s = readertwo.ReadLine();
-            listone[p] = s;
+            string s = readerone.ReadLine();
+            arrayone[p] = s;
             Console.WriteLine(s);
             p++;
          }
          Console.WriteLine();
 
          // Разделение строки на прдстроки и конвертация подстрок в double
-         for (int i = 0; i < listone.Length; i++)
+         for (int i = 0; i < arrayone.Length; i++)
          {
-            string[] split = listone[i].Split(" ");
+            string[] split = arrayone[i].Split(" ");
             for (int j = 0; j < split.Length; j++)
             {
                a[i, j] = Convert.ToDouble(split[j]);
@@ -40,7 +40,7 @@ namespace CodeExperiment
             }
             Console.WriteLine();
          }
-         readertwo.Close();
+         readerone.Close();
          Console.WriteLine();
 
          // Пример организации цикла построчного чтения
