@@ -31,10 +31,10 @@ namespace CodeExperiment
          // Разделение строки на прдстроки и конвертация подстрок в double
          for (int i = 0; i < arrayone.Length; i++)
          {
-            string[] split = arrayone[i].Split(" ");
-            for (int j = 0; j < split.Length; j++)
+            string[] arraysplit = arrayone[i].Split(" ");
+            for (int j = 0; j < arraysplit.Length; j++)
             {
-               a[i, j] = Convert.ToDouble(split[j]);
+               a[i, j] = Convert.ToDouble(arraysplit[j]);
                Console.Write(a[i, j] + " ");
             }
             Console.WriteLine();
