@@ -18,13 +18,16 @@ namespace CodeExperiment
          // Классический вариант чтения файла построчно
          StreamReader readerone = new StreamReader(filePath);
          string[] arrayone = new string[n];
-         int p = 0;
-         while (!readerone.EndOfStream && p < n)
+         int k = 0;
+         while (k < n)
          {
-            string s = readerone.ReadLine();
-            arrayone[p] = s;
-            Console.WriteLine(s);
-            p++;
+            if (!readerone.EndOfStream)
+            {
+               string s = readerone.ReadLine();
+               arrayone[k] = s;
+               Console.WriteLine(s);
+            }
+            k++;
          }
          Console.WriteLine();
 
