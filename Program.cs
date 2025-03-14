@@ -31,16 +31,20 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         // Разделение строки на прдстроки и конвертация подстрок в double
-         for (int i = 0; i < arrayone.Length; i++)
+         // Разделение строки на подстроки и конвертация подстрок в double
+         int z = 0;
+         while (z < arrayone.Length)
          {
-            string[] arraysplit = arrayone[i].Split(" ");
-            for (int j = 0; j < arraysplit.Length; j++)
+            string[] arraysplit = arrayone[z].Split(" ");
+            int x = 0;
+            while (x < arraysplit.Length)
             {
-               a[i, j] = Convert.ToDouble(arraysplit[j]);
-               Console.Write(a[i, j] + " ");
+               a[z, x] = Convert.ToDouble(arraysplit[x]);
+               Console.Write(a[z, x] + " ");
+               x++;
             }
             Console.WriteLine();
+            z++;
          }
          readerone.Close();
          Console.WriteLine();
