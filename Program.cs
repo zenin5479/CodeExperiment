@@ -29,7 +29,6 @@ namespace CodeExperiment
             k++;
          }
          Console.WriteLine();
-
          // Разделение строки на подстроки и конвертация подстрок в double
          int z = 0;
          while (z < arrayone.Length)
