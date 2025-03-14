@@ -12,7 +12,6 @@ namespace CodeExperiment
          int m = 20;
 
          double[,] a = new double[n, m];
-
          string filePath = AppContext.BaseDirectory + "a.txt";
 
          // Классический вариант чтения файла построчно
