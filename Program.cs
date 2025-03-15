@@ -14,14 +14,6 @@ namespace CodeExperiment
          double[,] arrayForFileSize = new double[n, m];
          string filePath = AppContext.BaseDirectory + "a.txt";
 
-         // Считывает все символы, начиная с текущей позиции до конца потока
-         StreamReader readersix = new StreamReader(filePath);
-         string text = readersix.ReadToEnd();
-         string[] arraysplitsix = text.Split();
-
-         readersix.Close();
-         Console.WriteLine(text);
-
          // Классический вариант чтения файла построчно
          StreamReader readerone = new StreamReader(filePath);
          string[] arrayone = new string[n];
