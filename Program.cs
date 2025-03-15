@@ -14,6 +14,12 @@ namespace CodeExperiment
          double[,] arrayForFileSize = new double[n, m];
          string filePath = AppContext.BaseDirectory + "a.txt";
 
+         // Считывает все символы, начиная с текущей позиции до конца потока
+         StreamReader readersix = new StreamReader(filePath);
+         string text = readersix.ReadToEnd();
+         readersix.Close();
+         Console.WriteLine(text);
+
          // Классический вариант чтения файла построчно
          StreamReader readerone = new StreamReader(filePath);
          string[] arrayone = new string[n];
@@ -85,7 +91,6 @@ namespace CodeExperiment
             readerfour.Close();
          }
          Console.WriteLine();
-
          
          // Конвертируем массив строк
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
