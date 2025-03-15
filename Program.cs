@@ -11,7 +11,7 @@ namespace CodeExperiment
          int n = 10;
          int m = 20;
 
-         double[,] a = new double[n, m];
+         double[,] arraya = new double[n, m];
          string filePath = AppContext.BaseDirectory + "a.txt";
 
          // Классический вариант чтения файла построчно
@@ -22,9 +22,9 @@ namespace CodeExperiment
          {
             if (!readerone.EndOfStream)
             {
-               string s = readerone.ReadLine();
-               arrayone[k] = s;
-               Console.WriteLine(s);
+               string stroka = readerone.ReadLine();
+               arrayone[k] = stroka;
+               Console.WriteLine(stroka);
             }
             k++;
          }
@@ -37,8 +37,8 @@ namespace CodeExperiment
             int x = 0;
             while (x < arraysplit.GetLength(0))
             {
-               a[z, x] = Convert.ToDouble(arraysplit[x]);
-               Console.Write(a[z, x] + " ");
+               arraya[z, x] = Convert.ToDouble(arraysplit[x]);
+               Console.Write(arraya[z, x] + " ");
                x++;
             }
             Console.WriteLine();
