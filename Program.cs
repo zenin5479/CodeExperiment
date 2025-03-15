@@ -17,7 +17,7 @@ namespace CodeExperiment
          // Считывает все символы, начиная с текущей позиции до конца потока
          StreamReader readersix = new StreamReader(filePath);
          string text = readersix.ReadToEnd();
-         string[] arraysplitsix = text.Split("\r\n");
+         string[] arraysplitsix = text.Split();
 
          readersix.Close();
          Console.WriteLine(text);
