@@ -86,32 +86,8 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         // Создаем новый список
-         List<string> linesone = new List<string>();
-         // Используем ключевое слово using для удаления
-         using (StreamReader readerfive = new StreamReader(filePath))
-         {
-            // Используем шаблон while not null в цикле while
-            string lineone;
-            while ((lineone = readerfive.ReadLine()) != null)
-            {
-               // Переменная line - это строка в файле добавляем её в список
-               linesone.Add(lineone);
-            }
-         }
-         // Распечатываем все строки в списке
-         for (int i = 0; i < linesone.Count; i++)
-         {
-            string value = linesone[i];
-            Console.WriteLine(value);
-         }
-         Console.WriteLine();
-
-         List<string> linestwo = new List<string>(File.ReadLines(filePath));
-         Console.WriteLine(string.Join(Environment.NewLine, linestwo));
-         Console.WriteLine();
-
-         // Конвертирует массив строк
+         
+         // Конвертируем массив строк
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
          double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
          for (int i = 0; i < txtNum.GetLength(0); i++)
@@ -124,23 +100,6 @@ namespace CodeExperiment
             Console.WriteLine();
          }
          Console.WriteLine();
-
-         // Обрабатывает строку файла
-         using (StreamReader readerseven = new StreamReader(filePath))
-         {
-            string num = readerseven.ReadLine();
-            if (num != null)
-            {
-               string[] split = num.Split(" ");
-               for (int i = 0; i < split.Length; i++)
-               {
-                  string numbers = split[i];
-                  Console.Write(numbers + " ");
-               }
-            }
-            Console.WriteLine();
-         }
-         //Console.WriteLine();
 
          Console.ReadKey();
       }
