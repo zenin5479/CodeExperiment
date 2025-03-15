@@ -55,16 +55,6 @@ namespace CodeExperiment
          readerone.Close();
          Console.WriteLine();
 
-         // Пример организации цикла построчного чтения
-         string r;
-         StreamReader readerthree = new StreamReader(filePath);
-         while ((r = readerthree.ReadLine()) != null)
-         {
-            Console.WriteLine(r);
-         }
-         readerthree.Close();
-         Console.WriteLine();
-
          // Прочитать весь файл целиком в массив строк
          string[] lines = File.ReadAllLines(filePath);
          for (int i = 0; i < lines.Length; i++)
