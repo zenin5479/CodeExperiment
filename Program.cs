@@ -31,11 +31,11 @@ namespace CodeExperiment
          Console.WriteLine();
          // Разделение строки на подстроки и конвертация подстрок в double
          int z = 0;
-         while (z < arrayone.Length)
+         while (z < arrayone.GetLength(0))
          {
             string[] arraysplit = arrayone[z].Split(" ");
             int x = 0;
-            while (x < arraysplit.Length)
+            while (x < arraysplit.GetLength(0))
             {
                a[z, x] = Convert.ToDouble(arraysplit[x]);
                Console.Write(a[z, x] + " ");
