@@ -11,7 +11,7 @@ namespace CodeExperiment
          int n = 10;
          int m = 20;
 
-         double[,] arraya = new double[n, m];
+         double[,] arraymaster = new double[n, m];
          string filePath = AppContext.BaseDirectory + "a.txt";
 
          // Классический вариант чтения файла построчно
@@ -37,8 +37,8 @@ namespace CodeExperiment
             int x = 0;
             while (x < arraysplit.GetLength(0))
             {
-               arraya[z, x] = Convert.ToDouble(arraysplit[x]);
-               Console.Write(arraya[z, x] + " ");
+               arraymaster[z, x] = Convert.ToDouble(arraysplit[x]);
+               Console.Write(arraymaster[z, x] + " ");
                x++;
             }
             Console.WriteLine();
