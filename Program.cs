@@ -13,35 +13,19 @@ namespace CodeExperiment
 
          double[,] arrayForFileSize = new double[n, m];
          string filePath = AppContext.BaseDirectory + "a.txt";
-         
-
          try
          {
-            if (File.Exists(filePath))
-            {
-               File.Delete(filePath);
-            }
-
-            using (StreamWriter sw = new StreamWriter(filePath))
-            {
-               sw.WriteLine("This");
-               sw.WriteLine("is some text");
-               sw.WriteLine("to test");
-               sw.WriteLine("Reading");
-            }
-
             using (StreamReader sr = new StreamReader(filePath))
             {
                //Это позволяет вам выполнить одну операцию чтения.
                Console.WriteLine(sr.ReadToEnd());
+               sr.Close();
             }
          }
          catch (Exception e)
          {
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
          }
-
-         
 
          // Классический вариант чтения файла построчно
          StreamReader readerone = new StreamReader(filePath);
