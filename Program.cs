@@ -13,18 +13,18 @@ namespace CodeExperiment
 
          double[,] arrayForFileSize = new double[n, m];
          string filePath = AppContext.BaseDirectory + "a.txt";
-         //try
-         //{
-         //   using (StreamReader sr = new StreamReader(filePath))
-         //   {
-         //      //Это позволяет вам выполнить одну операцию чтения.
-         //      Console.WriteLine(sr.ReadToEnd());
-         //   }
-         //}
-         //catch (Exception e)
-         //{
-         //   Console.WriteLine("Процесс завершился неудачей: {0}", e);
-         //}
+         try
+         {
+            using (StreamReader sr = new StreamReader(filePath))
+            {
+               //Это позволяет вам выполнить одну операцию чтения
+               Console.WriteLine(sr.ReadToEnd());
+            }
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine("Процесс завершился неудачей: {0}", e);
+         }
 
          // Классический вариант чтения файла построчно
          StreamReader readerone = new StreamReader(filePath);
