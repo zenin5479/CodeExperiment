@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 
 namespace CodeExperiment
@@ -87,7 +86,7 @@ namespace CodeExperiment
             readerfour.Close();
          }
          Console.WriteLine();
-         
+
          // Конвертируем массив строк
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
          double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
