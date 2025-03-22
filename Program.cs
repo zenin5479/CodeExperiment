@@ -14,11 +14,9 @@ namespace CodeExperiment
          string filePath = AppContext.BaseDirectory + "a.txt";
          try
          {
-            using (StreamReader sr = new StreamReader(filePath))
-            {
-               //Это позволяет вам выполнить одну операцию чтения
-               Console.WriteLine(sr.ReadToEnd());
-            }
+            using StreamReader sr = new StreamReader(filePath);
+            //Это позволяет вам выполнить одну операцию чтения
+            Console.WriteLine(sr.ReadToEnd());
          }
          catch (Exception e)
          {
