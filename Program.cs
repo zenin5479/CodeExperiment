@@ -27,14 +27,11 @@ namespace CodeExperiment
          StreamReader readerone = new StreamReader(filePath);
          string[] arrayone = new string[n];
          int k = 0;
-         while (k < n)
+         while (!readerone.EndOfStream)
          {
-            if (!readerone.EndOfStream)
-            {
-               string stroka = readerone.ReadLine();
-               arrayone[k] = stroka;
-               Console.WriteLine(stroka);
-            }
+            string stroka = readerone.ReadLine();
+            arrayone[k] = stroka;
+            Console.WriteLine(stroka);
             k++;
          }
          Console.WriteLine();
