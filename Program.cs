@@ -27,14 +27,11 @@ namespace CodeExperiment
          StreamReader readerone = new StreamReader(filePath);
          string[] arrayone = new string[n];
          int k = 0;
-         while (k < n)
+         while (!readerone.EndOfStream)
          {
-            if (!readerone.EndOfStream)
-            {
-               string stroka = readerone.ReadLine();
-               arrayone[k] = stroka;
-               Console.WriteLine(stroka);
-            }
+            string stroka = readerone.ReadLine();
+            arrayone[k] = stroka;
+            Console.WriteLine(stroka);
             k++;
          }
          Console.WriteLine();
@@ -56,14 +53,6 @@ namespace CodeExperiment
          readerone.Close();
          Console.WriteLine();
 
-         // Прочитать весь файл целиком в массив строк
-         string[] lines = File.ReadAllLines(filePath);
-         for (int i = 0; i < lines.Length; i++)
-         {
-            string s = lines[i];
-            Console.WriteLine(s);
-         }
-         Console.WriteLine();
 
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fpA == null)
