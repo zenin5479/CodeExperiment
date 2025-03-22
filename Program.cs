@@ -53,7 +53,6 @@ namespace CodeExperiment
          readerone.Close();
          Console.WriteLine();
 
-
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fpA == null)
          {
