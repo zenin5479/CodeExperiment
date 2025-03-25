@@ -12,20 +12,8 @@ namespace CodeExperiment
          int m = 20;
          string filePath = AppContext.BaseDirectory + "a.txt";
          double[,] arrayForFileSize = new double[n, m];
-         StreamReaderReadLine(filePath);
-         StreamReaderReadToEnd(filePath);
 
-         try
-         {
-            // За одну операцию выполняется чтение файла вплоть до конца
-            using StreamReader sr = new StreamReader(filePath);
-            Console.WriteLine(sr.ReadToEnd());
-            Console.WriteLine();
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Процесс завершился неудачей {0}", e);
-         }
+
 
 
          // Классический вариант чтения файла построчно
@@ -36,9 +24,9 @@ namespace CodeExperiment
             {
                Console.WriteLine(readerone.ReadLine());
             }
-           
+
             string[] arrayone = new string[n];
-            
+
             Console.WriteLine();
             // Разделение строки на подстроки и конвертация подстрок в double
             int c = 0;
@@ -62,34 +50,6 @@ namespace CodeExperiment
          {
             Console.WriteLine("Процесс завершился неудачей {0}", e);
          }
-
-         try
-         {
-            // Строки из файла считываются до достижения конца файла
-            using StreamReader sr = new StreamReader(filePath);
-            while (sr.Peek() > -1)
-            {
-               Console.WriteLine(sr.ReadLine());
-            }
-            Console.WriteLine();
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Процесс завершился неудачей {0}", e);
-         }
-
-         try
-         {
-            using StreamReader sr = new StreamReader(filePath);
-            //Это позволяет вам выполнить одну операцию чтения
-            Console.WriteLine(sr.ReadToEnd());
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Процесс завершился неудачей: {0}", e);
-         }
-
-
 
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fpA == null)
@@ -125,7 +85,6 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-
          // Для создания списка списков необходимо создать отдельные списки
          // и использовать List<T>.Add(T) для добавления их в основной список
          List<List<string>> listOfListsOne = new List<List<string>>();
@@ -144,20 +103,6 @@ namespace CodeExperiment
          Console.WriteLine();
 
          // Эквивалентно
-         List<string> languageTwo = new List<string> { "Python", "JavaScript", "TypeScript" };
-         List<string> autoTwo = new List<string> { "Toyota", "Volkswagen", "Chevrolet", "Honda", "Nissan" };
-         List<List<string>> listOfListsTwo = new List<List<string>> { languageTwo, autoTwo };
-         for (int i = 0; i < listOfListsTwo.Count; i++)
-         {
-            Console.WriteLine("Лист {0}", i);
-            for (int j = 0; j < listOfListsTwo[i].Count; j++)
-            {
-               Console.Write("{0} ", listOfListsTwo[i][j]);
-            }
-            Console.WriteLine();
-         }
-         Console.WriteLine();
-
          List<List<string>> itemBag = new List<List<string>>();
          List<string> weapons = new List<string> { "Меч", "Кинжал", "Арбалет" };
          itemBag.Add(weapons);
@@ -174,6 +119,7 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
+         //
          List<List<string>> mylist = new List<List<string>>
          {
                 new List<string> { "Один", "Два" },
@@ -208,6 +154,19 @@ namespace CodeExperiment
             z++;
          }
          Console.WriteLine();
+
+         //
+         try
+         {
+            // За одну операцию выполняется чтение файла вплоть до конца
+            using StreamReader sr = new StreamReader(filePath);
+            Console.WriteLine(sr.ReadToEnd());
+            Console.WriteLine();
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine("Процесс завершился неудачей {0}", e);
+         }
 
          Console.ReadKey();
       }
