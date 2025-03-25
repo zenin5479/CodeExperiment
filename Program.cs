@@ -16,57 +16,62 @@ namespace CodeExperiment
          // Классический вариант чтения файла построчно
          try
          {
-            StreamReader readerone = new StreamReader(filePath);
-            while (!readerone.EndOfStream)
+            FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
+            if (fpA == null)
             {
-               Console.WriteLine(readerone.ReadLine());
+               Console.WriteLine("Ошибка при открытии файла для чтения");
             }
-
-            string[] arrayone = new string[n];
-
-            Console.WriteLine();
-            // Разделение строки на подстроки и конвертация подстрок в double
-            int c = 0;
-            while (c < arrayone.GetLength(0))
+            // Cвязываем StreamReader c файловыйм потоком
+            if (fpA != null)
             {
-               string[] arraysplit = arrayone[c].Split(" ");
-               int x = 0;
-               while (x < arraysplit.GetLength(0))
+               // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки
+               StreamReader readerone = new StreamReader(filePath);
+               while (!readerone.EndOfStream)
                {
-                  arrayForFileSize[c, x] = Convert.ToDouble(arraysplit[x]);
-                  Console.Write(arrayForFileSize[c, x] + " ");
-                  x++;
+
+                  Console.WriteLine(readerone.ReadLine());
                }
+               // Закрытие потока
+               readerone.Close();
+
+               string[] arrayone = new string[n];
+
                Console.WriteLine();
-               c++;
+               // Разделение строки на подстроки и конвертация подстрок в double
+               int c = 0;
+               while (c < arrayone.GetLength(0))
+               {
+                  string[] arraysplit = arrayone[c].Split(" ");
+                  int x = 0;
+                  while (x < arraysplit.GetLength(0))
+                  {
+                     arrayForFileSize[c, x] = Convert.ToDouble(arraysplit[x]);
+                     Console.Write(arrayForFileSize[c, x] + " ");
+                     x++;
+                  }
+                  Console.WriteLine();
+                  c++;
+               }
+               readerone.Close();
+               Console.WriteLine();
+
+
+
             }
-            readerone.Close();
             Console.WriteLine();
+
+
+
+
+
+
          }
          catch (Exception e)
          {
             Console.WriteLine("Процесс завершился неудачей {0}", e);
          }
 
-         FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
-         if (fpA == null)
-         {
-            Console.WriteLine("Ошибка при открытии файла для чтения");
-         }
-         // Cвязываем StreamReader c файловыйм потоком
-         if (fpA != null)
-         {
-            StreamReader readerfour = new StreamReader(fpA);
-            for (int i = 0; i < n; i++)
-            {
-               // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки
-               string singleLine = readerfour.ReadLine();
-               Console.WriteLine(singleLine);
-            }
-            // Закрытие потока
-            readerfour.Close();
-         }
-         Console.WriteLine();
+
 
          // Конвертируем массив строк
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
