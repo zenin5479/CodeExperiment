@@ -13,9 +13,6 @@ namespace CodeExperiment
          string filePath = AppContext.BaseDirectory + "a.txt";
          double[,] arrayForFileSize = new double[n, m];
 
-
-
-
          // Классический вариант чтения файла построчно
          try
          {
