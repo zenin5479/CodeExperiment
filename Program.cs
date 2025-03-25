@@ -24,11 +24,9 @@ namespace CodeExperiment
             // Cвязываем StreamReader c файловыйм потоком
             if (fpA != null)
             {
-               // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки
                StreamReader readerone = new StreamReader(filePath);
                while (!readerone.EndOfStream)
                {
-
                   Console.WriteLine(readerone.ReadLine());
                }
                // Закрытие потока
@@ -62,20 +60,6 @@ namespace CodeExperiment
             Console.WriteLine("Процесс завершился неудачей {0}", e);
          }
 
-         // Конвертируем массив строк
-         string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
-         double[,] number = new double[txtNum.GetLength(0), txtNum.GetLength(1)];
-         for (int i = 0; i < txtNum.GetLength(0); i++)
-         {
-            for (int j = 0; j < txtNum.GetLength(1); j++)
-            {
-               number[i, j] = Convert.ToDouble(txtNum[i, j]);
-               Console.Write(number[i, j] + " ");
-            }
-            Console.WriteLine();
-         }
-         Console.WriteLine();
-
          // Для создания списка списков необходимо создать отдельные списки
          // и использовать List<T>.Add(T) для добавления их в основной список
          List<List<string>> itemBag = new List<List<string>>();
@@ -83,7 +67,6 @@ namespace CodeExperiment
          itemBag.Add(weapons);
          List<string> potions = new List<string> { "Зелье здоровья", "Зелье силы", "Зелье удачи" };
          itemBag.Add(potions);
-
          int z = 0;
          Console.WriteLine("Количество листов {0}", itemBag.Count);
          while (z < itemBag.Count)
