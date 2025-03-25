@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 namespace CodeExperiment
 {
@@ -58,6 +59,21 @@ namespace CodeExperiment
          {
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
          }
+
+         using FileStream stream = File.OpenRead(filePath);
+         int totalBytes = (int)stream.Length;
+         byte[] bytes = new byte[totalBytes];
+         int bytesRead = 0;
+
+         while (bytesRead < totalBytes)
+         {
+            int len = stream.Read(bytes, bytesRead, totalBytes);
+            bytesRead += len;
+         }
+
+         string text = Encoding.UTF8.GetString(bytes);
+         Console.WriteLine(text);
+         Console.ReadKey();
 
          Console.ReadKey();
       }
