@@ -60,7 +60,7 @@ namespace CodeExperiment
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
          }
 
-         using FileStream stream = File.OpenRead(filePath);
+         using FileStream stream = File.Open(filePath, FileMode.Open, FileAccess.Read);
          int totalBytes = (int)stream.Length;
          byte[] bytes = new byte[totalBytes];
          int bytesRead = 0;
