@@ -128,17 +128,6 @@ namespace CodeExperiment
                 new List<string> { "Девять", "Десять" }
          };
 
-         for (int i = 0; i < mylist.Count; i++)
-         {
-            Console.WriteLine("Лист {0}", i);
-            for (int j = 0; j < mylist[i].Count; j++)
-            {
-               Console.Write("{0} ", mylist[i][j]);
-            }
-            Console.WriteLine();
-         }
-         Console.WriteLine();
-
          int z = 0;
          Console.WriteLine("Количество листов {0}", mylist.Count);
          while (z < mylist.Count)
@@ -154,19 +143,6 @@ namespace CodeExperiment
             z++;
          }
          Console.WriteLine();
-
-         //
-         try
-         {
-            // За одну операцию выполняется чтение файла вплоть до конца
-            using StreamReader sr = new StreamReader(filePath);
-            Console.WriteLine(sr.ReadToEnd());
-            Console.WriteLine();
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Процесс завершился неудачей {0}", e);
-         }
 
          Console.ReadKey();
       }
