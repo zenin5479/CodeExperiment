@@ -15,9 +15,6 @@ namespace CodeExperiment
          StreamReaderReadLine(filePath);
          StreamReaderReadToEnd(filePath);
 
-
-
-
          try
          {
             using StreamReader sr = new StreamReader(filePath);
