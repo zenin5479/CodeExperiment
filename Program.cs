@@ -33,7 +33,6 @@ namespace CodeExperiment
                readerone.Close();
 
                string[] arrayone = new string[n];
-
                Console.WriteLine();
                // Разделение строки на подстроки и конвертация подстрок в double
                int c = 0;
