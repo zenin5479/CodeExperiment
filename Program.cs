@@ -52,26 +52,15 @@ namespace CodeExperiment
                   Console.WriteLine();
                   c++;
                }
-               readerone.Close();
                Console.WriteLine();
-
-
-
             }
+
             Console.WriteLine();
-
-
-
-
-
-
          }
          catch (Exception e)
          {
             Console.WriteLine("Процесс завершился неудачей {0}", e);
          }
-
-
 
          // Конвертируем массив строк
          string[,] txtNum = { { "21,5", "123,1", "87,8" }, { "54,3", "2,7", "0,8" }, { "0,3", "7,9", "4,5" } };
@@ -89,56 +78,21 @@ namespace CodeExperiment
 
          // Для создания списка списков необходимо создать отдельные списки
          // и использовать List<T>.Add(T) для добавления их в основной список
-         List<List<string>> listOfListsOne = new List<List<string>>();
-         List<string> languageOne = new List<string> { "C", "C++", "C#" };
-         List<string> autoOne = new List<string> { "Volvo", "Audi", "BMW" };
-         listOfListsOne.Add(languageOne);
-         listOfListsOne.Add(autoOne);
-         for (int i = 0; i < listOfListsOne.Count; i++)
-         {
-            Console.WriteLine("Лист {0}", i);
-            List<string> list = listOfListsOne[i];
-            // Метод String.Join объединяет элементы массива или коллекции,
-            // используя указанный разделитель между каждым элементом
-            Console.WriteLine(string.Join(", ", list));
-         }
-         Console.WriteLine();
-
-         // Эквивалентно
          List<List<string>> itemBag = new List<List<string>>();
          List<string> weapons = new List<string> { "Меч", "Кинжал", "Арбалет" };
          itemBag.Add(weapons);
          List<string> potions = new List<string> { "Зелье здоровья", "Зелье силы", "Зелье удачи" };
          itemBag.Add(potions);
-         for (int i = 0; i < itemBag.Count; i++)
-         {
-            Console.WriteLine("Лист {0}", i);
-            for (int j = 0; j < itemBag[i].Count; j++)
-            {
-               Console.Write("{0} ", itemBag[i][j]);
-            }
-            Console.WriteLine();
-         }
-         Console.WriteLine();
-
-         //
-         List<List<string>> mylist = new List<List<string>>
-         {
-                new List<string> { "Один", "Два" },
-                new List<string> { "Три", "Четыре", "Пять" },
-                new List<string> { "Шесть", "Семь", "Восемь" },
-                new List<string> { "Девять", "Десять" }
-         };
 
          int z = 0;
-         Console.WriteLine("Количество листов {0}", mylist.Count);
-         while (z < mylist.Count)
+         Console.WriteLine("Количество листов {0}", itemBag.Count);
+         while (z < itemBag.Count)
          {
-            Console.WriteLine("Лист {0}: количество элементов во вложенном листе {1}", z, mylist[z].Count);
+            Console.WriteLine("Лист {0}: количество элементов во вложенном листе {1}", z, itemBag[z].Count);
             int x = 0;
-            while (x < mylist[z].Count)
+            while (x < itemBag[z].Count)
             {
-               Console.Write("{0} ", mylist[z][x]);
+               Console.Write("{0} ", itemBag[z][x]);
                x++;
             }
             Console.WriteLine();
