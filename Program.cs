@@ -73,7 +73,7 @@ namespace CodeExperiment
 
          string text = Encoding.UTF8.GetString(bytes);
          Console.WriteLine(text);
-         Console.WriteLine(string.Join(", ", text));
+         //Console.WriteLine(string.Join(", ", text));
 
          Console.ReadKey();
       }
