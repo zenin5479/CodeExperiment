@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace CodeExperiment
 {
@@ -27,74 +26,64 @@ namespace CodeExperiment
             {
                // Классический вариант чтения файла построчно
                StreamReader readerone = new StreamReader(fpA);
-
-               int total = (int)fpA.Length;
-
-               string[] arrayone = new string[n];
-               int k = 0;
+               
+               List<string> arrayone = new List<string>();
                while (!readerone.EndOfStream)
                {
                   string stroka = readerone.ReadLine();
-                  arrayone[k] = stroka;
+                  arrayone.Add(stroka);
                   Console.WriteLine(stroka);
-                  k++;
+
                }
                readerone.Close();
                Console.WriteLine();
-               // Разделение строки на подстроки и конвертация подстрок в double
+               Console.WriteLine(arrayone.Count);
+               Console.WriteLine();
+
+               //Разделение строки на подстроки
                int z = 0;
-               while (z < arrayone.GetLength(0))
+               List<string> arraysplit = new List<string>();
+               while (z < arrayone.Count)
                {
-                  string[] arraysplit = arrayone[z].Split(" ");
-                  int x = 0;
-                  while (x < arraysplit.GetLength(0))
-                  {
-                     arrayForFileSize[z, x] = Convert.ToDouble(arraysplit[x]);
-                     Console.Write(arrayForFileSize[z, x] + " ");
-                     x++;
-                  }
+                  arraysplit = new List<string>(arrayone[z].Split(" "));
                   Console.WriteLine();
                   z++;
                }
                Console.WriteLine();
+               // 
+               Console.WriteLine(arraysplit.Count);
+               Console.WriteLine();
+
+               Console.WriteLine();
+
+
+
+
+
+
+
+
+               // Разделение строки на подстроки и конвертация подстрок в double
+               //int z = 0;
+               //while (z < arrayone.GetLength(0))
+               //{
+               //   string[] arraysplit = arrayone[z].Split(" ");
+               //   int x = 0;
+               //   while (x < arraysplit.GetLength(0))
+               //   {
+               //      arrayForFileSize[z, x] = Convert.ToDouble(arraysplit[x]);
+               //      Console.Write(arrayForFileSize[z, x] + " ");
+               //      x++;
+               //   }
+               //   Console.WriteLine();
+               //   z++;
+               //}
+               //Console.WriteLine();
             }
          }
          catch (Exception e)
          {
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
-         }
-
-         using FileStream stream = File.Open(filePath, FileMode.Open, FileAccess.Read);
-         int totalBytes = (int)stream.Length;
-         byte[] bytes = new byte[totalBytes];
-         int bytesRead = 0;
-         while (bytesRead < totalBytes)
-         {
-            int len = stream.Read(bytes, bytesRead, totalBytes);
-            bytesRead += len;
-         }
-
-         string text = Encoding.UTF8.GetString(bytes);
-         //Console.WriteLine(text);
-         string hgh = string.Join("\r\n", text);
-         Console.Write(hgh);
-
-         // Creates and initializes a new ArrayList.
-         ArrayList myAl = new ArrayList
-         {
-            "Hello",
-            "World",
-            "!"
-         };
-
-         // Displays the properties and values of the ArrayList.
-         Console.WriteLine("myAL");
-         Console.WriteLine("    Count:    {0}", myAl.Count);
-         Console.WriteLine("    Capacity: {0}", myAl.Capacity);
-         Console.Write("    Values:");
-         foreach (string obj in myAl)
-         {
-            Console.Write("   {0}", obj);
          }
 
          Console.WriteLine();
