@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -72,7 +73,7 @@ namespace CodeExperiment
 
          string text = Encoding.UTF8.GetString(bytes);
          Console.WriteLine(text);
-         Console.ReadKey();
+         Console.WriteLine(string.Join(", ", text));
 
          Console.ReadKey();
       }
