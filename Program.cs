@@ -44,8 +44,6 @@ namespace CodeExperiment
                   z++;
                }
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
-               
-               //Console.WriteLine();
                //Console.WriteLine();
 
                // Разделение строки на подстроки и конвертация подстрок в double
