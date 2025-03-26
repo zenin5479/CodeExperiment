@@ -64,7 +64,6 @@ namespace CodeExperiment
          int totalBytes = (int)stream.Length;
          byte[] bytes = new byte[totalBytes];
          int bytesRead = 0;
-
          while (bytesRead < totalBytes)
          {
             int len = stream.Read(bytes, bytesRead, totalBytes);
