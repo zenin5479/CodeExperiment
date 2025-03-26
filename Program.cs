@@ -8,7 +8,7 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         //int m = 20;
+         int m = 20;
 
          //double[,] arrayForFileSize = new double[n, m];
          //double[,] number = new double[arrayForFileSize.GetLength(0), arrayForFileSize.GetLength(1)];
