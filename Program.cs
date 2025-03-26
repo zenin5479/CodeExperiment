@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections;
 using System.IO;
-using System.Linq;
 using System.Text;
 
 namespace CodeExperiment
@@ -78,6 +78,27 @@ namespace CodeExperiment
          //Console.WriteLine(text);
          string hgh = string.Join("\r\n", text);
          Console.Write(hgh);
+
+         // Creates and initializes a new ArrayList.
+         ArrayList myAl = new ArrayList
+         {
+            "Hello",
+            "World",
+            "!"
+         };
+
+         // Displays the properties and values of the ArrayList.
+         Console.WriteLine("myAL");
+         Console.WriteLine("    Count:    {0}", myAl.Count);
+         Console.WriteLine("    Capacity: {0}", myAl.Capacity);
+         Console.Write("    Values:");
+         foreach (string obj in myAl)
+         {
+            Console.Write("   {0}", obj);
+         }
+
+         Console.WriteLine();
+
 
          Console.ReadKey();
       }
