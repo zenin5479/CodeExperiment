@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -27,6 +26,7 @@ namespace CodeExperiment
             {
                // Классический вариант чтения файла построчно
                StreamReader readerone = new StreamReader(fpA);
+               int total = (int)fpA.Length;
                string[] arrayone = new string[n];
                int k = 0;
                while (!readerone.EndOfStream)
