@@ -37,6 +37,7 @@ namespace CodeExperiment
                }
                readerone.Close();
                Console.WriteLine();
+               // Количество строк
                Console.WriteLine(arrayone.Count);
                Console.WriteLine();
 
@@ -46,22 +47,15 @@ namespace CodeExperiment
                while (z < arrayone.Count)
                {
                   arraysplit = new List<string>(arrayone[z].Split(" "));
-                  Console.WriteLine();
+                  //Console.WriteLine();
                   z++;
                }
-               Console.WriteLine();
-               // 
+               //Console.WriteLine();
+               // Количество столбцов
                Console.WriteLine(arraysplit.Count);
-               Console.WriteLine();
+               //Console.WriteLine();
 
-               Console.WriteLine();
-
-
-
-
-
-
-
+               //Console.WriteLine();
 
                // Разделение строки на подстроки и конвертация подстрок в double
                //int z = 0;
