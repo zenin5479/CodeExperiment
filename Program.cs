@@ -21,7 +21,7 @@ namespace CodeExperiment
             {
                // Классический вариант чтения файла построчно
                StreamReader readerone = new StreamReader(fpA);
-               
+
                List<string> arrayone = new List<string>();
                while (!readerone.EndOfStream)
                {
@@ -32,7 +32,7 @@ namespace CodeExperiment
                }
                readerone.Close();
                Console.WriteLine();
-               
+
                Console.WriteLine("Количество строк {0}", arrayone.Count);
                //Разделение строки на подстроки
                int z = 0;
