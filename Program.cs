@@ -8,7 +8,6 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         //int n = 10;
          //int m = 20;
 
          //double[,] arrayForFileSize = new double[n, m];
