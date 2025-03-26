@@ -8,8 +8,6 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         int m = 20;
-
          //double[,] arrayForFileSize = new double[n, m];
          //double[,] number = new double[arrayForFileSize.GetLength(0), arrayForFileSize.GetLength(1)];
          string filePath = AppContext.BaseDirectory + "a.txt";
