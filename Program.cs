@@ -37,13 +37,18 @@ namespace CodeExperiment
                int g = 0;
                // Создаем List<string> для определения количество столбцов в файле
                List<string> arraysplit = new List<string>();
+               int[] checkinDimension = new int[arrayone.Count];
                while (g < arrayone.Count)
                {
                   arraysplit = new List<string>(arrayone[g].Split(" "));
                   //Console.WriteLine();
+                  checkinDimension[g] = arraysplit.Count;
+                  Console.WriteLine("Количество столбцов {0} в строке {1}", checkinDimension[g], g);
                   g++;
                }
+               Console.WriteLine();
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
+
                //Console.WriteLine();
 
                // Разделение строки на подстроки и конвертация подстрок в double
