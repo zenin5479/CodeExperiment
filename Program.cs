@@ -23,24 +23,26 @@ namespace CodeExperiment
                StreamReader readerone = new StreamReader(fpA);
 
                List<string> arrayone = new List<string>();
+               int sl = 0;
                while (!readerone.EndOfStream)
                {
                   string stroka = readerone.ReadLine();
                   arrayone.Add(stroka);
                   Console.WriteLine(stroka);
+                  sl++;
                }
                readerone.Close();
                Console.WriteLine();
 
                Console.WriteLine("Количество строк {0}", arrayone.Count);
                //Разделение строки на подстроки
-               int z = 0;
+               int gr = 0;
                List<string> arraysplit = new List<string>();
-               while (z < arrayone.Count)
+               while (gr < arrayone.Count)
                {
-                  arraysplit = new List<string>(arrayone[z].Split(" "));
+                  arraysplit = new List<string>(arrayone[gr].Split(" "));
                   //Console.WriteLine();
-                  z++;
+                  gr++;
                }
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
                //Console.WriteLine();
