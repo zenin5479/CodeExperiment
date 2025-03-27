@@ -47,6 +47,9 @@ namespace CodeExperiment
                   g++;
                }
                Console.WriteLine();
+               
+               bool value = Array.TrueForAll(checkinDimension, element => element.Equals(20));
+
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
 
                //Console.WriteLine();
