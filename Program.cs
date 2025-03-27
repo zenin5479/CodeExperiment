@@ -25,10 +25,9 @@ namespace CodeExperiment
                List<string> arrayone = new List<string>();
                while (!readerone.EndOfStream)
                {
-                  string stroka = readerone.ReadLine();
-                  arrayone.Add(stroka);
-                  Console.WriteLine(stroka);
-
+                  //string stroka = ;
+                  arrayone.Add(readerone.ReadLine());
+                  Console.WriteLine(arrayone);
                }
                readerone.Close();
                Console.WriteLine();
