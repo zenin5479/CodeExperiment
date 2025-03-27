@@ -26,7 +26,7 @@ namespace CodeExperiment
                int sl = 0;
                while (!readerone.EndOfStream)
                {
-                  string stroka = readerone.ReadLine();
+                  string stroka = Convert.ToString(readerone.ReadLine()[sl]);
                   arrayone.Add(stroka);
                   Console.WriteLine(stroka);
                   sl++;
@@ -36,13 +36,13 @@ namespace CodeExperiment
 
                Console.WriteLine("Количество строк {0}", arrayone.Count);
                //Разделение строки на подстроки
-               int gr = 0;
+               int g = 0;
                List<string> arraysplit = new List<string>();
-               while (gr < arrayone.Count)
+               while (g < arrayone.Count)
                {
-                  arraysplit = new List<string>(arrayone[gr].Split(" "));
+                  arraysplit = new List<string>(arrayone[g].Split(" "));
                   //Console.WriteLine();
-                  gr++;
+                  g++;
                }
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
                //Console.WriteLine();
