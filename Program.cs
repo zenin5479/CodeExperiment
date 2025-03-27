@@ -21,15 +21,13 @@ namespace CodeExperiment
             {
                // Классический вариант чтения файла построчно
                StreamReader readerone = new StreamReader(fpA);
-
+               // Создаем List<string> для определения количество строк в файле
                List<string> arrayone = new List<string>();
-               int sl = 0;
                while (!readerone.EndOfStream)
                {
-                  string stroka = Convert.ToString(readerone.ReadLine()[sl]);
+                  string stroka = readerone.ReadLine();
                   arrayone.Add(stroka);
                   Console.WriteLine(stroka);
-                  sl++;
                }
                readerone.Close();
                Console.WriteLine();
@@ -37,6 +35,7 @@ namespace CodeExperiment
                Console.WriteLine("Количество строк {0}", arrayone.Count);
                //Разделение строки на подстроки
                int g = 0;
+               // Создаем List<string> для определения количество столбцов в файле
                List<string> arraysplit = new List<string>();
                while (g < arrayone.Count)
                {
