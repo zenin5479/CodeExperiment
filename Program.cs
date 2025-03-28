@@ -82,8 +82,26 @@ namespace CodeExperiment
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
          }
 
+
+         List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+         // Использование Predicate<T> для поиска четных чисел
+         Predicate<int> isEvenPredicate = IsEven;
+         List<int> evenNumbers = numbers.FindAll(isEvenPredicate);
+
+         Console.WriteLine("Четные числа:");
+         foreach (int num in evenNumbers)
+         {
+            Console.WriteLine(num);
+         }
+
          Console.WriteLine();
          Console.ReadKey();
+      }
+
+      // Метод, соответствующий сигнатуре делегата Predicate<T>
+      public static bool IsEven(int value)
+      {
+         return value % 2 == 0;
       }
    }
 }
