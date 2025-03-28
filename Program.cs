@@ -50,8 +50,10 @@ namespace CodeExperiment
                Console.WriteLine();
                // Определяет, все ли элементы массива удовлетворяют условиям указанного предиката
                // public static bool TrueForAll<T> (T[] array, Predicate<T> match);
-               bool value = Array.TrueForAll(checkinDimension, element => element.Equals(20));
-               bool trueForAll = Array.TrueForAll(checkinDimension, i => i.Equals(arraysplit.Count));
+               bool value = Array.TrueForAll(checkinDimension, s => s.Equals(20));
+               Console.WriteLine(value);
+               bool trueForAll = Array.TrueForAll(checkinDimension, t => t.Equals(arraysplit.Count));
+               Console.WriteLine(trueForAll);
 
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
 
