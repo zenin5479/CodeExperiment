@@ -93,7 +93,7 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         // Использование Predicate<T> делегат принимает только один параметр
+         // Использование Predicate<T> для сравнения длины строки
          Predicate<string> val = Myfun;
          Console.WriteLine(val("GeeksforGeeks"));
 
@@ -107,7 +107,7 @@ namespace CodeExperiment
          return value % 2 == 0;
       }
 
-      // Метод, соответствующий сигнатуре делегата Predicate<T> для српавнения длинный строки
+      // Метод, соответствующий сигнатуре делегата Predicate<T> для сравнения длины строки
       public static bool Myfun(string mystring)
       {
          if (mystring.Length < 20)
