@@ -110,7 +110,7 @@ namespace CodeExperiment
       // Метод
       public static bool Myfun(string mystring)
       {
-         if (mystring.Length < 7)
+         if (mystring.Length < 20)
          {
             return true;
          }
