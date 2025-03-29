@@ -91,11 +91,11 @@ namespace CodeExperiment
          {
             Console.Write("{0} ", num);
          }
+         Console.WriteLine();
 
          // Использование Predicate<T> делегат принимает только один параметр
          Predicate<string> val = Myfun;
          Console.WriteLine(val("GeeksforGeeks"));
-
 
          Console.WriteLine();
          Console.ReadKey();
