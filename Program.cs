@@ -101,7 +101,7 @@ namespace CodeExperiment
          Console.ReadKey();
       }
 
-      // Метод, соответствующий сигнатуре делегата Predicate<T>
+      // Метод, соответствующий сигнатуре делегата Predicate<T> для поиска четных чисел
       public static bool IsEven(int value)
       {
          return value % 2 == 0;
