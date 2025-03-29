@@ -92,10 +92,8 @@ namespace CodeExperiment
             Console.Write("{0} ", num);
          }
 
-         // Using predicate delegate
-         // here, this delegate takes
-         // only one parameter
-         Predicate<string> val = myfun;
+         // Использование Predicate<T> делегат принимает только один параметр
+         Predicate<string> val = Myfun;
          Console.WriteLine(val("GeeksforGeeks"));
 
 
@@ -109,17 +107,15 @@ namespace CodeExperiment
          return value % 2 == 0;
       }
 
-      // Method
-      public static bool myfun(string mystring)
+      // Метод
+      public static bool Myfun(string mystring)
       {
          if (mystring.Length < 7)
          {
             return true;
          }
-         else
-         {
-            return false;
-         }
+
+         return false;
       }
    }
 }
