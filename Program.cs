@@ -107,7 +107,7 @@ namespace CodeExperiment
          return value % 2 == 0;
       }
 
-      // Метод
+      // Метод, соответствующий сигнатуре делегата Predicate<T> для српавнения длинный строки
       public static bool Myfun(string mystring)
       {
          if (mystring.Length < 20)
