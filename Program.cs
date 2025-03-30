@@ -49,7 +49,7 @@ namespace CodeExperiment
                Console.WriteLine();
                // Определяет, все ли элементы массива удовлетворяют условиям указанного предиката
                // public static bool TrueForAll<T> (T[] array, Predicate<T> match);
-               bool value = Array.TrueForAll(checkinDimension, s => s.Equals(20));
+               bool value = Array.TrueForAll(checkinDimension, StringLengthComparisons);
                Console.WriteLine(value);
                bool trueForAll = Array.TrueForAll(checkinDimension, t => t.Equals(arraysplit.Count));
                Console.WriteLine(trueForAll);
@@ -104,6 +104,12 @@ namespace CodeExperiment
       public static bool IsEven(int value)
       {
          return value % 2 == 0;
+      }
+
+      // Метод, соответствующий сигнатуре делегата Predicate<T> для сравнения длины строки
+      private static bool StringLengthComparisons(int s)
+      {
+         return s.Equals(20);
       }
 
       // Метод, соответствующий сигнатуре делегата Predicate<T> для сравнения длины строки
