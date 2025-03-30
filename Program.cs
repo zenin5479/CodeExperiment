@@ -85,7 +85,6 @@ namespace CodeExperiment
          // Использование Predicate<T> для поиска четных чисел
          Predicate<int> isEvenPredicate = IsEven;
          List<int> evenNumbers = numbers.FindAll(isEvenPredicate);
-
          Console.Write("Четные числа: ");
          foreach (int num in evenNumbers)
          {
