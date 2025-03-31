@@ -96,6 +96,9 @@ namespace CodeExperiment
          Predicate<string> val = Myfun;
          Console.WriteLine(val("GeeksforGeeks"));
 
+
+
+
          Console.WriteLine();
          Console.ReadKey();
       }
