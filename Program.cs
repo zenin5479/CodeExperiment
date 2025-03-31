@@ -92,13 +92,6 @@ namespace CodeExperiment
          }
          Console.WriteLine();
 
-         // Использование Predicate<T> для сравнения длины строки
-         Predicate<string> val = Myfun;
-         Console.WriteLine(val("GeeksforGeeks"));
-
-
-
-
          Console.WriteLine();
          Console.ReadKey();
       }
