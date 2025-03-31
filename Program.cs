@@ -107,16 +107,5 @@ namespace CodeExperiment
       {
          return s.Equals(20);
       }
-
-      // Метод, соответствующий сигнатуре делегата Predicate<T> для сравнения длины строки
-      public static bool Myfun(string mystring)
-      {
-         if (mystring.Length < 20)
-         {
-            return true;
-         }
-
-         return false;
-      }
    }
 }
