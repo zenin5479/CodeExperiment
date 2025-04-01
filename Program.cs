@@ -53,10 +53,6 @@ namespace CodeExperiment
                int i = 0;
                while (i < checkinDimension.Length)
                {
-                  i++;
-               }
-               for (; )
-               {
                   if (checkinDimension[i] < min)
                   {
                      min = checkinDimension[i];
@@ -66,6 +62,9 @@ namespace CodeExperiment
                   {
                      max = checkinDimension[i];
                   }
+
+
+                  i++;
                }
 
                Console.WriteLine();
