@@ -47,12 +47,7 @@ namespace CodeExperiment
                   g++;
                }
                Console.WriteLine();
-               // Определяет, все ли элементы массива удовлетворяют условиям указанного предиката
-               // public static bool TrueForAll<T> (T[] array, Predicate<T> match);
-               bool value = Array.TrueForAll(checkinDimension, StringLengthComparisons);
-               Console.WriteLine(value);
-               bool trueForAll = Array.TrueForAll(checkinDimension, t => t.Equals(arraysplit.Count));
-               Console.WriteLine(trueForAll);
+              
 
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
 
