@@ -48,7 +48,31 @@ namespace CodeExperiment
                }
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
 
+               int min = checkinDimension[0];
+               int max = checkinDimension[0];
+               int i = 0;
+               while (i < checkinDimension.Length)
+               {
+                  i++;
+               }
+               for (; )
+               {
+                  if (checkinDimension[i] < min)
+                  {
+                     min = checkinDimension[i];
+                  }
 
+                  if (checkinDimension[i] > max)
+                  {
+                     max = checkinDimension[i];
+                  }
+               }
+
+               Console.WriteLine();
+               Console.ForegroundColor = ConsoleColor.Red;
+               Console.WriteLine(min);
+               Console.ForegroundColor = ConsoleColor.Green;
+               Console.WriteLine(max);
 
                // Разделение строки на подстроки и конвертация подстрок в double
                //int z = 0;
