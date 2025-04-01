@@ -47,7 +47,8 @@ namespace CodeExperiment
                   g++;
                }
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
-
+               
+               // Проверка количества столбцов
                int min = checkinDimension[0];
                int max = checkinDimension[0];
                int f = 0;
