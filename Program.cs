@@ -96,11 +96,5 @@ namespace CodeExperiment
       {
          return value % 2 == 0;
       }
-
-      // Метод, соответствующий сигнатуре делегата Predicate<T> для сравнения длины строки
-      private static bool StringLengthComparisons(int s)
-      {
-         return s.Equals(20);
-      }
    }
 }
