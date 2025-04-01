@@ -50,24 +50,22 @@ namespace CodeExperiment
 
                int min = checkinDimension[0];
                int max = checkinDimension[0];
-               int i = 0;
-               while (i < checkinDimension.Length)
+               int f = 0;
+               while (f < checkinDimension.Length)
                {
-                  if (checkinDimension[i] < min)
+                  if (checkinDimension[f] < min)
                   {
-                     min = checkinDimension[i];
+                     min = checkinDimension[f];
                   }
 
-                  if (checkinDimension[i] > max)
+                  if (checkinDimension[f] > max)
                   {
-                     max = checkinDimension[i];
+                     max = checkinDimension[f];
                   }
 
-
-                  i++;
+                  f++;
                }
 
-               Console.WriteLine();
                Console.ForegroundColor = ConsoleColor.Red;
                Console.WriteLine(min);
                Console.ForegroundColor = ConsoleColor.Green;
