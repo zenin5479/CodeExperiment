@@ -46,12 +46,7 @@ namespace CodeExperiment
                   Console.WriteLine("Количество столбцов {0} в строке {1}", checkinDimension[g], g);
                   g++;
                }
-               Console.WriteLine();
-              
-
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
-
-               //Console.WriteLine();
 
                // Разделение строки на подстроки и конвертация подстрок в double
                //int z = 0;
@@ -75,17 +70,6 @@ namespace CodeExperiment
          {
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
          }
-
-         List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-         // Использование Predicate<T> для поиска четных чисел
-         Predicate<int> isEvenPredicate = IsEven;
-         List<int> evenNumbers = numbers.FindAll(isEvenPredicate);
-         Console.Write("Четные числа: ");
-         foreach (int num in evenNumbers)
-         {
-            Console.Write("{0} ", num);
-         }
-         Console.WriteLine();
 
          Console.WriteLine();
          Console.ReadKey();
