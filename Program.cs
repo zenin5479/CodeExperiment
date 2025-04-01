@@ -74,7 +74,5 @@ namespace CodeExperiment
          Console.WriteLine();
          Console.ReadKey();
       }
-
-      // Метод, соответствующий сигнатуре делегата Predicate<T> для поиска четных чисел
    }
 }
