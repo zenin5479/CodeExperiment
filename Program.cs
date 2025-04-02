@@ -40,8 +40,7 @@ namespace CodeExperiment
                int g = 0;
                while (g < listOne.Count)
                {
-                  // Предварительное разделение строк на подстроки для определения количества столбцов в файле
-                  // Создаем List<string> для определения количества столбцов в строке
+                  // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
                   List<string> arraysplit = new List<string>(listOne[g].Split(" "));
                   arrayDimension[g] = arraysplit.Count;
                   Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
