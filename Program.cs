@@ -35,7 +35,6 @@ namespace CodeExperiment
                Console.WriteLine("Количество строк {0}", arrayone.Count);
                // Предварительное разделение строк на подстроки для определения количества столбцов в файле
                int g = 0;
-
                int[] arrayDimension = new int[arrayone.Count];
                while (g < arrayone.Count)
                { 
