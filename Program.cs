@@ -37,31 +37,31 @@ namespace CodeExperiment
                int g = 0;
                // Создаем List<string> для определения количества столбцов в строке
                List<string> arraysplit = new List<string>();
-               int[] checkinDimension = new int[arrayone.Count];
+               int[] arrayDimension = new int[arrayone.Count];
                while (g < arrayone.Count)
                {
                   arraysplit = new List<string>(arrayone[g].Split(" "));
                   //Console.WriteLine();
-                  checkinDimension[g] = arraysplit.Count;
-                  Console.WriteLine("Количество столбцов {0} в строке {1}", checkinDimension[g], g);
+                  arrayDimension[g] = arraysplit.Count;
+                  Console.WriteLine("Количество столбцов {0} в строке {1}", arrayDimension[g], g);
                   g++;
                }
                Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
                
                // Проверка количества столбцов
-               int min = checkinDimension[0];
-               int max = checkinDimension[0];
+               int min = arrayDimension[0];
+               int max = arrayDimension[0];
                int f = 0;
-               while (f < checkinDimension.Length)
+               while (f < arrayDimension.Length)
                {
-                  if (checkinDimension[f] < min)
+                  if (arrayDimension[f] < min)
                   {
-                     min = checkinDimension[f];
+                     min = arrayDimension[f];
                   }
 
-                  if (checkinDimension[f] > max)
+                  if (arrayDimension[f] > max)
                   {
-                     max = checkinDimension[f];
+                     max = arrayDimension[f];
                   }
 
                   f++;
