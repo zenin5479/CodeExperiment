@@ -29,15 +29,18 @@ namespace CodeExperiment
                   listOne.Add(stroka);
                   Console.WriteLine(stroka);
                }
+
                readerone.Close();
                Console.WriteLine();
-
                Console.WriteLine("Количество строк {0}", listOne.Count);
-               // Предварительное разделение строк на подстроки для определения количества столбцов в файле
-               int g = 0;
+
+               // Одномерный массив для определения количества столбцов в строке
+               // и определения вида будущего двухмерного массива (прямоугольный/зубчатый)
                int[] arrayDimension = new int[listOne.Count];
+               int g = 0;
                while (g < listOne.Count)
-               { 
+               {
+                  // Предварительное разделение строк на подстроки для определения количества столбцов в файле
                   // Создаем List<string> для определения количества столбцов в строке
                   List<string> arraysplit = new List<string>(listOne[g].Split(" "));
                   arrayDimension[g] = arraysplit.Count;
