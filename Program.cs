@@ -72,6 +72,17 @@ namespace CodeExperiment
                Console.ForegroundColor = ConsoleColor.Green;
                Console.WriteLine(max);
 
+               if (min == max)
+               {
+                  Console.ForegroundColor = ConsoleColor.Green;
+                  Console.WriteLine("Массив имеет одинаковое количество столбцов - прямоугольный");
+               }
+               else
+               {
+                  Console.ForegroundColor = ConsoleColor.Red;
+                  Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
+               }
+
                // Разделение строки на подстроки и конвертация подстрок в double
                //int z = 0;
                //while (z < arrayone.GetLength(0))
