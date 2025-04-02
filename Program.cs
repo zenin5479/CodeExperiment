@@ -68,9 +68,7 @@ namespace CodeExperiment
                }
                
                Console.WriteLine("Минимальное количество столбцов: {0}", min);
-               Console.WriteLine(max);
                Console.WriteLine("Максимальное количество столбцов: {0}", max);
-
                if (min == max)
                {
                   Console.ForegroundColor = ConsoleColor.Green;
