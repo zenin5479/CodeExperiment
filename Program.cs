@@ -31,7 +31,7 @@ namespace CodeExperiment
                   Console.WriteLine(stroka);
                }
 
-               readerOne.Close();
+               //readerOne.Close();
                Console.WriteLine();
                Console.WriteLine("Количество строк {0}", listOne.Count);
 
@@ -41,8 +41,8 @@ namespace CodeExperiment
                while (g < listOne.Count)
                {
                   // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
-                  List<string> arraySplit = new List<string>(listOne[g].Split(" "));
-                  arrayDimension[g] = arraySplit.Count;
+                  List<string> listSplit = new List<string>(listOne[g].Split(" "));
+                  arrayDimension[g] = listSplit.Count;
                   //Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
                   g++;
                }
@@ -88,17 +88,15 @@ namespace CodeExperiment
                while (z < arrayTwo.GetLength(0))
                {
                   string stroka = readerTwo.ReadLine();
-                  if (stroka != null)
+                  string[] arraysplit = stroka.Split(" ");
+                  int x = 0;
+                  while (x < arraysplit.GetLength(1))
                   {
-                     string[] arraysplit = stroka.Split(" ");
-                     int x = 0;
-                     while (x < arraysplit.GetLength(0))
-                     {
-                        arrayTwo[z, x] = Convert.ToDouble(arraysplit);
-                        Console.Write(arrayTwo[z, x] + " ");
-                        x++;
-                     }
+                     arrayTwo[z, x] = Convert.ToDouble(arraysplit);
+                     Console.Write(arrayTwo[z, x] + " ");
+                     x++;
                   }
+
 
                   Console.WriteLine();
                   z++;
