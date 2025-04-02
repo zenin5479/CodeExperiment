@@ -43,11 +43,10 @@ namespace CodeExperiment
                   arraysplit = new List<string>(arrayone[g].Split(" "));
                   //Console.WriteLine();
                   arrayDimension[g] = arraysplit.Count;
-                  Console.WriteLine("Количество столбцов {0} в строке {1}", arrayDimension[g], g);
+                  Console.WriteLine("В строке {0}: количество столбцов {1}", g, arrayDimension[g]);
                   g++;
                }
-               Console.WriteLine("Количество столбцов {0}", arraysplit.Count);
-               
+
                // Проверка количества столбцов
                int min = arrayDimension[0];
                int max = arrayDimension[0];
@@ -66,7 +65,7 @@ namespace CodeExperiment
 
                   f++;
                }
-               
+
                Console.WriteLine("Минимальное количество столбцов: {0}", min);
                Console.WriteLine("Максимальное количество столбцов: {0}", max);
                if (min == max)
