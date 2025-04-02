@@ -35,15 +35,14 @@ namespace CodeExperiment
                Console.WriteLine("Количество строк {0}", arrayone.Count);
                // Предварительное разделение строк на подстроки для определения количества столбцов в файле
                int g = 0;
-               // Создаем List<string> для определения количества столбцов в строке
-               List<string> arraysplit = new List<string>();
+
                int[] arrayDimension = new int[arrayone.Count];
                while (g < arrayone.Count)
-               {
-                  arraysplit = new List<string>(arrayone[g].Split(" "));
-                  //Console.WriteLine();
+               { 
+                  // Создаем List<string> для определения количества столбцов в строке
+                  List<string> arraysplit = new List<string>(arrayone[g].Split(" "));
                   arrayDimension[g] = arraysplit.Count;
-                  Console.WriteLine("В строке {0}: количество столбцов {1}", g, arrayDimension[g]);
+                  Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
                   g++;
                }
 
