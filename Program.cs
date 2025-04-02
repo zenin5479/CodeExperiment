@@ -37,7 +37,7 @@ namespace CodeExperiment
                int g = 0;
                int[] arrayDimension = new int[arrayone.Count];
                while (g < arrayone.Count)
-               { 
+               {
                   // Создаем List<string> для определения количества столбцов в строке
                   List<string> arraysplit = new List<string>(arrayone[g].Split(" "));
                   arrayDimension[g] = arraysplit.Count;
