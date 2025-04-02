@@ -81,23 +81,29 @@ namespace CodeExperiment
 
                // Чтение файла построчно
                StreamReader readerTwo = new StreamReader(fS);
+               double[,] arrayTwo = new double[listOne.Count, max];
 
                // Разделение строки на подстроки и конвертация подстрок в double
-               //int z = 0;
-               //while (z < arrayone.GetLength(0))
-               //{
-               //   string[] arraysplit = arrayone[z].Split(" ");
-               //   int x = 0;
-               //   while (x < arraysplit.GetLength(0))
-               //   {
-               //      arrayForFileSize[z, x] = Convert.ToDouble(arraysplit[x]);
-               //      Console.Write(arrayForFileSize[z, x] + " ");
-               //      x++;
-               //   }
-               //   Console.WriteLine();
-               //   z++;
-               //}
-               //Console.WriteLine();
+               int z = 0;
+               while (z < arrayTwo.GetLength(0))
+               {
+                  string stroka = readerTwo.ReadLine();
+                  if (stroka != null)
+                  {
+                     string[] arraysplit = stroka.Split(" ");
+                     int x = 0;
+                     while (x < arraysplit.GetLength(0))
+                     {
+                        arrayTwo[z, x] = Convert.ToDouble(arraysplit);
+                        Console.Write(arrayTwo[z, x] + " ");
+                        x++;
+                     }
+                  }
+
+                  Console.WriteLine();
+                  z++;
+               }
+               Console.WriteLine();
 
                fS.Dispose();
             }
