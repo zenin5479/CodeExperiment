@@ -22,24 +22,24 @@ namespace CodeExperiment
                // Классический вариант чтения файла построчно
                StreamReader readerone = new StreamReader(fpA);
                // Создаем List<string> для определения количество строк в файле
-               List<string> arrayone = new List<string>();
+               List<string> listOne = new List<string>();
                while (!readerone.EndOfStream)
                {
                   string stroka = readerone.ReadLine();
-                  arrayone.Add(stroka);
+                  listOne.Add(stroka);
                   Console.WriteLine(stroka);
                }
                readerone.Close();
                Console.WriteLine();
 
-               Console.WriteLine("Количество строк {0}", arrayone.Count);
+               Console.WriteLine("Количество строк {0}", listOne.Count);
                // Предварительное разделение строк на подстроки для определения количества столбцов в файле
                int g = 0;
-               int[] arrayDimension = new int[arrayone.Count];
-               while (g < arrayone.Count)
+               int[] arrayDimension = new int[listOne.Count];
+               while (g < listOne.Count)
                { 
                   // Создаем List<string> для определения количества столбцов в строке
-                  List<string> arraysplit = new List<string>(arrayone[g].Split(" "));
+                  List<string> arraysplit = new List<string>(listOne[g].Split(" "));
                   arrayDimension[g] = arraysplit.Count;
                   Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
                   g++;
