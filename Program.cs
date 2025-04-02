@@ -8,7 +8,8 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         string filePath = AppContext.BaseDirectory + "a.txt";
+         //string filePath = AppContext.BaseDirectory + "a.txt";
+         string filePath = AppContext.BaseDirectory + "b.txt";
          try
          {
             FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
@@ -19,7 +20,7 @@ namespace CodeExperiment
             // Cвязываем StreamReader c файловыйм потоком
             if (fpA != null)
             {
-               // Классический вариант чтения файла построчно
+               // Чтение файла построчно
                StreamReader readerone = new StreamReader(fpA);
                // Создаем List<string> для определения количество строк в файле
                List<string> listOne = new List<string>();
@@ -42,7 +43,7 @@ namespace CodeExperiment
                   // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
                   List<string> arraysplit = new List<string>(listOne[g].Split(" "));
                   arrayDimension[g] = arraysplit.Count;
-                  Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
+                  //Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
                   g++;
                }
 
