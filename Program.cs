@@ -66,10 +66,8 @@ namespace CodeExperiment
 
                   f++;
                }
-
-               Console.ForegroundColor = ConsoleColor.Red;
+               
                Console.WriteLine(min);
-               Console.ForegroundColor = ConsoleColor.Green;
                Console.WriteLine(max);
 
                if (min == max)
