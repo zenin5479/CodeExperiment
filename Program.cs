@@ -35,7 +35,6 @@ namespace CodeExperiment
                Console.WriteLine("Количество строк {0}", listOne.Count);
 
                // Одномерный массив для определения количества столбцов в строке
-               // и определения вида будущего двухмерного массива (прямоугольный/зубчатый)
                int[] arrayDimension = new int[listOne.Count];
                int g = 0;
                while (g < listOne.Count)
@@ -47,7 +46,7 @@ namespace CodeExperiment
                   g++;
                }
 
-               // Проверка количества столбцов
+               // Проверка количества столбцов для определения вида будущего двухмерного массива (прямоугольный/зубчатый)
                int min = arrayDimension[0];
                int max = arrayDimension[0];
                int f = 0;
