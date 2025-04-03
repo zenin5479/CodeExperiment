@@ -82,13 +82,12 @@ namespace CodeExperiment
 
                string[] arrayOne = new string[listOne.Count];
                double[,] arrayTwo = new double[listOne.Count, max];
-               int q = 0;
-               while (q < listOne.Count)
+               int h = 0;
+               while (h < listOne.Count)
                {
-                  arrayOne[g] = listOne[q];
-                  Console.WriteLine(arrayOne[g]);
-                  //Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
-                  q++;
+                  arrayOne[h] = listOne[h];
+                  Console.WriteLine(arrayOne[h]);
+                  h++;
                }
 
                // Разделение строки на подстроки и конвертация подстрок в double
