@@ -38,13 +38,12 @@ namespace CodeExperiment
                // Одномерный массив для определения количества столбцов в строке
                int[] arrayDimension = new int[listOne.Count];
                int g = 0;
-               int[] arrayDimension = new int[arrayone.Count];
-               while (g < arrayone.Count)
-               { 
-                  // Создаем List<string> для определения количества столбцов в строке
-                  List<string> arraysplit = new List<string>(arrayone[g].Split(" "));
-                  arrayDimension[g] = arraysplit.Count;
-                  Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
+               while (g < listOne.Count)
+               {
+                  // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
+                  List<string> listSplit = new List<string>(listOne[g].Split(" "));
+                  arrayDimension[g] = listSplit.Count;
+                  //Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
                   g++;
                }
 
