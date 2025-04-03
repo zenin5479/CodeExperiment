@@ -82,12 +82,12 @@ namespace CodeExperiment
 
                Console.ResetColor();
                string[] arrayOne = new string[listOne.Count];
-               double[,] arrayTwo = new double[arrayOne.GetLength(0), max];
+               string[,] arrayTwo = new string[arrayOne.GetLength(0), max];
                int h = 0;
                while (h < listOne.Count)
                {
                   arrayOne[h] = listOne[h];
-                  Console.WriteLine(arrayOne[h]);
+                  //Console.WriteLine(arrayOne[h]);
                   h++;
                }
 
@@ -101,7 +101,7 @@ namespace CodeExperiment
                   int x = 0;
                   while (x < arrayTwo.GetLength(1))
                   {
-                     arrayTwo[z, x] = Convert.ToDouble(arraysplit);
+                     arrayTwo[z, x] = arraysplit[z].ToString();
                      Console.Write(arrayTwo[z, x] + " ");
                      x++;
                   }
