@@ -95,11 +95,11 @@ namespace CodeExperiment
                int z = 0;
                while (z < arrayTwo.GetLength(0))
                {
-                  string[] arraysplit = arrayOne[z].Split(" ");
+                  string[] arraySplit = arrayOne[z].Split(" ");
                   int x = 0;
-                  while (x < arraysplit.GetLength(0))
+                  while (x < arraySplit.GetLength(0))
                   {
-                     arrayTwo[z, x] = Convert.ToDouble(arraysplit[x]);
+                     arrayTwo[z, x] = Convert.ToDouble(arraySplit[x]);
                      Console.Write(arrayTwo[z, x] + " ");
                      x++;
                   }
@@ -125,7 +125,6 @@ namespace CodeExperiment
                //   z++;
                //}
                //Console.WriteLine();
-
 
             }
          }
