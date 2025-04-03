@@ -78,32 +78,48 @@ namespace CodeExperiment
                   Console.ForegroundColor = ConsoleColor.Red;
                   Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
                }
+                              fS.Dispose();
 
-               // Чтение файла построчно
-               StreamReader readerTwo = new StreamReader(fS);
-               double[,] arrayTwo = new double[listOne.Count, max];
 
-               // Разделение строки на подстроки и конвертация подстрок в double
-               int z = 0;
-               while (z < arrayTwo.GetLength(0))
+
+
+               FileStream fS2 = File.Open(filePath, FileMode.Open, FileAccess.Read);
+               if (fS2 == null)
                {
-                  string stroka = readerTwo.ReadLine();
-                  string[] arraysplit = stroka.Split(" ");
-                  int x = 0;
-                  while (x < arraysplit.GetLength(1))
-                  {
-                     arrayTwo[z, x] = Convert.ToDouble(arraysplit);
-                     Console.Write(arrayTwo[z, x] + " ");
-                     x++;
-                  }
-
-
-                  Console.WriteLine();
-                  z++;
+                  Console.WriteLine("Ошибка при открытии файла для чтения");
                }
-               Console.WriteLine();
+               // Чтение файла построчно
+               if (fS2 != null)
+               {
+                  StreamReader readerTwo = new StreamReader(fS2);
+                  double[,] arrayTwo = new double[listOne.Count, max];
 
-               fS.Dispose();
+                  // Разделение строки на подстроки и конвертация подстрок в double
+                  int z = 0;
+
+                  string[] arraysplit = new string[arrayTwo.GetLength(1)];
+                  while (z < arrayTwo.GetLength(0))
+                  {
+                     string stroka = readerTwo.ReadLine();
+                     if (stroka != null)
+                     {
+                        arraysplit = stroka.Split(" ");
+                        int x = 0;
+                        while (x < arraysplit.GetLength(1))
+                        {
+                           arrayTwo[z, x] = Convert.ToDouble(arraysplit);
+                           Console.Write(arrayTwo[z, x] + " ");
+                           x++;
+                        }
+                     }
+
+
+                     Console.WriteLine();
+                     z++;
+                  }
+               }
+
+               Console.WriteLine();
             }
          }
          catch (Exception e)
