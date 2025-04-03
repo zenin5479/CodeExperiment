@@ -9,35 +9,38 @@ namespace CodeExperiment
       static void Main()
       {
          string filePath = AppContext.BaseDirectory + "a.txt";
+         //string filePath = AppContext.BaseDirectory + "b.txt";
          try
          {
-            FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
-            if (fpA == null)
+            FileStream fS = File.Open(filePath, FileMode.Open, FileAccess.Read);
+            if (fS == null)
             {
                Console.WriteLine("Ошибка при открытии файла для чтения");
             }
             // Cвязываем StreamReader c файловыйм потоком
-            if (fpA != null)
+            if (fS != null)
             {
-               // Классический вариант чтения файла построчно
-               StreamReader readerone = new StreamReader(fpA);
+               // Чтение файла построчно
+               StreamReader readerOne = new StreamReader(fS);
                // Создаем List<string> для определения количество строк в файле
-               List<string> arrayone = new List<string>();
-               while (!readerone.EndOfStream)
+               List<string> listOne = new List<string>();
+               while (!readerOne.EndOfStream)
                {
-                  string stroka = readerone.ReadLine();
-                  arrayone.Add(stroka);
+                  string stroka = readerOne.ReadLine();
+                  listOne.Add(stroka);
                   Console.WriteLine(stroka);
                }
-               readerone.Close();
-               Console.WriteLine();
 
-               Console.WriteLine("Количество строк {0}", arrayone.Count);
-               // Предварительное разделение строк на подстроки для определения количества столбцов в файле
+               //readerOne.Close();
+               Console.WriteLine();
+               Console.WriteLine("Количество строк {0}", listOne.Count);
+
+               // Одномерный массив для определения количества столбцов в строке
+               int[] arrayDimension = new int[listOne.Count];
                int g = 0;
                int[] arrayDimension = new int[arrayone.Count];
                while (g < arrayone.Count)
-               {
+               { 
                   // Создаем List<string> для определения количества столбцов в строке
                   List<string> arraysplit = new List<string>(arrayone[g].Split(" "));
                   arrayDimension[g] = arraysplit.Count;
@@ -45,7 +48,7 @@ namespace CodeExperiment
                   g++;
                }
 
-               // Проверка количества столбцов
+               // Проверка количества столбцов для определения вида будущего двухмерного массива (прямоугольный/зубчатый)
                int min = arrayDimension[0];
                int max = arrayDimension[0];
                int f = 0;
@@ -77,22 +80,31 @@ namespace CodeExperiment
                   Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
                }
 
+               // Чтение файла построчно
+               StreamReader readerTwo = new StreamReader(fS);
+               double[,] arrayTwo = new double[listOne.Count, max];
+
                // Разделение строки на подстроки и конвертация подстрок в double
-               //int z = 0;
-               //while (z < arrayone.GetLength(0))
-               //{
-               //   string[] arraysplit = arrayone[z].Split(" ");
-               //   int x = 0;
-               //   while (x < arraysplit.GetLength(0))
-               //   {
-               //      arrayForFileSize[z, x] = Convert.ToDouble(arraysplit[x]);
-               //      Console.Write(arrayForFileSize[z, x] + " ");
-               //      x++;
-               //   }
-               //   Console.WriteLine();
-               //   z++;
-               //}
-               //Console.WriteLine();
+               int z = 0;
+               while (z < arrayTwo.GetLength(0))
+               {
+                  string stroka = readerTwo.ReadLine();
+                  string[] arraysplit = stroka.Split(" ");
+                  int x = 0;
+                  while (x < arraysplit.GetLength(1))
+                  {
+                     arrayTwo[z, x] = Convert.ToDouble(arraysplit);
+                     Console.Write(arrayTwo[z, x] + " ");
+                     x++;
+                  }
+
+
+                  Console.WriteLine();
+                  z++;
+               }
+               Console.WriteLine();
+
+               fS.Dispose();
             }
          }
          catch (Exception e)
