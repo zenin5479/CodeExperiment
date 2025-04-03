@@ -82,7 +82,7 @@ namespace CodeExperiment
 
                Console.ResetColor();
                string[] arrayOne = new string[listOne.Count];
-               double[,] arrayTwo = new double[listOne.Count, max];
+               double[,] arrayTwo = new double[arrayOne.GetLength(0), max];
                int h = 0;
                while (h < listOne.Count)
                {
@@ -92,26 +92,24 @@ namespace CodeExperiment
                }
 
                // Разделение строки на подстроки и конвертация подстрок в double
-               //int z = 0;
-               //string[] arraysplit = new string[arrayTwo.GetLength(1)];
-               //while (z < arrayTwo.GetLength(0))
-               //{
-               //   string stroka = readerTwo.ReadLine();
-               //   if (stroka != null)
-               //   {
-               //      arraysplit = stroka.Split(" ");
-               //      int x = 0;
-               //      while (x < arraysplit.GetLength(1))
-               //      {
-               //         arrayTwo[z, x] = Convert.ToDouble(arraysplit);
-               //         Console.Write(arrayTwo[z, x] + " ");
-               //         x++;
-               //      }
-               //   }
-               //   Console.WriteLine();
-               //   z++;
-               //}
-               //Console.WriteLine();
+               int z = 0;
+
+               string arraysplit = arrayOne[z];
+               while (z < arrayTwo.GetLength(0))
+               {
+                  arraysplit.Split(" ");
+                  int x = 0;
+                  while (x < arrayTwo.GetLength(1))
+                  {
+                     arrayTwo[z, x] = Convert.ToDouble(arraysplit);
+                     Console.Write(arrayTwo[z, x] + " ");
+                     x++;
+                  }
+
+                  Console.WriteLine();
+                  z++;
+               }
+               Console.WriteLine();
             }
          }
          catch (Exception e)
