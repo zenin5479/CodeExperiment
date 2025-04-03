@@ -80,6 +80,7 @@ namespace CodeExperiment
                }
                fS.Dispose();
 
+               Console.ResetColor();
                string[] arrayOne = new string[listOne.Count];
                double[,] arrayTwo = new double[listOne.Count, max];
                int h = 0;
