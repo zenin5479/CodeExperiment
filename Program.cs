@@ -82,7 +82,7 @@ namespace CodeExperiment
 
                Console.ResetColor();
                string[] arrayOne = new string[listOne.Count];
-               string[,] arrayTwo = new string[arrayOne.GetLength(0), max];
+               double[,] arrayTwo = new double[arrayOne.GetLength(0), max];
                int h = 0;
                while (h < listOne.Count)
                {
@@ -93,15 +93,13 @@ namespace CodeExperiment
 
                // Разделение строки на подстроки и конвертация подстрок в double
                int z = 0;
-
-               string arraysplit = arrayOne[z];
                while (z < arrayTwo.GetLength(0))
                {
-                  arraysplit.Split(" ");
+                  string[] arraysplit = arrayOne[z].Split(" ");
                   int x = 0;
-                  while (x < arrayTwo.GetLength(1))
+                  while (x < arraysplit.GetLength(0))
                   {
-                     arrayTwo[z, x] = arraysplit[z].ToString();
+                     arrayTwo[z, x] = Convert.ToDouble(arraysplit[x]);
                      Console.Write(arrayTwo[z, x] + " ");
                      x++;
                   }
@@ -110,6 +108,25 @@ namespace CodeExperiment
                   z++;
                }
                Console.WriteLine();
+
+               // Разделение строки на подстроки и конвертация подстрок в double
+               //int z = 0;
+               //while (z < arrayone.GetLength(0))
+               //{
+               //   string[] arraysplit = arrayone[z].Split(" ");
+               //   int x = 0;
+               //   while (x < arraysplit.GetLength(0))
+               //   {
+               //      arrayForFileSize[z, x] = Convert.ToDouble(arraysplit[x]);
+               //      Console.Write(arrayForFileSize[z, x] + " ");
+               //      x++;
+               //   }
+               //   Console.WriteLine();
+               //   z++;
+               //}
+               //Console.WriteLine();
+
+
             }
          }
          catch (Exception e)
