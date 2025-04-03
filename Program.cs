@@ -107,7 +107,7 @@ namespace CodeExperiment
                   Console.WriteLine();
                   z++;
                }
-               Console.WriteLine();
+               //Console.WriteLine();
 
                // Разделение строки на подстроки и конвертация подстрок в double
                //int z = 0;
