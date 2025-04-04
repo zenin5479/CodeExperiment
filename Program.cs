@@ -114,6 +114,18 @@ namespace CodeExperiment
                int[] result = numbers[2..5];
                Console.WriteLine(string.Join(" ", result));
 
+               string text = "Хороший день";
+               // обрезаем начиная с третьего символа
+               text = text.Substring(2);
+               // результат "роший день"
+               Console.WriteLine(text);
+               // обрезаем сначала до последних двух символов
+               text = text.Substring(0, text.Length - 2);
+               // результат "роший де"
+               Console.WriteLine(text);
+               // Функция Substring возвращает обрезанную строку
+               // В качестве параметра первая версия применяет индекс, начиная с которого надо обрезать строку
+               // Вторая версия применяет два параметра - индекс начала обрезки и длину вырезаемой части строки
 
 
             }
