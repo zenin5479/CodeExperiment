@@ -31,7 +31,8 @@ namespace CodeExperiment
                   Console.WriteLine(stroka);
                }
 
-               //readerOne.Close();
+               readerOne.Close();
+
                Console.WriteLine();
                Console.WriteLine("Количество строк {0}", listOne.Count);
 
