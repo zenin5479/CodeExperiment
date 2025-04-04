@@ -110,6 +110,12 @@ namespace CodeExperiment
                   z++;
                }
 
+               int[] numbers = { 5, 1, 4, 2, 3, 7 };
+               int[] result = numbers[2..5];
+               Console.WriteLine(string.Join(" ", result));
+
+
+
             }
          }
          catch (Exception e)
