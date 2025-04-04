@@ -32,7 +32,7 @@ namespace CodeExperiment
                }
 
                readerOne.Close();
-
+               fS.Dispose();
                Console.WriteLine();
                Console.WriteLine("Количество строк {0}", listOne.Count);
 
@@ -79,7 +79,6 @@ namespace CodeExperiment
                   Console.ForegroundColor = ConsoleColor.Red;
                   Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
                }
-               fS.Dispose();
 
                Console.ResetColor();
                string[] arrayOne = new string[listOne.Count];
