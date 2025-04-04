@@ -8,8 +8,8 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         string filePath = AppContext.BaseDirectory + "a.txt";
-         //string filePath = AppContext.BaseDirectory + "b.txt";
+         //string filePath = AppContext.BaseDirectory + "a.txt";
+         string filePath = AppContext.BaseDirectory + "b.txt";
          try
          {
             FileStream fS = File.Open(filePath, FileMode.Open, FileAccess.Read);
