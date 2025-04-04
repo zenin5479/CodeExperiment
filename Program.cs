@@ -87,9 +87,11 @@ namespace CodeExperiment
                while (h < listOne.Count)
                {
                   arrayOne[h] = listOne[h];
-                  //Console.WriteLine(arrayOne[h]);
+                  Console.WriteLine(arrayOne[h]);
                   h++;
                }
+
+               Console.WriteLine();
 
                // Разделение строки на подстроки и конвертация подстрок в double
                int z = 0;
@@ -107,25 +109,7 @@ namespace CodeExperiment
                   Console.WriteLine();
                   z++;
                }
-               //Console.WriteLine();
-
-               // Разделение строки на подстроки и конвертация подстрок в double
-               //int z = 0;
-               //while (z < arrayone.GetLength(0))
-               //{
-               //   string[] arraysplit = arrayone[z].Split(" ");
-               //   int x = 0;
-               //   while (x < arraysplit.GetLength(0))
-               //   {
-               //      arrayForFileSize[z, x] = Convert.ToDouble(arraysplit[x]);
-               //      Console.Write(arrayForFileSize[z, x] + " ");
-               //      x++;
-               //   }
-               //   Console.WriteLine();
-               //   z++;
-               //}
-               //Console.WriteLine();
-
+               
             }
          }
          catch (Exception e)
