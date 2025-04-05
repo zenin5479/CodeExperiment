@@ -145,6 +145,18 @@ namespace CodeExperiment
                int endIndex = s.LastIndexOf(charRange);
                int length = endIndex - startIndex + 1;
                Console.WriteLine("{0}.Substring({1}, {2}) = {3}", s, startIndex, length, s.Substring(startIndex, length));
+
+               string text2 = "(Hello World!)";
+               int startChar = text2.IndexOf('(') + 1;
+               int endChar = text2.IndexOf(')');
+               string sub2 = text2.Substring(startChar, endChar - startChar);
+               Console.WriteLine(sub2);
+
+               string text3 = "C# Programmers are awesome!";
+               int empStartIndex = text3.IndexOf("are") + 4;
+               int empLength = text3.Length - empStartIndex;
+               string sub3 = text3.Substring(empStartIndex, empLength);
+               Console.WriteLine(sub3);
             }
          }
          catch (Exception e)
