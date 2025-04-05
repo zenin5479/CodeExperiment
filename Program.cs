@@ -129,19 +129,32 @@ namespace CodeExperiment
                string sub3 = text3.Substring(empStartIndex, empLength);
                Console.WriteLine(sub3);
 
-               int[] numbers = new int[] { 5, 1, 4, 2, 3, 7 };
+               int[] numbers = { 5, 1, 4, 2, 3, 7 };
 
                Range range1 = new Range();
                int[] result = numbers[range1]; // пустой массив
-               Console.WriteLine(result);
+               foreach (int a in result)
+               {
+                  Console.WriteLine(a);
+               }
+               Console.WriteLine();
+
 
                Range range2 = new Range(2, 5);
                result = numbers[range2]; // 4 2 3
-               Console.WriteLine(result);
+               foreach (int a in result)
+               {
+                  Console.Write(a);
+               }
+               Console.WriteLine();
 
                Range range3 = new Range(1, 3);
                result = numbers[range3]; // 1 4
-               Console.WriteLine(result);
+               foreach (int a in result)
+               {
+                  Console.Write(a);
+               }
+               Console.WriteLine();
 
             }
          }
