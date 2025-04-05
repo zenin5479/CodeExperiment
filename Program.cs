@@ -128,9 +128,8 @@ namespace CodeExperiment
                // Вторая версия применяет два параметра - индекс начала обрезки и длину вырезаемой части строки
 
 
-               String[] pairs = { "Color1=red", "Color2=green", "Color3=blue",
-                  "Title=Code Repository" };
-               foreach (var pair in pairs)
+               string[] pairs = { "Color1=red", "Color2=green", "Color3=blue", "Title=Code Repository" };
+               foreach (string pair in pairs)
                {
                   int position = pair.IndexOf("=", StringComparison.Ordinal);
                   if (position < 0)
