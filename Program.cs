@@ -126,6 +126,22 @@ namespace CodeExperiment
                // Функция Substring возвращает обрезанную строку
                // В качестве параметра первая версия применяет индекс, начиная с которого надо обрезать строку
                // Вторая версия применяет два параметра - индекс начала обрезки и длину вырезаемой части строки
+
+
+               String[] pairs = { "Color1=red", "Color2=green", "Color3=blue",
+                  "Title=Code Repository" };
+               foreach (var pair in pairs)
+               {
+                  int position = pair.IndexOf("=", StringComparison.Ordinal);
+                  if (position < 0)
+                  {
+                     continue;
+                  }
+
+                  Console.WriteLine("Key: {0}, Value: '{1}'",
+                     pair.Substring(0, position),
+                     pair.Substring(position + 1));
+               }
             }
          }
          catch (Exception e)
