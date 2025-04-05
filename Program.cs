@@ -126,12 +126,20 @@ namespace CodeExperiment
                string text3 = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                int empStartIndex = 0;
                int empLength = text3.IndexOf(' ');
-               string sub3 = text3.Substring(empStartIndex, empLength);
-               Console.WriteLine(sub3);
-               int empStartIndex2 = empLength + 1;
-               int empLength2 = text3.IndexOf(' ');
-               string sub4 = text3.Substring(empStartIndex2, empLength2);
-               Console.WriteLine(sub4);
+               //string sub3 = text3.Substring(empStartIndex, empLength);
+               //Console.WriteLine(sub3);
+               //int empStartIndex2 = empLength + 1;
+               //int empLength2 = text3.IndexOf(' ');
+               //string sub4 = text3.Substring(empStartIndex2, empLength2);
+               //Console.WriteLine(sub4);
+               for (int i = 0; i < text3.Length; i++)
+               {
+                  char b = text3[i];
+                  string sub = text3.Substring(empStartIndex, empLength);
+                  Console.Write(sub + " ");
+                  empStartIndex += sub.Length + 1;
+                  empLength += sub.Length + 1;
+               }
             }
          }
          catch (Exception e)
