@@ -128,6 +128,21 @@ namespace CodeExperiment
                int empLength = text3.Length - empStartIndex;
                string sub3 = text3.Substring(empStartIndex, empLength);
                Console.WriteLine(sub3);
+
+               int[] numbers = new int[] { 5, 1, 4, 2, 3, 7 };
+
+               Range range1 = new Range();
+               int[] result = numbers[range1]; // пустой массив
+
+
+               Range range2 = new Range(2, 5);
+               result = numbers[range2]; // 4 2 3
+
+
+               Range range3 = new Range(1, 3);
+               result = numbers[range3]; // 1 4
+
+
             }
          }
          catch (Exception e)
