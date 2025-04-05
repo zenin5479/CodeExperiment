@@ -133,15 +133,15 @@ namespace CodeExperiment
 
                Range range1 = new Range();
                int[] result = numbers[range1]; // пустой массив
-
+               Console.WriteLine(result);
 
                Range range2 = new Range(2, 5);
                result = numbers[range2]; // 4 2 3
-
+               Console.WriteLine(result);
 
                Range range3 = new Range(1, 3);
                result = numbers[range3]; // 1 4
-
+               Console.WriteLine(result);
 
             }
          }
