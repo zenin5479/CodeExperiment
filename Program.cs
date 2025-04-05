@@ -132,7 +132,7 @@ namespace CodeExperiment
                int[] numbers = { 5, 1, 4, 2, 3, 7 };
 
                Range range1 = new Range();
-               int[] result = numbers[range1]; // пустой массив
+               int[] result = numbers[range1];
                foreach (int a in result)
                {
                   Console.WriteLine(a);
@@ -141,7 +141,7 @@ namespace CodeExperiment
 
 
                Range range2 = new Range(2, 5);
-               result = numbers[range2]; // 4 2 3
+               result = numbers[range2];
                foreach (int a in result)
                {
                   Console.Write(a);
@@ -149,7 +149,7 @@ namespace CodeExperiment
                Console.WriteLine();
 
                Range range3 = new Range(1, 3);
-               result = numbers[range3]; // 1 4
+               result = numbers[range3];
                foreach (int a in result)
                {
                   Console.Write(a);
