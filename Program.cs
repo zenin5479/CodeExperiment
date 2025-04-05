@@ -136,7 +136,7 @@ namespace CodeExperiment
                Console.WriteLine(sub2);
 
                string text3 = "C# Programmers are awesome!";
-               int empStartIndex = text3.IndexOf("are") + 4;
+               int empStartIndex = text3.IndexOf("are", StringComparison.Ordinal) + 4;
                int empLength = text3.Length - empStartIndex;
                string sub3 = text3.Substring(empStartIndex, empLength);
                Console.WriteLine(sub3);
