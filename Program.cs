@@ -110,23 +110,6 @@ namespace CodeExperiment
                   z++;
                }
 
-               int[] numbers = { 5, 1, 4, 2, 3, 7 };
-               int[] result = numbers[2..5];
-               Console.WriteLine(string.Join(" ", result));
-
-               string text = "Хороший день";
-               // Обрезаем начиная с третьего символа
-               text = text.Substring(2);
-               // Результат "роший день"
-               Console.WriteLine(text);
-               // Обрезаем сначала до последних двух символов
-               text = text.Substring(0, text.Length - 2);
-               // Результат "роший де"
-               Console.WriteLine(text);
-               // Функция Substring возвращает обрезанную строку
-               // В качестве параметра первая версия применяет индекс, начиная с которого надо обрезать строку
-               // Вторая версия применяет два параметра - индекс начала обрезки и длину вырезаемой части строки
-
                string[] pairs = { "Color1=red", "Color2=green", "Color3=blue", "Title=Code Repository" };
                foreach (string pair in pairs)
                {
