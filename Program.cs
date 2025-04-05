@@ -136,19 +136,15 @@ namespace CodeExperiment
                      continue;
                   }
 
-                  Console.WriteLine("Key: {0}, Value: '{1}'",
-                     pair.Substring(0, position),
-                     pair.Substring(position + 1));
+                  Console.WriteLine("Key: {0}, Value: '{1}'", pair.Substring(0, position), pair.Substring(position + 1));
                }
 
-               String s = "aaaaabbbcccccccdd";
-               Char charRange = 'b';
+               string s = "aaaaabbbcccccccdd";
+               char charRange = 'b';
                int startIndex = s.IndexOf(charRange);
                int endIndex = s.LastIndexOf(charRange);
                int length = endIndex - startIndex + 1;
-               Console.WriteLine("{0}.Substring({1}, {2}) = {3}",
-                  s, startIndex, length,
-                  s.Substring(startIndex, length));
+               Console.WriteLine("{0}.Substring({1}, {2}) = {3}", s, startIndex, length, s.Substring(startIndex, length));
             }
          }
          catch (Exception e)
