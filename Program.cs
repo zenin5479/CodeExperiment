@@ -110,18 +110,6 @@ namespace CodeExperiment
                   z++;
                }
 
-               string[] pairs = { "Color1=red", "Color2=green", "Color3=blue", "Title=Code Repository" };
-               foreach (string pair in pairs)
-               {
-                  int position = pair.IndexOf("=", StringComparison.Ordinal);
-                  if (position < 0)
-                  {
-                     continue;
-                  }
-
-                  Console.WriteLine("Key: {0}, Value: '{1}'", pair.Substring(0, position), pair.Substring(position + 1));
-               }
-
                string s = "aaaaabbbcccccccdd";
                char charRange = 'b';
                int startIndex = s.IndexOf(charRange);
