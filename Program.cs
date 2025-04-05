@@ -123,11 +123,15 @@ namespace CodeExperiment
                string sub2 = text2.Substring(startChar, endChar - startChar);
                Console.WriteLine(sub2);
 
-               string text3 = "1 2 3 4 75 6 7 8 9 -10 1 2 3 4 5 6 87 8 9 -10";
-               int empStartIndex = text3.IndexOf(" ", StringComparison.Ordinal);
-               int empLength = text3.Length - empStartIndex;
+               string text3 = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
+               int empStartIndex = 0;
+               int empLength = text3.IndexOf(' ');
                string sub3 = text3.Substring(empStartIndex, empLength);
                Console.WriteLine(sub3);
+               int empStartIndex2 = empLength + 1;
+               int empLength2 = text3.IndexOf(' ');
+               string sub4 = text3.Substring(empStartIndex2, empLength2);
+               Console.WriteLine(sub4);
             }
          }
          catch (Exception e)
