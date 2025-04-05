@@ -127,7 +127,6 @@ namespace CodeExperiment
                // В качестве параметра первая версия применяет индекс, начиная с которого надо обрезать строку
                // Вторая версия применяет два параметра - индекс начала обрезки и длину вырезаемой части строки
 
-
                string[] pairs = { "Color1=red", "Color2=green", "Color3=blue", "Title=Code Repository" };
                foreach (string pair in pairs)
                {
