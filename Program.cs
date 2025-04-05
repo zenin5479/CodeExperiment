@@ -140,6 +140,36 @@ namespace CodeExperiment
                int empLength = text3.Length - empStartIndex;
                string sub3 = text3.Substring(empStartIndex, empLength);
                Console.WriteLine(sub3);
+
+               string[] info = { "Name: Felica Walker", "Title: Mz.",
+                  "Age: 47", "Location: Paris", "Gender: F"};
+               int found = 0;
+
+               Console.WriteLine("The initial values in the array are:");
+               foreach (string s1 in info)
+                  Console.WriteLine(s1);
+
+               Console.WriteLine("\nWe want to retrieve only the key information. That is:");
+               foreach (string s2 in info)
+               {
+                  found = s2.IndexOf(": ", StringComparison.Ordinal);
+                  Console.WriteLine("   {0}", s2.Substring(found + 2));
+               }
+
+               // The example displays the following output:
+               //       The initial values in the array are:
+               //       Name: Felica Walker
+               //       Title: Mz.
+               //       Age: 47
+               //       Location: Paris
+               //       Gender: F
+               //       
+               //       We want to retrieve only the key information. That is:
+               //          Felica Walker
+               //          Mz.
+               //          47
+               //          Paris
+               //          F
             }
          }
          catch (Exception e)
