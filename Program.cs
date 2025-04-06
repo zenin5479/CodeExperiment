@@ -137,7 +137,7 @@ namespace CodeExperiment
                   string sub = text3.Substring(empStartIndex, empLength);
                   Console.Write(sub);
                   empStartIndex += sub.Length + 1;
-                  empLength += sub.Length + 1;
+                  empLength += sub.Length;
                }
             }
          }
