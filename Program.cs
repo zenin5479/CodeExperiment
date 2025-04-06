@@ -127,11 +127,11 @@ namespace CodeExperiment
                string[] arr = new string[whiteSpace.Count + 1];
                for (int i = 0; i < whiteSpace.Count + 1; i++)
                {
-                  arr[i] = s.Substring(startIndex, whiteSpace[i]);
-                  startIndex += whiteSpace[i];
+                  arr[i] = s.Substring(startIndex, whiteSpace[i] - startIndex);
+                  startIndex = whiteSpace[i] + 1;
+
                   Console.WriteLine("Substring: {0}", arr[i]);
                }
-
             }
          }
          catch (Exception e)
