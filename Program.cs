@@ -134,9 +134,8 @@ namespace CodeExperiment
                //Console.WriteLine(sub4);
                for (int i = 0; i < text3.Length; i++)
                {
-                  char b = text3[i];
                   string sub = text3.Substring(empStartIndex, empLength);
-                  Console.Write(b + " ");
+                  Console.Write(sub);
                   empStartIndex += sub.Length + 1;
                   empLength += sub.Length + 1;
                }
