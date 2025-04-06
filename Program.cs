@@ -124,9 +124,13 @@ namespace CodeExperiment
                Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
                Console.WriteLine();
                int startIndex = 0;
-               int endIndex = 3;
-               int length = endIndex;
-               Console.WriteLine("Substring({0}, {1}) = {2}", startIndex, length, s.Substring(startIndex, length));
+               string[] arr = new string[whiteSpace.Count + 1];
+               for (int i = 0; i < whiteSpace.Count + 1; i++)
+               {
+                  arr[i] = s.Substring(startIndex, whiteSpace[i]);
+                  startIndex += whiteSpace[i];
+                  Console.WriteLine("Substring: {0}", arr[i]);
+               }
 
             }
          }
