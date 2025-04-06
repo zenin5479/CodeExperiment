@@ -118,7 +118,6 @@ namespace CodeExperiment
                Console.WriteLine("Substring({0}, {1}) = {2}", startIndex, length, s.Substring(startIndex, length));
                List<int> whitespace = new List<int>();
                List<int> whitespace2 = new List<int>();
-
                for (int i = 0; i < s.Length; i++)
                {
                   if (s[i] == charRange)
