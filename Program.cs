@@ -126,6 +126,15 @@ namespace CodeExperiment
                   }
                }
 
+               String value = "This is a string.";
+               int startIndex2 = 5;
+               int length2 = 2;
+               String substring = value.Substring(startIndex2, length2);
+               Console.WriteLine(substring);
+
+               // The example displays the following output:
+               //       is
+
             }
          }
          catch (Exception e)
