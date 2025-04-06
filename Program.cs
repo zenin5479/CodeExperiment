@@ -136,7 +136,7 @@ namespace CodeExperiment
                {
                   char b = text3[i];
                   string sub = text3.Substring(empStartIndex, empLength);
-                  Console.Write(sub + " ");
+                  Console.Write(b + " ");
                   empStartIndex += sub.Length + 1;
                   empLength += sub.Length + 1;
                }
