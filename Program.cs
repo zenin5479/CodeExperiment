@@ -117,17 +117,14 @@ namespace CodeExperiment
                int length = endIndex - startIndex + 1;
                Console.WriteLine("{0}.Substring({1}, {2}) = {3}", s, startIndex, length, s.Substring(startIndex, length));
 
-               // Сравним первые две строки
                string s1 = "это строка";
                string s2 = "это текст, а это строка";
 
               // Поиск из массива символов
                char[] myCh = { 'Ы', 'х', ' ' };
                if (s2.IndexOfAny(myCh) != -1)
-                  Console.WriteLine("Один из символов из массива ch " +
-                                    "найден в текущей строке на позиции {0}", s2.IndexOfAny(myCh));
-
-               
+                  Console.WriteLine("Один из символов из массива ch найден в текущей строке на позиции {0}",
+                     s2.IndexOfAny(myCh));
             }
          }
          catch (Exception e)
