@@ -126,14 +126,12 @@ namespace CodeExperiment
                   }
                }
 
-               String value = "This is a string.";
-               int startIndex2 = 5;
-               int length2 = 2;
-               String substring = value.Substring(startIndex2, length2);
+               string value = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
+               int startIndex2 = 0;
+               int length2 = 3;
+               string substring = value.Substring(startIndex2, length2);
                Console.WriteLine(substring);
 
-               // The example displays the following output:
-               //       is
 
             }
          }
