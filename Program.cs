@@ -110,35 +110,12 @@ namespace CodeExperiment
                   z++;
                }
 
-               string s = "aaaaabbbcccccccdd";
-               char charRange = 'b';
+               string s = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
+               char charRange = ' ';
                int startIndex = s.IndexOf(charRange);
                int endIndex = s.LastIndexOf(charRange);
                int length = endIndex - startIndex + 1;
                Console.WriteLine("{0}.Substring({1}, {2}) = {3}", s, startIndex, length, s.Substring(startIndex, length));
-
-               string text2 = "(Hello World!)";
-               int startChar = text2.IndexOf('(') + 1;
-               int endChar = text2.IndexOf(')');
-               string sub2 = text2.Substring(startChar, endChar - startChar);
-               Console.WriteLine(sub2);
-
-               string text3 = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
-               int empStartIndex = 0;
-               int empLength = text3.IndexOf(' ');
-               //string sub3 = text3.Substring(empStartIndex, empLength);
-               //Console.WriteLine(sub3);
-               //int empStartIndex2 = empLength + 1;
-               //int empLength2 = text3.IndexOf(' ');
-               //string sub4 = text3.Substring(empStartIndex2, empLength2);
-               //Console.WriteLine(sub4);
-               for (int i = 0; i < text3.Length; i++)
-               {
-                  string sub = text3.Substring(empStartIndex, empLength);
-                  Console.Write(sub);
-                  empStartIndex += sub.Length + 1;
-                  empLength += sub.Length;
-               }
             }
          }
          catch (Exception e)
