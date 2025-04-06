@@ -116,11 +116,21 @@ namespace CodeExperiment
                int endIndex = s.LastIndexOf(charRange);
                int length = endIndex - startIndex + 1;
                Console.WriteLine("{0}.Substring({1}, {2}) = {3}", s, startIndex, length, s.Substring(startIndex, length));
+               List<int> whitespace = new List<int>();
+               for (int i = 0; i < s.Length; i++)
+               {
+                  if (s[i]== charRange)
+                  {
+                     whitespace.Add(i);
+                     Console.WriteLine("Индекс: {0}", i);
+                  }
+               }
+
 
                string s1 = "это строка";
                string s2 = "это текст, а это строка";
 
-              // Поиск из массива символов
+               // Поиск из массива символов
                char[] myCh = { 'Ы', 'х', ' ' };
                if (s2.IndexOfAny(myCh) != -1)
                   Console.WriteLine("Один из символов из массива ch найден в текущей строке на позиции {0}",
