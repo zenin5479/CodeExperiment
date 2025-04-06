@@ -112,33 +112,22 @@ namespace CodeExperiment
 
                string s = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                char charRange = ' ';
-               int startIndex = 0;
-               int endIndex = 3;
-               int length = endIndex;
-               Console.WriteLine("Substring({0}, {1}) = {2}", startIndex, length, s.Substring(startIndex, length));
-               List<int> whitespace = new List<int>();
-               List<int> whitespace2 = new List<int>();
-               for (int i = 0; i < s.Length; i++)
-               {
-                  if (s[i] == charRange)
-                  {
-                     whitespace.Add(i);
-                     Console.WriteLine("Индекс: {0}", i);
-                  }
-               }
-               Console.WriteLine("Количество пробелов {0}", whitespace.Count);
-               Console.WriteLine();
-
+               List<int> whiteSpace = new List<int>();
                for (int i = 0; i < s.Length; i++)
                {
                   if (charRange.Equals(s[i]))
                   {
-                     whitespace2.Add(i);
+                     whiteSpace.Add(i);
                      Console.WriteLine("Индекс: {0}", i);
                   }
                }
-               Console.WriteLine("Количество пробелов {0}", whitespace2.Count);
+               Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
                Console.WriteLine();
+               int startIndex = 0;
+               int endIndex = 3;
+               int length = endIndex;
+               Console.WriteLine("Substring({0}, {1}) = {2}", startIndex, length, s.Substring(startIndex, length));
+
             }
          }
          catch (Exception e)
