@@ -136,11 +136,17 @@ namespace CodeExperiment
                string[] arr = new string[whiteSpace.Count];
                for (int i = 0; i < whiteSpace.Count; i++)
                {
-                  arr[i] = s.Substring(startIndex, whiteSpace[i] - startIndex); // whiteSpace.Count = 9
-                  startIndex = whiteSpace[i] + 1;
+                  arr[i] = s.Substring(startIndex, whiteSpace[i] - startIndex);
+                  startIndex = whiteSpace[i];
 
                   Console.WriteLine("Substring: {0}", arr[i]);
                }
+
+               // String.IndexOf Метод
+               // https://learn.microsoft.com/ru-ru/dotnet/api/system.string.indexof?view=netcore-3.1#system-string-indexof(system-char-system-int32-system-int32)
+
+               // String.Substring Метод
+               // https://learn.microsoft.com/ru-ru/dotnet/api/system.string.indexof?view=netcore-3.1#system-string-indexof(system-char-system-int32-system-int32)
             }
          }
          catch (Exception e)
@@ -151,5 +157,6 @@ namespace CodeExperiment
          Console.WriteLine();
          Console.ReadKey();
       }
+
    }
 }
