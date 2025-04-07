@@ -113,7 +113,9 @@ namespace CodeExperiment
                string s = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                char charRange = ' ';
                List<int> whiteSpace = new List<int>();
-               for (int i = 0; i < s.Length; i++)
+               const int dr = 0;
+               whiteSpace.Add(dr);
+               for (int i = 1; i < s.Length; i++)
                {
                   if (charRange.Equals(s[i]))
                   {
@@ -124,8 +126,8 @@ namespace CodeExperiment
                Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
                Console.WriteLine();
                int startIndex = 0;
-               string[] arr = new string[whiteSpace.Count + 1];
-               for (int i = 0; i < whiteSpace.Count + 1; i++)
+               string[] arr = new string[whiteSpace.Count];
+               for (int i = 0; i < whiteSpace.Count; i++)
                {
                   arr[i] = s.Substring(startIndex, whiteSpace[i] - startIndex); // whiteSpace.Count = 9
                   startIndex = whiteSpace[i] + 1;
