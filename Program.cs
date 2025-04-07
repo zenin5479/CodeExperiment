@@ -136,8 +136,8 @@ namespace CodeExperiment
                string[] arr = new string[whiteSpace.Count];
                for (int i = 1; i < whiteSpace.Count; i++)
                {
-                  int length = whiteSpace[i] - whiteSpace[i - 1];
-                  arr[i] = s.Substring(whiteSpace[i], length); // whiteSpace.Count = 9
+                  int length = whiteSpace[i] + 1;
+                  arr[i] = s.Substring(whiteSpace[i], length);
                   //startIndex = whiteSpace[i] + 1;
 
                   Console.WriteLine("Substring: {0}", arr[i]);
