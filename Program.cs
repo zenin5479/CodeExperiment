@@ -120,17 +120,25 @@ namespace CodeExperiment
                   if (charRange.Equals(s[i]))
                   {
                      whiteSpace.Add(i);
-                     Console.WriteLine("Индекс: {0}", i);
+                     //Console.WriteLine("Индекс: {0}", i);
                   }
                }
+
+               foreach (int c in whiteSpace)
+               {
+                  Console.WriteLine("Индекс: {0}", c);
+               }
+
                Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
                Console.WriteLine();
-               int startIndex = 0;
+
+               //int startIndex = 0;
                string[] arr = new string[whiteSpace.Count];
-               for (int i = 0; i < whiteSpace.Count; i++)
+               for (int i = 1; i < whiteSpace.Count; i++)
                {
-                  arr[i] = s.Substring(startIndex, whiteSpace[i] - startIndex); // whiteSpace.Count = 9
-                  startIndex = whiteSpace[i] + 1;
+                  int length = whiteSpace[i] - whiteSpace[i - 1];
+                  arr[i] = s.Substring(whiteSpace[i], length); // whiteSpace.Count = 9
+                  //startIndex = whiteSpace[i] + 1;
 
                   Console.WriteLine("Substring: {0}", arr[i]);
                }
