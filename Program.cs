@@ -121,18 +121,13 @@ namespace CodeExperiment
                   if (charRange.Equals(s[i]))
                   {
                      whiteSpace.Add(i);
-                     //Console.WriteLine("Индекс: {0}", i);
+                     Console.WriteLine("Индекс: {0}", i);
                   }
                }
-
-               //Console.WriteLine();
-
-               foreach (int c in whiteSpace)
-               {
-                  Console.WriteLine("Индекс: {0}", c);
-               }
-
                Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
+               
+
+
                //Console.WriteLine();
             }
          }
@@ -144,7 +139,5 @@ namespace CodeExperiment
          Console.WriteLine();
          Console.ReadKey();
       }
-
-
    }
 }
