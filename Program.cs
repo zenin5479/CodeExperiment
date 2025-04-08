@@ -161,7 +161,7 @@ namespace CodeExperiment
                Console.WriteLine();
 
                int indexStart = -1;
-               string[] arr = new string[whiteSpace.Count+1];
+               string[] arr = new string[whiteSpace.Count + 1];
                for (int i = 0; i < whiteSpace.Count; i++)
                {
                   arr[i] = s.Substring(indexStart + 1, whiteSpace[i] - indexStart);
