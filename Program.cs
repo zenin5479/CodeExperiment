@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace CodeExperiment
 {
@@ -113,8 +114,7 @@ namespace CodeExperiment
                string s = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                char charRange = ' ';
                List<int> whiteSpace = new List<int>();
-               //const int dr = 0;
-               //whiteSpace.Add(dr);
+
                for (int i = 0; i < s.Length; i++)
                {
                   if (charRange.Equals(s[i]))
@@ -123,6 +123,8 @@ namespace CodeExperiment
                      //Console.WriteLine("Индекс: {0}", i);
                   }
                }
+               int dr = s.Length;
+               whiteSpace.Add(dr);
 
                Console.WriteLine();
 
@@ -164,13 +166,13 @@ namespace CodeExperiment
                string[] arr = new string[whiteSpace.Count + 1];
                for (int i = 0; i < whiteSpace.Count; i++)
                {
-                  arr[i] = s.Substring(indexStart + 1, whiteSpace[i] - indexStart);
+                  arr[i] = s.Substring(indexStart + 1, whiteSpace[i] - indexStart - 1);
                   indexStart = whiteSpace[i];
 
                   Console.WriteLine("Substring: {0}", arr[i]);
                }
 
-               Console.WriteLine();
+               //Console.WriteLine();
             }
          }
          catch (Exception e)
