@@ -133,8 +133,6 @@ namespace CodeExperiment
                }
 
                Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
-               Console.WriteLine();
-
                //Console.WriteLine();
             }
          }
