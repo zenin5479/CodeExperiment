@@ -147,8 +147,7 @@ namespace CodeExperiment
                string br2 = "01234567890123456789012345678901234567890123456789012345678901234567890";
                string str = "ABCDEFGHI abcdefghi ABCDEFGHI abcdefghi ABCDEFGHI abcdefghi ABCDEFGHI";
 
-               Console.WriteLine(
-                  "Метод String.IndexOf( char, int, int ) генерирует следующий результат");
+               Console.WriteLine("Метод String.IndexOf( char, int, int ) генерирует следующий результат");
                Console.WriteLine("{0}{1}{0}{2}{0}{3}{0}", Environment.NewLine, br1, br2, str);
                FindAllChar('A', str);
                FindAllChar('a', str);
@@ -168,9 +167,7 @@ namespace CodeExperiment
       }
       static void FindAllChar(Char target, String searched)
       {
-         Console.Write(
-            "символ '{0}' происходит в позиции(ах): ",
-            target);
+         Console.Write("Символ '{0}' встречается в позиции(ах): ", target);
 
          int startIndex = -1;
          int hitCount = 0;
