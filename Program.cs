@@ -145,17 +145,10 @@ namespace CodeExperiment
                Console.WriteLine();
 
                // Метод String.IndexOf(char, int, int)
-               string br1 = "0----+----1----+----2----+----3----+----4----+----5----+----6----+----7";
-               string br2 = "01234567890123456789012345678901234567890123456789012345678901234567890";
-               string str = "ABCDEFGHI abcdefghi ABCDEFGHI abcdefghi ABCDEFGHI abcdefghi ABCDEFGHI";
-
+               string str = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                Console.WriteLine("Метод String.IndexOf(char, int, int) генерирует следующий результат");
-               Console.WriteLine("{0}{1}{0}{2}{0}{3}{0}", Environment.NewLine, br1, br2, str);
-               FindAllChar('A', str);
-               FindAllChar('a', str);
-               FindAllChar('I', str);
-               FindAllChar('i', str);
-               FindAllChar('@', str);
+               Console.WriteLine("{0}{1}{0}", Environment.NewLine, str);
+               FindAllChar(',', str);
                FindAllChar(' ', str);
             }
          }
