@@ -142,11 +142,20 @@ namespace CodeExperiment
                   Console.WriteLine("Substring: {0}", arr[i]);
                }
 
-               // String.IndexOf Метод
-               // https://learn.microsoft.com/ru-ru/dotnet/api/system.string.indexof?view=netcore-3.1#system-string-indexof(system-char-system-int32-system-int32)
+               // Метод String.IndexOf( char, int, инт )
+               string br1 = "0----+----1----+----2----+----3----+----4----+----5----+----6----+----7";
+               string br2 = "01234567890123456789012345678901234567890123456789012345678901234567890";
+               string str = "ABCDEFGHI abcdefghi ABCDEFGHI abcdefghi ABCDEFGHI abcdefghi ABCDEFGHI";
 
-               // String.Substring Метод
-               // https://learn.microsoft.com/ru-ru/dotnet/api/system.string.indexof?view=netcore-3.1#system-string-indexof(system-char-system-int32-system-int32)
+               Console.WriteLine(
+                  "Метод String.IndexOf( char, int, int ) генерирует следующий результат");
+               Console.WriteLine("{0}{1}{0}{2}{0}{3}{0}", Environment.NewLine, br1, br2, str);
+               FindAllChar('A', str);
+               FindAllChar('a', str);
+               FindAllChar('I', str);
+               FindAllChar('i', str);
+               FindAllChar('@', str);
+               FindAllChar(' ', str);
             }
          }
          catch (Exception e)
@@ -157,6 +166,33 @@ namespace CodeExperiment
          Console.WriteLine();
          Console.ReadKey();
       }
+      static void FindAllChar(Char target, String searched)
+      {
+         Console.Write(
+            "символ '{0}' происходит в позиции(ах): ",
+            target);
+
+         int startIndex = -1;
+         int hitCount = 0;
+
+         // Выполните поиск по всем появлениям объекта.
+         while (true)
+         {
+            startIndex = searched.IndexOf(
+               target, startIndex + 1,
+               searched.Length - startIndex - 1);
+
+            // Выйдите из цикла, если цель не найдена.
+            if (startIndex < 0)
+               break;
+
+            Console.Write("{0}, ", startIndex);
+            hitCount++;
+         }
+
+         Console.WriteLine("проявление: {0}", hitCount);
+      }
+
 
    }
 }
