@@ -111,6 +111,9 @@ namespace CodeExperiment
                   z++;
                }
 
+               Console.WriteLine();
+
+               Console.WriteLine("Поиск в строке индексов символа '\u0020'");
                string s = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                char charRange = ' ';
                List<int> whiteSpace = new List<int>();
