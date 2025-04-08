@@ -142,6 +142,8 @@ namespace CodeExperiment
                   Console.WriteLine("Substring: {0}", arr[i]);
                }
 
+               Console.WriteLine();
+
                // Метод String.IndexOf(char, int, int)
                string br1 = "0----+----1----+----2----+----3----+----4----+----5----+----6----+----7";
                string br2 = "01234567890123456789012345678901234567890123456789012345678901234567890";
@@ -170,12 +172,10 @@ namespace CodeExperiment
          Console.Write("Символ '{0}' встречается в позиции(ах): ", target);
          int startIndex = -1;
          int hitCount = 0;
-
          // Поиск всех позиций где встречается символ в объекте
          while (true)
          {
             startIndex = searched.IndexOf(target, startIndex + 1, searched.Length - startIndex - 1);
-
             // Выход из цикла, если символ не найден
             if (startIndex < 0)
             {
@@ -186,9 +186,7 @@ namespace CodeExperiment
             hitCount++;
          }
 
-         Console.WriteLine("проявление: {0}", hitCount);
+         Console.WriteLine("всего позиций: {0}", hitCount);
       }
-
-
    }
 }
