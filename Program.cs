@@ -142,7 +142,6 @@ namespace CodeExperiment
                FindAllChar(' ', str);
                Console.WriteLine();
 
-
                char target = ' ';
                Console.Write("Символ '{0}' встречается в позиции(ах): ", target);
                int startIndex2 = -1;
@@ -165,7 +164,7 @@ namespace CodeExperiment
                string[] arr = new string[whiteSpace.Count];
                for (int i = 0; i < whiteSpace.Count; i++)
                {
-                  arr[i] = s.Substring(startIndex + 1, whiteSpace.Count - startIndex - 1);
+                  arr[i] = s.Substring(startIndex + 1, whiteSpace[i] - startIndex);
                   startIndex = whiteSpace[i];
 
                   Console.WriteLine("Substring: {0}", arr[i]);
