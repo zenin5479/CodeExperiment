@@ -134,24 +134,14 @@ namespace CodeExperiment
                Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
                Console.WriteLine();
 
-               int startIndex = -1;
-               string[] arr = new string[whiteSpace.Count];
-               for (int i = 0; i < whiteSpace.Count; i++)
-               {
-                  arr[i] = s.Substring(startIndex + 1, whiteSpace.Count - startIndex - 1);
-                  startIndex = whiteSpace[i];
-
-                  Console.WriteLine("Substring: {0}", arr[i]);
-               }
-
-               Console.WriteLine();
-
                // Метод String.IndexOf(char, int, int)
                string str = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                Console.WriteLine("Метод String.IndexOf(char, int, int) генерирует следующий результат");
                Console.WriteLine("{0}", str);
                FindAllChar(',', str);
                FindAllChar(' ', str);
+               Console.WriteLine();
+
 
                char target = ' ';
                Console.Write("Символ '{0}' встречается в позиции(ах): ", target);
@@ -170,6 +160,18 @@ namespace CodeExperiment
                }
 
                Console.WriteLine();
+
+               int startIndex = -1;
+               string[] arr = new string[whiteSpace.Count];
+               for (int i = 0; i < whiteSpace.Count; i++)
+               {
+                  arr[i] = s.Substring(startIndex + 1, whiteSpace.Count - startIndex - 1);
+                  startIndex = whiteSpace[i];
+
+                  Console.WriteLine("Substring: {0}", arr[i]);
+               }
+
+               Console.WriteLine();
             }
          }
          catch (Exception e)
@@ -182,7 +184,7 @@ namespace CodeExperiment
       }
       static void FindAllChar(char target, string searched)
       {
-         Console.Write("Символ '{0}' встречается в позиции(ах): ", target);
+         Console.Write("Символ '{0}' встречается в позиции(ях): ", target);
          int startIndex = -1;
          int hitCount = 0;
          // Поиск всех позиций где встречается символ в объекте
