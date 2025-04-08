@@ -126,7 +126,7 @@ namespace CodeExperiment
                }
                int dr = s.Length;
                whiteSpace.Add(dr);
-               Console.WriteLine();
+               //Console.WriteLine();
 
                foreach (int c in whiteSpace)
                {
