@@ -144,6 +144,34 @@ namespace CodeExperiment
 
                Console.WriteLine();
 
+               char target = ' ';
+               Console.Write("Символ '{0}' встречается в позиции(ах): ", target);
+               int startIndex2 = -1;
+               // Поиск всех позиций где встречается символ в объекте
+               while (true)
+               {
+                  startIndex2 = s.IndexOf(target, startIndex2 + 1, s.Length - startIndex2 - 1);
+                  // Выход из цикла, если символ не найден
+                  if (startIndex2 < 0)
+                  {
+                     break;
+                  }
+
+                  Console.Write("{0}, ", startIndex2);
+               }
+
+               Console.WriteLine();
+
+
+
+
+
+
+
+
+
+
+
                // Метод String.IndexOf(char, int, int)
                string str = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                Console.WriteLine("Метод String.IndexOf(char, int, int) генерирует следующий результат");
