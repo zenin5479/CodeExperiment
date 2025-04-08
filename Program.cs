@@ -113,9 +113,9 @@ namespace CodeExperiment
                string s = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                char charRange = ' ';
                List<int> whiteSpace = new List<int>();
-               const int dr = 0;
-               whiteSpace.Add(dr);
-               for (int i = 1; i < s.Length; i++)
+               //const int dr = 0;
+               //whiteSpace.Add(dr);
+               for (int i = 0; i < s.Length; i++)
                {
                   if (charRange.Equals(s[i]))
                   {
@@ -144,28 +144,28 @@ namespace CodeExperiment
 
                char target = ' ';
                Console.Write("Символ '{0}' встречается в позиции(ах): ", target);
-               int startIndex2 = -1;
+               int startIndex = -1;
                // Поиск всех позиций где встречается символ в объекте
                while (true)
                {
-                  startIndex2 = s.IndexOf(target, startIndex2 + 1, s.Length - startIndex2 - 1);
+                  startIndex = s.IndexOf(target, startIndex + 1, s.Length - startIndex - 1);
                   // Выход из цикла, если символ не найден
-                  if (startIndex2 < 0)
+                  if (startIndex < 0)
                   {
                      break;
                   }
 
-                  Console.Write("{0}, ", startIndex2);
+                  Console.Write("{0}, ", startIndex);
                }
 
                Console.WriteLine();
 
-               int startIndex = -1;
-               string[] arr = new string[whiteSpace.Count];
+               int indexStart = -1;
+               string[] arr = new string[whiteSpace.Count+1];
                for (int i = 0; i < whiteSpace.Count; i++)
                {
-                  arr[i] = s.Substring(startIndex + 1, whiteSpace[i] - startIndex);
-                  startIndex = whiteSpace[i];
+                  arr[i] = s.Substring(indexStart + 1, whiteSpace[i] - indexStart);
+                  indexStart = whiteSpace[i];
 
                   Console.WriteLine("Substring: {0}", arr[i]);
                }
