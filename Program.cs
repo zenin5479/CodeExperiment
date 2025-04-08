@@ -142,12 +142,12 @@ namespace CodeExperiment
                   Console.WriteLine("Substring: {0}", arr[i]);
                }
 
-               // Метод String.IndexOf( char, int, инт )
+               // Метод String.IndexOf(char, int, int)
                string br1 = "0----+----1----+----2----+----3----+----4----+----5----+----6----+----7";
                string br2 = "01234567890123456789012345678901234567890123456789012345678901234567890";
                string str = "ABCDEFGHI abcdefghi ABCDEFGHI abcdefghi ABCDEFGHI abcdefghi ABCDEFGHI";
 
-               Console.WriteLine("Метод String.IndexOf( char, int, int ) генерирует следующий результат");
+               Console.WriteLine("Метод String.IndexOf(char, int, int) генерирует следующий результат");
                Console.WriteLine("{0}{1}{0}{2}{0}{3}{0}", Environment.NewLine, br1, br2, str);
                FindAllChar('A', str);
                FindAllChar('a', str);
@@ -165,7 +165,7 @@ namespace CodeExperiment
          Console.WriteLine();
          Console.ReadKey();
       }
-      static void FindAllChar(Char target, String searched)
+      static void FindAllChar(char target, string searched)
       {
          Console.Write("Символ '{0}' встречается в позиции(ах): ", target);
 
