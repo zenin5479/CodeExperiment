@@ -147,7 +147,7 @@ namespace CodeExperiment
                // Метод String.IndexOf(char, int, int)
                string str = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                Console.WriteLine("Метод String.IndexOf(char, int, int) генерирует следующий результат");
-               Console.WriteLine("{0}{1}{0}", Environment.NewLine, str);
+               Console.WriteLine("{0}", str);
                FindAllChar(',', str);
                FindAllChar(' ', str);
             }
