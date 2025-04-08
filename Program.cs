@@ -133,7 +133,7 @@ namespace CodeExperiment
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
          }
 
-         Console.WriteLine();
+         //Console.WriteLine();
          Console.ReadKey();
       }
    }
