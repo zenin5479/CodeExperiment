@@ -168,20 +168,19 @@ namespace CodeExperiment
       static void FindAllChar(char target, string searched)
       {
          Console.Write("Символ '{0}' встречается в позиции(ах): ", target);
-
          int startIndex = -1;
          int hitCount = 0;
 
-         // Выполните поиск по всем появлениям объекта.
+         // Поиск всех позиций где встречается символ в объекте
          while (true)
          {
-            startIndex = searched.IndexOf(
-               target, startIndex + 1,
-               searched.Length - startIndex - 1);
+            startIndex = searched.IndexOf(target, startIndex + 1, searched.Length - startIndex - 1);
 
-            // Выйдите из цикла, если цель не найдена.
+            // Выход из цикла, если символ не найден
             if (startIndex < 0)
+            {
                break;
+            }
 
             Console.Write("{0}, ", startIndex);
             hitCount++;
