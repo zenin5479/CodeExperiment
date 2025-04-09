@@ -143,10 +143,9 @@ namespace CodeExperiment
                int d = 0;
                while (d < whiteSpace.Count)
                {
-                  int IndexEnd = whiteSpace[d];
-                  Range Index = (IndexStart + 1)..IndexEnd;
+                  Range Index = (IndexStart + 1)..whiteSpace[d];
                   string result = people[Index];
-                  IndexStart = IndexEnd;
+                  IndexStart = whiteSpace[d];
                   Console.WriteLine(result);
                   d++;
                }
