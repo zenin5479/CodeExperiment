@@ -127,6 +127,18 @@ namespace CodeExperiment
                Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
                //Console.WriteLine();
 
+               string people = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
+               string peopleRange = people[8..11];
+               Console.WriteLine(peopleRange);
+
+               string res = people[^5..^2];
+               Console.WriteLine(string.Join(" ", res));
+
+               Range range = 3..7;
+               string result = people[range];
+               Console.WriteLine(result);
+
+
                //// Метод String.IndexOf(char, int, int)
                //string str = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                //Console.WriteLine("Метод String.IndexOf(char, int, int) генерирует следующий результат");
