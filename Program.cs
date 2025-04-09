@@ -153,7 +153,10 @@ namespace CodeExperiment
                // Добавить к содержимому "b"
                b += "ello";
                Console.WriteLine(a == b);
-               Console.WriteLine(object.ReferenceEquals(a, b));
+               Console.WriteLine(ReferenceEquals(a, b));
+
+               // https://learn.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types
+               // https://professorweb.ru/my/csharp/charp_theory/level4/4_7.php
 
 
                // Метод String.IndexOf(char, int, int)
