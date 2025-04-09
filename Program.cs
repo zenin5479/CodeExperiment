@@ -125,7 +125,7 @@ namespace CodeExperiment
                   }
                }
                Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
-               //Console.WriteLine();
+               Console.WriteLine();
 
                // Для получения диапазона необходимо в квадратных скобках указать начальный индекс, затем индекс конца (!!! НЕ включительно !!!)
                string number = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
@@ -153,7 +153,6 @@ namespace CodeExperiment
                //string str = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                //Console.WriteLine("Метод String.IndexOf(char, int, int) генерирует следующий результат");
                //Console.WriteLine("{0}", str);
-               //FindAllChar(',', str);
                //FindAllChar(' ', str);
                //Console.WriteLine();
             }
