@@ -135,11 +135,25 @@ namespace CodeExperiment
                // Индексация диапазона справа налево (Indices)
                string res = people[^11..^8];
                Console.WriteLine(string.Join(" ", res));
+               Console.WriteLine();
 
                // Range(Index start, Index end) – создает диапазон от индекса start (включительно) и до индекса end (НЕ включительно)
-               Range range = 4..7;
+               int IndexStart = 0;
+               int IndexEnd = 3;
+               Range range = IndexStart..IndexEnd;
                string result = people[range];
                Console.WriteLine(result);
+               // Поиск всех позиций где встречается символ в объекте
+               int d = 0;
+               while (d < whiteSpace.Count)
+               {
+                  Range Index = IndexStart..IndexEnd;
+                  string resul = people[Index];
+                  Console.WriteLine("{0}, ", resul);
+                  d++;
+               }
+
+
 
                // Метод String.IndexOf(char, int, int)
                //string str = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
