@@ -138,9 +138,8 @@ namespace CodeExperiment
                Console.WriteLine();
 
                // Range(Index start, Index end) – создает диапазон от индекса start (включительно) и до индекса end (НЕ включительно)
-               int IndexStart = -1;
-               // Поиск всех позиций где встречается символ в объекте
                int d = 0;
+               int IndexStart = -1;
                while (d < whiteSpace.Count)
                {
                   Range Index = (IndexStart + 1)..whiteSpace[d];
