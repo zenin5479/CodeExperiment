@@ -157,6 +157,8 @@ namespace CodeExperiment
 
                // https://learn.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/reference-types
                // https://professorweb.ru/my/csharp/charp_theory/level4/4_7.php
+               // https://learn.microsoft.com/ru-ru/dotnet/api/system.text.stringbuilder?view=netcore-3.1#definition
+               // https://learn.microsoft.com/ru-ru/dotnet/standard/base-types/stringbuilder
 
 
                // Метод String.IndexOf(char, int, int)
