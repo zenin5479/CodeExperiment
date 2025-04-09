@@ -127,14 +127,17 @@ namespace CodeExperiment
                Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
                //Console.WriteLine();
 
+               // Для получения диапазона необходимо в квадратных скобках указать начальный индекс, затем индекс конца (!!! НЕ включительно !!!)
                string people = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
-               string peopleRange = people[8..11];
+               string peopleRange = people[4..7];
                Console.WriteLine(peopleRange);
 
-               string res = people[^5..^2];
+               // Индексация диапазона справа налево (Indices)
+               string res = people[^11..^8];
                Console.WriteLine(string.Join(" ", res));
 
-               Range range = 3..7;
+               // Range(Index start, Index end) – создает диапазон от индекса start (включительно) и до индекса end (НЕ включительно)
+               Range range = 4..7;
                string result = people[range];
                Console.WriteLine(result);
 
