@@ -120,7 +120,7 @@ namespace CodeExperiment
                {
                   if (charRange.Equals(s[i]))
                   {
-                     bool equals = Equals(s[i], charRange);
+                     //bool equals = Equals(s[i], charRange);
                      whiteSpace.Add(i);
                      Console.WriteLine("Индекс: {0}", i);
                   }
