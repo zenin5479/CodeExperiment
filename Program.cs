@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace CodeExperiment
 {
@@ -149,12 +150,22 @@ namespace CodeExperiment
                   d++;
                }
 
+               Console.WriteLine();
+
                string a = "hello";
                string b = "h";
                // Добавить к содержимому "b"
                b += "ello";
                Console.WriteLine(a == b);
+               Console.WriteLine(Equals(a, b));
                Console.WriteLine(ReferenceEquals(a, b));
+               Console.WriteLine();
+
+               // Метод Append позволяет добавить текст или строковое представление объекта к концу строки,
+               // представленной текущим объектом StringBuilder. 
+               StringBuilder myStringBuilder = new StringBuilder("Hello World!");
+               myStringBuilder.Append(" What a beautiful day.");
+               Console.WriteLine(myStringBuilder);
 
                // Метод String.IndexOf(char, int, int)
                //string str = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
