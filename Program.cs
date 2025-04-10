@@ -113,58 +113,13 @@ namespace CodeExperiment
 
                Console.WriteLine();
 
-               Console.WriteLine("Поиск в строке индексов символа '\u0020'");
-               string s = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
-               char charRange = ' ';
-               List<int> whiteSpace = new List<int>();
-               for (int i = 0; i < s.Length; i++)
-               {
-                  if (charRange.Equals(s[i]))
-                  {
-                     //bool equals = Equals(s[i], charRange);
-                     whiteSpace.Add(i);
-                     Console.WriteLine("Индекс: {0}", i);
-                  }
-               }
-               Console.WriteLine("Количество пробелов {0}", whiteSpace.Count);
-               Console.WriteLine();
-
-               // Для получения диапазона необходимо в квадратных скобках указать начальный индекс, затем индекс конца (!!! НЕ включительно !!!)
                string number = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
-               string peopleRange = number[4..7];
-               Console.WriteLine(peopleRange);
-               // Индексация диапазона справа налево (Indices)
-               string resultIndices = number[^11..^8];
-               Console.WriteLine(resultIndices);
-               Console.WriteLine();
-
-               // Range(Index start, Index end) – создает диапазон от индекса start (включительно) и до индекса end (НЕ включительно)
-               int d = 0;
-               int indexStart = -1;
-               while (d < whiteSpace.Count)
-               {
-                  Range indexRange = (indexStart + 1)..whiteSpace[d];
-                  string resultRange = number[indexRange];
-                  indexStart = whiteSpace[d];
-                  Console.WriteLine(resultRange);
-                  d++;
-               }
-
-               Console.WriteLine();
-
-               string a = "hello";
-               string b = "h";
-               // Добавить к содержимому "b"
-               b += "ello";
-               Console.WriteLine(a == b);
-               Console.WriteLine(Equals(a, b));
-               Console.WriteLine();
-
                // Метод Append позволяет добавить текст или строковое представление объекта
-               // к концу строки, представленной текущим объектом StringBuilder. 
+               // к концу строки, представленной текущим объектом StringBuilder
                StringBuilder myStringBuilder = new StringBuilder();
                int n = 0;
                char charRange2 = ' ';
+               string[,] arrayThree = new string[arrayOne.GetLength(0), max];
                while (n < number.Length)
                {
                   bool equals = charRange2.Equals(number[n]);
@@ -174,12 +129,12 @@ namespace CodeExperiment
                   }
                   else
                   {
-                     myStringBuilder= myStringBuilder.Append(number[n]);
+                     
                   }
                   n++;
 
                   Console.WriteLine(myStringBuilder);
-                 
+
                }
 
             }
