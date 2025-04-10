@@ -158,14 +158,30 @@ namespace CodeExperiment
                b += "ello";
                Console.WriteLine(a == b);
                Console.WriteLine(Equals(a, b));
-               Console.WriteLine(ReferenceEquals(a, b));
                Console.WriteLine();
 
                // Метод Append позволяет добавить текст или строковое представление объекта
                // к концу строки, представленной текущим объектом StringBuilder. 
-               StringBuilder myStringBuilder = new StringBuilder("Hello World!");
-               myStringBuilder.Append(" What a beautiful day.");
-               Console.WriteLine(myStringBuilder);
+               StringBuilder myStringBuilder = new StringBuilder();
+               int n = 0;
+               char charRange2 = ' ';
+               while (n < number.Length)
+               {
+                  bool equals = charRange2.Equals(number[n]);
+                  if (!equals)
+                  {
+                     myStringBuilder.Append(number[n]);
+                  }
+                  else
+                  {
+                     myStringBuilder= myStringBuilder.Append(number[n]);
+                  }
+                  n++;
+
+                  Console.WriteLine(myStringBuilder);
+                 
+               }
+
             }
          }
          catch (Exception e)
