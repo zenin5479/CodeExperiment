@@ -136,20 +136,16 @@ namespace CodeExperiment
                      {
                         string er = myStringBuilder.ToString(); // 
                         list[n] = er;
-
                      }
                      myStringBuilder.Clear();
                      n++;
-
                      Console.WriteLine();
-
                   }
                   Console.WriteLine();
                   rs++;
                   //Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
                   Console.WriteLine(list.Count);
                }
-
             }
          }
          catch (Exception e)
