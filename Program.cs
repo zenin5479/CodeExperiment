@@ -143,7 +143,6 @@ namespace CodeExperiment
                   //Console.WriteLine(list.Count);
                   list.Clear();
                }
-
             }
          }
          catch (Exception e)
