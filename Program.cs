@@ -125,7 +125,7 @@ namespace CodeExperiment
                   while (n < number.Length)
                   {
                      bool equals = charRange.Equals(number[n]);
-                     if (!equals)
+                     if (!equals && n != number.Length - 1)
                      {
                         myStringBuilder.Append(number[n]);
                      }
@@ -135,15 +135,7 @@ namespace CodeExperiment
                         list.Add(er);
                         myStringBuilder.Clear();
                      }
-
-                     if (n == number.Length - 1)
-                     {
-                        string er = myStringBuilder.ToString();
-                        list.Add(er);
-                        myStringBuilder.Clear();
-                     }
                      n++;
-                     //Console.WriteLine();
                   }
                   rs++;
                   n = 0;
