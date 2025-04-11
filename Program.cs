@@ -113,11 +113,8 @@ namespace CodeExperiment
 
                Console.WriteLine();
 
+               // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
                string number = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
-               // Метод Append позволяет добавить текст или строковое представление объекта
-               // к концу строки, представленной текущим объектом StringBuilder
-
-               // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
                StringBuilder myStringBuilder = new StringBuilder();
                List<string> list = new List<string>();
                char charRange2 = ' ';
