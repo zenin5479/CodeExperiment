@@ -114,35 +114,44 @@ namespace CodeExperiment
                Console.WriteLine();
 
                // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
-               string number = "1,5 5,6 9,8 2,1 5,8 9,1 7,3 4,2 2,9 1,7";
                StringBuilder myStringBuilder = new StringBuilder();
                List<string> list = new List<string>();
-               char charRange2 = ' ';
+               char charRange = ' ';
                int n = 0;
                int rs = 0;
                while (rs < listOne.Count)
                {
+                  string number = listOne[rs];
                   while (n < number.Length)
                   {
-                     bool equals = charRange2.Equals(number[n]);
+                     bool equals = charRange.Equals(number[n]);
                      if (!equals)
                      {
                         myStringBuilder.Append(number[n]);
                      }
                      else
                      {
-                        string er = myStringBuilder.ToString(); // 
-                        list[n] = er;
+                        string er = myStringBuilder.ToString();
+                        list.Add(er);
+                        myStringBuilder.Clear();
                      }
-                     myStringBuilder.Clear();
+
+                     if (n == number.Length - 1)
+                     {
+                        string er = myStringBuilder.ToString();
+                        list.Add(er);
+                        myStringBuilder.Clear();
+                     }
                      n++;
-                     Console.WriteLine();
+                     //Console.WriteLine();
                   }
-                  Console.WriteLine();
                   rs++;
-                  //Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
-                  Console.WriteLine(list.Count);
+                  n = 0;
+                  Console.WriteLine("В строке {0} количество столбцов {1}", rs, list.Count);
+                  //Console.WriteLine(list.Count);
+                  list.Clear();
                }
+
             }
          }
          catch (Exception e)
