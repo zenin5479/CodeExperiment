@@ -117,52 +117,38 @@ namespace CodeExperiment
                // Метод Append позволяет добавить текст или строковое представление объекта
                // к концу строки, представленной текущим объектом StringBuilder
 
-               // Одномерный массив для определения количества столбцов в строке
-               int[] arrayDimension2 = new int[listOne.Count];
-               int a = 0;
-               while (a < listOne.Count)
+               // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
+               StringBuilder myStringBuilder = new StringBuilder();
+               List<string> list = new List<string>();
+               char charRange2 = ' ';
+               int n = 0;
+               int rs = 0;
+               while (rs < listOne.Count)
                {
-                  // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
-                  StringBuilder myStringBuilder = new StringBuilder();
-                  List<string> list = new List<string>();
-                  char charRange2 = ' ';
-                  int n = 0;
-                  while (h < listOne.Count)
+                  while (n < number.Length)
                   {
-
-                     while (n < number.Length)
+                     bool equals = charRange2.Equals(number[n]);
+                     if (!equals)
                      {
-                        bool equals = charRange2.Equals(number[n]);
-                        if (!equals)
-                        {
-                           myStringBuilder.Append(number[n]);
-                        }
-                        else
-                        {
-                           string er = myStringBuilder.ToString();
-                           list[h] = er;
-                           myStringBuilder.Clear();
-                        }
-                        n++;
-
-                        Console.WriteLine();
+                        myStringBuilder.Append(number[n]);
+                     }
+                     else
+                     {
+                        string er = myStringBuilder.ToString(); // 
+                        list[n] = er;
 
                      }
+                     myStringBuilder.Clear();
+                     n++;
+
                      Console.WriteLine();
-                     h++;
+
                   }
-
-                  arrayDimension2[a] = list.Count;
+                  Console.WriteLine();
+                  rs++;
                   //Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
-                  a++;
+                  Console.WriteLine(list.Count);
                }
-
-
-
-
-
-
-
 
             }
          }
