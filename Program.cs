@@ -124,8 +124,8 @@ namespace CodeExperiment
                   string number = listOne[t];
                   while (n < number.Length)
                   {
-                     bool equals = charRange.Equals(number[n]);
-                     if (!equals && n != number.Length - 1)
+                     bool equally = charRange.Equals(number[n]);
+                     if (!equally && n != number.Length - 1)
                      {
                         myStringBuilder.Append(number[n]);
                      }
