@@ -118,10 +118,10 @@ namespace CodeExperiment
                List<string> list = new List<string>();
                char charRange = ' ';
                int n = 0;
-               int rs = 0;
-               while (rs < listOne.Count)
+               int t = 0;
+               while (t < listOne.Count)
                {
-                  string number = listOne[rs];
+                  string number = listOne[t];
                   while (n < number.Length)
                   {
                      bool equals = charRange.Equals(number[n]);
@@ -137,10 +137,9 @@ namespace CodeExperiment
                      }
                      n++;
                   }
-                  rs++;
+                  t++;
                   n = 0;
-                  Console.WriteLine("В строке {0} количество столбцов {1}", rs, list.Count);
-                  Console.WriteLine(list.Count);
+                  Console.WriteLine("В строке {0} количество столбцов {1}", t, list.Count);
                   list.Clear();
                }
             }
