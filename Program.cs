@@ -140,7 +140,7 @@ namespace CodeExperiment
                   rs++;
                   n = 0;
                   Console.WriteLine("В строке {0} количество столбцов {1}", rs, list.Count);
-                  //Console.WriteLine(list.Count);
+                  Console.WriteLine(list.Count);
                   list.Clear();
                }
             }
