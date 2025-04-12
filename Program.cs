@@ -88,7 +88,7 @@ namespace CodeExperiment
                while (h < listOne.Count)
                {
                   arrayOne[h] = listOne[h];
-                  Console.WriteLine(arrayOne[h]);
+                  //Console.WriteLine(arrayOne[h]);
                   h++;
                }
 
@@ -106,9 +106,8 @@ namespace CodeExperiment
                      Console.Write(arrayTwo[z, x] + " ");
                      x++;
                   }
-
-                  Console.WriteLine();
                   z++;
+                  Console.WriteLine();
                }
 
                Console.WriteLine();
