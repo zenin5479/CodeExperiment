@@ -114,26 +114,26 @@ namespace CodeExperiment
                Console.WriteLine();
 
                // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
-               StringBuilder myStringBuilder = new StringBuilder();
+               StringBuilder stringModified = new StringBuilder();
                List<string> listColumns = new List<string>();
                char spaceCharacter = ' ';
                int n = 0;
                int t = 0;
                while (t < listOne.Count)
                {
-                  string number = listOne[t];
-                  while (n < number.Length)
+                  string line = listOne[t];
+                  while (n < line.Length)
                   {
-                     bool equally = spaceCharacter.Equals(number[n]);
-                     if (!equally && n != number.Length - 1)
+                     bool equally = spaceCharacter.Equals(line[n]);
+                     if (!equally && n != line.Length - 1)
                      {
-                        myStringBuilder.Append(number[n]);
+                        stringModified.Append(line[n]);
                      }
                      else
                      {
-                        string er = myStringBuilder.ToString();
+                        string er = stringModified.ToString();
                         listColumns.Add(er);
-                        myStringBuilder.Clear();
+                        stringModified.Clear();
                      }
                      n++;
                   }
