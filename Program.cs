@@ -80,7 +80,7 @@ namespace CodeExperiment
                   Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
                }
 
-               Console.WriteLine();
+               //Console.WriteLine();
                Console.ResetColor();
                string[] arrayOne = new string[listOne.Count];
                double[,] arrayTwo = new double[arrayOne.GetLength(0), max];
