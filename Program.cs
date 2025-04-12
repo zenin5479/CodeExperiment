@@ -34,9 +34,8 @@ namespace CodeExperiment
 
                readerOne.Close();
                fS.Dispose();
-               Console.WriteLine();
                Console.WriteLine("Количество строк {0}", listOne.Count);
-
+               Console.WriteLine();
                // Одномерный массив для определения количества столбцов в строке
                int[] arrayDimension = new int[listOne.Count];
                int g = 0;
@@ -81,6 +80,7 @@ namespace CodeExperiment
                   Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
                }
 
+               Console.WriteLine();
                Console.ResetColor();
                string[] arrayOne = new string[listOne.Count];
                double[,] arrayTwo = new double[arrayOne.GetLength(0), max];
@@ -131,8 +131,8 @@ namespace CodeExperiment
                      }
                      else
                      {
-                        string subline = stringModified.ToString();
-                        listColumns.Add(subline);
+                        string subLine = stringModified.ToString();
+                        listColumns.Add(subLine);
                         stringModified.Clear();
                      }
                      w++;
