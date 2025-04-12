@@ -115,7 +115,7 @@ namespace CodeExperiment
 
                // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
                StringBuilder myStringBuilder = new StringBuilder();
-               List<string> list = new List<string>();
+               List<string> listcolumns = new List<string>();
                char charRange = ' ';
                int n = 0;
                int t = 0;
@@ -132,15 +132,15 @@ namespace CodeExperiment
                      else
                      {
                         string er = myStringBuilder.ToString();
-                        list.Add(er);
+                        listcolumns.Add(er);
                         myStringBuilder.Clear();
                      }
                      n++;
                   }
                   t++;
                   n = 0;
-                  Console.WriteLine("В строке {0} количество столбцов {1}", t, list.Count);
-                  list.Clear();
+                  Console.WriteLine("В строке {0} количество столбцов {1}", t, listcolumns.Count);
+                  listcolumns.Clear();
                }
             }
          }
