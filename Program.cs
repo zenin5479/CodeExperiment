@@ -117,28 +117,28 @@ namespace CodeExperiment
                StringBuilder stringModified = new StringBuilder();
                List<string> listColumns = new List<string>();
                char spaceCharacter = ' ';
-               int n = 0;
+               int w = 0;
                int t = 0;
                while (t < listOne.Count)
                {
                   string line = listOne[t];
-                  while (n < line.Length)
+                  while (w < line.Length)
                   {
-                     bool equally = spaceCharacter.Equals(line[n]);
-                     if (!equally && n != line.Length - 1)
+                     bool equally = spaceCharacter.Equals(line[w]);
+                     if (!equally && w != line.Length - 1)
                      {
-                        stringModified.Append(line[n]);
+                        stringModified.Append(line[w]);
                      }
                      else
                      {
-                        string er = stringModified.ToString();
-                        listColumns.Add(er);
+                        string subline = stringModified.ToString();
+                        listColumns.Add(subline);
                         stringModified.Clear();
                      }
-                     n++;
+                     w++;
                   }
                   t++;
-                  n = 0;
+                  w = 0;
                   Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
                   listColumns.Clear();
                }
