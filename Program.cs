@@ -166,18 +166,32 @@ namespace CodeExperiment
          Console.ResetColor();
 
          Console.ForegroundColor = ConsoleColor.Red;
-         Console.WriteLine("Скорость выполнения циклов");
+         Console.WriteLine("Скорость выполнения цикла while");
          Console.ForegroundColor = ConsoleColor.Green;
          int rep = 10000001;
          int y = 0;
          while (y < 10)
          {
-            Console.Write("{0} ", y);
+            Console.WriteLine("{0} ", y);
             y++;
+            For(rep);
             While(rep);
          }
          Console.WriteLine();
          Console.ReadKey();
+      }
+
+      // Цикл for
+      private static void For(int rep)
+      {
+         _sw = Stopwatch.StartNew();
+         for (int i = 0; i < rep; ++i)
+         {
+            double sin = Math.Sin(i);
+         }
+         _sw.Stop();
+         Console.Write("Цикл for\t");
+         Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
       }
 
       // Цикл while
