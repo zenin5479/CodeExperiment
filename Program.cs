@@ -155,6 +155,7 @@ namespace CodeExperiment
          {
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
          }
+         Console.ResetColor();
 
          Console.ForegroundColor = ConsoleColor.Red;
          Console.WriteLine("Скорость выполнения циклов");
