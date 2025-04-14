@@ -115,7 +115,7 @@ namespace CodeExperiment
                }
                _sw.Stop();
                Console.ForegroundColor = ConsoleColor.Red;
-               Console.WriteLine("Скорость выполнения циклов");
+               Console.WriteLine("Скорость выполнения");
                Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
                Console.ForegroundColor = ConsoleColor.Green;
                Console.WriteLine();
@@ -126,6 +126,7 @@ namespace CodeExperiment
                char spaceCharacter = ' ';
                int w = 0;
                int t = 0;
+               _sw = Stopwatch.StartNew();
                while (t < listOne.Count)
                {
                   string line = listOne[t];
@@ -149,6 +150,13 @@ namespace CodeExperiment
                   Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
                   listColumns.Clear();
                }
+               _sw.Stop();
+               _sw.Stop();
+               Console.ForegroundColor = ConsoleColor.Red;
+               Console.WriteLine("Скорость выполнения");
+               Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
+               Console.ForegroundColor = ConsoleColor.Green;
+               Console.WriteLine();
             }
          }
          catch (Exception e)
