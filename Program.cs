@@ -231,8 +231,5 @@ namespace CodeExperiment
          Console.Write("Цикл do-while:\t");
          Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
       }
-
-
-
    }
 }
