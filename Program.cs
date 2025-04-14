@@ -151,9 +151,6 @@ namespace CodeExperiment
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
          }
 
-
-         // Заголовок окна
-         Console.Title = "Класс Stopwatch";
          Console.ForegroundColor = ConsoleColor.Red;
          Console.WriteLine("Скорость выполнения циклов");
          Console.ForegroundColor = ConsoleColor.Green;
