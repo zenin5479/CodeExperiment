@@ -166,7 +166,7 @@ namespace CodeExperiment
          Console.ResetColor();
 
          Console.ForegroundColor = ConsoleColor.Red;
-         Console.WriteLine("Скорость выполнения цикла while");
+         Console.WriteLine("Скорость выполнения циклов");
          Console.ForegroundColor = ConsoleColor.Green;
          int rep = 10000001;
          int y = 0;
@@ -176,6 +176,7 @@ namespace CodeExperiment
             y++;
             For(rep);
             While(rep);
+            DoWhile(rep);
          }
          Console.WriteLine();
          Console.ReadKey();
@@ -206,6 +207,22 @@ namespace CodeExperiment
          }
          _sw.Stop();
          Console.Write("Цикл while\t");
+         Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
+      }
+
+      // Цикл do-while
+      private static void DoWhile(int rep)
+      {
+         _sw = Stopwatch.StartNew();
+         int i = 0;
+         do
+         {
+            double sin = Math.Sin(i);
+            i++;
+         }
+         while (i < rep);
+         _sw.Stop();
+         Console.Write("Цикл do-while:\t");
          Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
       }
    }
