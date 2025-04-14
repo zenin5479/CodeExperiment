@@ -158,7 +158,6 @@ namespace CodeExperiment
          Console.WriteLine("Скорость выполнения циклов");
          Console.ForegroundColor = ConsoleColor.Green;
          int rep = 10000001;
-         // Начало отсчета с 0
          int y = 0;
          while (y < 10)
          {
