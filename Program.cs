@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 
@@ -7,6 +8,8 @@ namespace CodeExperiment
 {
    internal class Program
    {
+      private static Stopwatch _sw = new Stopwatch();
+
       static void Main()
       {
          //string filePath = AppContext.BaseDirectory + "a.txt";
@@ -148,8 +151,89 @@ namespace CodeExperiment
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
          }
 
+
+         // Заголовок окна
+         Console.Title = "Класс Stopwatch";
+         Console.ForegroundColor = ConsoleColor.Red;
+         Console.WriteLine("Скорость выполнения циклов");
+         Console.ForegroundColor = ConsoleColor.Green;
+         int rep = 10000001;
+         // Начало отсчета с 1
+         int i = 0;
+         while (i++ < 10)
+         {
+            Console.WriteLine("{0} ", i);
+            For(rep);
+            While(rep);
+            DoWhile(rep);
+         }
+         Console.WriteLine();
+         Console.ForegroundColor = ConsoleColor.Yellow;
+         // Начало отсчета с 0
+         int j = 0;
+         while (j < 10)
+         {
+            Console.WriteLine("{0} ", j);
+            j++;
+            For(rep);
+            While(rep);
+            DoWhile(rep);
+         }
+         Console.WriteLine();
+         Console.ReadKey();
+
+
+
+
+
          //Console.WriteLine();
          Console.ReadKey();
       }
+
+      // Цикл for
+      private static void For(int rep)
+      {
+         _sw = Stopwatch.StartNew();
+         int i;
+         for (i = 1; i < rep; ++i)
+         {
+            double sin = Math.Sin(i);
+         }
+         _sw.Stop();
+         Console.Write("Цикл for\t");
+         Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
+      }
+
+      // Цикл while
+      private static void While(int rep)
+      {
+         _sw = Stopwatch.StartNew();
+         int i = 1;
+         while (i++ < rep)
+         {
+            double sin = Math.Sin(i);
+         }
+         _sw.Stop();
+         Console.Write("Цикл while\t");
+         Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
+      }
+
+      // Цикл do-while
+      private static void DoWhile(int rep)
+      {
+         _sw = Stopwatch.StartNew();
+         int i = 1;
+         do
+         {
+            double sin = Math.Sin(i);
+         }
+         while (i++ < rep);
+         _sw.Stop();
+         Console.Write("Цикл do-while:\t");
+         Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
+      }
+
+
+
    }
 }
