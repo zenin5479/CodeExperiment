@@ -181,13 +181,6 @@ namespace CodeExperiment
          }
          Console.WriteLine();
          Console.ReadKey();
-
-
-
-
-
-         //Console.WriteLine();
-         Console.ReadKey();
       }
 
       // Цикл for
