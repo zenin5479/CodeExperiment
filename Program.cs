@@ -114,7 +114,10 @@ namespace CodeExperiment
                   Console.WriteLine();
                }
                _sw.Stop();
+               Console.ForegroundColor = ConsoleColor.Red;
+               Console.WriteLine("Скорость выполнения циклов");
                Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
+               Console.ForegroundColor = ConsoleColor.Green;
                Console.WriteLine();
 
                // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
