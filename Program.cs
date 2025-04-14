@@ -194,8 +194,7 @@ namespace CodeExperiment
       private static void For(int rep)
       {
          _sw = Stopwatch.StartNew();
-         int i;
-         for (i = 1; i < rep; ++i)
+         for (int i = 0; i < rep; ++i)
          {
             double sin = Math.Sin(i);
          }
@@ -208,7 +207,7 @@ namespace CodeExperiment
       private static void While(int rep)
       {
          _sw = Stopwatch.StartNew();
-         int i = 1;
+         int i = 0;
          while (i++ < rep)
          {
             double sin = Math.Sin(i);
@@ -222,7 +221,7 @@ namespace CodeExperiment
       private static void DoWhile(int rep)
       {
          _sw = Stopwatch.StartNew();
-         int i = 1;
+         int i = 0;
          do
          {
             double sin = Math.Sin(i);
