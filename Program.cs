@@ -173,12 +173,13 @@ namespace CodeExperiment
          while (y < 10)
          {
             Console.WriteLine("{0} ", y);
-            y++;
             For(rep);
             While(rep);
             DoWhile(rep);
+            y++;
          }
-         Console.WriteLine();
+
+         Console.ResetColor();
          Console.ReadKey();
       }
 
@@ -191,7 +192,7 @@ namespace CodeExperiment
             double sin = Math.Sin(i);
          }
          _sw.Stop();
-         Console.Write("Цикл for\t");
+         Console.Write("Цикл for:\t");
          Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
       }
 
@@ -206,7 +207,7 @@ namespace CodeExperiment
             i++;
          }
          _sw.Stop();
-         Console.Write("Цикл while\t");
+         Console.Write("Цикл while:\t");
          Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
       }
 
