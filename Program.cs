@@ -164,7 +164,7 @@ namespace CodeExperiment
          int y = 0;
          while (y < 10)
          {
-            Console.WriteLine("{0} ", y);
+            Console.Write("{0} ", y);
             y++;
             While(rep);
          }
