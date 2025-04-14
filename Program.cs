@@ -164,25 +164,10 @@ namespace CodeExperiment
          {
             Console.WriteLine("{0} ", y);
             y++;
-            For(rep);
             While(rep);
-            DoWhile(rep);
          }
          Console.WriteLine();
          Console.ReadKey();
-      }
-
-      // Цикл for
-      private static void For(int rep)
-      {
-         _sw = Stopwatch.StartNew();
-         for (int i = 0; i < rep; ++i)
-         {
-            double sin = Math.Sin(i);
-         }
-         _sw.Stop();
-         Console.Write("Цикл for\t");
-         Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
       }
 
       // Цикл while
@@ -190,27 +175,13 @@ namespace CodeExperiment
       {
          _sw = Stopwatch.StartNew();
          int i = 0;
-         while (i++ < rep)
+         while (i < rep)
          {
             double sin = Math.Sin(i);
+            i++;
          }
          _sw.Stop();
          Console.Write("Цикл while\t");
-         Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
-      }
-
-      // Цикл do-while
-      private static void DoWhile(int rep)
-      {
-         _sw = Stopwatch.StartNew();
-         int i = 0;
-         do
-         {
-            double sin = Math.Sin(i);
-         }
-         while (i++ < rep);
-         _sw.Stop();
-         Console.Write("Цикл do-while:\t");
          Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
       }
    }
