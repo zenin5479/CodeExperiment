@@ -128,7 +128,7 @@ namespace CodeExperiment
             char spaceCharacter = ' ';
             int w = 0;
             int t = 0;
-            _sw = Stopwatch.StartNew();
+            //_sw = Stopwatch.StartNew();
             while (t < listOne.Count)
             {
                string line = listOne[t];
@@ -148,18 +148,53 @@ namespace CodeExperiment
                   w++;
                }
                sizeArray[t] = listColumns.Count;
-               Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
+               //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
                t++;
                w = 0;
                listColumns.Clear();
             }
 
-            _sw.Stop();
+            //_sw.Stop();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Скорость выполнения");
-            Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
+            //Console.WriteLine("Скорость выполнения");
+            //Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine();
+            //Console.WriteLine();
+
+            // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
+            int minOne = sizeArray[0];
+            int maxOne = sizeArray[0];
+            int p = 0;
+            while (p < sizeArray.Length)
+            {
+               if (sizeArray[p] < minOne)
+               {
+                  minOne = sizeArray[p];
+               }
+
+               if (sizeArray[p] > maxOne)
+               {
+                  maxOne = sizeArray[p];
+               }
+
+               p++;
+            }
+
+            Console.WriteLine("Минимальное количество столбцов: {0}", minOne);
+            Console.WriteLine("Максимальное количество столбцов: {0}", maxOne);
+            if (minOne == maxOne)
+            {
+               Console.ForegroundColor = ConsoleColor.Green;
+               Console.WriteLine("Массив имеет одинаковое количество столбцов - прямоугольный");
+            }
+            else
+            {
+               Console.ForegroundColor = ConsoleColor.Red;
+               Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
+            }
+
+
+
          }
 
          Console.ResetColor();
