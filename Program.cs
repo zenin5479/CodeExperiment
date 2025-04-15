@@ -162,68 +162,9 @@ namespace CodeExperiment
          {
             Console.WriteLine("Процесс завершился неудачей: {0}", e);
          }
-         Console.ResetColor();
-
-         Console.ForegroundColor = ConsoleColor.Red;
-         Console.WriteLine("Скорость выполнения циклов");
-         Console.ForegroundColor = ConsoleColor.Green;
-         int rep = 10000001;
-         int y = 0;
-         while (y < 10)
-         {
-            Console.WriteLine("{0} ", y);
-            For(rep);
-            While(rep);
-            //DoWhile(rep);
-            y++;
-         }
 
          Console.ResetColor();
          Console.ReadKey();
-      }
-
-      // Цикл for
-      private static void For(int rep)
-      {
-         _sw = Stopwatch.StartNew();
-         for (int i = 0; i < rep; ++i)
-         {
-            double sin = Math.Sin(i);
-         }
-         _sw.Stop();
-         Console.Write("Цикл for:\t");
-         Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
-      }
-
-      // Цикл while
-      private static void While(int rep)
-      {
-         _sw = Stopwatch.StartNew();
-         int i = 0;
-         while (i < rep)
-         {
-            double sin = Math.Sin(i);
-            i++;
-         }
-         _sw.Stop();
-         Console.Write("Цикл while:\t");
-         Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
-      }
-
-      // Цикл do-while
-      private static void DoWhile(int rep)
-      {
-         _sw = Stopwatch.StartNew();
-         int i = 0;
-         do
-         {
-            double sin = Math.Sin(i);
-            i++;
-         }
-         while (i < rep);
-         _sw.Stop();
-         Console.Write("Цикл do-while:\t");
-         Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
       }
    }
 }
