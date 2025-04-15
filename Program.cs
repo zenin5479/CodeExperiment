@@ -145,12 +145,11 @@ namespace CodeExperiment
                      }
                      w++;
                   }
+                  Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
                   t++;
                   w = 0;
-                  Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
                   listColumns.Clear();
                }
-               _sw.Stop();
                _sw.Stop();
                Console.ForegroundColor = ConsoleColor.Red;
                Console.WriteLine("Скорость выполнения");
@@ -175,7 +174,7 @@ namespace CodeExperiment
             Console.WriteLine("{0} ", y);
             For(rep);
             While(rep);
-            DoWhile(rep);
+            //DoWhile(rep);
             y++;
          }
 
