@@ -192,9 +192,6 @@ namespace CodeExperiment
                Console.ForegroundColor = ConsoleColor.Red;
                Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
             }
-
-
-
          }
 
          Console.ResetColor();
