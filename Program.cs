@@ -40,14 +40,14 @@ namespace CodeExperiment
             Console.WriteLine();
             // Одномерный массив для определения количества столбцов в строке
             int[] arrayDimension = new int[listOne.Count];
-            int g = 0;
-            while (g < listOne.Count)
+            int d = 0;
+            while (d < listOne.Count)
             {
                // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
-               List<string> listSplit = new List<string>(listOne[g].Split(" "));
-               arrayDimension[g] = listSplit.Count;
+               List<string> listSplit = new List<string>(listOne[d].Split(" "));
+               arrayDimension[d] = listSplit.Count;
                //Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
-               g++;
+               d++;
             }
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
@@ -162,27 +162,27 @@ namespace CodeExperiment
             //Console.WriteLine();
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
-            int minOne = sizeArray[0];
-            int maxOne = sizeArray[0];
+            int minTwo = sizeArray[0];
+            int maxTwo = sizeArray[0];
             int p = 0;
             while (p < sizeArray.Length)
             {
-               if (sizeArray[p] < minOne)
+               if (sizeArray[p] < minTwo)
                {
-                  minOne = sizeArray[p];
+                  minTwo = sizeArray[p];
                }
 
-               if (sizeArray[p] > maxOne)
+               if (sizeArray[p] > maxTwo)
                {
-                  maxOne = sizeArray[p];
+                  maxTwo = sizeArray[p];
                }
 
                p++;
             }
 
-            Console.WriteLine("Минимальное количество столбцов: {0}", minOne);
-            Console.WriteLine("Максимальное количество столбцов: {0}", maxOne);
-            if (minOne == maxOne)
+            Console.WriteLine("Минимальное количество столбцов: {0}", minTwo);
+            Console.WriteLine("Максимальное количество столбцов: {0}", maxTwo);
+            if (minTwo == maxTwo)
             {
                Console.ForegroundColor = ConsoleColor.Green;
                Console.WriteLine("Массив имеет одинаковое количество столбцов - прямоугольный");
