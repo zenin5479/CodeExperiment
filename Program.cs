@@ -185,24 +185,54 @@ namespace CodeExperiment
             }
 
 
+
+            // Разделение строки на подстроки и конвертация подстрок в double
             string[] arrayThree = new string[listOne.Count];
             double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
-            // Разделение строки на подстроки и конвертация подстрок в double
-            int u = 0;
-            while (u < arrayFour.GetLength(0))
+            StringBuilder stringModifiedOne = new StringBuilder();
+            char spaceCharacterOne = ' ';
+            int c = 0;
+            int v = 0;
+            while (v < arrayFour.GetLength(0))
             {
-               string[] arraySplit = arrayThree[u].Split(" ");
-               int y = 0;
-               while (y < arraySplit.GetLength(0))
+               string line = listOne[v];
+               while (c < line.Length)
                {
-                  arrayFour[u, y] = Convert.ToDouble(arraySplit[y]);
-                  Console.Write(arrayFour[u, y] + " ");
-                  y++;
+                  bool equally = spaceCharacterOne == line[c];
+                  if (!equally && c != line.Length - 1)
+                  {
+                     stringModifiedOne.Append(line[c]);
+                  }
+                  else
+                  {
+                     string subLine = stringModifiedOne.ToString();
+                     arrayFour[v, c] = Convert.ToDouble(subLine); // ???
+                     Console.Write(arrayFour[c, v] + " ");
+                  }
+                  c++;
                }
-
-               u++;
-               Console.WriteLine();
+               v++;
+               c = 0;
             }
+
+
+
+
+            //int u = 0;
+            //while (u < arrayFour.GetLength(0))
+            //{
+            //   string[] arraySplit = arrayThree[u].Split(" ");
+            //   int y = 0;
+            //   while (y < arraySplit.GetLength(0))
+            //   {
+            //      arrayFour[u, y] = Convert.ToDouble(arraySplit[y]);
+            //      Console.Write(arrayFour[u, y] + " ");
+            //      y++;
+            //   }
+
+            //   u++;
+            //   Console.WriteLine();
+            //}
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
