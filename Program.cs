@@ -126,7 +126,6 @@ namespace CodeExperiment
             char spaceCharacter = ' ';
             int w = 0;
             int t = 0;
-            //_sw = Stopwatch.StartNew();
             while (t < listOne.Count)
             {
                string line = listOne[t];
@@ -152,10 +151,7 @@ namespace CodeExperiment
                listColumns.Clear();
             }
 
-            //_sw.Stop();
             Console.ForegroundColor = ConsoleColor.Red;
-            //Console.WriteLine("Скорость выполнения");
-            //Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
             Console.ForegroundColor = ConsoleColor.Green;
             //Console.WriteLine();
 
