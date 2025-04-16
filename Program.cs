@@ -192,12 +192,12 @@ namespace CodeExperiment
             while (u < arrayFour.GetLength(0))
             {
                string[] arraySplit = arrayThree[u].Split(" ");
-               int x = 0;
-               while (x < arraySplit.GetLength(0))
+               int y = 0;
+               while (y < arraySplit.GetLength(0))
                {
-                  arrayFour[u, x] = Convert.ToDouble(arraySplit[x]);
-                  Console.Write(arrayFour[u, x] + " ");
-                  x++;
+                  arrayFour[u, y] = Convert.ToDouble(arraySplit[y]);
+                  Console.Write(arrayFour[u, y] + " ");
+                  y++;
                }
 
                u++;
