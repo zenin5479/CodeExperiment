@@ -50,27 +50,27 @@ namespace CodeExperiment
             }
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
-            int min = arrayDimension[0];
-            int max = arrayDimension[0];
+            int minOne = arrayDimension[0];
+            int maxOne = arrayDimension[0];
             int f = 0;
             while (f < arrayDimension.Length)
             {
-               if (arrayDimension[f] < min)
+               if (arrayDimension[f] < minOne)
                {
-                  min = arrayDimension[f];
+                  minOne = arrayDimension[f];
                }
 
-               if (arrayDimension[f] > max)
+               if (arrayDimension[f] > maxOne)
                {
-                  max = arrayDimension[f];
+                  maxOne = arrayDimension[f];
                }
 
                f++;
             }
 
-            Console.WriteLine("Минимальное количество столбцов: {0}", min);
-            Console.WriteLine("Максимальное количество столбцов: {0}", max);
-            if (min == max)
+            Console.WriteLine("Минимальное количество столбцов: {0}", minOne);
+            Console.WriteLine("Максимальное количество столбцов: {0}", maxOne);
+            if (minOne == maxOne)
             {
                Console.ForegroundColor = ConsoleColor.Green;
                Console.WriteLine("Массив имеет одинаковое количество столбцов - прямоугольный");
@@ -84,7 +84,7 @@ namespace CodeExperiment
             //Console.WriteLine();
             Console.ResetColor();
             string[] arrayOne = new string[listOne.Count];
-            double[,] arrayTwo = new double[arrayOne.GetLength(0), max];
+            double[,] arrayTwo = new double[arrayOne.GetLength(0), maxOne];
             int h = 0;
             while (h < listOne.Count)
             {
@@ -183,6 +183,30 @@ namespace CodeExperiment
                Console.ForegroundColor = ConsoleColor.Red;
                Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
             }
+
+
+            string[] arrayThree = new string[listOne.Count];
+            double[,] arrayFour = new double[arrayThree.GetLength(0), maxOne];
+            // Разделение строки на подстроки и конвертация подстрок в double
+            int u = 0;
+            while (u < arrayFour.GetLength(0))
+            {
+               string[] arraySplit = arrayThree[u].Split(" ");
+               int x = 0;
+               while (x < arraySplit.GetLength(0))
+               {
+                  arrayFour[u, x] = Convert.ToDouble(arraySplit[x]);
+                  Console.Write(arrayFour[u, x] + " ");
+                  x++;
+               }
+
+               u++;
+               Console.WriteLine();
+            }
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine();
+
          }
 
          Console.ResetColor();
