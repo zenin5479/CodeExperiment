@@ -214,10 +214,7 @@ namespace CodeExperiment
                v++;
                c = 0;
             }
-
-
-
-
+            
             //int u = 0;
             //while (u < arrayFour.GetLength(0))
             //{
