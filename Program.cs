@@ -38,6 +38,8 @@ namespace CodeExperiment
             fStream.Dispose();
             Console.WriteLine("Количество строк {0}", listOne.Count);
             Console.WriteLine();
+
+            // Вариант 1 
             // Одномерный массив для определения количества столбцов в строке
             int[] arrayDimension = new int[listOne.Count];
             int d = 0;
@@ -97,7 +99,7 @@ namespace CodeExperiment
             Console.WriteLine();
 
             // Разделение строки на подстроки и конвертация подстрок в double
-            _sw = Stopwatch.StartNew();
+            //_sw = Stopwatch.StartNew();
             int z = 0;
             while (z < arrayTwo.GetLength(0))
             {
@@ -114,13 +116,14 @@ namespace CodeExperiment
                Console.WriteLine();
             }
 
-            _sw.Stop();
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Скорость выполнения");
-            Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
+            //_sw.Stop();
+            //Console.ForegroundColor = ConsoleColor.Red;
+            //Console.WriteLine("Скорость выполнения");
+            //Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
 
+            // Вариант 2 с помощью StringBuilder
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
             StringBuilder stringModified = new StringBuilder();
             List<string> listColumns = new List<string>();
