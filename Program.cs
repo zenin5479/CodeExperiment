@@ -186,7 +186,7 @@ namespace CodeExperiment
 
 
             string[] arrayThree = new string[listOne.Count];
-            double[,] arrayFour = new double[arrayThree.GetLength(0), maxOne];
+            double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
             // Разделение строки на подстроки и конвертация подстрок в double
             int u = 0;
             while (u < arrayFour.GetLength(0))
