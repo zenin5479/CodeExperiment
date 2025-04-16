@@ -48,7 +48,7 @@ namespace CodeExperiment
                // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
                List<string> listSplit = new List<string>(listOne[d].Split(" "));
                arrayDimension[d] = listSplit.Count;
-               //Console.WriteLine("В строке {0} количество столбцов {1}", g, arrayDimension[g]);
+               Console.WriteLine("В строке {0} количество столбцов {1}", d, arrayDimension[d]);
                d++;
             }
 
