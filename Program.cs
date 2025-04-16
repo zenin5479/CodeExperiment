@@ -39,7 +39,7 @@ namespace CodeExperiment
             Console.WriteLine("Количество строк {0}", listOne.Count);
             Console.WriteLine();
 
-            // Вариант 1 
+            // Вариант 1 с помощью метода String.Split
             // Одномерный массив для определения количества столбцов в строке
             int[] arrayDimension = new int[listOne.Count];
             int d = 0;
