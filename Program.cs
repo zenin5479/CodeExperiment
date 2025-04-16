@@ -99,7 +99,6 @@ namespace CodeExperiment
             Console.WriteLine();
 
             // Разделение строки на подстроки и конвертация подстрок в double
-            //_sw = Stopwatch.StartNew();
             int z = 0;
             while (z < arrayTwo.GetLength(0))
             {
@@ -116,10 +115,6 @@ namespace CodeExperiment
                Console.WriteLine();
             }
 
-            //_sw.Stop();
-            //Console.ForegroundColor = ConsoleColor.Red;
-            //Console.WriteLine("Скорость выполнения");
-            //Console.WriteLine(_sw.ElapsedMilliseconds + " ms");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
 
