@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Text;
 
@@ -8,8 +7,6 @@ namespace CodeExperiment
 {
    internal class Program
    {
-      private static Stopwatch _sw = new Stopwatch();
-
       static void Main()
       {
          //string filePath = AppContext.BaseDirectory + "a.txt";
