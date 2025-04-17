@@ -185,8 +185,7 @@ namespace CodeExperiment
             }
 
             // Разделение строки на подстроки и конвертация подстрок в double
-            string[] arrayThree = new string[listOne.Count];
-            double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
+            double[,] arrayThree = new double[listOne.Count, maxTwo];
             StringBuilder stringModifiedOne = new StringBuilder();
             char spaceCharacterOne = ' ';
             int l = 0;
@@ -194,7 +193,7 @@ namespace CodeExperiment
             int c = 0;
             while (l < listOne.Count)
             {
-               while (c < arrayFour.GetLength(1))
+               while (c < arrayThree.GetLength(1))
                {
                   string line = listOne[l];
                   while (m < line.Length)
@@ -207,8 +206,8 @@ namespace CodeExperiment
                      else
                      {
                         string subLine = stringModifiedOne.ToString();
-                        arrayFour[l, c] = Convert.ToDouble(subLine);
-                        Console.Write(arrayFour[l, c] + " ");
+                        arrayThree[l, c] = Convert.ToDouble(subLine);
+                        Console.Write(arrayThree[l, c] + " ");
                         stringModifiedOne.Clear();
                      }
                      c++;
