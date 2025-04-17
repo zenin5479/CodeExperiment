@@ -207,7 +207,8 @@ namespace CodeExperiment
                   {
                      string subLine = stringModifiedOne.ToString();
                      arrayFour[v, c] = Convert.ToDouble(subLine); // ???
-                     Console.Write(arrayFour[c, v] + " ");
+                     Console.Write(arrayFour[v, c] + " ");
+                     stringModifiedOne.Clear();
                   }
                   c++;
                }
