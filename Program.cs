@@ -190,53 +190,37 @@ namespace CodeExperiment
             StringBuilder stringModifiedOne = new StringBuilder();
             char spaceCharacterOne = ' ';
             int l = 0;
-            int v = 0;
+            int m = 0;
             int c = 0;
-            while (v < arrayFour.GetLength(0))
+            while (l < listOne.Count)
             {
-               string line = listOne[v];
-               while (l < arrayFour.GetLength(1))
+               string line = listOne[t];
+               while (m < line.Length)
                {
-                  while (c < line.Length)
+                  while (c < arrayFour.GetLength(1))
                   {
-                     bool equally = spaceCharacterOne == line[c];
-                     if (!equally && c != line.Length - 1)
+                     bool equally = spaceCharacterOne == line[m];
+                     if (!equally && m != line.Length - 1)
                      {
-                        stringModifiedOne.Append(line[c]);
+                        stringModified.Append(line[m]);
                      }
                      else
                      {
                         string subLine = stringModifiedOne.ToString();
-                        arrayFour[v, l] = Convert.ToDouble(subLine);
-                        Console.Write(arrayFour[v, l] + " ");
+                        arrayFour[l, c] = Convert.ToDouble(subLine);
+                        Console.Write(arrayTwo[l, c] + " ");
                         stringModifiedOne.Clear();
                      }
                      c++;
                   }
                   c = 0;
+                  m++;
                }
-               v++;
+               l++;
             }
-
-            //int u = 0;
-            //while (u < arrayFour.GetLength(0))
-            //{
-            //   string[] arraySplit = arrayThree[u].Split(" ");
-            //   int y = 0;
-            //   while (y < arraySplit.GetLength(0))
-            //   {
-            //      arrayFour[u, y] = Convert.ToDouble(arraySplit[y]);
-            //      Console.Write(arrayFour[u, y] + " ");
-            //      y++;
-            //   }
-
-            //   u++;
-            //   Console.WriteLine();
-            //}
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
-
          }
 
          Console.ResetColor();
