@@ -36,7 +36,7 @@ namespace CodeExperiment
             readerOne.Close();
             fStream.Dispose();
             //Console.WriteLine("Количество строк {0}", listOne.Count);
-            Console.WriteLine();
+            //Console.WriteLine();
 
             // Вариант 1 с помощью метода String.Split
             // Одномерный массив для определения количества столбцов в строке
@@ -162,7 +162,7 @@ namespace CodeExperiment
                listColumns.Clear();
             }
 
-            //Console.WriteLine();
+            Console.WriteLine();
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
             int minTwo = sizeArray[0];
