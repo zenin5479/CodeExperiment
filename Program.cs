@@ -184,38 +184,40 @@ namespace CodeExperiment
                Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
             }
 
-
-
             // Разделение строки на подстроки и конвертация подстрок в double
             string[] arrayThree = new string[listOne.Count];
             double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
             StringBuilder stringModifiedOne = new StringBuilder();
             char spaceCharacterOne = ' ';
-            int c = 0;
+            int l = 0;
             int v = 0;
+            int c = 0;
             while (v < arrayFour.GetLength(0))
             {
                string line = listOne[v];
-               while (c < line.Length)
+               while (l < arrayFour.GetLength(1))
                {
-                  bool equally = spaceCharacterOne == line[c];
-                  if (!equally && c != line.Length - 1)
+                  while (c < line.Length)
                   {
-                     stringModifiedOne.Append(line[c]);
+                     bool equally = spaceCharacterOne == line[c];
+                     if (!equally && c != line.Length - 1)
+                     {
+                        stringModifiedOne.Append(line[c]);
+                     }
+                     else
+                     {
+                        string subLine = stringModifiedOne.ToString();
+                        arrayFour[v, l] = Convert.ToDouble(subLine); // ???
+                        Console.Write(arrayFour[v, l] + " ");
+                        stringModifiedOne.Clear();
+                     }
+                     c++;
                   }
-                  else
-                  {
-                     string subLine = stringModifiedOne.ToString();
-                     arrayFour[v, c] = Convert.ToDouble(subLine); // ???
-                     Console.Write(arrayFour[v, c] + " ");
-                     stringModifiedOne.Clear();
-                  }
-                  c++;
+                  c = 0;
                }
                v++;
-               c = 0;
             }
-            
+
             //int u = 0;
             //while (u < arrayFour.GetLength(0))
             //{
