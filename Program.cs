@@ -141,7 +141,7 @@ namespace CodeExperiment
                      
                      stringModified.Clear();
                   }
-                  Console.Write(listColumns[w] + " ");
+                  Console.Write(listColumns[w] + " "); //
                   w++;
                }
                sizeArray[t] = listColumns.Count;
