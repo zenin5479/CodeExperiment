@@ -24,16 +24,18 @@ namespace CodeExperiment
             StreamReader readerOne = new StreamReader(fStream);
             // Создаем List<string> для определения количество строк в файле
             List<string> listOne = new List<string>();
+            Console.WriteLine("Исходный массив строк");
             while (!readerOne.EndOfStream)
             {
                string stroka = readerOne.ReadLine();
                listOne.Add(stroka);
+
                Console.WriteLine(stroka);
             }
 
             readerOne.Close();
             fStream.Dispose();
-            Console.WriteLine("Количество строк {0}", listOne.Count);
+            //Console.WriteLine("Количество строк {0}", listOne.Count);
             Console.WriteLine();
 
             // Вариант 1 с помощью метода String.Split
@@ -96,6 +98,7 @@ namespace CodeExperiment
             Console.WriteLine();
 
             // Разделение строки на подстроки и конвертация подстрок в double
+            Console.WriteLine("Двухмерный числовой массив");
             int z = 0;
             while (z < arrayTwo.GetLength(0))
             {
@@ -112,7 +115,6 @@ namespace CodeExperiment
                Console.WriteLine();
             }
 
-            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
 
             // Вариант 2 с помощью StringBuilder
@@ -123,6 +125,7 @@ namespace CodeExperiment
             char spaceCharacter = ' ';
             int w = 0;
             int t = 0;
+            Console.WriteLine("Исходный массив строк");
             while (t < listOne.Count)
             {
                string line = listOne[t];
@@ -193,11 +196,10 @@ namespace CodeExperiment
                Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
             }
 
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ResetColor();
             Console.WriteLine();
          }
 
-         Console.ResetColor();
          Console.ReadKey();
       }
    }
