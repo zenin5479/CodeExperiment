@@ -29,7 +29,6 @@ namespace CodeExperiment
             {
                string stroka = readerOne.ReadLine();
                listOne.Add(stroka);
-
                Console.WriteLine(stroka);
             }
 
@@ -77,6 +76,7 @@ namespace CodeExperiment
                Console.ForegroundColor = ConsoleColor.Green;
                Console.WriteLine("Массив имеет одинаковое количество столбцов - прямоугольный");
             }
+
             else
             {
                Console.ForegroundColor = ConsoleColor.Red;
@@ -150,6 +150,7 @@ namespace CodeExperiment
                      Console.Write(subLine + " ");
                      stringModified.Clear();
                   }
+
                   w++;
                }
 
