@@ -129,7 +129,7 @@ namespace CodeExperiment
                while (w < line.Length)
                {
                   bool equally = spaceCharacter == line[w];
-                  if (!equally && w != line.Length - 1)
+                  if (!equally)
                   {
                      stringModified.Append(line[w]);
                   }
@@ -137,12 +137,22 @@ namespace CodeExperiment
                   {
                      string subLine = stringModified.ToString();
                      listColumns.Add(subLine);
-
+                     Console.Write(subLine + " ");
                      stringModified.Clear();
                   }
-                  Console.Write(listColumns[w] + " "); //
+
+                  if (w == line.Length - 1)
+                  {
+                     string subLine = stringModified.ToString();
+                     listColumns.Add(subLine);
+                     Console.Write(subLine + " ");
+                     stringModified.Clear();
+                  }
                   w++;
                }
+
+               Console.WriteLine();
+
                sizeArray[t] = listColumns.Count;
                //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
                t++;
@@ -184,40 +194,6 @@ namespace CodeExperiment
             {
                Console.ForegroundColor = ConsoleColor.Red;
                Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
-            }
-
-            // Разделение строки на подстроки и конвертация подстрок в double
-            double[,] arrayThree = new double[listOne.Count, maxTwo];
-            StringBuilder stringModifiedOne = new StringBuilder();
-            char spaceCharacterOne = ' ';
-            int l = 0;
-            int m = 0;
-            int c = 0;
-            while (l < listOne.Count)
-            {
-               while (c < arrayThree.GetLength(1))
-               {
-                  string line = listOne[l];
-                  while (m < line.Length)
-                  {
-                     bool equally = spaceCharacterOne == line[m];
-                     if (!equally && m != line.Length - 1)
-                     {
-                        stringModifiedOne.Append(line[m]);
-                     }
-                     else
-                     {
-                        string subLine = stringModifiedOne.ToString();
-                        arrayThree[l, c] = Convert.ToDouble(subLine);
-                        Console.Write(arrayThree[l, c] + " ");
-                        stringModifiedOne.Clear();
-                     }
-                     m++;
-                  }
-                  m = 0;
-                  c++;
-               }
-               l++;
             }
 
             Console.ForegroundColor = ConsoleColor.Green;
