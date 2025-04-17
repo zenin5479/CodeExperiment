@@ -128,8 +128,7 @@ namespace CodeExperiment
                string line = listOne[t];
                while (w < line.Length)
                {
-                  bool equally = spaceCharacter == line[w];
-                  if (!equally)
+                  if (spaceCharacter != line[w])
                   {
                      stringModified.Append(line[w]);
                   }
