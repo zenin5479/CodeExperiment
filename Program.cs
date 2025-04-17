@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading.Channels;
 
 namespace CodeExperiment
 {
@@ -137,6 +138,7 @@ namespace CodeExperiment
                   {
                      string subLine = stringModified.ToString();
                      listColumns.Add(subLine);
+                     Console.Write(subLine);
                      stringModified.Clear();
                   }
                   w++;
