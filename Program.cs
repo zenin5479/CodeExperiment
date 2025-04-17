@@ -194,10 +194,10 @@ namespace CodeExperiment
             int c = 0;
             while (l < listOne.Count)
             {
-               string line = listOne[l];
-               while (m < line.Length)
+               while (c < arrayFour.GetLength(1))
                {
-                  while (c < arrayFour.GetLength(1))
+                  string line = listOne[l];
+                  while (m < line.Length)
                   {
                      bool equally = spaceCharacterOne == line[m];
                      if (!equally && m != line.Length - 1)
