@@ -201,7 +201,7 @@ namespace CodeExperiment
                      bool equally = spaceCharacterOne == line[m];
                      if (!equally && m != line.Length - 1)
                      {
-                        stringModified.Append(line[m]);
+                        stringModifiedOne.Append(line[m]);
                      }
                      else
                      {
@@ -210,11 +210,13 @@ namespace CodeExperiment
                         Console.Write(arrayThree[l, c] + " ");
                         stringModifiedOne.Clear();
                      }
-                     c++;
+                     m++;
                   }
-                  c = 0;
-                  m++;
+
+                  m = 0;
+                  c++;
                }
+
                l++;
             }
 
