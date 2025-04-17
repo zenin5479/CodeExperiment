@@ -194,7 +194,7 @@ namespace CodeExperiment
             int c = 0;
             while (l < listOne.Count)
             {
-               string line = listOne[t];
+               string line = listOne[l];
                while (m < line.Length)
                {
                   while (c < arrayFour.GetLength(1))
@@ -208,7 +208,7 @@ namespace CodeExperiment
                      {
                         string subLine = stringModifiedOne.ToString();
                         arrayFour[l, c] = Convert.ToDouble(subLine);
-                        Console.Write(arrayTwo[l, c] + " ");
+                        Console.Write(arrayFour[l, c] + " ");
                         stringModifiedOne.Clear();
                      }
                      c++;
