@@ -212,11 +212,9 @@ namespace CodeExperiment
                      }
                      m++;
                   }
-
                   m = 0;
                   c++;
                }
-
                l++;
             }
 
