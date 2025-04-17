@@ -138,9 +138,10 @@ namespace CodeExperiment
                   {
                      string subLine = stringModified.ToString();
                      listColumns.Add(subLine);
-                     Console.Write(subLine);
+                     
                      stringModified.Clear();
                   }
+                  Console.Write(listColumns[w] + " ");
                   w++;
                }
                sizeArray[t] = listColumns.Count;
