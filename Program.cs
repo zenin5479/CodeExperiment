@@ -164,7 +164,6 @@ namespace CodeExperiment
                listColumns.Clear();
             }
 
-
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
             int minTwo = sizeArray[0];
             int maxTwo = sizeArray[0];
