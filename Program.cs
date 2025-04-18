@@ -9,8 +9,8 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         //string filePath = AppContext.BaseDirectory + "a.txt";
-         string filePath = AppContext.BaseDirectory + "b.txt";
+         string filePath = AppContext.BaseDirectory + "a.txt";
+         //string filePath = AppContext.BaseDirectory + "b.txt";
 
          FileStream fStream = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fStream == null)
@@ -34,7 +34,6 @@ namespace CodeExperiment
 
             readerOne.Close();
             fStream.Dispose();
-
 
             // Вариант 1 с помощью метода String.Split
             // Одномерный массив для определения количества столбцов в строке
