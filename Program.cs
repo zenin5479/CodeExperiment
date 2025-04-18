@@ -28,6 +28,7 @@ namespace CodeExperiment
             while (!readerOne.EndOfStream)
             {
                string stroka = readerOne.ReadLine();
+               Console.BackgroundColor = ConsoleColor.Blue;
                listOne.Add(stroka);
                Console.WriteLine(stroka);
             }
@@ -107,6 +108,7 @@ namespace CodeExperiment
                while (x < arraySplit.GetLength(0))
                {
                   arrayTwo[z, x] = Convert.ToDouble(arraySplit[x]);
+                  Console.BackgroundColor = ConsoleColor.Magenta;
                   Console.Write(arrayTwo[z, x] + " ");
                   x++;
                }
@@ -115,6 +117,7 @@ namespace CodeExperiment
                Console.WriteLine();
             }
 
+            Console.WriteLine(arrayTwo[0, 19] + " ");
             Console.WriteLine();
 
             // Вариант 2 с помощью StringBuilder
