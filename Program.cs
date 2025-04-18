@@ -70,7 +70,6 @@ namespace CodeExperiment
 
             Console.WriteLine();
             Console.WriteLine("Количество строк {0}", listOne.Count);
-            Console.WriteLine();
             Console.WriteLine("Минимальное количество столбцов: {0}", minOne);
             Console.WriteLine("Максимальное количество столбцов: {0}", maxOne);
             if (minOne == maxOne)
@@ -201,7 +200,6 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
-            Console.WriteLine();
          }
 
          Console.ReadKey();
