@@ -69,6 +69,7 @@ namespace CodeExperiment
                f++;
             }
 
+            Console.WriteLine();
             Console.WriteLine("Минимальное количество столбцов: {0}", minOne);
             Console.WriteLine("Максимальное количество столбцов: {0}", maxOne);
             if (minOne == maxOne)
@@ -163,7 +164,7 @@ namespace CodeExperiment
                listColumns.Clear();
             }
 
-            Console.WriteLine();
+            //Console.WriteLine();
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
             int minTwo = sizeArray[0];
@@ -184,6 +185,7 @@ namespace CodeExperiment
                p++;
             }
 
+            Console.WriteLine();
             Console.WriteLine("Минимальное количество столбцов: {0}", minTwo);
             Console.WriteLine("Максимальное количество столбцов: {0}", maxTwo);
             if (minTwo == maxTwo)
