@@ -11,7 +11,7 @@ namespace CodeExperiment
       {
          //string filePath = AppContext.BaseDirectory + "a.txt";
          string filePath = AppContext.BaseDirectory + "b.txt";
-
+         Console.BackgroundColor = ConsoleColor.DarkBlue;
          FileStream fStream = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fStream == null)
          {
@@ -28,7 +28,7 @@ namespace CodeExperiment
             while (!readerOne.EndOfStream)
             {
                string stroka = readerOne.ReadLine();
-               Console.BackgroundColor = ConsoleColor.DarkBlue;
+
                listOne.Add(stroka);
                Console.WriteLine(stroka);
             }
@@ -108,7 +108,6 @@ namespace CodeExperiment
                while (x < arraySplit.GetLength(0))
                {
                   arrayTwo[z, x] = Convert.ToDouble(arraySplit[x]);
-                  Console.BackgroundColor = ConsoleColor.Magenta;
                   Console.Write(arrayTwo[z, x] + " ");
                   x++;
                }
