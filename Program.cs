@@ -132,7 +132,6 @@ namespace CodeExperiment
             char spaceCharacter = ' ';
             int w = 0;
             int t = 0;
-            Console.WriteLine("Исходный массив строк");
             while (t < listOne.Count)
             {
                string line = listOne[t];
