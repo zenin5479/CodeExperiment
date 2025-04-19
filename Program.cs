@@ -68,6 +68,7 @@ namespace CodeExperiment
                f++;
             }
 
+            Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine("Количество строк {0}", listOne.Count);
             Console.WriteLine("Минимальное количество столбцов: {0}", minOne);
@@ -85,7 +86,7 @@ namespace CodeExperiment
             }
 
             //Console.WriteLine();
-            Console.ResetColor();
+
             string[] arrayOne = new string[listOne.Count];
             double[,] arrayTwo = new double[arrayOne.GetLength(0), maxOne];
             int h = 0;
@@ -97,7 +98,8 @@ namespace CodeExperiment
             }
 
             Console.WriteLine();
-
+            Console.ResetColor();
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             int z = 0;
@@ -116,11 +118,14 @@ namespace CodeExperiment
                Console.WriteLine();
             }
 
+            Console.WriteLine();
             Console.WriteLine(arrayTwo[0, 19] + " ");
             Console.WriteLine();
 
             // Вариант 2 с помощью StringBuilder
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
+            Console.ResetColor();
+            Console.BackgroundColor = ConsoleColor.Magenta;
             StringBuilder stringModified = new StringBuilder();
             List<string> listColumns = new List<string>();
             int[] sizeArray = new int[listOne.Count];
@@ -184,6 +189,7 @@ namespace CodeExperiment
                p++;
             }
 
+            Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine("Количество строк {0}", listOne.Count);
             Console.WriteLine("Минимальное количество столбцов: {0}", minTwo);
