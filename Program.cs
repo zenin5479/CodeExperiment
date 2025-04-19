@@ -28,7 +28,7 @@ namespace CodeExperiment
             while (!readerOne.EndOfStream)
             {
                string stroka = readerOne.ReadLine();
-               Console.BackgroundColor = ConsoleColor.Blue;
+               Console.BackgroundColor = ConsoleColor.DarkBlue;
                listOne.Add(stroka);
                Console.WriteLine(stroka);
             }
