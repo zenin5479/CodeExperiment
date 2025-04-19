@@ -119,7 +119,7 @@ namespace CodeExperiment
             }
 
             Console.WriteLine();
-            Console.WriteLine(arrayTwo[0, arrayTwo.GetLength(0) - 1]);
+            Console.WriteLine(arrayTwo[0, arrayTwo.GetLength(1) - 1]);
             Console.WriteLine();
 
             // Вариант 2 с помощью StringBuilder
