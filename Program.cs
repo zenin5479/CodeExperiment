@@ -39,14 +39,14 @@ namespace CodeExperiment
             // Вариант 1 с помощью метода String.Split
             // Одномерный массив для определения количества столбцов в строке
             int[] arrayDimension = new int[listOne.Count];
-            int d = 0;
-            while (d < listOne.Count)
+            int a = 0;
+            while (a < listOne.Count)
             {
                // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
-               List<string> listSplit = new List<string>(listOne[d].Split(" "));
-               arrayDimension[d] = listSplit.Count;
+               List<string> listSplit = new List<string>(listOne[a].Split(" "));
+               arrayDimension[a] = listSplit.Count;
                //Console.WriteLine("В строке {0} количество столбцов {1}", d, arrayDimension[d]);
-               d++;
+               a++;
             }
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
@@ -89,12 +89,12 @@ namespace CodeExperiment
 
             string[] arrayOne = new string[listOne.Count];
             double[,] arrayTwo = new double[arrayOne.GetLength(0), maxOne];
-            int h = 0;
-            while (h < listOne.Count)
+            int c = 0;
+            while (c < listOne.Count)
             {
-               arrayOne[h] = listOne[h];
+               arrayOne[c] = listOne[c];
                //Console.WriteLine(arrayOne[h]);
-               h++;
+               c++;
             }
 
             Console.WriteLine();
@@ -102,19 +102,19 @@ namespace CodeExperiment
             Console.BackgroundColor = ConsoleColor.Magenta;
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
-            int z = 0;
-            while (z < arrayTwo.GetLength(0))
+            int d = 0;
+            while (d < arrayTwo.GetLength(0))
             {
-               string[] arraySplit = arrayOne[z].Split(" ");
-               int x = 0;
-               while (x < arraySplit.GetLength(0))
+               string[] arraySplit = arrayOne[d].Split(" ");
+               int e = 0;
+               while (e < arraySplit.GetLength(0))
                {
-                  arrayTwo[z, x] = Convert.ToDouble(arraySplit[x]);
-                  Console.Write(arrayTwo[z, x] + " ");
-                  x++;
+                  arrayTwo[d, e] = Convert.ToDouble(arraySplit[e]);
+                  Console.Write(arrayTwo[d, e] + " ");
+                  e++;
                }
 
-               z++;
+               d++;
                Console.WriteLine();
             }
 
