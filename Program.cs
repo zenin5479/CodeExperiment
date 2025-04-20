@@ -244,7 +244,6 @@ namespace CodeExperiment
                      zk++;
                   }
 
-
                   Console.WriteLine();
                   zk = 0;
                   zj++;
