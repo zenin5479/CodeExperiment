@@ -52,20 +52,20 @@ namespace CodeExperiment
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
             int minOne = arrayDimension[0];
             int maxOne = arrayDimension[0];
-            int f = 0;
-            while (f < arrayDimension.Length)
+            int b = 0;
+            while (b < arrayDimension.Length)
             {
-               if (arrayDimension[f] < minOne)
+               if (arrayDimension[b] < minOne)
                {
-                  minOne = arrayDimension[f];
+                  minOne = arrayDimension[b];
                }
 
-               if (arrayDimension[f] > maxOne)
+               if (arrayDimension[b] > maxOne)
                {
-                  maxOne = arrayDimension[f];
+                  maxOne = arrayDimension[b];
                }
 
-               f++;
+               b++;
             }
 
             Console.ResetColor();
