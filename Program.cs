@@ -99,7 +99,7 @@ namespace CodeExperiment
 
             Console.WriteLine();
             Console.ResetColor();
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.BackgroundColor = ConsoleColor.Magenta;
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             int z = 0;
@@ -205,6 +205,8 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+
             Console.WriteLine();
             string[] arrayThree = new string[listOne.Count];
             double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
