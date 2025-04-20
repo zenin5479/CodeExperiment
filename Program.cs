@@ -231,6 +231,7 @@ namespace CodeExperiment
                         arrayFour[zi, zj] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayFour[zi, zj] + " ");
                         stringModifiedOne.Clear();
+                        zj++;
                      }
 
                      if (zk == line.Length - 1)
@@ -239,16 +240,16 @@ namespace CodeExperiment
                         arrayFour[zi, zj] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayFour[zi, zj] + " ");
                         stringModifiedOne.Clear();
+                        zj++;
                      }
 
                      zk++;
                   }
+                  zk = 0;
 
                   Console.WriteLine();
-                  zk = 0;
-                  zj++;
                }
-
+               zj = 0;
                zi++;
             }
 
