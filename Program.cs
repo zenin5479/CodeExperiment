@@ -205,44 +205,50 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            //Console.BackgroundColor = ConsoleColor.DarkBlue;
 
             Console.WriteLine();
             StringBuilder stringModifiedOne = new StringBuilder();
-            string[] arrayThree = new string[listOne.Count];
-            double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
+            double[,] arrayFour = new double[listOne.Count, maxTwo];
             char spaceCharacterOne = ' ';
             int zi = 0;
             int zj = 0;
-            while (zi < listOne.Count)
+            int zk = 0;
+            while (zi < arrayFour.GetLength(0))
             {
                string line = listOne[zi];
-               while (zj < line.Length)
+               while (zj < arrayFour.GetLength(1))
                {
-                  if (spaceCharacterOne != line[zj])
+                  while (zk < line.Length)
                   {
-                     stringModifiedOne.Append(line[zj]);
-                  }
-                  else
-                  {
-                     string subLineOne = stringModifiedOne.ToString();
-                     arrayFour[zi, zj] = Convert.ToDouble(subLineOne);
-                     Console.Write(subLineOne + " ");
-                     stringModifiedOne.Clear();
+                     if (spaceCharacterOne != line[zk])
+                     {
+                        stringModifiedOne.Append(line[zk]);
+                     }
+                     else
+                     {
+                        string subLineOne = stringModifiedOne.ToString();
+                        arrayFour[zi, zj] = Convert.ToDouble(subLineOne);
+                        Console.Write(arrayFour[zi, zj] + " ");
+                        stringModifiedOne.Clear();
+                     }
+
+                     if (zk == line.Length - 1)
+                     {
+                        string subLineOne = stringModifiedOne.ToString();
+                        arrayFour[zi, zj] = Convert.ToDouble(subLineOne);
+                        Console.Write(arrayFour[zi, zj] + " ");
+                        stringModifiedOne.Clear();
+                     }
+
+                     zk++;
                   }
 
-                  if (zj == line.Length - 1)
-                  {
-                     string subLineOne = stringModifiedOne.ToString();
-                     arrayFour[zi, zj] = Convert.ToDouble(subLineOne);
-                     Console.Write(subLineOne + " ");
-                     stringModifiedOne.Clear();
-                  }
-                  zj = 0;
+
+                  Console.WriteLine();
+                  zk = 0;
+                  zj++;
                }
-
-               Console.WriteLine();
-               Console.WriteLine("В строке {0} количество столбцов {1}", zi, arrayFour[zi, zj]);
 
                zi++;
             }
