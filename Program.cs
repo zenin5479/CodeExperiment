@@ -213,13 +213,11 @@ namespace CodeExperiment
             double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
             char spaceCharacterOne = ' ';
             int zi = 0;
-            int zw = 0;
             int zt = 0;
-
-
+            int zw = 0;
             while (zi < listOne.Count)
             {
-               while (zt < listOne.Count)
+               while (zt < arrayFour.GetLength(0))
                {
                   string line = listOne[zt];
                   while (zw < line.Length)
