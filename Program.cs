@@ -189,7 +189,7 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
-            Console.WriteLine();
+            //Console.WriteLine();
             Console.WriteLine("Количество строк {0}", listOne.Count);
             Console.WriteLine("Минимальное количество столбцов: {0}", minTwo);
             Console.WriteLine("Максимальное количество столбцов: {0}", maxTwo);
@@ -204,7 +204,8 @@ namespace CodeExperiment
                Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
             }
 
-            
+            Console.ResetColor();
+            Console.WriteLine();
             string[] arrayThree = new string[listOne.Count];
             double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
             int hj = 0;
@@ -214,7 +215,6 @@ namespace CodeExperiment
                Console.WriteLine(arrayOne[hj]);
                hj++;
             }
-
 
             Console.ResetColor();
          }
