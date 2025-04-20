@@ -213,60 +213,39 @@ namespace CodeExperiment
             double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
             char spaceCharacterOne = ' ';
             int zi = 0;
-            int zt = 0;
-            int zw = 0;
+            int zj = 0;
             while (zi < listOne.Count)
             {
-               while (zt < arrayFour.GetLength(0))
+               string line = listOne[zi];
+               while (zj < line.Length)
                {
-                  string line = listOne[zt];
-                  while (zw < line.Length)
+                  if (spaceCharacterOne != line[zj])
                   {
-                     if (spaceCharacterOne != line[zw])
-                     {
-                        stringModifiedOne.Append(line[zw]);
-                     }
-                     else
-                     {
-                        string subLineOne = stringModifiedOne.ToString();
-                        listColumns.Add(subLineOne);
-                        Console.Write(subLineOne + " ");
-                        stringModifiedOne.Clear();
-                     }
-
-                     if (zw == line.Length - 1)
-                     {
-                        string subLineOne = stringModifiedOne.ToString();
-                        listColumns.Add(subLineOne);
-                        Console.Write(subLineOne + " ");
-                        stringModifiedOne.Clear();
-                     }
-
-                     zw++;
+                     stringModifiedOne.Append(line[zj]);
+                  }
+                  else
+                  {
+                     string subLineOne = stringModifiedOne.ToString();
+                     arrayFour[zi, zj] = Convert.ToDouble(subLineOne);
+                     Console.Write(subLineOne + " ");
+                     stringModifiedOne.Clear();
                   }
 
-                  //Console.WriteLine();
-
-                  sizeArray[zt] = listColumns.Count;
-                  //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
-                  zt++;
-                  zw = 0;
-                  listColumns.Clear();
+                  if (zj == line.Length - 1)
+                  {
+                     string subLineOne = stringModifiedOne.ToString();
+                     arrayFour[zi, zj] = Convert.ToDouble(subLineOne);
+                     Console.Write(subLineOne + " ");
+                     stringModifiedOne.Clear();
+                  }
+                  zj = 0;
                }
 
+               Console.WriteLine();
+               Console.WriteLine("В строке {0} количество столбцов {1}", zi, arrayFour[zi, zj]);
 
-
-
-               arrayThree[zi] = listOne[zi];
-               Console.WriteLine(arrayOne[zi]);
                zi++;
             }
-
-
-
-
-
-
 
             Console.ResetColor();
          }
