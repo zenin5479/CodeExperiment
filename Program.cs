@@ -145,7 +145,7 @@ namespace CodeExperiment
                   {
                      string subLine = stringModified.ToString();
                      listColumns.Add(subLine);
-                     Console.Write(subLine + " ");
+                     //Console.Write(subLine + " ");
                      stringModified.Clear();
                   }
 
@@ -153,14 +153,14 @@ namespace CodeExperiment
                   {
                      string subLine = stringModified.ToString();
                      listColumns.Add(subLine);
-                     Console.Write(subLine + " ");
+                     //Console.Write(subLine + " ");
                      stringModified.Clear();
                   }
 
                   w++;
                }
 
-               Console.WriteLine();
+               //Console.WriteLine();
 
                sizeArray[t] = listColumns.Count;
                //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
@@ -203,6 +203,18 @@ namespace CodeExperiment
                Console.ForegroundColor = ConsoleColor.Red;
                Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
             }
+
+            
+            string[] arrayThree = new string[listOne.Count];
+            double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
+            int hj = 0;
+            while (hj < listOne.Count)
+            {
+               arrayThree[hj] = listOne[hj];
+               Console.WriteLine(arrayOne[hj]);
+               hj++;
+            }
+
 
             Console.ResetColor();
          }
