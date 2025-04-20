@@ -210,12 +210,12 @@ namespace CodeExperiment
             Console.WriteLine();
             string[] arrayThree = new string[listOne.Count];
             double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
-            int hj = 0;
-            while (hj < listOne.Count)
+            int hi = 0;
+            while (hi < listOne.Count)
             {
-               arrayThree[hj] = listOne[hj];
-               Console.WriteLine(arrayOne[hj]);
-               hj++;
+               arrayThree[hi] = listOne[hi];
+               Console.WriteLine(arrayOne[hi]);
+               hi++;
             }
 
             Console.ResetColor();
