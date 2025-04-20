@@ -211,53 +211,61 @@ namespace CodeExperiment
             StringBuilder stringModifiedOne = new StringBuilder();
             string[] arrayThree = new string[listOne.Count];
             double[,] arrayFour = new double[arrayThree.GetLength(0), maxTwo];
+            char spaceCharacterOne = ' ';
             int zi = 0;
+            int zw = 0;
+            int zt = 0;
+
+
             while (zi < listOne.Count)
             {
+               while (zt < listOne.Count)
+               {
+                  string line = listOne[zt];
+                  while (zw < line.Length)
+                  {
+                     if (spaceCharacterOne != line[zw])
+                     {
+                        stringModifiedOne.Append(line[zw]);
+                     }
+                     else
+                     {
+                        string subLineOne = stringModifiedOne.ToString();
+                        listColumns.Add(subLineOne);
+                        Console.Write(subLineOne + " ");
+                        stringModifiedOne.Clear();
+                     }
+
+                     if (zw == line.Length - 1)
+                     {
+                        string subLineOne = stringModifiedOne.ToString();
+                        listColumns.Add(subLineOne);
+                        Console.Write(subLineOne + " ");
+                        stringModifiedOne.Clear();
+                     }
+
+                     zw++;
+                  }
+
+                  //Console.WriteLine();
+
+                  sizeArray[zt] = listColumns.Count;
+                  //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
+                  zt++;
+                  zw = 0;
+                  listColumns.Clear();
+               }
+
+
+
+
                arrayThree[zi] = listOne[zi];
                Console.WriteLine(arrayOne[zi]);
                zi++;
             }
 
-            char spaceCharacterOne = ' ';
-            int zw = 0;
-            int zt = 0;
-            while (zt < listOne.Count)
-            {
-               string line = listOne[zt];
-               while (zw < line.Length)
-               {
-                  if (spaceCharacterOne != line[zw])
-                  {
-                     stringModifiedOne.Append(line[zw]);
-                  }
-                  else
-                  {
-                     string subLineOne = stringModifiedOne.ToString();
-                     listColumns.Add(subLineOne);
-                     Console.Write(subLineOne + " ");
-                     stringModifiedOne.Clear();
-                  }
 
-                  if (zw == line.Length - 1)
-                  {
-                     string subLineOne = stringModifiedOne.ToString();
-                     listColumns.Add(subLineOne);
-                     Console.Write(subLineOne + " ");
-                     stringModifiedOne.Clear();
-                  }
 
-                  zw++;
-               }
-
-               //Console.WriteLine();
-
-               sizeArray[zt] = listColumns.Count;
-               //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
-               zt++;
-               zw = 0;
-               listColumns.Clear();
-            }
 
 
 
