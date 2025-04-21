@@ -217,7 +217,7 @@ namespace CodeExperiment
             while (l < arrayFour.GetLength(0)) // 10
             {
                string line = listOne[l];
-               l++;
+
                while (m < arrayFour.GetLength(1)) // 20
                {
 
@@ -248,9 +248,10 @@ namespace CodeExperiment
                   }
                   n = 0;
                   m = 0;
+
                   Console.WriteLine();
                }
-
+               l++;
             }
 
             Console.ResetColor();
