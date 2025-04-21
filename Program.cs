@@ -245,15 +245,18 @@ namespace CodeExperiment
 
                      n++;
                   }
-                  n = 0;
 
-                  Console.WriteLine();
+                  n = 0;
                }
+
+               Console.WriteLine();
                m = 0;
                l++;
             }
 
             Console.ResetColor();
+            // Не присваивать лишние элементы массиву строки
+
          }
 
          Console.ReadKey();
