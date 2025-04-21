@@ -206,9 +206,11 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
-            //Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
 
             Console.WriteLine();
+            // Разделение строки на подстроки и конвертация подстрок в double
+            Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModifiedOne = new StringBuilder();
             double[,] arrayFour = new double[listOne.Count, maxTwo];
             char spaceCharacterOne = ' ';
