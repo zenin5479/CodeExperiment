@@ -242,12 +242,13 @@ namespace CodeExperiment
                         stringModifiedOne.Clear();
                         m++;
                      }
+
                      n++;
                   }
+
                   n = 0;
-
-
                }
+
                Console.WriteLine();
                m = 0;
                l++;
