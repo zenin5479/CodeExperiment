@@ -217,8 +217,10 @@ namespace CodeExperiment
             while (l < arrayFour.GetLength(0)) // 10
             {
                string line = listOne[l];
+
                while (m < arrayFour.GetLength(1)) // 20
                {
+
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
@@ -242,15 +244,13 @@ namespace CodeExperiment
                         stringModifiedOne.Clear();
                         m++;
                      }
-
                      n++;
                   }
-
                   n = 0;
-               }
+                  m = 0;
 
-               Console.WriteLine();
-               m = 0;
+                  Console.WriteLine();
+               }
                l++;
             }
 
