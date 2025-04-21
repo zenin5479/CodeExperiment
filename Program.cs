@@ -126,7 +126,6 @@ namespace CodeExperiment
             // Вариант 2 с помощью StringBuilder
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
             Console.ResetColor();
-            Console.BackgroundColor = ConsoleColor.Magenta;
             StringBuilder stringModified = new StringBuilder();
             List<string> listColumns = new List<string>();
             int[] sizeArray = new int[listOne.Count];
@@ -206,7 +205,6 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
-            Console.BackgroundColor = ConsoleColor.Magenta;
             Console.WriteLine();
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
