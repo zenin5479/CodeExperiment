@@ -119,6 +119,7 @@ namespace CodeExperiment
             }
 
             Console.WriteLine();
+            Console.ResetColor();
             Console.WriteLine("Последний элемент первой строки : {0}", arrayTwo[0, arrayTwo.GetLength(1) - 1]);
             Console.WriteLine();
 
