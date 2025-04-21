@@ -145,7 +145,7 @@ namespace CodeExperiment
                   {
                      string subLine = stringModified.ToString();
                      listColumns.Add(subLine);
-                     //Console.Write(subLine + " ");
+                     Console.Write(subLine + " ");
                      stringModified.Clear();
                   }
 
@@ -153,14 +153,14 @@ namespace CodeExperiment
                   {
                      string subLine = stringModified.ToString();
                      listColumns.Add(subLine);
-                     //Console.Write(subLine + " ");
+                     Console.Write(subLine + " ");
                      stringModified.Clear();
                   }
 
                   f++;
                }
 
-               //Console.WriteLine();
+               Console.WriteLine();
 
                sizeArray[h] = listColumns.Count;
                //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
@@ -214,10 +214,10 @@ namespace CodeExperiment
             int l = 0;
             int m = 0;
             int n = 0;
-            while (l < arrayFour.GetLength(0))
+            while (l < arrayFour.GetLength(0)) // 10
             {
                string line = listOne[l];
-               while (m < arrayFour.GetLength(1))
+               while (m < arrayFour.GetLength(1)) // 20
                {
                   while (n < line.Length)
                   {
@@ -242,13 +242,13 @@ namespace CodeExperiment
                         stringModifiedOne.Clear();
                         m++;
                      }
-
                      n++;
                   }
                   n = 0;
 
-                  Console.WriteLine();
+
                }
+               Console.WriteLine();
                m = 0;
                l++;
             }
