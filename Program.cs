@@ -119,6 +119,7 @@ namespace CodeExperiment
             }
 
             Console.WriteLine();
+            Console.ResetColor();
             Console.WriteLine("Последний элемент первой строки : {0}", arrayTwo[0, arrayTwo.GetLength(1) - 1]);
             Console.WriteLine();
 
@@ -130,16 +131,16 @@ namespace CodeExperiment
             List<string> listColumns = new List<string>();
             int[] sizeArray = new int[listOne.Count];
             char spaceCharacter = ' ';
-            int w = 0;
-            int t = 0;
-            while (t < listOne.Count)
+            int f = 0;
+            int h = 0;
+            while (h < listOne.Count)
             {
-               string line = listOne[t];
-               while (w < line.Length)
+               string line = listOne[h];
+               while (f < line.Length)
                {
-                  if (spaceCharacter != line[w])
+                  if (spaceCharacter != line[f])
                   {
-                     stringModified.Append(line[w]);
+                     stringModified.Append(line[f]);
                   }
                   else
                   {
@@ -149,7 +150,7 @@ namespace CodeExperiment
                      stringModified.Clear();
                   }
 
-                  if (w == line.Length - 1)
+                  if (f == line.Length - 1)
                   {
                      string subLine = stringModified.ToString();
                      listColumns.Add(subLine);
@@ -157,35 +158,35 @@ namespace CodeExperiment
                      stringModified.Clear();
                   }
 
-                  w++;
+                  f++;
                }
 
                //Console.WriteLine();
 
-               sizeArray[t] = listColumns.Count;
+               sizeArray[h] = listColumns.Count;
                //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
-               t++;
-               w = 0;
+               h++;
+               f = 0;
                listColumns.Clear();
             }
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
             int minTwo = sizeArray[0];
             int maxTwo = sizeArray[0];
-            int p = 0;
-            while (p < sizeArray.Length)
+            int k = 0;
+            while (k < sizeArray.Length)
             {
-               if (sizeArray[p] < minTwo)
+               if (sizeArray[k] < minTwo)
                {
-                  minTwo = sizeArray[p];
+                  minTwo = sizeArray[k];
                }
 
-               if (sizeArray[p] > maxTwo)
+               if (sizeArray[k] > maxTwo)
                {
-                  maxTwo = sizeArray[p];
+                  maxTwo = sizeArray[k];
                }
 
-               p++;
+               k++;
             }
 
             Console.ResetColor();
@@ -205,52 +206,53 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
-            //Console.BackgroundColor = ConsoleColor.DarkBlue;
-
+            Console.BackgroundColor = ConsoleColor.Magenta;
             Console.WriteLine();
+            // Разделение строки на подстроки и конвертация подстрок в double
+            Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModifiedOne = new StringBuilder();
             double[,] arrayFour = new double[listOne.Count, maxTwo];
             char spaceCharacterOne = ' ';
-            int zi = 0;
-            int zj = 0;
-            int zk = 0;
-            while (zi < arrayFour.GetLength(0))
+            int l = 0;
+            int m = 0;
+            int n = 0;
+            while (l < arrayFour.GetLength(0))
             {
-               string line = listOne[zi];
-               while (zj < arrayFour.GetLength(1))
+               string line = listOne[l];
+               while (m < arrayFour.GetLength(1))
                {
-                  while (zk < line.Length)
+                  while (n < line.Length)
                   {
-                     if (spaceCharacterOne != line[zk])
+                     if (spaceCharacterOne != line[n])
                      {
-                        stringModifiedOne.Append(line[zk]);
+                        stringModifiedOne.Append(line[n]);
                      }
                      else
                      {
                         string subLineOne = stringModifiedOne.ToString();
-                        arrayFour[zi, zj] = Convert.ToDouble(subLineOne);
-                        Console.Write(arrayFour[zi, zj] + " ");
+                        arrayFour[l, m] = Convert.ToDouble(subLineOne);
+                        Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
-                        zj++;
+                        m++;
                      }
 
-                     if (zk == line.Length - 1)
+                     if (n == line.Length - 1)
                      {
                         string subLineOne = stringModifiedOne.ToString();
-                        arrayFour[zi, zj] = Convert.ToDouble(subLineOne);
-                        Console.Write(arrayFour[zi, zj] + " ");
+                        arrayFour[l, m] = Convert.ToDouble(subLineOne);
+                        Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
-                        zj++;
+                        m++;
                      }
 
-                     zk++;
+                     n++;
                   }
-                  zk = 0;
+                  n = 0;
 
                   Console.WriteLine();
                }
-               zj = 0;
-               zi++;
+               m = 0;
+               l++;
             }
 
             Console.ResetColor();
