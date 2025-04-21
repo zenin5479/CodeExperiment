@@ -255,6 +255,7 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
+            // Не присваивать лишние элементы массиву строки
          }
 
          Console.ReadKey();
