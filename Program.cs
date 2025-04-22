@@ -9,8 +9,8 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         string filePath = AppContext.BaseDirectory + "a.txt";
-         //string filePath = AppContext.BaseDirectory + "b.txt";
+         //string filePath = AppContext.BaseDirectory + "a.txt";
+         string filePath = AppContext.BaseDirectory + "b.txt";
          Console.BackgroundColor = ConsoleColor.DarkBlue;
          FileStream fStream = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fStream == null)
