@@ -211,6 +211,12 @@ namespace CodeExperiment
             StringBuilder stringModifiedOne = new StringBuilder();
             double[,] arrayFour = new double[listOne.Count, maxTwo];
             char spaceCharacterOne = ' ';
+            int vowels, consonants, others, punctuationmarks, sumAll, sumFour;
+            vowels = 0;
+            consonants = 0;
+            others = 0;
+            punctuationmarks = 0;
+            sumAll = 0;
             int l = 0;
             int m = 0;
             int n = 0;
@@ -219,114 +225,67 @@ namespace CodeExperiment
                string line = listOne[l];
                while (m < arrayFour.GetLength(1))
                {
+                  sumAll++;
+                  bool isVowel = false;
+                  bool isConsonants = false;
+                  bool isOthersCh = false;
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
                      {
-                        stringModifiedOne.Append(line[n]);
-                     }
-                     else
-                     {
-                        string subLineOne = stringModifiedOne.ToString();
-                        arrayFour[l, m] = Convert.ToDouble(subLineOne);
-                        Console.Write(arrayFour[l, m] + " ");
-                        stringModifiedOne.Clear();
-                        m++;
-                     }
-
-                     if (n == line.Length - 1)
-                     {
-                        string subLineOne = stringModifiedOne.ToString();
-                        arrayFour[l, m] = Convert.ToDouble(subLineOne);
-                        Console.Write(arrayFour[l, m] + " ");
-                        stringModifiedOne.Clear();
-                        m++;
+                        vowels++;
+                        isVowel = true;
                      }
 
                      n++;
                   }
 
-                  n = 0;
-               }
-
-               Console.WriteLine();
-               m = 0;
-               l++;
-            }
-
-
-            Console.WriteLine();
-            int vowels, consonants, others, punctuationmarks, sumAll, sumFour;
-            vowels = 0;
-            consonants = 0;
-            others = 0;
-            punctuationmarks = 0;
-            sumAll = 0;
-            int i = 0;
-            while (i < arrayFour.GetLength(0))
-            {
-               string line = listOne[l];
-
-               sumAll++;
-               bool isVowel = false;
-               bool isConsonants = false;
-               bool isOthersCh = false;
-               int j = 0;
-               while (j < line.Length)
-               {
-                  if (spaceCharacterOne != line[n])
+                  if (isVowel == false)
                   {
-                     vowels++;
-                     isVowel = true;
-                  }
-
-                  j++;
-               }
-
-               if (isVowel == false)
-               {
-                  int kl = 0;
-                  while (kl < consonantsCh.Length)
-                  {
-                     if (phrase[i] == consonantsCh[kl])
+                     int p = 0;
+                     while (p < line.Length)
                      {
-                        consonants++;
-                        isConsonants = true;
+                        //if (phrase[l] == consonantsCh[p])
+                        //{
+                        //   consonants++;
+                        //   isConsonants = true;
+                        //}
+
+                        p++;
                      }
-
-                     kl++;
                   }
-               }
 
-               if (isVowel == false && isConsonants == false)
-               {
-                  int lm = 0;
-                  while (lm < othersCh.Length)
+                  if (isVowel == false && isConsonants == false)
                   {
-                     if (phrase[i] == othersCh[lm])
+                     int r = 0;
+                     while (r < line.Length)
                      {
-                        others++;
-                        isOthersCh = true;
+                        //if (phrase[l] == othersCh[r])
+                        //{
+                        //   others++;
+                        //   isOthersCh = true;
+                        //}
+
+                        r++;
                      }
-
-                     lm++;
                   }
-               }
 
-               if (isVowel == false && isConsonants == false && isOthersCh == false)
-               {
-                  int mn = 0;
-                  while (mn < punctuationMarksCh.Length)
+                  if (isVowel == false && isConsonants == false && isOthersCh == false)
                   {
-                     if (phrase[i] == punctuationMarksCh[mn])
+                     int s = 0;
+                     while (s < line.Length)
                      {
-                        punctuationmarks++;
+                        //if (phrase[l] == punctuationMarksCh[s])
+                        //{
+                        //   punctuationmarks++;
+                        //}
+                        //s++;
                      }
-                     mn++;
                   }
+
+                  l++;
                }
 
-               i++;
             }
 
             sumFour = vowels + consonants + others + punctuationmarks;
@@ -337,12 +296,58 @@ namespace CodeExperiment
             Console.WriteLine("Сумма гласных, согласных, других знаков и знаков пунктуации: {0}", sumFour);
             Console.WriteLine("Количество всех знаков: {0}", sumAll);
 
-            Console.ReadKey();
 
 
+            //Console.WriteLine("Двухмерный числовой массив");
+            //StringBuilder stringModifiedOne = new StringBuilder();
+            //double[,] arrayFour = new double[listOne.Count, maxTwo];
+            //char spaceCharacterOne = ' ';
+            //int l = 0;
+            //int m = 0;
+            //int n = 0;
+            //while (l < arrayFour.GetLength(0))
+            //{
+            //   string line = listOne[l];
+            //   while (m < arrayFour.GetLength(1))
+            //   {
+            //      while (n < line.Length)
+            //      {
+            //         if (spaceCharacterOne != line[n])
+            //         {
+            //            stringModifiedOne.Append(line[n]);
+            //         }
+            //         else
+            //         {
+            //            string subLineOne = stringModifiedOne.ToString();
+            //            arrayFour[l, m] = Convert.ToDouble(subLineOne);
+            //            Console.Write(arrayFour[l, m] + " ");
+            //            stringModifiedOne.Clear();
+            //            m++;
+            //         }
+
+            //         if (n == line.Length - 1)
+            //         {
+            //            string subLineOne = stringModifiedOne.ToString();
+            //            arrayFour[l, m] = Convert.ToDouble(subLineOne);
+            //            Console.Write(arrayFour[l, m] + " ");
+            //            stringModifiedOne.Clear();
+            //            m++;
+            //         }
+
+            //         n++;
+            //      }
+
+            //      n = 0;
+            //   }
+
+            //   Console.WriteLine();
+            //   m = 0;
+            //   l++;
+            //}
 
 
             Console.ResetColor();
+            Console.ReadKey();
             // Не присваивать лишние элементы массиву строки (первые 3 строки 10)
          }
 
