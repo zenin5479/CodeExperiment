@@ -355,7 +355,6 @@ namespace CodeExperiment
          Console.WriteLine("Сумма гласных, согласных, других знаков и знаков пунктуации: {0}", sumFour);
          Console.WriteLine("Количество всех знаков: {0}", sumAll);
 
-         CountingLine();
          Console.ReadKey();
       }
 
