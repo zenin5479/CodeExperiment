@@ -357,7 +357,5 @@ namespace CodeExperiment
 
          Console.ReadKey();
       }
-
-      
    }
 }
