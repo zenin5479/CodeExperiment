@@ -297,15 +297,58 @@ namespace CodeExperiment
             Console.WriteLine("Количество всех знаков: {0}", sumAll);
 
 
-            
-
 
             Console.ResetColor();
             Console.ReadKey();
             // Не присваивать лишние элементы массиву строки (первые 3 строки 10)
          }
 
+         //Console.WriteLine("Двухмерный числовой массив");
+         //StringBuilder stringModifiedOne = new StringBuilder();
+         //double[,] arrayFour = new double[listOne.Count, maxTwo];
+         //char spaceCharacterOne = ' ';
+         //int l = 0;
+         //int m = 0;
+         //int n = 0;
+         //while (l < arrayFour.GetLength(0))
+         //{
+         //   string line = listOne[l];
+         //   while (m < arrayFour.GetLength(1))
+         //   {
+         //      while (n < line.Length)
+         //      {
+         //         if (spaceCharacterOne != line[n])
+         //         {
+         //            stringModifiedOne.Append(line[n]);
+         //         }
+         //         else
+         //         {
+         //            string subLineOne = stringModifiedOne.ToString();
+         //            arrayFour[l, m] = Convert.ToDouble(subLineOne);
+         //            Console.Write(arrayFour[l, m] + " ");
+         //            stringModifiedOne.Clear();
+         //            m++;
+         //         }
 
+         //         if (n == line.Length - 1)
+         //         {
+         //            string subLineOne = stringModifiedOne.ToString();
+         //            arrayFour[l, m] = Convert.ToDouble(subLineOne);
+         //            Console.Write(arrayFour[l, m] + " ");
+         //            stringModifiedOne.Clear();
+         //            m++;
+         //         }
+
+         //         n++;
+         //      }
+
+         //      n = 0;
+         //   }
+
+         //   Console.WriteLine();
+         //   m = 0;
+         //   l++;
+         //}
       }
    }
 }
