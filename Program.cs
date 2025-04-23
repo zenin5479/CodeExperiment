@@ -259,7 +259,6 @@ namespace CodeExperiment
          }
 
          CountingLine();
-
          Console.ReadKey();
       }
 
