@@ -256,25 +256,6 @@ namespace CodeExperiment
 
 
             Console.WriteLine();
-
-            string phrase = "Дважды она вскакивала и зажигала свечу, испытывая желание рассмотреть оба костюма, лежавшие на стульях возле кровати, — один для предстоящей завтра королевской охоты, другой — для торжества, последующего за ней.";
-            char[] vowelscCh =
-            { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я',
-            'А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я'
-         };
-            char[] consonantsCh =
-            {
-            'б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
-            'Б', 'В', 'Г', 'Д', 'Ж', 'З', 'Й', 'К', 'Л', 'М', 'Н', 'П', 'Р', 'С', 'Т', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ'
-         };
-            char[] othersCh =
-            {
-            'ь', 'ъ',
-            'Ъ', 'Ь'
-         };
-            char[] punctuationMarksCh = { ' ', '.', '?', '!', '…', ',', ';', ':', '—', '(', ')', '«', '»' };
-            // Символ '—' может отличатся, поэтому считатся не будет
-
             int vowels, consonants, others, punctuationmarks, sumAll, sumFour;
             vowels = 0;
             consonants = 0;
@@ -284,14 +265,16 @@ namespace CodeExperiment
             int i = 0;
             while (i < arrayFour.GetLength(0))
             {
+               string line = listOne[l];
+
                sumAll++;
                bool isVowel = false;
                bool isConsonants = false;
                bool isOthersCh = false;
                int j = 0;
-               while (j < vowelscCh.Length)
+               while (j < line.Length)
                {
-                  if (phrase[i] == vowelscCh[j])
+                  if (spaceCharacterOne != line[n])
                   {
                      vowels++;
                      isVowel = true;
