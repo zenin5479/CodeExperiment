@@ -294,8 +294,8 @@ namespace CodeExperiment
             Console.WriteLine("Количество знаков пунктуации: {0}", punctuationmarks);
             Console.WriteLine("Сумма гласных, согласных, других знаков и знаков пунктуации: {0}", sumFour);
             Console.WriteLine("Количество всех знаков: {0}", sumAll);
+            //Console.ResetColor();
 
-            Console.ResetColor();
             Console.ReadKey();
             // Не присваивать лишние элементы массиву строки (первые 3 строки 10)
          }
