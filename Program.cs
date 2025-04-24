@@ -211,8 +211,8 @@ namespace CodeExperiment
             StringBuilder stringModifiedOne = new StringBuilder();
             double[,] arrayFour = new double[listOne.Count, maxTwo];
             char spaceCharacterOne = ' ';
-            int characterOne, consonants, others, punctuationmarks, sumAll, sumFour;
-            characterOne = 0;
+            int character, consonants, others, punctuationmarks, sumAll, sumFour;
+            character = 0;
             consonants = 0;
             others = 0;
             punctuationmarks = 0;
@@ -226,7 +226,7 @@ namespace CodeExperiment
                while (m < arrayFour.GetLength(1))
                {
                   sumAll++;
-                  bool isCharacterOne = false;
+                  bool isCharacter = false;
                   bool isConsonants = false;
                   bool isOthersCh = false;
                   while (n < line.Length)
@@ -234,8 +234,8 @@ namespace CodeExperiment
                      if (spaceCharacterOne != line[n])
                      {
                         stringModifiedOne.Append(line[n]);
-                        characterOne++;
-                        isCharacterOne = true;
+                        character++;
+                        isCharacter = true;
                      }
                      else
                      {
@@ -249,7 +249,7 @@ namespace CodeExperiment
                      n++;
                   }
 
-                  if (isCharacterOne == false)
+                  if (isCharacter == false)
                   {
                      int p = 0;
                      while (p < line.Length)
@@ -264,7 +264,7 @@ namespace CodeExperiment
                      }
                   }
 
-                  if (isCharacterOne == false && isConsonants == false)
+                  if (isCharacter == false && isConsonants == false)
                   {
                      int r = 0;
                      while (r < line.Length)
@@ -279,7 +279,7 @@ namespace CodeExperiment
                      }
                   }
 
-                  if (isCharacterOne == false && isConsonants == false && isOthersCh == false)
+                  if (isCharacter == false && isConsonants == false && isOthersCh == false)
                   {
                      int s = 0;
                      while (s < line.Length)
@@ -296,8 +296,8 @@ namespace CodeExperiment
                }
             }
 
-            sumFour = characterOne + consonants + others + punctuationmarks;
-            Console.WriteLine("Количество гласных: {0}", characterOne);
+            sumFour = character + consonants + others + punctuationmarks;
+            Console.WriteLine("Количество гласных: {0}", character);
             Console.WriteLine("Количество coгласных: {0}", consonants);
             Console.WriteLine("Количество других знаков: {0}", others);
             Console.WriteLine("Количество знаков пунктуации: {0}", punctuationmarks);
