@@ -246,6 +246,15 @@ namespace CodeExperiment
                         m++;
                      }
 
+                     if (n == line.Length - 1)
+                     {
+                        string subLineOne = stringModifiedOne.ToString();
+                        arrayFour[l, m] = Convert.ToDouble(subLineOne);
+                        Console.Write(arrayFour[l, m] + " ");
+                        stringModifiedOne.Clear();
+                        m++;
+                     }
+
                      n++;
                   }
 
