@@ -252,6 +252,7 @@ namespace CodeExperiment
                         arrayFour[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
+                        isCharacter = false;
                         m++;
                      }
 
