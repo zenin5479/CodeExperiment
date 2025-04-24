@@ -236,6 +236,7 @@ namespace CodeExperiment
                         stringModifiedOne.Append(line[n]);
                         character++;
                         isCharacter = true;
+                        isModified = true;
                      }
                      else
                      {
@@ -243,6 +244,7 @@ namespace CodeExperiment
                         arrayFour[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
+                        isCharacter = false;
                         m++;
                      }
 
