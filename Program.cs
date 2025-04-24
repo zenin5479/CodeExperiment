@@ -233,8 +233,17 @@ namespace CodeExperiment
                   {
                      if (spaceCharacterOne != line[n])
                      {
+                        stringModifiedOne.Append(line[n]);
                         vowels++;
                         isVowel = true;
+                     }
+                     else
+                     {
+                        string subLineOne = stringModifiedOne.ToString();
+                        arrayFour[l, m] = Convert.ToDouble(subLineOne);
+                        Console.Write(arrayFour[l, m] + " ");
+                        stringModifiedOne.Clear();
+                        m++;
                      }
 
                      n++;
