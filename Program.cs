@@ -211,11 +211,10 @@ namespace CodeExperiment
             StringBuilder stringModifiedOne = new StringBuilder();
             double[,] arrayFour = new double[listOne.Count, maxTwo];
             char spaceCharacterOne = ' ';
-            int character, consonants, others, punctuationmarks, sumAll, sumFour;
+            int character, modified, others, sumAll, sumFour;
             character = 0;
-            consonants = 0;
+            modified = 0;
             others = 0;
-            punctuationmarks = 0;
             sumAll = 0;
             int l = 0;
             int m = 0;
@@ -227,7 +226,7 @@ namespace CodeExperiment
                {
                   sumAll++;
                   bool isCharacter = false;
-                  bool isConsonants = false;
+                  bool isModified = false;
                   bool isOthersCh = false;
                   while (n < line.Length)
                   {
@@ -264,7 +263,7 @@ namespace CodeExperiment
                      }
                   }
 
-                  if (isCharacter == false && isConsonants == false)
+                  if (isCharacter == false && isModified == false)
                   {
                      int r = 0;
                      while (r < line.Length)
@@ -279,7 +278,7 @@ namespace CodeExperiment
                      }
                   }
 
-                  if (isCharacter == false && isConsonants == false && isOthersCh == false)
+                  if (isCharacter == false && isModified == false && isOthersCh == false)
                   {
                      int s = 0;
                      while (s < line.Length)
@@ -296,9 +295,9 @@ namespace CodeExperiment
                }
             }
 
-            sumFour = character + consonants + others + punctuationmarks;
+            sumFour = character + modified + others + punctuationmarks;
             Console.WriteLine("Количество гласных: {0}", character);
-            Console.WriteLine("Количество coгласных: {0}", consonants);
+            Console.WriteLine("Количество coгласных: {0}", modified);
             Console.WriteLine("Количество других знаков: {0}", others);
             Console.WriteLine("Количество знаков пунктуации: {0}", punctuationmarks);
             Console.WriteLine("Сумма гласных, согласных, других знаков и знаков пунктуации: {0}", sumFour);
