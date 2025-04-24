@@ -211,10 +211,11 @@ namespace CodeExperiment
             StringBuilder stringModifiedOne = new StringBuilder();
             double[,] arrayFour = new double[listOne.Count, maxTwo];
             char spaceCharacterOne = ' ';
-            int character, modified, others, sumAll, sumFour;
+            int character, modified, others, punctuationmarks, sumAll, sumFour;
             character = 0;
             modified = 0;
             others = 0;
+            punctuationmarks = 0;
             sumAll = 0;
             int l = 0;
             int m = 0;
