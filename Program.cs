@@ -245,6 +245,7 @@ namespace CodeExperiment
                         Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
                         isCharacter = false;
+                        isModified = false;
                         m++;
                      }
 
@@ -255,6 +256,7 @@ namespace CodeExperiment
                         Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
                         isCharacter = false;
+                        isModified = false;
                         m++;
                      }
 
