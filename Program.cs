@@ -314,16 +314,8 @@ namespace CodeExperiment
                      //Console.WriteLine("Количество всех знаков: {0}", sumAll);
                      //Console.ResetColor();
                   }
-
-
-
-
-
-
                }
             }
-
-
 
             Console.ReadKey();
             // Не присваивать лишние элементы массиву строки (первые 3 строки 10)
