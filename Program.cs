@@ -226,8 +226,8 @@ namespace CodeExperiment
                while (m < arrayFour.GetLength(1))
                {
                   sumAll++;
-                  bool isCharacter = false;
-                  bool isModified = false;
+                  bool isCharacter;
+                  bool isModified;
                   bool isOthersCh = false;
                   while (n < line.Length)
                   {
