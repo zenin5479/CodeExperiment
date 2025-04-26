@@ -260,23 +260,27 @@ namespace CodeExperiment
                         m++;
                      }
 
+                     if (isCharacter == false)
+                     {
+                        int p = 0;
+                        while (p < line.Length)
+                        {
+                           //if (phrase[l] == consonantsCh[p])
+                           //{
+                           //   consonants++;
+                           //   isConsonants = true;
+                           //}
+
+                           p++;
+                        }
+                     }
+
+
+
                      n++;
                   }
 
-                  if (isCharacter == false)
-                  {
-                     int p = 0;
-                     while (p < line.Length)
-                     {
-                        //if (phrase[l] == consonantsCh[p])
-                        //{
-                        //   consonants++;
-                        //   isConsonants = true;
-                        //}
 
-                        p++;
-                     }
-                  }
 
                   if (isCharacter == false && isModified == false)
                   {
