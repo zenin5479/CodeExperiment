@@ -303,7 +303,6 @@ namespace CodeExperiment
                         }
                      }
 
-                     l++;
                      n++;
                      //sumFour = character + modified + others + punctuationmarks;
                      //Console.WriteLine("Количество гласных: {0}", character);
