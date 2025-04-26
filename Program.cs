@@ -289,6 +289,21 @@ namespace CodeExperiment
                         }
                      }
 
+                     if (isCharacter == false && isModified == false && isOthersCh == false)
+                     {
+                        int s = 0;
+                        while (s < line.Length)
+                        {
+                           //if (phrase[l] == punctuationMarksCh[s])
+                           //{
+                           //   punctuationmarks++;
+                           //}
+                           //s++;
+                        }
+                     }
+
+                     l++;
+
 
                      n++;
                   }
@@ -297,20 +312,7 @@ namespace CodeExperiment
 
 
 
-                  if (isCharacter == false && isModified == false && isOthersCh == false)
-                  {
-                     int s = 0;
-                     while (s < line.Length)
-                     {
-                        //if (phrase[l] == punctuationMarksCh[s])
-                        //{
-                        //   punctuationmarks++;
-                        //}
-                        //s++;
-                     }
-                  }
 
-                  l++;
                }
             }
 
