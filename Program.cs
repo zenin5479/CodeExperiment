@@ -303,15 +303,15 @@ namespace CodeExperiment
                         }
                      }
 
-                     //l++;
+                     l++;
                      n++;
-                     sumFour = character + modified + others + punctuationmarks;
-                     Console.WriteLine("Количество гласных: {0}", character);
-                     Console.WriteLine("Количество coгласных: {0}", modified);
-                     Console.WriteLine("Количество других знаков: {0}", others);
-                     Console.WriteLine("Количество знаков пунктуации: {0}", punctuationmarks);
-                     Console.WriteLine("Сумма гласных, согласных, других знаков и знаков пунктуации: {0}", sumFour);
-                     Console.WriteLine("Количество всех знаков: {0}", sumAll);
+                     //sumFour = character + modified + others + punctuationmarks;
+                     //Console.WriteLine("Количество гласных: {0}", character);
+                     //Console.WriteLine("Количество coгласных: {0}", modified);
+                     //Console.WriteLine("Количество других знаков: {0}", others);
+                     //Console.WriteLine("Количество знаков пунктуации: {0}", punctuationmarks);
+                     //Console.WriteLine("Сумма гласных, согласных, других знаков и знаков пунктуации: {0}", sumFour);
+                     //Console.WriteLine("Количество всех знаков: {0}", sumAll);
                      //Console.ResetColor();
                   }
 
