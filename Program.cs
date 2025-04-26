@@ -271,9 +271,10 @@ namespace CodeExperiment
                            //   isConsonants = true;
                            //}
 
-                           p++;
+                           //p++;
                         }
                      }
+
                      if (isCharacter == false && isModified == false)
                      {
                         int r = 0;
@@ -285,7 +286,7 @@ namespace CodeExperiment
                            //   isOthersCh = true;
                            //}
 
-                           r++;
+                           //r++;
                         }
                      }
 
@@ -302,7 +303,7 @@ namespace CodeExperiment
                         }
                      }
 
-                     l++;
+                     //l++;
                      n++;
                      sumFour = character + modified + others + punctuationmarks;
                      Console.WriteLine("Количество гласных: {0}", character);
