@@ -314,7 +314,11 @@ namespace CodeExperiment
                      //Console.WriteLine("Количество всех знаков: {0}", sumAll);
                      //Console.ResetColor();
                   }
+                  n = 0;
                }
+               Console.WriteLine();
+               m = 0;
+               l++;
             }
 
             Console.ReadKey();
