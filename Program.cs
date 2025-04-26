@@ -274,7 +274,20 @@ namespace CodeExperiment
                            p++;
                         }
                      }
+                     if (isCharacter == false && isModified == false)
+                     {
+                        int r = 0;
+                        while (r < line.Length)
+                        {
+                           //if (phrase[l] == othersCh[r])
+                           //{
+                           //   others++;
+                           //   isOthersCh = true;
+                           //}
 
+                           r++;
+                        }
+                     }
 
 
                      n++;
@@ -282,20 +295,7 @@ namespace CodeExperiment
 
 
 
-                  if (isCharacter == false && isModified == false)
-                  {
-                     int r = 0;
-                     while (r < line.Length)
-                     {
-                        //if (phrase[l] == othersCh[r])
-                        //{
-                        //   others++;
-                        //   isOthersCh = true;
-                        //}
 
-                        r++;
-                     }
-                  }
 
                   if (isCharacter == false && isModified == false && isOthersCh == false)
                   {
