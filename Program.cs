@@ -234,7 +234,6 @@ namespace CodeExperiment
                   //bool isCharacter;
                   ////bool isModified;
                   //bool isOthersCh = false;
-
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
