@@ -22,17 +22,34 @@ namespace CodeExperiment
          {
             // Чтение файла построчно
             StreamReader readerOne = new StreamReader(fStream);
+            StreamReader readerTwo = new StreamReader(fStream);
             // Создаем List<string> для определения количество строк в файле
             List<string> listOne = new List<string>();
+
             Console.WriteLine("Исходный массив строк");
+            int i = 0;
             while (!readerOne.EndOfStream)
+            {
+               readerOne.ReadLine();
+               i++;
+            }
+
+            readerOne.Close();
+
+            string[] arrayOne = new string[i];
+            int i1 = 0;
+            while (!readerTwo.EndOfStream)
             {
                string stroka = readerOne.ReadLine();
                listOne.Add(stroka);
                Console.WriteLine(stroka);
+               arrayOne[i1] = stroka;
+
+               i1++;
             }
 
-            readerOne.Close();
+            readerTwo.Close();
+
             fStream.Dispose();
             Console.WriteLine();
 
@@ -195,6 +212,9 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
+
+
+
 
             string[] readText = File.ReadAllLines(filePath);
             foreach (string s in readText)
