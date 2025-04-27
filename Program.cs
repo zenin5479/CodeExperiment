@@ -87,42 +87,6 @@ namespace CodeExperiment
 
             //Console.WriteLine();
 
-            string[] arrayOne = new string[listOne.Count];
-            double[,] arrayTwo = new double[arrayOne.GetLength(0), maxOne];
-            int c = 0;
-            while (c < listOne.Count)
-            {
-               arrayOne[c] = listOne[c];
-               //Console.WriteLine(arrayOne[h]);
-               c++;
-            }
-
-            Console.WriteLine();
-            Console.ResetColor();
-            Console.BackgroundColor = ConsoleColor.Magenta;
-            // Разделение строки на подстроки и конвертация подстрок в double
-            Console.WriteLine("Двухмерный числовой массив");
-            int d = 0;
-            while (d < arrayTwo.GetLength(0))
-            {
-               string[] arraySplit = arrayOne[d].Split(" ");
-               int e = 0;
-               while (e < arraySplit.GetLength(0))
-               {
-                  arrayTwo[d, e] = Convert.ToDouble(arraySplit[e]);
-                  Console.Write(arrayTwo[d, e] + " ");
-                  e++;
-               }
-
-               d++;
-               Console.WriteLine();
-            }
-
-            Console.WriteLine();
-            Console.ResetColor();
-            Console.WriteLine("Последний элемент первой строки : {0}", arrayTwo[0, arrayTwo.GetLength(1) - 1]);
-            Console.WriteLine();
-
             // Вариант 2 с помощью StringBuilder
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
             Console.ResetColor();
@@ -324,59 +288,19 @@ namespace CodeExperiment
                Console.WriteLine();
                m = 0;
                l++;
+
+               Console.ResetColor();
+
             }
+            Console.WriteLine();
+            Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
+            Console.WriteLine();
+
 
             Console.ReadKey();
             // Не присваивать лишние элементы массиву строки (первые 3 строки 10)
             // Проверка последнего элемента первой строки
          }
-
-         //Console.WriteLine("Двухмерный числовой массив");
-         //StringBuilder stringModifiedOne = new StringBuilder();
-         //double[,] arrayFour = new double[listOne.Count, maxTwo];
-         //char spaceCharacterOne = ' ';
-         //int l = 0;
-         //int m = 0;
-         //int n = 0;
-         //while (l < arrayFour.GetLength(0))
-         //{
-         //   string line = listOne[l];
-         //   while (m < arrayFour.GetLength(1))
-         //   {
-         //      while (n < line.Length)
-         //      {
-         //         if (spaceCharacterOne != line[n])
-         //         {
-         //            stringModifiedOne.Append(line[n]);
-         //         }
-         //         else
-         //         {
-         //            string subLineOne = stringModifiedOne.ToString();
-         //            arrayFour[l, m] = Convert.ToDouble(subLineOne);
-         //            Console.Write(arrayFour[l, m] + " ");
-         //            stringModifiedOne.Clear();
-         //            m++;
-         //         }
-
-         //         if (n == line.Length - 1)
-         //         {
-         //            string subLineOne = stringModifiedOne.ToString();
-         //            arrayFour[l, m] = Convert.ToDouble(subLineOne);
-         //            Console.Write(arrayFour[l, m] + " ");
-         //            stringModifiedOne.Clear();
-         //            m++;
-         //         }
-
-         //         n++;
-         //      }
-
-         //      n = 0;
-         //   }
-
-         //   Console.WriteLine();
-         //   m = 0;
-         //   l++;
-         //}
       }
    }
 }
