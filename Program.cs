@@ -120,6 +120,13 @@ namespace CodeExperiment
 
             Console.ResetColor();
             Console.WriteLine();
+
+            string[] readText = File.ReadAllLines(filePath);
+            foreach (string s in readText)
+            {
+               Console.WriteLine(s);
+            }
+
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModifiedOne = new StringBuilder();
@@ -193,6 +200,8 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
+           
+
             Console.ReadKey();
             // Не присваивать лишние элементы массиву строки (первые 3 строки 10)
 
