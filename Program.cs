@@ -229,7 +229,7 @@ namespace CodeExperiment
                   //bool isCharacter;
                   ////bool isModified;
                   //bool isOthersCh = false;
-                  if (arrayFour.GetLength(1) != maxTwo)
+                  if (sizeArray[l] != maxTwo)
                   {
                      
                   }
