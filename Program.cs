@@ -225,18 +225,18 @@ namespace CodeExperiment
                string line = listOne[l];
                while (m < arrayFour.GetLength(1))
                {
-                  sumAll++;
-                  bool isCharacter;
-                  bool isModified;
-                  bool isOthersCh = false;
+                  //sumAll++;
+                  //bool isCharacter;
+                  ////bool isModified;
+                  //bool isOthersCh = false;
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
                      {
                         stringModifiedOne.Append(line[n]);
-                        character++;
-                        isCharacter = true;
-                        isModified = true;
+                        //character++;
+                        //isCharacter = true;
+                        //isModified = true;
                      }
                      else
                      {
@@ -244,8 +244,8 @@ namespace CodeExperiment
                         arrayFour[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
-                        isCharacter = false;
-                        isModified = false;
+                        //isCharacter = false;
+                        //isModified = false;
                         m++;
                      }
 
@@ -255,53 +255,53 @@ namespace CodeExperiment
                         arrayFour[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
-                        isCharacter = false;
-                        isModified = false;
+                        //isCharacter = false;
+                        //isModified = false;
                         m++;
                      }
 
-                     if (isCharacter == false)
-                     {
-                        int p = 0;
-                        while (p < line.Length)
-                        {
-                           //if (phrase[l] == consonantsCh[p])
-                           //{
-                           //   consonants++;
-                           //   isConsonants = true;
-                           //}
+                     //if (isCharacter == false)
+                     //{
+                     //   int p = 0;
+                     //   while (p < line.Length)
+                     //   {
+                     //      //if (phrase[l] == consonantsCh[p])
+                     //      //{
+                     //      //   consonants++;
+                     //      //   isConsonants = true;
+                     //      //}
 
-                           //p++;
-                        }
-                     }
+                     //      //p++;
+                     //   }
+                     //}
 
-                     if (isCharacter == false && isModified == false)
-                     {
-                        int r = 0;
-                        while (r < line.Length)
-                        {
-                           //if (phrase[l] == othersCh[r])
-                           //{
-                           //   others++;
-                           //   isOthersCh = true;
-                           //}
+                     //if (isCharacter == false && isModified == false)
+                     //{
+                     //   int r = 0;
+                     //   while (r < line.Length)
+                     //   {
+                     //      //if (phrase[l] == othersCh[r])
+                     //      //{
+                     //      //   others++;
+                     //      //   isOthersCh = true;
+                     //      //}
 
-                           //r++;
-                        }
-                     }
+                     //      //r++;
+                     //   }
+                     //}
 
-                     if (isCharacter == false && isModified == false && isOthersCh == false)
-                     {
-                        int s = 0;
-                        while (s < line.Length)
-                        {
-                           //if (phrase[l] == punctuationMarksCh[s])
-                           //{
-                           //   punctuationmarks++;
-                           //}
-                           //s++;
-                        }
-                     }
+                     //if (isCharacter == false && isModified == false && isOthersCh == false)
+                     //{
+                     //   int s = 0;
+                     //   while (s < line.Length)
+                     //   {
+                     //      //if (phrase[l] == punctuationMarksCh[s])
+                     //      //{
+                     //      //   punctuationmarks++;
+                     //      //}
+                     //      //s++;
+                     //   }
+                     //}
 
                      n++;
                      //sumFour = character + modified + others + punctuationmarks;
