@@ -223,6 +223,7 @@ namespace CodeExperiment
             while (l < arrayFour.GetLength(0))
             {
                string line = listOne[l];
+               // Изменить количество получемых элементов в соответствии с количеством столбцов
                if (sizeArray[l] != maxTwo)
                {
 
