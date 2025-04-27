@@ -229,6 +229,11 @@ namespace CodeExperiment
                   //bool isCharacter;
                   ////bool isModified;
                   //bool isOthersCh = false;
+                  if (arrayFour.GetLength(1) != maxTwo)
+                  {
+                     
+                  }
+                  
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
