@@ -49,43 +49,7 @@ namespace CodeExperiment
                a++;
             }
 
-            // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/зубчатый)
-            int minOne = arrayDimension[0];
-            int maxOne = arrayDimension[0];
-            int b = 0;
-            while (b < arrayDimension.Length)
-            {
-               if (arrayDimension[b] < minOne)
-               {
-                  minOne = arrayDimension[b];
-               }
-
-               if (arrayDimension[b] > maxOne)
-               {
-                  maxOne = arrayDimension[b];
-               }
-
-               b++;
-            }
-
-            Console.ResetColor();
             Console.WriteLine();
-            Console.WriteLine("Количество строк {0}", listOne.Count);
-            Console.WriteLine("Минимальное количество столбцов: {0}", minOne);
-            Console.WriteLine("Максимальное количество столбцов: {0}", maxOne);
-            if (minOne == maxOne)
-            {
-               Console.ForegroundColor = ConsoleColor.Green;
-               Console.WriteLine("Массив имеет одинаковое количество столбцов - прямоугольный");
-            }
-
-            else
-            {
-               Console.ForegroundColor = ConsoleColor.Red;
-               Console.WriteLine("Массив имеет разное количество столбцов - зубчатый");
-            }
-
-            //Console.WriteLine();
 
             // Вариант 2 с помощью StringBuilder
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
@@ -175,12 +139,10 @@ namespace CodeExperiment
             StringBuilder stringModifiedOne = new StringBuilder();
             double[,] arrayFour = new double[listOne.Count, maxTwo];
             char spaceCharacterOne = ' ';
-            int character, modified, others, punctuationmarks, sumAll, sumFour;
+            int character, modified, others;
             character = 0;
             modified = 0;
             others = 0;
-            punctuationmarks = 0;
-            sumAll = 0;
             int l = 0;
             int m = 0;
             int n = 0;
@@ -195,7 +157,7 @@ namespace CodeExperiment
 
                while (m < arrayFour.GetLength(1))
                {
-                  //sumAll++;
+                  sumAll++;
                   //bool isCharacter;
                   ////bool isModified;
                   //bool isOthersCh = false;
@@ -230,58 +192,7 @@ namespace CodeExperiment
                         m++;
                      }
 
-                     //if (isCharacter == false)
-                     //{
-                     //   int p = 0;
-                     //   while (p < line.Length)
-                     //   {
-                     //      //if (phrase[l] == consonantsCh[p])
-                     //      //{
-                     //      //   consonants++;
-                     //      //   isConsonants = true;
-                     //      //}
-
-                     //      //p++;
-                     //   }
-                     //}
-
-                     //if (isCharacter == false && isModified == false)
-                     //{
-                     //   int r = 0;
-                     //   while (r < line.Length)
-                     //   {
-                     //      //if (phrase[l] == othersCh[r])
-                     //      //{
-                     //      //   others++;
-                     //      //   isOthersCh = true;
-                     //      //}
-
-                     //      //r++;
-                     //   }
-                     //}
-
-                     //if (isCharacter == false && isModified == false && isOthersCh == false)
-                     //{
-                     //   int s = 0;
-                     //   while (s < line.Length)
-                     //   {
-                     //      //if (phrase[l] == punctuationMarksCh[s])
-                     //      //{
-                     //      //   punctuationmarks++;
-                     //      //}
-                     //      //s++;
-                     //   }
-                     //}
-
                      n++;
-                     //sumFour = character + modified + others + punctuationmarks;
-                     //Console.WriteLine("Количество гласных: {0}", character);
-                     //Console.WriteLine("Количество coгласных: {0}", modified);
-                     //Console.WriteLine("Количество других знаков: {0}", others);
-                     //Console.WriteLine("Количество знаков пунктуации: {0}", punctuationmarks);
-                     //Console.WriteLine("Сумма гласных, согласных, других знаков и знаков пунктуации: {0}", sumFour);
-                     //Console.WriteLine("Количество всех знаков: {0}", sumAll);
-                     //Console.ResetColor();
                   }
                   n = 0;
                }
