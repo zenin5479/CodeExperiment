@@ -293,11 +293,11 @@ namespace CodeExperiment
 
             }
             Console.WriteLine();
-
-            Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
-           Console.ReadKey();
-            // Не присваивать лишние элементы массиву строки (первые 3 строки 10)
             // Проверка последнего элемента первой строки
+            Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
+            Console.ReadKey();
+            // Не присваивать лишние элементы массиву строки (первые 3 строки 10)
+
          }
       }
    }
