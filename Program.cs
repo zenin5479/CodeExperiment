@@ -223,17 +223,19 @@ namespace CodeExperiment
             while (l < arrayFour.GetLength(0))
             {
                string line = listOne[l];
+               if (sizeArray[l] != maxTwo)
+               {
+
+               }
+
                while (m < arrayFour.GetLength(1))
                {
                   //sumAll++;
                   //bool isCharacter;
                   ////bool isModified;
                   //bool isOthersCh = false;
-                  if (sizeArray[l] != maxTwo)
-                  {
-                     
-                  }
-                  
+
+
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
