@@ -28,7 +28,6 @@ namespace CodeExperiment
             while (!readerOne.EndOfStream)
             {
                string stroka = readerOne.ReadLine();
-
                listOne.Add(stroka);
                Console.WriteLine(stroka);
             }
