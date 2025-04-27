@@ -139,10 +139,11 @@ namespace CodeExperiment
             StringBuilder stringModifiedOne = new StringBuilder();
             double[,] arrayFour = new double[listOne.Count, maxTwo];
             char spaceCharacterOne = ' ';
-            int character, modified, others;
+            int character, modified, others, sumAll;
             character = 0;
             modified = 0;
             others = 0;
+            sumAll = 0;
             int l = 0;
             int m = 0;
             int n = 0;
@@ -158,17 +159,17 @@ namespace CodeExperiment
                while (m < arrayFour.GetLength(1))
                {
                   sumAll++;
-                  //bool isCharacter;
-                  ////bool isModified;
-                  //bool isOthersCh = false;
+                  bool isCharacter;
+                  bool isModified;
+                  bool isOthersCh = false;
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
                      {
                         stringModifiedOne.Append(line[n]);
-                        //character++;
-                        //isCharacter = true;
-                        //isModified = true;
+                        character++;
+                        isCharacter = true;
+                        isModified = true;
                      }
                      else
                      {
@@ -176,8 +177,8 @@ namespace CodeExperiment
                         arrayFour[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
-                        //isCharacter = false;
-                        //isModified = false;
+                        isCharacter = false;
+                        isModified = false;
                         m++;
                      }
 
@@ -187,8 +188,8 @@ namespace CodeExperiment
                         arrayFour[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
-                        //isCharacter = false;
-                        //isModified = false;
+                        isCharacter = false;
+                        isModified = false;
                         m++;
                      }
 
