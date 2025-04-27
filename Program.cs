@@ -35,23 +35,9 @@ namespace CodeExperiment
 
             readerOne.Close();
             fStream.Dispose();
-
-            // Вариант 1 с помощью метода String.Split
-            // Одномерный массив для определения количества столбцов в строке
-            int[] arrayDimension = new int[listOne.Count];
-            int a = 0;
-            while (a < listOne.Count)
-            {
-               // Разделение строк на подстроки для определения количества столбцов в строке с помощью List<string>
-               List<string> listSplit = new List<string>(listOne[a].Split(" "));
-               arrayDimension[a] = listSplit.Count;
-               //Console.WriteLine("В строке {0} количество столбцов {1}", d, arrayDimension[d]);
-               a++;
-            }
-
             Console.WriteLine();
 
-            // Вариант 2 с помощью StringBuilder
+            // Вариант с помощью StringBuilder
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
             Console.ResetColor();
             StringBuilder stringModified = new StringBuilder();
@@ -159,17 +145,17 @@ namespace CodeExperiment
                while (m < arrayFour.GetLength(1))
                {
                   sumAll++;
-                  bool isCharacter;
-                  bool isModified;
-                  bool isOthersCh = false;
+                  //bool isCharacter;
+                  //bool isModified;
+                  //bool isOthersCh = false;
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
                      {
                         stringModifiedOne.Append(line[n]);
                         character++;
-                        isCharacter = true;
-                        isModified = true;
+                        //isCharacter = true;
+                        //isModified = true;
                      }
                      else
                      {
@@ -177,8 +163,8 @@ namespace CodeExperiment
                         arrayFour[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
-                        isCharacter = false;
-                        isModified = false;
+                        //isCharacter = false;
+                        //isModified = false;
                         m++;
                      }
 
@@ -188,8 +174,8 @@ namespace CodeExperiment
                         arrayFour[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayFour[l, m] + " ");
                         stringModifiedOne.Clear();
-                        isCharacter = false;
-                        isModified = false;
+                        //isCharacter = false;
+                        //isModified = false;
                         m++;
                      }
 
