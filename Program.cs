@@ -25,8 +25,7 @@ namespace CodeExperiment
             // Создаем List<string> для определения количество строк в файле
             List<string> listOne = new List<string>();
 
-            //string uyu = readerOne.ReadToEnd();
-            //Console.WriteLine(uyu);
+
 
             Console.WriteLine("Исходный массив строк");
             while (!readerOne.EndOfStream)
@@ -38,6 +37,10 @@ namespace CodeExperiment
 
             readerOne.Close();
             fStream.Dispose();
+
+            string uyu = readerOne.ReadToEnd();
+            Console.WriteLine(uyu);
+
             Console.WriteLine();
 
             // Вариант с помощью StringBuilder
