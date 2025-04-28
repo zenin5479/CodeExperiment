@@ -28,13 +28,13 @@ namespace CodeExperiment
             //string readToEnd = readerOne.ReadToEnd();
             //Console.WriteLine(readToEnd);
 
-            //Console.WriteLine("Исходный массив строк");
-            //while (!readerOne.EndOfStream)
-            //{
-            //   string stroka = readerOne.ReadLine();
-            //   listOne.Add(stroka);
-            //   Console.WriteLine(stroka);
-            //}
+            Console.WriteLine("Исходный массив строк");
+            while (!readerOne.EndOfStream)
+            {
+               string stroka = readerOne.ReadLine();
+               listOne.Add(stroka);
+               Console.WriteLine(stroka);
+            }
 
             readerOne.Close();
             fStream.Dispose();
