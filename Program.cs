@@ -192,7 +192,6 @@ namespace CodeExperiment
                l++;
 
                Console.ResetColor();
-
             }
             Console.WriteLine();
             // Проверка последнего элемента первой строки
