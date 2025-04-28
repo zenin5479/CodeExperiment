@@ -37,27 +37,30 @@ namespace CodeExperiment
 
             Console.WriteLine("Исходный массив строк");
             int i = 0;
+            string[] arrayOne = new string[i];
             while (!readerOne.EndOfStream)
             {
-               readerOne.ReadLine();
-               i++;
-            }
 
-            readerOne.Close();
-
-            string[] arrayOne = new string[i];
-            int i1 = 0;
-            while (!readerTwo.EndOfStream)
-            {
                string stroka = readerOne.ReadLine();
                listOne.Add(stroka);
                Console.WriteLine(stroka);
                arrayOne[i1] = stroka;
 
                i1++;
+
+               readerOne.ReadLine();
+               i++;
             }
 
-            readerTwo.Close();
+            readerOne.Close();
+
+
+            int i1 = 0;
+            while (!readerOne.EndOfStream)
+            {
+
+            }
+
 
             fStream.Dispose();
             Console.WriteLine();
