@@ -28,28 +28,15 @@ namespace CodeExperiment
             string uyu = readerOne.ReadToEnd();
             Console.WriteLine(uyu);
 
-            string[] readText = File.ReadAllLines(filePath);
-            foreach (string s in readText)
-            {
-               Console.WriteLine(s);
-            }
-
-
             Console.WriteLine("Исходный массив строк");
-            int i = 0;
-            string[] arrayOne = new string[i];
             while (!readerOne.EndOfStream)
             {
                string stroka = readerOne.ReadLine();
                listOne.Add(stroka);
                Console.WriteLine(stroka);
-               arrayOne[i] = stroka;
-               i++;
             }
 
             readerOne.Close();
-
-
             fStream.Dispose();
             Console.WriteLine();
 
