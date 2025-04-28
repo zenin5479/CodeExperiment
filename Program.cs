@@ -44,22 +44,15 @@ namespace CodeExperiment
                string stroka = readerOne.ReadLine();
                listOne.Add(stroka);
                Console.WriteLine(stroka);
-               arrayOne[i1] = stroka;
+               arrayOne[i] = stroka;
 
-               i1++;
+               i++;
 
                readerOne.ReadLine();
                i++;
             }
 
             readerOne.Close();
-
-
-            int i1 = 0;
-            while (!readerOne.EndOfStream)
-            {
-
-            }
 
 
             fStream.Dispose();
