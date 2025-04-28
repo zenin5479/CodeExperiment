@@ -38,7 +38,6 @@ namespace CodeExperiment
 
             readerOne.Close();
             fStream.Dispose();
-
             Console.WriteLine();
 
             // Вариант с помощью StringBuilder
