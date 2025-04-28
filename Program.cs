@@ -40,15 +40,10 @@ namespace CodeExperiment
             string[] arrayOne = new string[i];
             while (!readerOne.EndOfStream)
             {
-
                string stroka = readerOne.ReadLine();
                listOne.Add(stroka);
                Console.WriteLine(stroka);
                arrayOne[i] = stroka;
-
-               i++;
-
-               readerOne.ReadLine();
                i++;
             }
 
