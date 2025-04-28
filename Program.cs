@@ -28,7 +28,7 @@ namespace CodeExperiment
             string uyu = readerOne.ReadToEnd();
             Console.WriteLine(uyu);
 
-            Console.WriteLine("Исходный массив строк");
+            //Console.WriteLine("Исходный массив строк");
             //while (!readerOne.EndOfStream)
             //{
             //   string stroka = readerOne.ReadLine();
