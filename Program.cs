@@ -29,6 +29,13 @@ namespace CodeExperiment
             string uyu = readerTwo.ReadToEnd();
             Console.WriteLine(uyu);
 
+            string[] readText = File.ReadAllLines(filePath);
+            foreach (string s in readText)
+            {
+               Console.WriteLine(s);
+            }
+
+
             Console.WriteLine("Исходный массив строк");
             int i = 0;
             while (!readerOne.EndOfStream)
@@ -213,13 +220,6 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
-
-            string[] readText = File.ReadAllLines(filePath);
-            foreach (string s in readText)
-            {
-               Console.WriteLine(s);
-            }
-
             Console.ReadKey();
             // Не присваивать лишние элементы массиву строки (первые 3 строки 10)
          }
