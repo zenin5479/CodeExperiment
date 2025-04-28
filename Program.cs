@@ -140,8 +140,6 @@ namespace CodeExperiment
             Console.ResetColor();
             Console.WriteLine();
 
-
-
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModifiedOne = new StringBuilder();
