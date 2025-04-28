@@ -22,11 +22,10 @@ namespace CodeExperiment
          {
             // Чтение файла построчно
             StreamReader readerOne = new StreamReader(fStream);
-            StreamReader readerTwo = new StreamReader(fStream);
             // Создаем List<string> для определения количество строк в файле
             List<string> listOne = new List<string>();
 
-            string uyu = readerTwo.ReadToEnd();
+            string uyu = readerOne.ReadToEnd();
             Console.WriteLine(uyu);
 
             string[] readText = File.ReadAllLines(filePath);
