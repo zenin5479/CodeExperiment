@@ -203,6 +203,7 @@ namespace CodeExperiment
          FileReadAllLines(filePath);
          StreamReaderReadLine(filePath);
          StreamReaderReadToEnd(filePath);
+
          Console.ReadKey();
       }
 
@@ -240,7 +241,7 @@ namespace CodeExperiment
             }
             //stringBuilder.Length -= Environment.NewLine.Length;
             Console.WriteLine(stringBuilder.ToString());
-            Console.WriteLine();
+            //Console.WriteLine();
          }
          catch (Exception e)
          {
