@@ -35,7 +35,7 @@ namespace CodeExperiment
 
             readerOne.Close();
             fStream.Dispose();
-            Console.WriteLine();
+            //Console.WriteLine();
 
             // Вариант с помощью StringBuilder
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
@@ -194,7 +194,8 @@ namespace CodeExperiment
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
             Console.ReadKey();
-            // Не присваивать лишние элементы массиву строки (первые 3 строки 10)
+            // Не присваивать лишние элементы массиву строки
+            // (первые 3 строки содержат по 10 элементов массив зубчатый)
          }
       }
    }
