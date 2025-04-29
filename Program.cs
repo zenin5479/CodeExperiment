@@ -252,7 +252,6 @@ namespace CodeExperiment
             // Удалить новую строку в последней строке
             stringBuilder5.Length -= Environment.NewLine.Length;
          }
-         
 
          //FileReadLines(filePath);
          //FileReadAllLines(filePath);
