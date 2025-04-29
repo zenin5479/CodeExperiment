@@ -216,7 +216,6 @@ namespace CodeExperiment
             {
                stringBuilder.AppendLine(line);
             }
-
             stringBuilder.Length -= Environment.NewLine.Length;
             Console.WriteLine(stringBuilder.ToString());
             Console.WriteLine();
@@ -239,7 +238,6 @@ namespace CodeExperiment
                string line = lines[i];
                stringBuilder.AppendLine(line);
             }
-
             //stringBuilder.Length -= Environment.NewLine.Length;
             Console.WriteLine(stringBuilder.ToString());
             Console.WriteLine();
@@ -260,7 +258,6 @@ namespace CodeExperiment
             {
                Console.WriteLine(readerone.ReadLine());
             }
-
             Console.WriteLine();
          }
          catch (Exception e)
@@ -276,7 +273,6 @@ namespace CodeExperiment
             {
                Console.WriteLine(sr.ReadLine());
             }
-
             Console.WriteLine();
          }
          catch (Exception e)
