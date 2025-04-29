@@ -241,7 +241,7 @@ namespace CodeExperiment
          // Удалить новую строку в последней строке
          stringBuilder4.Length -= Environment.NewLine.Length;
 
-         Console.WriteLine("\n");
+         Console.WriteLine();
          // Лучший способ добавления новых строк с использованием StringBuilder и без условия if
          // Описание: Добавление новых строк с помощью StringBuilder и настройка длины для удаления последней новой строки
          StringBuilder stringBuilder5 = new StringBuilder();
@@ -249,6 +249,7 @@ namespace CodeExperiment
          foreach (string line in lines5)
          {
             stringBuilder5.AppendLine(line);
+            Console.Write(stringBuilder5);
             // Удалить новую строку в последней строке
             stringBuilder5.Length -= Environment.NewLine.Length;
          }
