@@ -198,10 +198,36 @@ namespace CodeExperiment
          }
 
          Console.WriteLine();
-         FileReadLines(filePath);
-         FileReadAllLines(filePath);
-         StreamReaderReadLine(filePath);
-         StreamReaderReadToEnd(filePath);
+
+         // Описание: Используя string.Join с Environment.NewLine, объединяем строки с новыми строками, за исключением последней
+         List<string> lines1 = new List<string> { "Line 1", "Line 2", "Line 3" };
+         string result = string.Join(Environment.NewLine, lines1);
+         Console.Write(result);
+
+         Console.WriteLine("\n");
+         // Описание: Использование цикла для добавления новых строк в StringBuilder, за исключением последней
+         StringBuilder stringBuilder = new StringBuilder();
+         List<string> lines2 = new List<string> { "Line 1", "Line 2", "Line 3" };
+         for (int i = 0; i < lines2.Count; i++)
+         {
+            stringBuilder.Append(lines2[i]);
+            if (i < lines2.Count - 1)
+            {
+               stringBuilder.AppendLine();
+            }
+            Console.WriteLine(stringBuilder);
+         }
+
+
+
+
+
+
+
+         //FileReadLines(filePath);
+         //FileReadAllLines(filePath);
+         //StreamReaderReadLine(filePath);
+         //StreamReaderReadToEnd(filePath);
          Console.ReadKey();
       }
 
@@ -239,7 +265,7 @@ namespace CodeExperiment
                stringBuilder.AppendLine(line);
             }
 
-            stringBuilder.Length -= Environment.NewLine.Length;
+            //stringBuilder.Length -= Environment.NewLine.Length;
             Console.WriteLine(stringBuilder.ToString());
             Console.WriteLine();
          }
