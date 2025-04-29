@@ -243,17 +243,16 @@ namespace CodeExperiment
 
          Console.WriteLine("\n");
          // Лучший способ добавления новых строк с использованием StringBuilder и без условия if
+         // Описание: Добавление новых строк с помощью StringBuilder и настройка длины для удаления последней новой строки
          StringBuilder stringBuilder5 = new StringBuilder();
          List<string> lines5 = new List<string> { "Line 1", "Line 2", "Line 3" };
-
          foreach (string line in lines5)
          {
             stringBuilder5.AppendLine(line);
             // Удалить новую строку в последней строке
             stringBuilder5.Length -= Environment.NewLine.Length;
          }
-         // Description: Appending newlines using StringBuilder and adjusting length to remove the last newline
-
+         
 
          //FileReadLines(filePath);
          //FileReadAllLines(filePath);
