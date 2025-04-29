@@ -193,7 +193,6 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
-            //Console.ReadKey();
             // Не присваивать лишние элементы массиву строк
             // первые 3 строки содержат по 10 элементов - ступенчатый массив
          }
