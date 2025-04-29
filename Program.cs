@@ -252,7 +252,7 @@ namespace CodeExperiment
             // Удалить новую строку в последней строке
             stringBuilder5.Length -= Environment.NewLine.Length;
          }
-         // Description: Appending newlines using StringBuilder and adjusting length to remove the last newline.
+         // Description: Appending newlines using StringBuilder and adjusting length to remove the last newline
 
 
          //FileReadLines(filePath);
