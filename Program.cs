@@ -218,9 +218,25 @@ namespace CodeExperiment
             Console.WriteLine(stringBuilder);
          }
 
+         Console.WriteLine();
+         string[] lines3 = { "Line 1", "Line 2", "Line 3" };
+         string result3 = string.Join(Environment.NewLine, lines3);
+         Console.Write(result3);
+         // Описание: Используя string.Join с Environment.NewLine,
+         // объединяем строки с новыми строками, за исключением последней строки в массиве строк
 
+         Console.WriteLine("\n");
+         // Описание: Добавление новых строк в StringBuilder и последующее удаление последней
+         StringBuilder stringBuilder4 = new StringBuilder();
+         List<string> lines4 = new List<string> { "Line 1", "Line 2", "Line 3" };
 
-
+         foreach (string line in lines4)
+         {
+            stringBuilder4.AppendLine(line);
+            Console.WriteLine(stringBuilder4);
+         }
+         // Удалить новую строку в последней строке
+         stringBuilder4.Length -= Environment.NewLine.Length;
 
 
 
