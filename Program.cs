@@ -199,12 +199,14 @@ namespace CodeExperiment
 
          Console.WriteLine();
 
+         // Лучшая практика для добавления новых строк к списку строк, кроме последней
          // Описание: Используя string.Join с Environment.NewLine, объединяем строки с новыми строками, за исключением последней
          List<string> lines1 = new List<string> { "Line 1", "Line 2", "Line 3" };
          string result = string.Join(Environment.NewLine, lines1);
          Console.Write(result);
 
          Console.WriteLine("\n");
+         // Лучший способ добавлять новые строки в StringBuilder, кроме последней
          // Описание: Использование цикла для добавления новых строк в StringBuilder, за исключением последней
          StringBuilder stringBuilder = new StringBuilder();
          List<string> lines2 = new List<string> { "Line 1", "Line 2", "Line 3" };
@@ -219,17 +221,18 @@ namespace CodeExperiment
          }
 
          Console.WriteLine();
+         // Лучший способ добавлять новые строки в массив строк, за исключением последней
+         // Описание: Используя string.Join с Environment.NewLine,
+         // объединяем строки с новыми строками, за исключением последней строки в массиве строк
          string[] lines3 = { "Line 1", "Line 2", "Line 3" };
          string result3 = string.Join(Environment.NewLine, lines3);
          Console.Write(result3);
-         // Описание: Используя string.Join с Environment.NewLine,
-         // объединяем строки с новыми строками, за исключением последней строки в массиве строк
 
          Console.WriteLine("\n");
+         // Лучший способ добавлять новые строки с помощью StringBuilder и удалять последнюю
          // Описание: Добавление новых строк в StringBuilder и последующее удаление последней
          StringBuilder stringBuilder4 = new StringBuilder();
          List<string> lines4 = new List<string> { "Line 1", "Line 2", "Line 3" };
-
          foreach (string line in lines4)
          {
             stringBuilder4.AppendLine(line);
