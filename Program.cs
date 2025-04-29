@@ -193,7 +193,7 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
-            Console.ReadKey();
+            //Console.ReadKey();
             // Не присваивать лишние элементы массиву строк
             // первые 3 строки содержат по 10 элементов - ступенчатый массив
          }
@@ -204,7 +204,7 @@ namespace CodeExperiment
          StreamReaderReadToEnd(filePath);
       }
 
-      private static void FileReadLines(string filePath)
+      public static void FileReadLines(string filePath)
       {
          try
          {
@@ -253,7 +253,7 @@ namespace CodeExperiment
          try
          {
             // Чтения файла построчно
-            StreamReader readerone = new StreamReader(filePath);
+            using StreamReader readerone = new StreamReader(filePath);
             while (!readerone.EndOfStream)
             {
                Console.WriteLine(readerone.ReadLine());
