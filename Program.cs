@@ -25,12 +25,6 @@ namespace CodeExperiment
             // Создаем List<string> для определения количество строк в файле
             List<string> listOne = new List<string>();
 
-            //string readToEnd = readerOne.ReadToEnd();
-            //Console.WriteLine(readToEnd);
-
-            IEnumerable<string> lines = File.ReadLines(path);
-            Console.WriteLine(String.Join(Environment.NewLine, lines));
-
             Console.WriteLine("Исходный массив строк");
             while (!readerOne.EndOfStream)
             {
