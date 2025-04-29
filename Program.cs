@@ -198,6 +198,7 @@ namespace CodeExperiment
             // первые 3 строки содержат по 10 элементов - ступенчатый массив
          }
 
+         Console.WriteLine();
          FileReadLines(filePath);
          FileReadAllLines(filePath);
          StreamReaderReadLine(filePath);
