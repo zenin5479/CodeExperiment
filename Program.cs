@@ -193,9 +193,115 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
+
+
+
+
+
+
             Console.ReadKey();
             // Не присваивать лишние элементы массиву строк
             // первые 3 строки содержат по 10 элементов - ступенчатый массив
+         }
+
+         FileReadLines(filePath);
+         FileReadAllLines(filePath);
+         StreamReaderReadLine(filePath);
+         StreamReaderReadToEnd(filePath);
+
+      }
+
+      public static void FileReadLines(string filePath)
+      {
+         try
+         {
+            // Чтения файла построчно
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (string line in File.ReadLines(filePath))
+            {
+               stringBuilder.AppendLine(line);
+            }
+
+            stringBuilder.Length -= Environment.NewLine.Length;
+            Console.WriteLine(stringBuilder.ToString());
+            Console.WriteLine();
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine("Процесс завершился неудачей {0}", e);
+         }
+      }
+
+      public static void FileReadAllLines(string filePath)
+      {
+         try
+         {
+            // Чтение файла выполняется за одну операцию
+            StringBuilder stringBuilder = new StringBuilder();
+            string[] lines = File.ReadAllLines(filePath);
+            for (int i = 0; i < lines.Length; i++)
+            {
+               string line = lines[i];
+               stringBuilder.AppendLine(line);
+            }
+
+            stringBuilder.Length -= Environment.NewLine.Length;
+            Console.WriteLine(stringBuilder.ToString());
+            Console.WriteLine();
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine("Процесс завершился неудачей {0}", e);
+         }
+      }
+
+      public static void StreamReaderReadLine(string filePath)
+      {
+         try
+         {
+            // Чтения файла построчно
+            StreamReader readerone = new StreamReader(filePath);
+            while (!readerone.EndOfStream)
+            {
+               Console.WriteLine(readerone.ReadLine());
+            }
+
+            Console.WriteLine();
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine("Процесс завершился неудачей {0}", e);
+         }
+
+         try
+         {
+            // Строки из файла считываются до достижения конца файла
+            using StreamReader sr = new StreamReader(filePath);
+            while (sr.Peek() > -1)
+            {
+               Console.WriteLine(sr.ReadLine());
+            }
+
+            Console.WriteLine();
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine("Процесс завершился неудачей {0}", e);
+         }
+      }
+
+      static void StreamReaderReadToEnd(string filePath)
+      {
+         try
+         {
+            // Чтение файла выполняется за одну операцию
+            using StreamReader sr = new StreamReader(filePath);
+            Console.WriteLine(sr.ReadToEnd());
+            //Console.WriteLine();
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine("Процесс завершился неудачей {0}", e);
          }
       }
    }
