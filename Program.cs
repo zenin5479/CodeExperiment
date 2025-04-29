@@ -208,7 +208,6 @@ namespace CodeExperiment
          FileReadAllLines(filePath);
          StreamReaderReadLine(filePath);
          StreamReaderReadToEnd(filePath);
-
       }
 
       public static void FileReadLines(string filePath)
