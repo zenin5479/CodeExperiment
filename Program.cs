@@ -261,8 +261,8 @@ namespace CodeExperiment
                Console.WriteLine(readerone.ReadLine());
                stringBuilder.AppendLine(readerone.ToString());
             }
-            stringBuilder.Length -= Environment.NewLine.Length;
-            Console.WriteLine(stringBuilder.ToString());
+            
+            //Console.WriteLine(stringBuilder.ToString());
             Console.WriteLine();
          }
          catch (Exception e)
@@ -270,20 +270,20 @@ namespace CodeExperiment
             Console.WriteLine("Процесс завершился неудачей {0}", e);
          }
 
-         try
-         {
-            // Строки из файла считываются до достижения конца файла
-            using StreamReader sr = new StreamReader(filePath);
-            while (sr.Peek() > -1)
-            {
-               Console.WriteLine(sr.ReadLine());
-            }
-            Console.WriteLine();
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Процесс завершился неудачей {0}", e);
-         }
+         //try
+         //{
+         //   // Строки из файла считываются до достижения конца файла
+         //   using StreamReader sr = new StreamReader(filePath);
+         //   while (sr.Peek() > -1)
+         //   {
+         //      Console.WriteLine(sr.ReadLine());
+         //   }
+         //   Console.WriteLine();
+         //}
+         //catch (Exception e)
+         //{
+         //   Console.WriteLine("Процесс завершился неудачей {0}", e);
+         //}
       }
 
       static void StreamReaderReadToEnd(string filePath)
