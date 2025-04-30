@@ -291,7 +291,7 @@ namespace CodeExperiment
          }
       }
 
-      static void StreamReaderReadToEnd(string filePath)
+      public static void StreamReaderReadToEnd(string filePath)
       {
          try
          {
