@@ -258,8 +258,8 @@ namespace CodeExperiment
             StreamReader readerOne = new StreamReader(filePath);
             while (!readerOne.EndOfStream)
             {
-               string stroka = readerOne.ReadLine();
-               stringBuilderOne.AppendLine(stroka);
+               string strokaOne = readerOne.ReadLine();
+               stringBuilderOne.AppendLine(strokaOne);
 
             }
             stringBuilderOne.Length -= Environment.NewLine.Length;
@@ -278,8 +278,8 @@ namespace CodeExperiment
             StreamReader readerTwo = new StreamReader(filePath);
             while (readerTwo.Peek() > -1)
             {
-               string stroka = readerTwo.ReadLine();
-               stringBuilderTwo.AppendLine(stroka);
+               string strokaTwo = readerTwo.ReadLine();
+               stringBuilderTwo.AppendLine(strokaTwo);
             }
             stringBuilderTwo.Length -= Environment.NewLine.Length;
             Console.WriteLine(stringBuilderTwo);
