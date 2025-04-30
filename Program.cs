@@ -296,7 +296,7 @@ namespace CodeExperiment
          try
          {
             // Чтение файла выполняется за одну операцию
-            using StreamReader sr = new StreamReader(filePath);
+            StreamReader sr = new StreamReader(filePath);
             Console.WriteLine(sr.ReadToEnd());
             //Console.WriteLine();
          }
