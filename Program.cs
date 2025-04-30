@@ -202,7 +202,7 @@ namespace CodeExperiment
          //FileReadLines(filePath);
          //FileReadAllLines(filePath);
          StreamReaderReadLine(filePath);
-         StreamReaderReadToEnd(filePath);
+         //StreamReaderReadToEnd(filePath);
 
          Console.ReadKey();
       }
