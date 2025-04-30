@@ -254,15 +254,16 @@ namespace CodeExperiment
          try
          {
             // Чтения файла построчно
-            StringBuilder stringBuilder = new StringBuilder();
-            StreamReader readerone = new StreamReader(filePath);
-            while (!readerone.EndOfStream)
+            StringBuilder stringBuilderOne = new StringBuilder();
+            StreamReader readerOne = new StreamReader(filePath);
+            while (!readerOne.EndOfStream)
             {
-               readerone.ReadLine();
-               stringBuilder.AppendLine(readerone.ToString());
-            }
+               string stroka = readerOne.ReadLine();
+               stringBuilderOne.AppendLine(stroka);
 
-            Console.WriteLine(stringBuilder);
+            }
+            stringBuilderOne.Length -= Environment.NewLine.Length;
+            Console.WriteLine(stringBuilderOne);
             Console.WriteLine();
          }
          catch (Exception e)
@@ -270,20 +271,24 @@ namespace CodeExperiment
             Console.WriteLine("Процесс завершился неудачей {0}", e);
          }
 
-         //try
-         //{
-         //   // Строки из файла считываются до достижения конца файла
-         //   using StreamReader sr = new StreamReader(filePath);
-         //   while (sr.Peek() > -1)
-         //   {
-         //      Console.WriteLine(sr.ReadLine());
-         //   }
-         //   Console.WriteLine();
-         //}
-         //catch (Exception e)
-         //{
-         //   Console.WriteLine("Процесс завершился неудачей {0}", e);
-         //}
+         try
+         {
+            // Строки из файла считываются до достижения конца файла
+            StringBuilder stringBuilderTwo = new StringBuilder();
+            StreamReader readerTwo = new StreamReader(filePath);
+            while (readerTwo.Peek() > -1)
+            {
+               string stroka = readerTwo.ReadLine();
+               stringBuilderTwo.AppendLine(stroka);
+            }
+            stringBuilderTwo.Length -= Environment.NewLine.Length;
+            Console.WriteLine(stringBuilderTwo);
+            Console.WriteLine();
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine("Процесс завершился неудачей {0}", e);
+         }
       }
 
       static void StreamReaderReadToEnd(string filePath)
