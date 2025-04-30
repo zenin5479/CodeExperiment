@@ -255,14 +255,14 @@ namespace CodeExperiment
          {
             // Чтения файла построчно
             StringBuilder stringBuilder = new StringBuilder();
-            using StreamReader readerone = new StreamReader(filePath);
+            StreamReader readerone = new StreamReader(filePath);
             while (!readerone.EndOfStream)
             {
                Console.WriteLine(readerone.ReadLine());
                stringBuilder.AppendLine(readerone.ToString());
             }
-            
-            //Console.WriteLine(stringBuilder.ToString());
+
+            Console.WriteLine(stringBuilder);
             Console.WriteLine();
          }
          catch (Exception e)
