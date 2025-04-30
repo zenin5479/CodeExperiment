@@ -200,9 +200,9 @@ namespace CodeExperiment
          Console.WriteLine();
 
          FileReadLines(filePath);
-         FileReadAllLines(filePath);
-         StreamReaderReadLine(filePath);
-         StreamReaderReadToEnd(filePath);
+         //FileReadAllLines(filePath);
+         //StreamReaderReadLine(filePath);
+         //StreamReaderReadToEnd(filePath);
 
          Console.ReadKey();
       }
@@ -255,12 +255,6 @@ namespace CodeExperiment
          {
             // Чтения файла построчно
             StringBuilder stringBuilder = new StringBuilder();
-            foreach (string line in File.ReadLines(filePath))
-            {
-
-            }
-
-
             using StreamReader readerone = new StreamReader(filePath);
             while (!readerone.EndOfStream)
             {
@@ -269,9 +263,6 @@ namespace CodeExperiment
             }
             stringBuilder.Length -= Environment.NewLine.Length;
             Console.WriteLine(stringBuilder.ToString());
-            Console.WriteLine();
-
-
             Console.WriteLine();
          }
          catch (Exception e)
