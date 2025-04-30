@@ -259,17 +259,19 @@ namespace CodeExperiment
             {
 
             }
-            stringBuilder.Length -= Environment.NewLine.Length;
-            Console.WriteLine(stringBuilder.ToString());
-            Console.WriteLine();
 
 
             using StreamReader readerone = new StreamReader(filePath);
             while (!readerone.EndOfStream)
             {
                Console.WriteLine(readerone.ReadLine());
-               stringBuilder.AppendLine(readerone);
+               stringBuilder.AppendLine(readerone.ToString());
             }
+            stringBuilder.Length -= Environment.NewLine.Length;
+            Console.WriteLine(stringBuilder.ToString());
+            Console.WriteLine();
+
+
             Console.WriteLine();
          }
          catch (Exception e)
