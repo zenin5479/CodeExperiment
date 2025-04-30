@@ -258,7 +258,7 @@ namespace CodeExperiment
             StreamReader readerone = new StreamReader(filePath);
             while (!readerone.EndOfStream)
             {
-               Console.WriteLine(readerone.ReadLine());
+               readerone.ReadLine();
                stringBuilder.AppendLine(readerone.ToString());
             }
 
