@@ -254,6 +254,17 @@ namespace CodeExperiment
          try
          {
             // Чтения файла построчно
+
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (string line in File.ReadLines(filePath))
+            {
+               stringBuilder.AppendLine(line);
+            }
+            stringBuilder.Length -= Environment.NewLine.Length;
+            Console.WriteLine(stringBuilder.ToString());
+            Console.WriteLine();
+
+
             using StreamReader readerone = new StreamReader(filePath);
             while (!readerone.EndOfStream)
             {
