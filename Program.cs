@@ -199,14 +199,12 @@ namespace CodeExperiment
          }
 
          Console.WriteLine();
-
-         //FileReadLines(filePath);
          FileReadAllLines(filePath);
 
          Console.ReadKey();
       }
 
-     public static void FileReadAllLines(string filePath)
+      public static void FileReadAllLines(string filePath)
       {
          try
          {
