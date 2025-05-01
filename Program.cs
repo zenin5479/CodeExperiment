@@ -24,7 +24,6 @@ namespace CodeExperiment
             StreamReader readerOne = new StreamReader(fStream);
             // Создаем List<string> для определения количество строк в файле
             List<string> listOne = new List<string>();
-            StringBuilder summingLineOne = new StringBuilder();
             int arraySize = 0;
             Console.WriteLine("Исходный массив строк");
             while (!readerOne.EndOfStream)
@@ -32,52 +31,12 @@ namespace CodeExperiment
                string stroka = readerOne.ReadLine();
                listOne.Add(stroka);
                Console.WriteLine(stroka);
-               summingLineOne.AppendLine(stroka);
                arraySize++;
             }
 
             Console.WriteLine();
-            summingLineOne.Length -= Environment.NewLine.Length;
-            Console.WriteLine(summingLineOne);
             readerOne.Close();
             fStream.Dispose();
-
-            string[] arrayOne = new string[arraySize];
-            StringBuilder summingLineTwo = new StringBuilder();
-            char charact = '\n';
-            int yt = 0;
-            int rf = 0;
-            int fw = 0;
-            while (yt < summingLineOne.Length)
-            {
-               while (rf < arrayOne.Length)
-               {
-                  if (charact != summingLineOne[yt])
-                  {
-                     summingLineTwo.Append(summingLineOne[yt]);
-                  }
-                  else
-                  {
-                     string subLineZero = summingLineTwo.ToString();
-                     arrayOne[rf] = subLineZero;
-                     Console.Write(subLineZero + " ");
-                     summingLineOne.Clear();
-                     rf++;
-                  }
-                  if (fw == summingLineOne.Length - 1)
-                  {
-                     string subLineZero = summingLineTwo.ToString();
-                     arrayOne[rf] = subLineZero;
-                     Console.Write(subLineZero + " ");
-                     summingLineOne.Clear();
-                     rf++;
-                  }
-               }
-
-               yt++;
-               Console.WriteLine();
-            }
-
 
             // Вариант с помощью StringBuilder
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
