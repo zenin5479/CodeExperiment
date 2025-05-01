@@ -42,43 +42,38 @@ namespace CodeExperiment
             readerOne.Close();
             fStream.Dispose();
 
-            int[] arrayOne = new int[arraySize];
+            string[] arrayOne = new string[arraySize];
             StringBuilder summingLineTwo = new StringBuilder();
             char charact = '\n';
             int yt = 0;
-            int rf;
+            int rf = 0;
             int fw = 0;
             while (yt < summingLineOne.Length)
             {
-               while (arrayOne.Length != 0)
+               while (rf < arrayOne.Length)
                {
+                  if (charact != summingLineOne[yt])
+                  {
+                     summingLineTwo.Append(summingLineOne[yt]);
+                  }
+                  else
+                  {
+                     string subLineZero = summingLineTwo.ToString();
+                     arrayOne[rf] = subLineZero;
+                     Console.Write(subLineZero + " ");
+                     summingLineOne.Clear();
+                  }
 
+
+                  if (fw == summingLineOne.Length - 1)
+                  {
+                     string subLineZero = summingLineTwo.ToString();
+                     arrayOne[rf] = subLineZero;
+                     Console.Write(subLineZero + " ");
+                     summingLineOne.Clear();
+                  }
                }
-
-               if (charact != summingLineOne[yt])
-               {
-                  summingLineTwo.Append(summingLineOne[yt]);
-               }
-               else
-               {
-                  string subLineZero = summingLineTwo.ToString();
-                  //listColumns.Add(subLine);
-                  ////Console.Write(subLine + " ");
-                  //stringModified.Clear();
-               }
-
-
-               if (fw == summingLineOne.Length - 1)
-               {
-                  //string subLine = stringModified.ToString();
-                  //listColumns.Add(subLine);
-                  ////Console.Write(subLine + " ");
-                  //stringModified.Clear();
-               }
-
                //f++;
-
-
                //Console.WriteLine();
 
                //sizeArray[h] = listColumns.Count;
