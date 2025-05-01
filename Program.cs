@@ -201,7 +201,7 @@ namespace CodeExperiment
          }
 
          Console.WriteLine();
-         //FileReadAllLines(filePath);
+         FileReadAllLines(filePath);
 
          Console.ReadKey();
       }
