@@ -41,7 +41,45 @@ namespace CodeExperiment
             Console.WriteLine(summingLine);
             readerOne.Close();
             fStream.Dispose();
-            //Console.WriteLine();
+            int[] arrayOne = new int[arraySize];
+            char charact = '\n';
+            int yt = 0;
+            int fw = 0;
+            while (yt < summingLine.Length)
+            {
+                  if (charact != summingLine[yt])
+                  {
+                     //stringModified.Append(line[f]);
+                  }
+                  else
+                  {
+                     //string subLine = stringModified.ToString();
+                     //listColumns.Add(subLine);
+                     ////Console.Write(subLine + " ");
+                     //stringModified.Clear();
+                  }
+
+               
+                  if (fw == summingLine.Length - 1)
+                  {
+                     string subLine = stringModified.ToString();
+                     listColumns.Add(subLine);
+                     //Console.Write(subLine + " ");
+                     stringModified.Clear();
+                  }
+
+                  //f++;
+               
+
+               //Console.WriteLine();
+
+               //sizeArray[h] = listColumns.Count;
+               //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
+               //h++;
+               //f = 0;
+               //listColumns.Clear();
+            }
+
 
             // Вариант с помощью StringBuilder
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
