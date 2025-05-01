@@ -62,25 +62,20 @@ namespace CodeExperiment
                      arrayOne[rf] = subLineZero;
                      Console.Write(subLineZero + " ");
                      summingLineOne.Clear();
+                     rf++;
                   }
-
-
                   if (fw == summingLineOne.Length - 1)
                   {
                      string subLineZero = summingLineTwo.ToString();
                      arrayOne[rf] = subLineZero;
                      Console.Write(subLineZero + " ");
                      summingLineOne.Clear();
+                     rf++;
                   }
                }
-               //f++;
-               //Console.WriteLine();
 
-               //sizeArray[h] = listColumns.Count;
-               //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
-               //h++;
-               //f = 0;
-               //listColumns.Clear();
+               yt++;
+               Console.WriteLine();
             }
 
 
