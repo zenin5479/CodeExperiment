@@ -47,29 +47,29 @@ namespace CodeExperiment
             int fw = 0;
             while (yt < summingLine.Length)
             {
-                  if (charact != summingLine[yt])
-                  {
-                     //stringModified.Append(line[f]);
-                  }
-                  else
-                  {
-                     //string subLine = stringModified.ToString();
-                     //listColumns.Add(subLine);
-                     ////Console.Write(subLine + " ");
-                     //stringModified.Clear();
-                  }
+               if (charact != summingLine[yt])
+               {
+                  //stringModified.Append(line[f]);
+               }
+               else
+               {
+                  //string subLine = stringModified.ToString();
+                  //listColumns.Add(subLine);
+                  ////Console.Write(subLine + " ");
+                  //stringModified.Clear();
+               }
 
-               
-                  if (fw == summingLine.Length - 1)
-                  {
-                     string subLine = stringModified.ToString();
-                     listColumns.Add(subLine);
-                     //Console.Write(subLine + " ");
-                     stringModified.Clear();
-                  }
 
-                  //f++;
-               
+               if (fw == summingLine.Length - 1)
+               {
+                  //string subLine = stringModified.ToString();
+                  //listColumns.Add(subLine);
+                  ////Console.Write(subLine + " ");
+                  //stringModified.Clear();
+               }
+
+               //f++;
+
 
                //Console.WriteLine();
 
