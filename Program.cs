@@ -13,7 +13,6 @@ namespace CodeExperiment
          string filePath = AppContext.BaseDirectory + "b.txt";
          Console.BackgroundColor = ConsoleColor.DarkBlue;
 
-
          FileStream fStream = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fStream == null)
          {
@@ -221,11 +220,11 @@ namespace CodeExperiment
 
             Console.WriteLine();
 
-            string[] linesArrayTwo = new string[lines.Length];
-            Array.Copy(lines, 0, linesArrayTwo, 0, lines.Length);
-            for (int i = 0; i < linesArrayTwo.Length; i++)
+            string[] sizeArrayTwo = new string[lines.Length];
+            Array.Copy(lines, 0, sizeArrayTwo, 0, lines.Length);
+            for (int i = 0; i < sizeArrayTwo.Length; i++)
             {
-               Console.WriteLine(linesArrayTwo[i]);
+               Console.WriteLine(sizeArrayTwo[i]);
             }
 
             Console.WriteLine();
