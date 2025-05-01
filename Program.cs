@@ -25,6 +25,7 @@ namespace CodeExperiment
             // Создаем List<string> для определения количество строк в файле
             List<string> listOne = new List<string>();
             StringBuilder summingLine = new StringBuilder();
+            int arraySize = 0;
             Console.WriteLine("Исходный массив строк");
             while (!readerOne.EndOfStream)
             {
@@ -32,6 +33,7 @@ namespace CodeExperiment
                listOne.Add(stroka);
                Console.WriteLine(stroka);
                summingLine.AppendLine(stroka);
+               arraySize++;
             }
 
             Console.WriteLine();
