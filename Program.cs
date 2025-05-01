@@ -242,9 +242,7 @@ namespace CodeExperiment
          Console.WriteLine();
 
          //FileReadLines(filePath);
-         //FileReadAllLines(filePath);
-         StreamReaderReadLine(filePath);
-         //StreamReaderReadToEnd(filePath);
+         FileReadAllLines(filePath);
 
          Console.ReadKey();
       }
