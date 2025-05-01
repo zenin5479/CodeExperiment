@@ -24,7 +24,7 @@ namespace CodeExperiment
             StreamReader readerOne = new StreamReader(fStream);
             // Создаем List<string> для определения количество строк в файле
             List<string> listOne = new List<string>();
-
+            StringBuilder summingLine = new StringBuilder();
             Console.WriteLine("Исходный массив строк");
             while (!readerOne.EndOfStream)
             {
