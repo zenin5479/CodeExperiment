@@ -24,7 +24,7 @@ namespace CodeExperiment
             StreamReader readerOne = new StreamReader(fStream);
             // Создаем List<string> для определения количество строк в файле
             List<string> listOne = new List<string>();
-            StringBuilder summingLine = new StringBuilder();
+            StringBuilder summingLineOne = new StringBuilder();
             int arraySize = 0;
             Console.WriteLine("Исходный массив строк");
             while (!readerOne.EndOfStream)
@@ -32,35 +32,43 @@ namespace CodeExperiment
                string stroka = readerOne.ReadLine();
                listOne.Add(stroka);
                Console.WriteLine(stroka);
-               summingLine.AppendLine(stroka);
+               summingLineOne.AppendLine(stroka);
                arraySize++;
             }
 
             Console.WriteLine();
-            summingLine.Length -= Environment.NewLine.Length;
-            Console.WriteLine(summingLine);
+            summingLineOne.Length -= Environment.NewLine.Length;
+            Console.WriteLine(summingLineOne);
             readerOne.Close();
             fStream.Dispose();
+
             int[] arrayOne = new int[arraySize];
+            StringBuilder summingLineTwo = new StringBuilder();
             char charact = '\n';
             int yt = 0;
+            int rf;
             int fw = 0;
-            while (yt < summingLine.Length)
+            while (yt < summingLineOne.Length)
             {
-               if (charact != summingLine[yt])
+               while (arrayOne.Length != 0)
                {
-                  //stringModified.Append(line[f]);
+
+               }
+
+               if (charact != summingLineOne[yt])
+               {
+                  summingLineTwo.Append(summingLineOne[yt]);
                }
                else
                {
-                  //string subLine = stringModified.ToString();
+                  string subLineZero = summingLineTwo.ToString();
                   //listColumns.Add(subLine);
                   ////Console.Write(subLine + " ");
                   //stringModified.Clear();
                }
 
 
-               if (fw == summingLine.Length - 1)
+               if (fw == summingLineOne.Length - 1)
                {
                   //string subLine = stringModified.ToString();
                   //listColumns.Add(subLine);
