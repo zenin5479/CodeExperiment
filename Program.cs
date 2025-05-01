@@ -30,11 +30,8 @@ namespace CodeExperiment
             {
                string stroka = readerOne.ReadLine();
                listOne.Add(stroka);
-
                Console.WriteLine(stroka);
                summingLine.AppendLine(stroka);
-
-
             }
 
             Console.WriteLine();
