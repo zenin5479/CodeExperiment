@@ -217,10 +217,10 @@ namespace CodeExperiment
             for (int i = 0; i < lines.Length; i++)
             {
                sizeArray[i] = lines[i];
+               Console.WriteLine(sizeArray[i]);
             }
-            //stringBuilder.Length -= Environment.NewLine.Length;
-            Console.WriteLine(stringBuilder.ToString());
-            //Console.WriteLine();
+
+            Console.WriteLine();
          }
          catch (Exception e)
          {
