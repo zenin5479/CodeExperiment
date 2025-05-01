@@ -32,7 +32,15 @@ namespace CodeExperiment
                listOne.Add(stroka);
 
                Console.WriteLine(stroka);
+               summingLine.AppendLine(stroka);
+
+
             }
+            Console.WriteLine();
+            summingLine.Length -= Environment.NewLine.Length;
+            Console.WriteLine(summingLine);
+
+
 
             readerOne.Close();
             fStream.Dispose();
