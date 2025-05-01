@@ -249,27 +249,7 @@ namespace CodeExperiment
          Console.ReadKey();
       }
 
-      public static void FileReadLines(string filePath)
-      {
-         try
-         {
-            // Чтения файла построчно
-            StringBuilder stringBuilder = new StringBuilder();
-            foreach (string line in File.ReadLines(filePath))
-            {
-               stringBuilder.AppendLine(line);
-            }
-            stringBuilder.Length -= Environment.NewLine.Length;
-            Console.WriteLine(stringBuilder.ToString());
-            Console.WriteLine();
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Процесс завершился неудачей {0}", e);
-         }
-      }
-
-      public static void FileReadAllLines(string filePath)
+     public static void FileReadAllLines(string filePath)
       {
          try
          {
@@ -302,7 +282,6 @@ namespace CodeExperiment
             {
                string strokaOne = readerOne.ReadLine();
                stringBuilderOne.AppendLine(strokaOne);
-
             }
             stringBuilderOne.Length -= Environment.NewLine.Length;
             Console.WriteLine(stringBuilderOne);
