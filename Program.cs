@@ -212,21 +212,23 @@ namespace CodeExperiment
          {
             // Чтение файла выполняется за одну операцию
             string[] lines = File.ReadAllLines(filePath);
-            string[] sizeArray = new string[lines.Length];
+            string[] linesArrayOne = new string[lines.Length];
             for (int i = 0; i < lines.Length; i++)
             {
-               sizeArray[i] = lines[i];
-               Console.WriteLine(sizeArray[i]);
+               linesArrayOne[i] = lines[i];
+               Console.WriteLine(linesArrayOne[i]);
             }
 
             Console.WriteLine();
 
-            string[] sizeArray2 = new string[lines.Length];
-            Array.Copy(lines, 0, sizeArray2, 0, lines.Length);
-            for (int i = 0; i < sizeArray2.Length; i++)
+            string[] linesArrayTwo = new string[lines.Length];
+            Array.Copy(lines, 0, linesArrayTwo, 0, lines.Length);
+            for (int i = 0; i < linesArrayTwo.Length; i++)
             {
-               Console.WriteLine(sizeArray2[i]);
+               Console.WriteLine(linesArrayTwo[i]);
             }
+
+            Console.WriteLine();
          }
          catch (Exception e)
          {
