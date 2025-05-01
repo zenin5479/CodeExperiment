@@ -213,10 +213,10 @@ namespace CodeExperiment
             // Чтение файла выполняется за одну операцию
             StringBuilder stringBuilder = new StringBuilder();
             string[] lines = File.ReadAllLines(filePath);
+            string[] sizeArray = new string[lines.Length];
             for (int i = 0; i < lines.Length; i++)
             {
-               string line = lines[i];
-               stringBuilder.AppendLine(line);
+               sizeArray[i] = lines[i];
             }
             //stringBuilder.Length -= Environment.NewLine.Length;
             Console.WriteLine(stringBuilder.ToString());
