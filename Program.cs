@@ -211,7 +211,6 @@ namespace CodeExperiment
          try
          {
             // Чтение файла выполняется за одну операцию
-            StringBuilder stringBuilder = new StringBuilder();
             string[] lines = File.ReadAllLines(filePath);
             string[] sizeArray = new string[lines.Length];
             for (int i = 0; i < lines.Length; i++)
@@ -221,6 +220,13 @@ namespace CodeExperiment
             }
 
             Console.WriteLine();
+
+            string[] sizeArray2 = new string[lines.Length];
+            Array.Copy(lines, 0, sizeArray2, 0, lines.Length);
+            for (int i = 0; i < sizeArray2.Length; i++)
+            {
+               Console.WriteLine(sizeArray2[i]);
+            }
          }
          catch (Exception e)
          {
