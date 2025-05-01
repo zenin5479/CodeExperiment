@@ -12,6 +12,8 @@ namespace CodeExperiment
          //string filePath = AppContext.BaseDirectory + "a.txt";
          string filePath = AppContext.BaseDirectory + "b.txt";
          Console.BackgroundColor = ConsoleColor.DarkBlue;
+
+
          FileStream fStream = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fStream == null)
          {
@@ -200,7 +202,6 @@ namespace CodeExperiment
 
          Console.WriteLine();
          //FileReadAllLines(filePath);
-         StreamReaderReadLine(filePath);
 
          Console.ReadKey();
       }
@@ -220,48 +221,6 @@ namespace CodeExperiment
             //stringBuilder.Length -= Environment.NewLine.Length;
             Console.WriteLine(stringBuilder.ToString());
             //Console.WriteLine();
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Процесс завершился неудачей {0}", e);
-         }
-      }
-
-      public static void StreamReaderReadLine(string filePath)
-      {
-         try
-         {
-            // Чтения файла построчно
-            StringBuilder stringBuilderOne = new StringBuilder();
-            StreamReader readerOne = new StreamReader(filePath);
-            while (!readerOne.EndOfStream)
-            {
-               string strokaOne = readerOne.ReadLine();
-               stringBuilderOne.AppendLine(strokaOne);
-
-            }
-            stringBuilderOne.Length -= Environment.NewLine.Length;
-            Console.WriteLine(stringBuilderOne);
-            Console.WriteLine();
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Процесс завершился неудачей {0}", e);
-         }
-
-         try
-         {
-            // Строки из файла считываются до достижения конца файла
-            StringBuilder stringBuilderTwo = new StringBuilder();
-            StreamReader readerTwo = new StreamReader(filePath);
-            while (readerTwo.Peek() > -1)
-            {
-               string strokaTwo = readerTwo.ReadLine();
-               stringBuilderTwo.AppendLine(strokaTwo);
-            }
-            stringBuilderTwo.Length -= Environment.NewLine.Length;
-            Console.WriteLine(stringBuilderTwo);
-            Console.WriteLine();
          }
          catch (Exception e)
          {
