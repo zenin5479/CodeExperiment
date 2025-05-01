@@ -36,12 +36,10 @@ namespace CodeExperiment
 
 
             }
+
             Console.WriteLine();
             summingLine.Length -= Environment.NewLine.Length;
             Console.WriteLine(summingLine);
-
-
-
             readerOne.Close();
             fStream.Dispose();
             //Console.WriteLine();
