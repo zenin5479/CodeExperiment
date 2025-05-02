@@ -27,7 +27,6 @@ namespace CodeExperiment
                listOne[i] = lines[i];
                Console.WriteLine(listOne[i]);
             }
-            // Вариант с помощью StringBuilder
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
             Console.ResetColor();
             StringBuilder stringModified = new StringBuilder();
