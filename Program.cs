@@ -15,7 +15,11 @@ namespace CodeExperiment
 
          // Чтение файла выполняется за одну операцию
          string[] lines = File.ReadAllLines(filePath);
-         if (lines != null)
+         if (lines == null)
+         {
+            Console.WriteLine("Ошибка при открытии файла для чтения");
+         }
+         else
          {
             string[] linesArrayOne = new string[lines.Length];
             for (int i = 0; i < lines.Length; i++)
@@ -23,10 +27,6 @@ namespace CodeExperiment
                linesArrayOne[i] = lines[i];
                Console.WriteLine(linesArrayOne[i]);
             }
-         }
-         else
-         {
-            Console.WriteLine("Ошибка при открытии файла для чтения");
          }
 
 
