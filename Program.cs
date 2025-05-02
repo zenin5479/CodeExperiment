@@ -29,33 +29,33 @@ namespace CodeExperiment
             // Разделение строки на подстроки для определения количества столбцов в строке
             Console.ResetColor();
             int[] sizeArray = new int[arrayOne.Length];
-            char spaceCharacter = ' ';
-            int d = 0;
-            int f = 0;
-            int h = 0;
-            while (h < arrayOne.Length)
+            char symbolSpace = ' ';
+            int countСolumn = 0;
+            int counterSymbol = 0;
+            int countRow = 0;
+            while (countRow < arrayOne.Length)
             {
-               string line = arrayOne[h];
-               while (f < line.Length)
+               string line = arrayOne[countRow];
+               while (counterSymbol < line.Length)
                {
-                  if (spaceCharacter == line[f])
+                  if (symbolSpace == line[counterSymbol])
                   {
-                     d++;
+                     countСolumn++;
                   }
 
-                  if (f == line.Length - 1)
+                  if (counterSymbol == line.Length - 1)
                   {
-                     d++;
+                     countСolumn++;
                   }
 
-                  f++;
+                  counterSymbol++;
                }
 
-               sizeArray[h] = d;
+               sizeArray[countRow] = countСolumn;
                //Console.WriteLine("В строке {0} количество столбцов {1}", h, d);
-               d = 0;
-               h++;
-               f = 0;
+               countСolumn = 0;
+               countRow++;
+               counterSymbol = 0;
             }
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
@@ -168,7 +168,7 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
-           
+
             //Console.WriteLine("Индекс последнего элемента первой строки : {0}", myIndex);
          }
 
