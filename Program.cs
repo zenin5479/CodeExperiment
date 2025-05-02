@@ -97,7 +97,7 @@ namespace CodeExperiment
 
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
-            StringBuilder stringModifiedOne = new StringBuilder();
+            StringBuilder stringModifiedOne = new StringBuilder(); // Заменить на массив
             double[,] arrayFour = new double[arrayOne.Length, max];
             char spaceCharacterOne = ' ';
             int character, modified, others, sumAll;
@@ -168,6 +168,7 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
+           
             //Console.WriteLine("Индекс последнего элемента первой строки : {0}", myIndex);
          }
 
