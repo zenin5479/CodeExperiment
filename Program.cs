@@ -21,6 +21,7 @@ namespace CodeExperiment
          }
          else
          {
+            Console.WriteLine("Исходный массив строк");
             string[] listOne = new string[lines.Length];
             for (int i = 0; i < lines.Length; i++)
             {
@@ -28,32 +29,6 @@ namespace CodeExperiment
                Console.WriteLine(listOne[i]);
             }
          }
-
-
-         FileStream fStream = File.Open(filePath, FileMode.Open, FileAccess.Read);
-         if (fStream == null)
-         {
-            Console.WriteLine("Ошибка при открытии файла для чтения");
-         }
-         // Cвязываем StreamReader c файловыйм потоком
-
-         // Чтение файла построчно
-         StreamReader readerOne = new StreamReader(fStream);
-         // Создаем List<string> для определения количество строк в файле
-         //List<string> listOne = new List<string>();
-         int arraySize = 0;
-         Console.WriteLine("Исходный массив строк");
-         while (!readerOne.EndOfStream)
-         {
-            string stroka = readerOne.ReadLine();
-            listOne.Add(stroka);
-            Console.WriteLine(stroka);
-            arraySize++;
-         }
-
-         Console.WriteLine();
-         readerOne.Close();
-         fStream.Dispose();
 
          // Вариант с помощью StringBuilder
          // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
