@@ -12,8 +12,7 @@ namespace CodeExperiment
          //string filePath = AppContext.BaseDirectory + "a.txt";
          string filePath = AppContext.BaseDirectory + "b.txt";
          Console.BackgroundColor = ConsoleColor.DarkBlue;
-
-         // Чтение файла выполняется за одну операцию
+         // Чтение файла за одну операцию
          string[] lines = File.ReadAllLines(filePath);
          if (lines == null)
          {
