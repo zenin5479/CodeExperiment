@@ -27,10 +27,8 @@ namespace CodeExperiment
                arrayOne[i] = lines[i];
                Console.WriteLine(arrayOne[i]);
             }
-            // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
+            // Разделение строки на подстроки для определения количества столбцов в строке
             Console.ResetColor();
-            List<string> listColumns = new List<string>();
-            //int[] sizeArray = new int[arrayOne.Length];
             int[] sizeArray = new int[arrayOne.Length];
             char spaceCharacter = ' ';
             int rx = 0;
