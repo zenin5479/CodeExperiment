@@ -21,23 +21,23 @@ namespace CodeExperiment
          else
          {
             Console.WriteLine("Исходный массив строк");
-            string[] listOne = new string[lines.Length];
+            string[] ArrayOne = new string[lines.Length];
             for (int i = 0; i < lines.Length; i++)
             {
-               listOne[i] = lines[i];
-               Console.WriteLine(listOne[i]);
+               ArrayOne[i] = lines[i];
+               Console.WriteLine(ArrayOne[i]);
             }
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
             Console.ResetColor();
             StringBuilder stringModified = new StringBuilder();
             List<string> listColumns = new List<string>();
-            int[] sizeArray = new int[listOne.Length];
+            int[] sizeArray = new int[ArrayOne.Length];
             char spaceCharacter = ' ';
             int f = 0;
             int h = 0;
-            while (h < listOne.Length)
+            while (h < ArrayOne.Length)
             {
-               string line = listOne[h];
+               string line = ArrayOne[h];
                while (f < line.Length)
                {
                   if (spaceCharacter != line[f])
@@ -93,7 +93,7 @@ namespace CodeExperiment
 
             Console.ResetColor();
             //Console.WriteLine();
-            Console.WriteLine("Количество строк {0}", listOne.IsFixedSize);
+            Console.WriteLine("Количество строк {0}", ArrayOne.IsFixedSize);
             Console.WriteLine("Минимальное количество столбцов: {0}", minTwo);
             Console.WriteLine("Максимальное количество столбцов: {0}", maxTwo);
             if (minTwo == maxTwo)
@@ -113,7 +113,7 @@ namespace CodeExperiment
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModifiedOne = new StringBuilder();
-            double[,] arrayFour = new double[listOne.Length, maxTwo];
+            double[,] arrayFour = new double[ArrayOne.Length, maxTwo];
             char spaceCharacterOne = ' ';
             int character, modified, others, sumAll;
             character = 0;
@@ -125,7 +125,7 @@ namespace CodeExperiment
             int n = 0;
             while (l < arrayFour.GetLength(0))
             {
-               string line = listOne[l];
+               string line = ArrayOne[l];
                // Изменить количество получемых элементов в соответствии с количеством столбцов
                if (sizeArray[l] != maxTwo)
                {
