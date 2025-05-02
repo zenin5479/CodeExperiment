@@ -97,7 +97,7 @@ namespace CodeExperiment
 
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
-            StringBuilder stringModifiedOne = new StringBuilder(); // Заменить на массив
+            StringBuilder stringModified = new StringBuilder(); // Заменить на массив
             double[,] arrayDouble = new double[arrayLines.Length, max];
             char spaceCharacterOne = ' ';
             int character, modified, others, sumAll;
@@ -128,17 +128,17 @@ namespace CodeExperiment
                   {
                      if (spaceCharacterOne != line[n])
                      {
-                        stringModifiedOne.Append(line[n]);
+                        stringModified.Append(line[n]);
                         character++;
                         //isCharacter = true;
                         //isModified = true;
                      }
                      else
                      {
-                        string subLineOne = stringModifiedOne.ToString();
+                        string subLineOne = stringModified.ToString();
                         arrayDouble[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayDouble[l, m] + " ");
-                        stringModifiedOne.Clear();
+                        stringModified.Clear();
                         //isCharacter = false;
                         //isModified = false;
                         m++;
@@ -146,10 +146,10 @@ namespace CodeExperiment
 
                      if (n == line.Length - 1)
                      {
-                        string subLineOne = stringModifiedOne.ToString();
+                        string subLineOne = stringModified.ToString();
                         arrayDouble[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayDouble[l, m] + " ");
-                        stringModifiedOne.Clear();
+                        stringModified.Clear();
                         //isCharacter = false;
                         //isModified = false;
                         m++;
