@@ -67,6 +67,7 @@ namespace CodeExperiment
                   f++;
                }
                sizeA[h] = rx;
+               rx = 0;
 
                //Console.WriteLine();
 
