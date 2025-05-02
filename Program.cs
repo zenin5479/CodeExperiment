@@ -32,6 +32,7 @@ namespace CodeExperiment
             StringBuilder stringModified = new StringBuilder();
             List<string> listColumns = new List<string>();
             int[] sizeArray = new int[arrayOne.Length];
+
             char spaceCharacter = ' ';
             int f = 0;
             int h = 0;
@@ -93,7 +94,7 @@ namespace CodeExperiment
 
             Console.ResetColor();
             //Console.WriteLine();
-            Console.WriteLine("Количество строк {0}", arrayOne.IsFixedSize);
+            Console.WriteLine("Количество строк {0}", arrayOne.Length);
             Console.WriteLine("Минимальное количество столбцов: {0}", minTwo);
             Console.WriteLine("Максимальное количество столбцов: {0}", maxTwo);
             if (minTwo == maxTwo)
