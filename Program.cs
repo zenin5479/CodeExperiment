@@ -172,9 +172,7 @@ namespace CodeExperiment
 
          Console.WriteLine();
          FileReadAllLines(filePath);
-
          Console.ReadKey();
-
       }
 
       public static void FileReadAllLines(string filePath)
