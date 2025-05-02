@@ -166,16 +166,17 @@ namespace CodeExperiment
                Console.ResetColor();
             }
             Console.WriteLine();
-            // Проверка последнего элемента первой строки
-            double variable = arrayDouble[0, arrayDouble.GetLength(1) - 1];
+            // Проверка элемента строки
+            int bar = 0;
+            double variable = arrayDouble[bar, arrayDouble.GetLength(1) - 8];
             int index = -1;
             int iterator = arrayDouble.GetLength(1) - 1;
             int first = 0;
             bool flag = false;
-            // Обходим первую строку с последнего элемента
+            // Обходим строку с последнего элемента
             while (first < iterator && flag != true)
             {
-               if (Equals(arrayDouble[0, iterator], variable))
+               if (Equals(arrayDouble[bar, iterator], variable))
                {
                   index = iterator;
                   flag = true;
@@ -184,8 +185,8 @@ namespace CodeExperiment
                iterator--;
             }
 
-            Console.WriteLine("Последний элемент первой строки : {0}", variable);
-            Console.WriteLine("Индекс последнего элемента первой строки : {0}", index);
+            Console.WriteLine("Элемент {0} строки : {1}", bar, variable);
+            Console.WriteLine("Индекс элемента {0} строки : {1}", bar, index);
          }
 
          Console.WriteLine();
