@@ -30,7 +30,7 @@ namespace CodeExperiment
             Console.ResetColor();
             int[] sizeArray = new int[arrayOne.Length];
             char spaceCharacter = ' ';
-            int rx = 0;
+            int d = 0;
             int f = 0;
             int h = 0;
             while (h < arrayOne.Length)
@@ -40,38 +40,38 @@ namespace CodeExperiment
                {
                   if (spaceCharacter == line[f])
                   {
-                     rx++;
+                     d++;
                   }
 
                   if (f == line.Length - 1)
                   {
-                     rx++;
+                     d++;
                   }
 
                   f++;
                }
 
-               sizeArray[h] = rx;
-               //Console.WriteLine("В строке {0} количество столбцов {1}", h, rx);
-               rx = 0;
+               sizeArray[h] = d;
+               //Console.WriteLine("В строке {0} количество столбцов {1}", h, d);
+               d = 0;
                h++;
                f = 0;
             }
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
-            int minTwo = sizeArray[0];
-            int maxTwo = sizeArray[0];
+            int min = sizeArray[0];
+            int max = sizeArray[0];
             int k = 0;
             while (k < sizeArray.Length)
             {
-               if (sizeArray[k] < minTwo)
+               if (sizeArray[k] < min)
                {
-                  minTwo = sizeArray[k];
+                  min = sizeArray[k];
                }
 
-               if (sizeArray[k] > maxTwo)
+               if (sizeArray[k] > max)
                {
-                  maxTwo = sizeArray[k];
+                  max = sizeArray[k];
                }
 
                k++;
@@ -79,9 +79,9 @@ namespace CodeExperiment
 
             Console.ResetColor();
             Console.WriteLine("Количество строк {0}", arrayOne.Length);
-            Console.WriteLine("Минимальное количество столбцов: {0}", minTwo);
-            Console.WriteLine("Максимальное количество столбцов: {0}", maxTwo);
-            if (minTwo == maxTwo)
+            Console.WriteLine("Минимальное количество столбцов: {0}", min);
+            Console.WriteLine("Максимальное количество столбцов: {0}", max);
+            if (min == max)
             {
                Console.ForegroundColor = ConsoleColor.Green;
                Console.WriteLine("Массив имеет одинаковое количество столбцов - прямоугольный");
@@ -98,7 +98,7 @@ namespace CodeExperiment
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModifiedOne = new StringBuilder();
-            double[,] arrayFour = new double[arrayOne.Length, maxTwo];
+            double[,] arrayFour = new double[arrayOne.Length, max];
             char spaceCharacterOne = ' ';
             int character, modified, others, sumAll;
             character = 0;
@@ -108,11 +108,12 @@ namespace CodeExperiment
             int l = 0;
             int m = 0;
             int n = 0;
+            // Не присваивать лишние элементы массиву строк первые 3 строки содержат по 10 элементов - ступенчатый массив
             while (l < arrayFour.GetLength(0))
             {
                string line = arrayOne[l];
                // Изменить количество получемых элементов в соответствии с количеством столбцов
-               if (sizeArray[l] != maxTwo)
+               if (sizeArray[l] != max)
                {
 
                }
@@ -167,17 +168,13 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
-
-
          }
-
-
 
          Console.WriteLine();
          FileReadAllLines(filePath);
 
-         Console.ReadKey(); // Не присваивать лишние элементы массиву строк
-                            // первые 3 строки содержат по 10 элементов - ступенчатый массив
+         Console.ReadKey();
+
       }
 
       public static void FileReadAllLines(string filePath)
