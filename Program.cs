@@ -28,7 +28,6 @@ namespace CodeExperiment
             }
             // Разделение строки на подстроки для определения количества столбцов в строке
             Console.ResetColor();
-            Console.WriteLine();
             int[] sizeArray = new int[arrayOne.Length];
             char spaceCharacter = ' ';
             int rx = 0;
@@ -43,7 +42,6 @@ namespace CodeExperiment
                   {
                      rx++;
                   }
-
                   if (f == line.Length - 1)
                   {
                      rx++;
