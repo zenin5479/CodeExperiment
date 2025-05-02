@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -29,6 +28,7 @@ namespace CodeExperiment
             }
             // Разделение строки на подстроки для определения количества столбцов в строке
             Console.ResetColor();
+            Console.WriteLine();
             int[] sizeArray = new int[arrayOne.Length];
             char spaceCharacter = ' ';
             int rx = 0;
@@ -52,12 +52,12 @@ namespace CodeExperiment
                   f++;
                }
                sizeArray[h] = rx;
-               rx = 0;
 
-               //Console.WriteLine();
-               //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
+               Console.WriteLine("В строке {0} количество столбцов {1}", h, rx);
+               rx = 0;
                h++;
                f = 0;
+
             }
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
