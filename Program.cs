@@ -32,8 +32,9 @@ namespace CodeExperiment
             StringBuilder stringModified = new StringBuilder();
             List<string> listColumns = new List<string>();
             int[] sizeArray = new int[arrayOne.Length];
-
+            int[] sizeA = new int[arrayOne.Length];
             char spaceCharacter = ' ';
+            int rx = 0;
             int f = 0;
             int h = 0;
             while (h < arrayOne.Length)
@@ -51,6 +52,7 @@ namespace CodeExperiment
                      listColumns.Add(subLine);
                      //Console.Write(subLine + " ");
                      stringModified.Clear();
+                     rx++;
                   }
 
                   if (f == line.Length - 1)
@@ -59,10 +61,12 @@ namespace CodeExperiment
                      listColumns.Add(subLine);
                      //Console.Write(subLine + " ");
                      stringModified.Clear();
+                     rx++;
                   }
 
                   f++;
                }
+               sizeA[h] = rx;
 
                //Console.WriteLine();
 
