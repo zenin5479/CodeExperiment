@@ -52,7 +52,7 @@ namespace CodeExperiment
                }
 
                sizeArray[h] = rx;
-               Console.WriteLine("В строке {0} количество столбцов {1}", h, rx);
+               //Console.WriteLine("В строке {0} количество столбцов {1}", h, rx);
                rx = 0;
                h++;
                f = 0;
