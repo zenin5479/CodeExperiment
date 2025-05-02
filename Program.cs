@@ -55,12 +55,9 @@ namespace CodeExperiment
                rx = 0;
 
                //Console.WriteLine();
-
-               sizeArray[h] = listColumns.Count;
                //Console.WriteLine("В строке {0} количество столбцов {1}", t, listColumns.Count);
                h++;
                f = 0;
-               listColumns.Clear();
             }
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
