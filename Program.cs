@@ -13,6 +13,15 @@ namespace CodeExperiment
          string filePath = AppContext.BaseDirectory + "b.txt";
          Console.BackgroundColor = ConsoleColor.DarkBlue;
 
+         // Чтение файла выполняется за одну операцию
+         string[] lines = File.ReadAllLines(filePath);
+         string[] linesArrayOne = new string[lines.Length];
+         for (int i = 0; i < lines.Length; i++)
+         {
+            linesArrayOne[i] = lines[i];
+            Console.WriteLine(linesArrayOne[i]);
+         }
+
          FileStream fStream = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fStream == null)
          {
