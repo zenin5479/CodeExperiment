@@ -29,10 +29,9 @@ namespace CodeExperiment
             }
             // Разделение строки на подстроки для определения количества столбцов в строке с помощью StringBuilder
             Console.ResetColor();
-            StringBuilder stringModified = new StringBuilder();
             List<string> listColumns = new List<string>();
+            //int[] sizeArray = new int[arrayOne.Length];
             int[] sizeArray = new int[arrayOne.Length];
-            int[] sizeA = new int[arrayOne.Length];
             char spaceCharacter = ' ';
             int rx = 0;
             int f = 0;
@@ -42,31 +41,19 @@ namespace CodeExperiment
                string line = arrayOne[h];
                while (f < line.Length)
                {
-                  if (spaceCharacter != line[f])
+                  if (spaceCharacter == line[f])
                   {
-                     stringModified.Append(line[f]);
-                  }
-                  else
-                  {
-                     string subLine = stringModified.ToString();
-                     listColumns.Add(subLine);
-                     //Console.Write(subLine + " ");
-                     stringModified.Clear();
                      rx++;
                   }
 
                   if (f == line.Length - 1)
                   {
-                     string subLine = stringModified.ToString();
-                     listColumns.Add(subLine);
-                     //Console.Write(subLine + " ");
-                     stringModified.Clear();
                      rx++;
                   }
 
                   f++;
                }
-               sizeA[h] = rx;
+               sizeArray[h] = rx;
                rx = 0;
 
                //Console.WriteLine();
