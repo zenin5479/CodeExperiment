@@ -171,7 +171,12 @@ namespace CodeExperiment
          }
 
          Console.WriteLine();
-        
+         int[] stringArray = { 5, 5, 8, 6 };
+         int elementToFind = stringArray[stringArray.Length-1];
+
+         int index = Array.FindIndex(stringArray, x => x == elementToFind);
+         Console.WriteLine(index);
+         
 
          FileReadAllLines(filePath);
          Console.ReadKey();
