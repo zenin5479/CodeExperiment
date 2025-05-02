@@ -167,13 +167,33 @@ namespace CodeExperiment
             }
             Console.WriteLine();
             // Проверка последнего элемента первой строки
-            Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
+            double variable = arrayFour[0, arrayFour.GetLength(1) - 1];
+            Console.WriteLine("Последний элемент первой строки : {0}", variable);
 
+            int index = -1;
+            int iterator = arrayFour.GetLength(1)-1;
+            int first = 0;
+            bool flag = false;
+            while (first < iterator && flag != true)
+            {
+               if (Equals(arrayFour[0, iterator], variable))
+               {
+                  index = iterator;
+                  flag = true;
+               }
+
+               iterator--;
+            }
+
+            Console.WriteLine(index);
+
+
+            //int myIndex = Array.LastIndexOf(arrayFour, variable);
             //Console.WriteLine("Индекс последнего элемента первой строки : {0}", myIndex);
          }
 
          Console.WriteLine();
-         FileReadAllLines(filePath);
+         //FileReadAllLines(filePath);
          Console.ReadKey();
       }
 
