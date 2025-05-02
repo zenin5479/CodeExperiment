@@ -78,7 +78,6 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
-            //Console.WriteLine();
             Console.WriteLine("Количество строк {0}", arrayOne.Length);
             Console.WriteLine("Минимальное количество столбцов: {0}", minTwo);
             Console.WriteLine("Максимальное количество столбцов: {0}", maxTwo);
@@ -168,8 +167,7 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
-            // Не присваивать лишние элементы массиву строк
-            // первые 3 строки содержат по 10 элементов - ступенчатый массив
+
 
          }
 
@@ -178,7 +176,8 @@ namespace CodeExperiment
          Console.WriteLine();
          FileReadAllLines(filePath);
 
-         Console.ReadKey();
+         Console.ReadKey(); // Не присваивать лишние элементы массиву строк
+                            // первые 3 строки содержат по 10 элементов - ступенчатый массив
       }
 
       public static void FileReadAllLines(string filePath)
