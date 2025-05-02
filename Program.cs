@@ -168,9 +168,8 @@ namespace CodeExperiment
             Console.WriteLine();
             // Проверка последнего элемента первой строки
             Console.WriteLine("Последний элемент первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
-            int[] stringArray = { 5, 5, 8, 6 };
-            int index = Array.FindIndex(stringArray, x => x == stringArray[^1]);
-            Console.WriteLine("Индекс последнего элемента первой строки : {0}", arrayFour[0, arrayFour.GetLength(1) - 1]);
+            
+            //Console.WriteLine("Индекс последнего элемента первой строки : {0}", index);
          }
 
          Console.WriteLine();
