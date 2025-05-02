@@ -20,22 +20,22 @@ namespace CodeExperiment
          else
          {
             Console.WriteLine("Исходный массив строк");
-            string[] arrayOne = new string[lines.Length];
+            string[] arrayLines = new string[lines.Length];
             for (int i = 0; i < lines.Length; i++)
             {
-               arrayOne[i] = lines[i];
-               Console.WriteLine(arrayOne[i]);
+               arrayLines[i] = lines[i];
+               Console.WriteLine(arrayLines[i]);
             }
             // Разделение строки на подстроки для определения количества столбцов в строке
             Console.ResetColor();
-            int[] sizeArray = new int[arrayOne.Length];
+            int[] sizeArray = new int[arrayLines.Length];
             char symbolSpace = ' ';
             int countСolumn = 0;
             int counterSymbol = 0;
             int countRow = 0;
-            while (countRow < arrayOne.Length)
+            while (countRow < arrayLines.Length)
             {
-               string line = arrayOne[countRow];
+               string line = arrayLines[countRow];
                while (counterSymbol < line.Length)
                {
                   if (symbolSpace == line[counterSymbol])
@@ -78,7 +78,7 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
-            Console.WriteLine("Количество строк {0}", arrayOne.Length);
+            Console.WriteLine("Количество строк {0}", arrayLines.Length);
             Console.WriteLine("Минимальное количество столбцов: {0}", min);
             Console.WriteLine("Максимальное количество столбцов: {0}", max);
             if (min == max)
@@ -98,7 +98,7 @@ namespace CodeExperiment
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModifiedOne = new StringBuilder(); // Заменить на массив
-            double[,] arrayFour = new double[arrayOne.Length, max];
+            double[,] arrayDouble = new double[arrayLines.Length, max];
             char spaceCharacterOne = ' ';
             int character, modified, others, sumAll;
             character = 0;
@@ -109,16 +109,16 @@ namespace CodeExperiment
             int m = 0;
             int n = 0;
             // Не присваивать лишние элементы массиву строк первые 3 строки содержат по 10 элементов - ступенчатый массив
-            while (l < arrayFour.GetLength(0))
+            while (l < arrayDouble.GetLength(0))
             {
-               string line = arrayOne[l];
+               string line = arrayLines[l];
                // Изменить количество получемых элементов в соответствии с количеством столбцов
                if (sizeArray[l] != max)
                {
 
                }
 
-               while (m < arrayFour.GetLength(1))
+               while (m < arrayDouble.GetLength(1))
                {
                   sumAll++;
                   //bool isCharacter;
@@ -136,8 +136,8 @@ namespace CodeExperiment
                      else
                      {
                         string subLineOne = stringModifiedOne.ToString();
-                        arrayFour[l, m] = Convert.ToDouble(subLineOne);
-                        Console.Write(arrayFour[l, m] + " ");
+                        arrayDouble[l, m] = Convert.ToDouble(subLineOne);
+                        Console.Write(arrayDouble[l, m] + " ");
                         stringModifiedOne.Clear();
                         //isCharacter = false;
                         //isModified = false;
@@ -147,8 +147,8 @@ namespace CodeExperiment
                      if (n == line.Length - 1)
                      {
                         string subLineOne = stringModifiedOne.ToString();
-                        arrayFour[l, m] = Convert.ToDouble(subLineOne);
-                        Console.Write(arrayFour[l, m] + " ");
+                        arrayDouble[l, m] = Convert.ToDouble(subLineOne);
+                        Console.Write(arrayDouble[l, m] + " ");
                         stringModifiedOne.Clear();
                         //isCharacter = false;
                         //isModified = false;
@@ -167,16 +167,15 @@ namespace CodeExperiment
             }
             Console.WriteLine();
             // Проверка последнего элемента первой строки
-            double variable = arrayFour[0, arrayFour.GetLength(1) - 1];
-
-
+            double variable = arrayDouble[0, arrayDouble.GetLength(1) - 1];
             int index = -1;
-            int iterator = arrayFour.GetLength(1) - 1;
+            int iterator = arrayDouble.GetLength(1) - 1;
             int first = 0;
             bool flag = false;
+            // Обходим первую строку с последнего элемента
             while (first < iterator && flag != true)
             {
-               if (Equals(arrayFour[0, iterator], variable))
+               if (Equals(arrayDouble[0, iterator], variable))
                {
                   index = iterator;
                   flag = true;
