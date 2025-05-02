@@ -42,6 +42,7 @@ namespace CodeExperiment
                   {
                      rx++;
                   }
+
                   if (f == line.Length - 1)
                   {
                      rx++;
@@ -49,13 +50,12 @@ namespace CodeExperiment
 
                   f++;
                }
-               sizeArray[h] = rx;
 
+               sizeArray[h] = rx;
                Console.WriteLine("В строке {0} количество столбцов {1}", h, rx);
                rx = 0;
                h++;
                f = 0;
-
             }
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
