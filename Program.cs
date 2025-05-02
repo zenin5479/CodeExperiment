@@ -192,11 +192,11 @@ namespace CodeExperiment
 
             Console.WriteLine();
 
-            string[] sizeArrayTwo = new string[lines.Length];
-            Array.Copy(lines, 0, sizeArrayTwo, 0, lines.Length);
-            for (int i = 0; i < sizeArrayTwo.Length; i++)
+            string[] linesArrayTwo = new string[lines.Length];
+            Array.Copy(lines, 0, linesArrayTwo, 0, lines.Length);
+            for (int i = 0; i < linesArrayTwo.Length; i++)
             {
-               Console.WriteLine(sizeArrayTwo[i]);
+               Console.WriteLine(linesArrayTwo[i]);
             }
 
             Console.WriteLine();
