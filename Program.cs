@@ -52,7 +52,7 @@ namespace CodeExperiment
                }
 
                sizeArray[countRow] = countСolumn;
-               //Console.WriteLine("В строке {0} количество столбцов {1}", h, d);
+               Console.WriteLine("В строке {0} количество столбцов {1}", h, d);
                countСolumn = 0;
                countRow++;
                counterSymbol = 0;
