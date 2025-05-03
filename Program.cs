@@ -185,8 +185,7 @@ namespace CodeExperiment
                iterator--;
             }
 
-            Console.WriteLine("Элемент {0} строки : {1}", bar, variable);
-            Console.WriteLine("Индекс элемента {0} строки : {1}", bar, index);
+            Console.WriteLine("Элемент {0} строки: {1}; Индекс элемента: {2}  ", bar, variable, index);
          }
 
          Console.WriteLine();
