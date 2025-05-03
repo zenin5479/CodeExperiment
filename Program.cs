@@ -191,35 +191,5 @@ namespace CodeExperiment
          Console.WriteLine();
          Console.ReadKey();
       }
-
-      public static void FileReadAllLines(string filePath)
-      {
-         try
-         {
-            // Чтение файла выполняется за одну операцию
-            string[] lines = File.ReadAllLines(filePath);
-            string[] linesArrayOne = new string[lines.Length];
-            for (int i = 0; i < lines.Length; i++)
-            {
-               linesArrayOne[i] = lines[i];
-               Console.WriteLine(linesArrayOne[i]);
-            }
-
-            Console.WriteLine();
-
-            string[] linesArrayTwo = new string[lines.Length];
-            Array.Copy(lines, 0, linesArrayTwo, 0, lines.Length);
-            for (int i = 0; i < linesArrayTwo.Length; i++)
-            {
-               Console.WriteLine(linesArrayTwo[i]);
-            }
-
-            Console.WriteLine();
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Процесс завершился неудачей {0}", e);
-         }
-      }
    }
 }
