@@ -188,7 +188,7 @@ namespace CodeExperiment
             Console.WriteLine("Элемент {0} строки: {1} \nИндекс: {2}  ", bar, variable, index);
          }
 
-         Console.WriteLine();
+         //Console.WriteLine();
          Console.ReadKey();
       }
    }
