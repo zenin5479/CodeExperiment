@@ -30,9 +30,10 @@ namespace CodeExperiment
             Console.ResetColor();
             int[] sizeArray = new int[arrayLines.Length];
             char symbolSpace = ' ';
-            int countСolumn = 0;
-            int counterSymbol = 0;
             int countRow = 0;
+
+            int counterSymbol = 0;
+            int countСolumn = 0;
             while (countRow < arrayLines.Length)
             {
                string line = arrayLines[countRow];
