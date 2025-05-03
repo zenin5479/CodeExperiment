@@ -31,7 +31,6 @@ namespace CodeExperiment
             int[] sizeArray = new int[arrayLines.Length];
             char symbolSpace = ' ';
             int countRow = 0;
-
             int counterSymbol = 0;
             int countСolumn = 0;
             while (countRow < arrayLines.Length)
