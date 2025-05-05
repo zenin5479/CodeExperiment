@@ -121,7 +121,6 @@ namespace CodeExperiment
                         arrayDouble[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayDouble[l, m] + " ");
                         stringModified.Clear();
-                        //isModified = false;
                         m++;
                      }
 
@@ -131,7 +130,6 @@ namespace CodeExperiment
                         arrayDouble[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayDouble[l, m] + " ");
                         stringModified.Clear();
-                        //isModified = false;
                         m++;
                      }
 
