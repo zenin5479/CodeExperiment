@@ -116,7 +116,7 @@ namespace CodeExperiment
 
                }
 
-               while (m < arrayDouble.GetLength(1))
+               while (m < sizeArray[l])
                {
                   //bool isModified = false;
                   //bool isOthersCh = false;
