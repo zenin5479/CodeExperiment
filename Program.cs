@@ -103,7 +103,6 @@ namespace CodeExperiment
             int l = 0;
             int m = 0;
             int n = 0;
-            // Не присваивать лишние элементы массиву строк первые 3 строки содержат по 10 элементов - ступенчатый массив
             while (l < arrayDouble.GetLength(0))
             {
                string line = arrayLines[l];
