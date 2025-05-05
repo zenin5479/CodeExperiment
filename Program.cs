@@ -153,6 +153,7 @@ namespace CodeExperiment
             int first = 0;
             bool flag = false;
             // Обходим строку с последнего элемента
+            // Ошибка в определении индекса 12 элемента
             while (first < iterator && flag != true)
             {
                if (Equals(arrayDouble[bar, iterator], variable))
