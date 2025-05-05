@@ -97,8 +97,7 @@ namespace CodeExperiment
 
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
-            StringBuilder stringModified = new StringBuilder();// Заменить на массив
-            string[] columnModified = new string[max];
+            StringBuilder stringModified = new StringBuilder();
             double[,] arrayDouble = new double[arrayLines.Length, max];
             char spaceCharacterOne = ' ';
             //int modified, others;
