@@ -12,18 +12,18 @@ namespace CodeExperiment
          string filePath = AppContext.BaseDirectory + "b.txt";
          Console.BackgroundColor = ConsoleColor.DarkBlue;
          // Чтение файла за одну операцию
-         string[] lines = File.ReadAllLines(filePath);
-         if (lines == null)
+         string[] AllLines = File.ReadAllLines(filePath);
+         if (AllLines == null)
          {
             Console.WriteLine("Ошибка при открытии файла для чтения");
          }
          else
          {
             Console.WriteLine("Исходный массив строк");
-            string[] arrayLines = new string[lines.Length];
-            for (int i = 0; i < lines.Length; i++)
+            string[] arrayLines = new string[AllLines.Length];
+            for (int i = 0; i < AllLines.Length; i++)
             {
-               arrayLines[i] = lines[i];
+               arrayLines[i] = AllLines[i];
                Console.WriteLine(arrayLines[i]);
             }
             // Разделение строки на подстроки для определения количества столбцов в строке
