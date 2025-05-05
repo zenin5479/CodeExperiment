@@ -101,10 +101,9 @@ namespace CodeExperiment
             string[] columnModified = new string[max];
             double[,] arrayDouble = new double[arrayLines.Length, max];
             char spaceCharacterOne = ' ';
-            int modified, others, sumAll;
-            modified = 0;
-            others = 0;
-            sumAll = 0;
+            //int modified, others;
+            //modified = 0;
+            //others = 0;
             int l = 0;
             int m = 0;
             int n = 0;
@@ -120,17 +119,14 @@ namespace CodeExperiment
 
                while (m < arrayDouble.GetLength(1))
                {
-                  sumAll++;
-                  bool isCharacter;
-                  bool isModified;
-                  bool isOthersCh = false;
+                  //bool isModified = false;
+                  //bool isOthersCh = false;
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
                      {
                         stringModified.Append(line[n]);
-                        isCharacter = true;
-                        isModified = true;
+                        //isModified = true;
                      }
                      else
                      {
@@ -138,8 +134,7 @@ namespace CodeExperiment
                         arrayDouble[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayDouble[l, m] + " ");
                         stringModified.Clear();
-                        isCharacter = false;
-                        isModified = false;
+                        //isModified = false;
                         m++;
                      }
 
@@ -149,8 +144,7 @@ namespace CodeExperiment
                         arrayDouble[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayDouble[l, m] + " ");
                         stringModified.Clear();
-                        isCharacter = false;
-                        isModified = false;
+                        //isModified = false;
                         m++;
                      }
 
