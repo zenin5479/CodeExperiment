@@ -100,9 +100,6 @@ namespace CodeExperiment
             StringBuilder stringModified = new StringBuilder();
             double[,] arrayDouble = new double[arrayLines.Length, max];
             char spaceCharacterOne = ' ';
-            //int modified, others;
-            //modified = 0;
-            //others = 0;
             int l = 0;
             int m = 0;
             int n = 0;
