@@ -126,7 +126,7 @@ namespace CodeExperiment
                      if (spaceCharacterOne != line[n])
                      {
                         stringModified.Append(line[n]);
-                        columnModified[n] = line[n];
+                        //columnModified[n] = line[n];
                         //isModified = true;
                      }
                      else
