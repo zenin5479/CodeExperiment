@@ -135,8 +135,10 @@ namespace CodeExperiment
 
                      n++;
                   }
+
                   n = 0;
                }
+
                Console.WriteLine();
                m = 0;
                l++;
