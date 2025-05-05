@@ -97,11 +97,11 @@ namespace CodeExperiment
 
             // Разделение строки на подстроки и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
-            StringBuilder stringModified = new StringBuilder(); // Заменить на массив
+            StringBuilder stringModified = new StringBuilder();// Заменить на массив
+            string[] columnModified = new string[max];
             double[,] arrayDouble = new double[arrayLines.Length, max];
             char spaceCharacterOne = ' ';
-            int character, modified, others, sumAll;
-            character = 0;
+            int modified, others, sumAll;
             modified = 0;
             others = 0;
             sumAll = 0;
@@ -129,7 +129,6 @@ namespace CodeExperiment
                      if (spaceCharacterOne != line[n])
                      {
                         stringModified.Append(line[n]);
-                        character++;
                         isCharacter = true;
                         isModified = true;
                      }
