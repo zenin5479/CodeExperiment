@@ -121,17 +121,17 @@ namespace CodeExperiment
                while (m < arrayDouble.GetLength(1))
                {
                   sumAll++;
-                  //bool isCharacter;
-                  //bool isModified;
-                  //bool isOthersCh = false;
+                  bool isCharacter;
+                  bool isModified;
+                  bool isOthersCh = false;
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
                      {
                         stringModified.Append(line[n]);
                         character++;
-                        //isCharacter = true;
-                        //isModified = true;
+                        isCharacter = true;
+                        isModified = true;
                      }
                      else
                      {
@@ -139,8 +139,8 @@ namespace CodeExperiment
                         arrayDouble[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayDouble[l, m] + " ");
                         stringModified.Clear();
-                        //isCharacter = false;
-                        //isModified = false;
+                        isCharacter = false;
+                        isModified = false;
                         m++;
                      }
 
@@ -150,8 +150,8 @@ namespace CodeExperiment
                         arrayDouble[l, m] = Convert.ToDouble(subLineOne);
                         Console.Write(arrayDouble[l, m] + " ");
                         stringModified.Clear();
-                        //isCharacter = false;
-                        //isModified = false;
+                        isCharacter = false;
+                        isModified = false;
                         m++;
                      }
 
