@@ -107,23 +107,13 @@ namespace CodeExperiment
             while (l < arrayDouble.GetLength(0))
             {
                string line = arrayLines[l];
-               // Изменить количество получемых элементов в соответствии с количеством столбцов
-               if (sizeArray[l] != max)
-               {
-
-               }
-
                while (m < sizeArray[l])
                {
-                  //bool isModified = false;
-                  //bool isOthersCh = false;
                   while (n < line.Length)
                   {
                      if (spaceCharacterOne != line[n])
                      {
                         stringModified.Append(line[n]);
-                        //columnModified[n] = line[n];
-                        //isModified = true;
                      }
                      else
                      {
