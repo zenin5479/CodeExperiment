@@ -158,20 +158,6 @@ namespace CodeExperiment
                Console.WriteLine("Элемент {0} строки по индексу {1} равен: {2}  ", bar, first, arrayDouble[bar, first] + " ");
                first++;
             }
-
-            //int index = -1;
-            //while (first < iterator && flag != true)
-            //{
-            //   if (Equals(arrayDouble[bar, iterator], variable))
-            //   {
-            //      index = iterator;
-            //      flag = true;
-            //   }
-
-            //   iterator--;
-            //}
-
-            //Console.WriteLine("Элемент {0} строки: {1} \nИндекс: {2}  ", bar, variable, index);
          }
 
          //Console.WriteLine();
