@@ -152,7 +152,6 @@ namespace CodeExperiment
             int first = 0;
             bool flag = false;
             // Обходим строку с последнего элемента
-            // Ошибка в определении индекса 12 элемента
             while (first < iterator)
             {
                Console.WriteLine("Элемент {0} строки по индексу {1} равен: {2}  ", bar, first, arrayDouble[bar, first] + " ");
