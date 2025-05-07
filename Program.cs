@@ -31,31 +31,31 @@ namespace CodeExperiment
             int[] sizeArray = new int[arrayLines.Length];
             char symbolSpace = ' ';
             int countRow = 0;
-            int counterSymbol = 0;
+            int countSymbol = 0;
             int countСolumn = 0;
             while (countRow < arrayLines.Length)
             {
                string line = arrayLines[countRow];
-               while (counterSymbol < line.Length)
+               while (countSymbol < line.Length)
                {
-                  if (symbolSpace == line[counterSymbol])
+                  if (symbolSpace == line[countSymbol])
                   {
                      countСolumn++;
                   }
 
-                  if (counterSymbol == line.Length - 1)
+                  if (countSymbol == line.Length - 1)
                   {
                      countСolumn++;
                   }
 
-                  counterSymbol++;
+                  countSymbol++;
                }
 
                sizeArray[countRow] = countСolumn;
                //Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
                countСolumn = 0;
                countRow++;
-               counterSymbol = 0;
+               countSymbol = 0;
             }
 
             // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
