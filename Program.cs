@@ -150,7 +150,6 @@ namespace CodeExperiment
             double variable = arrayDouble[bar, arrayDouble.GetLength(1) - 8];
             int iterator = arrayDouble.GetLength(1);
             int first = 0;
-            bool flag = false;
             // Обходим строку с последнего элемента
             while (first < iterator)
             {
