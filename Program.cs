@@ -99,48 +99,48 @@ namespace CodeExperiment
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
             double[,] arrayDouble = new double[arrayLines.Length, max];
-            char spaceCharacterOne = ' ';
-            int l = 0;
-            int m = 0;
-            int n = 0;
-            while (l < arrayDouble.GetLength(0))
+            char spaceCharacter = ' ';
+            int row = 0;
+            int column = 0;
+            int countCharacter = 0;
+            while (row < arrayDouble.GetLength(0))
             {
-               string line = arrayLines[l];
-               while (m < sizeArray[l])
+               string line = arrayLines[row];
+               while (column < sizeArray[row])
                {
-                  while (n < line.Length)
+                  while (countCharacter < line.Length)
                   {
-                     if (spaceCharacterOne != line[n])
+                     if (spaceCharacter != line[countCharacter])
                      {
-                        stringModified.Append(line[n]);
+                        stringModified.Append(line[countCharacter]);
                      }
                      else
                      {
-                        string subLineOne = stringModified.ToString();
-                        arrayDouble[l, m] = Convert.ToDouble(subLineOne);
-                        Console.Write(arrayDouble[l, m] + " ");
+                        string subLine = stringModified.ToString();
+                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        Console.Write(arrayDouble[row, column] + " ");
                         stringModified.Clear();
-                        m++;
+                        column++;
                      }
 
-                     if (n == line.Length - 1)
+                     if (countCharacter == line.Length - 1)
                      {
                         string subLineOne = stringModified.ToString();
-                        arrayDouble[l, m] = Convert.ToDouble(subLineOne);
-                        Console.Write(arrayDouble[l, m] + " ");
+                        arrayDouble[row, column] = Convert.ToDouble(subLineOne);
+                        Console.Write(arrayDouble[row, column] + " ");
                         stringModified.Clear();
-                        m++;
+                        column++;
                      }
 
-                     n++;
+                     countCharacter++;
                   }
 
-                  n = 0;
+                  countCharacter = 0;
                }
 
                Console.WriteLine();
-               m = 0;
-               l++;
+               column = 0;
+               row++;
 
                Console.ResetColor();
             }
