@@ -148,12 +148,21 @@ namespace CodeExperiment
             // Проверка элемента строки
             int bar = 0;
             double variable = arrayDouble[bar, arrayDouble.GetLength(1) - 8];
-            int index = -1;
+
             int iterator = arrayDouble.GetLength(1) - 1;
             int first = 0;
             bool flag = false;
             // Обходим строку с последнего элемента
             // Ошибка в определении индекса 12 элемента
+            while (first < iterator)
+            {
+               first++;
+               Console.WriteLine("Элемент {0} строки: {1} \nИндекс: {2}  ", bar, variable, arrayDouble[bar, first] + " ");
+            }
+
+
+
+            int index = -1;
             while (first < iterator && flag != true)
             {
                if (Equals(arrayDouble[bar, iterator], variable))
