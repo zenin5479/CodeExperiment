@@ -145,7 +145,7 @@ namespace CodeExperiment
                Console.ResetColor();
             }
             Console.WriteLine();
-            // Проверка элемента строки
+            // Проверка количества всех элементов строки
             int bar = 0;
             double variable = arrayDouble[bar, arrayDouble.GetLength(1) - 8];
             int iterator = arrayDouble.GetLength(1);
