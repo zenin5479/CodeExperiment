@@ -146,13 +146,13 @@ namespace CodeExperiment
             }
             Console.WriteLine();
             // Проверка количества всех элементов строки
-            int bar = 0;
+            int lines = 1;
             int range = arrayDouble.GetLength(1);
-            int first = 0;
-            while (first < range)
+            int iterator = 0;
+            while (iterator < range)
             {
-               Console.WriteLine("Элемент {0} строки по индексу {1} равен: {2}  ", bar, first, arrayDouble[bar, first] + " ");
-               first++;
+               Console.WriteLine("Элемент {0} строки по индексу {1} равен: {2}  ", lines, iterator, arrayDouble[lines, iterator] + " ");
+               iterator++;
             }
          }
 
