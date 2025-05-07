@@ -96,6 +96,7 @@ namespace CodeExperiment
             Console.WriteLine();
 
             // Разделение строки на подстроки и конвертация подстрок в double
+            Console.BackgroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
             double[,] arrayDouble = new double[arrayLines.Length, max];
@@ -142,9 +143,10 @@ namespace CodeExperiment
                column = 0;
                row++;
 
-               Console.ResetColor();
-            }
 
+            }
+            
+            Console.ResetColor();
             Console.WriteLine();
             // Проверка всех имеющихся элементов в строке
             int lines = 1;
@@ -157,6 +159,7 @@ namespace CodeExperiment
             }
          }
 
+         
          Console.ReadKey();
       }
    }
