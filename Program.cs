@@ -142,10 +142,8 @@ namespace CodeExperiment
                Console.WriteLine();
                column = 0;
                row++;
-
-
             }
-            
+
             Console.ResetColor();
             Console.WriteLine();
             // Проверка всех имеющихся элементов в строке
@@ -158,7 +156,7 @@ namespace CodeExperiment
                iterator++;
             }
          }
-         
+
          Console.ReadKey();
       }
    }
