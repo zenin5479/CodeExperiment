@@ -148,7 +148,6 @@ namespace CodeExperiment
             // Проверка элемента строки
             int bar = 0;
             double variable = arrayDouble[bar, arrayDouble.GetLength(1) - 8];
-
             int iterator = arrayDouble.GetLength(1) - 1;
             int first = 0;
             bool flag = false;
@@ -157,24 +156,24 @@ namespace CodeExperiment
             while (first < iterator)
             {
                first++;
-               Console.WriteLine("Элемент {0} строки: {1} \nИндекс: {2}  ", bar, variable, arrayDouble[bar, first] + " ");
+               Console.WriteLine("Элемент {0} строки: {1} Индекс: {2}  ", bar, arrayDouble[bar, first] + " ", first);
             }
 
 
 
-            int index = -1;
-            while (first < iterator && flag != true)
-            {
-               if (Equals(arrayDouble[bar, iterator], variable))
-               {
-                  index = iterator;
-                  flag = true;
-               }
+            //int index = -1;
+            //while (first < iterator && flag != true)
+            //{
+            //   if (Equals(arrayDouble[bar, iterator], variable))
+            //   {
+            //      index = iterator;
+            //      flag = true;
+            //   }
 
-               iterator--;
-            }
+            //   iterator--;
+            //}
 
-            Console.WriteLine("Элемент {0} строки: {1} \nИндекс: {2}  ", bar, variable, index);
+            //Console.WriteLine("Элемент {0} строки: {1} \nИндекс: {2}  ", bar, variable, index);
          }
 
          //Console.WriteLine();
