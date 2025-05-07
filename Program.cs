@@ -126,8 +126,8 @@ namespace CodeExperiment
 
                      if (countCharacter == line.Length - 1)
                      {
-                        string subLineOne = stringModified.ToString();
-                        arrayDouble[row, column] = Convert.ToDouble(subLineOne);
+                        string subLine = stringModified.ToString();
+                        arrayDouble[row, column] = Convert.ToDouble(subLine);
                         Console.Write(arrayDouble[row, column] + " ");
                         stringModified.Clear();
                         column++;
@@ -158,7 +158,6 @@ namespace CodeExperiment
                iterator++;
             }
          }
-
          
          Console.ReadKey();
       }
