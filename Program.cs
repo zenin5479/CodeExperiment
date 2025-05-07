@@ -156,10 +156,8 @@ namespace CodeExperiment
             while (first < iterator)
             {
                first++;
-               Console.WriteLine("Элемент {0} строки: {1} Индекс: {2}  ", bar, arrayDouble[bar, first] + " ", first);
+               Console.WriteLine("Элемент {0} строки по индексу {1} равен: {2}  ", bar, first, arrayDouble[bar, first] + " ");
             }
-
-
 
             //int index = -1;
             //while (first < iterator && flag != true)
