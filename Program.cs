@@ -144,8 +144,9 @@ namespace CodeExperiment
 
                Console.ResetColor();
             }
+
             Console.WriteLine();
-            // Проверка всех количества  имеющихся элементов строки
+            // Проверка всех имеющихся элементов в строке
             int lines = 1;
             int range = arrayDouble.GetLength(1);
             int iterator = 0;
@@ -156,7 +157,6 @@ namespace CodeExperiment
             }
          }
 
-         //Console.WriteLine();
          Console.ReadKey();
       }
    }
