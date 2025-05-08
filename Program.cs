@@ -52,7 +52,7 @@ namespace CodeExperiment
                }
 
                sizeArray[countRow] = countСolumn;
-               Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
+               //Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
                countСolumn = 0;
                countRow++;
                countSymbol = 0;
@@ -95,7 +95,7 @@ namespace CodeExperiment
             Console.ResetColor();
             Console.WriteLine();
 
-            // Разделение строки на подстроки и конвертация подстрок в double
+            // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             Console.BackgroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
@@ -147,7 +147,7 @@ namespace CodeExperiment
             Console.ResetColor();
             Console.WriteLine();
             // Проверка всех имеющихся элементов в строке
-            int lines = 1;
+            int lines = 2;
             int range = arrayDouble.GetLength(1);
             int iterator = 0;
             while (iterator < range)
