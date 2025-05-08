@@ -26,7 +26,7 @@ namespace CodeExperiment
                arrayLines[i] = AllLines[i];
                Console.WriteLine(arrayLines[i]);
             }
-            // Разделение строки на подстроки для определения количества столбцов в строке
+            // Разделение строки на подстроки по пробелу для определения количества столбцов в строке
             Console.ResetColor();
             int[] sizeArray = new int[arrayLines.Length];
             char symbolSpace = ' ';
