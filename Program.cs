@@ -58,6 +58,7 @@ namespace CodeExperiment
                   column++;
                }
             }
+
             string subLine = stringModified.ToString();
             arrayString[row] = subLine;
             Console.Write(subLine);
