@@ -59,8 +59,6 @@ namespace CodeExperiment
             Console.WriteLine(s);
          }
 
-
-
          Console.ReadKey();
       }
    }
