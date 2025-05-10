@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 namespace CodeExperiment
 {
@@ -35,23 +36,39 @@ namespace CodeExperiment
             { 1, 2, 3, 4, 5, 6, 89, 8, 9, -10 },
          };
 
-         //arrayDouble
+         // Разделение строки на подстроки по пробелу и конвертация подстрок в double
+         Console.BackgroundColor = ConsoleColor.Magenta;
+         Console.WriteLine("Двухмерный числовой массив");
+         StringBuilder stringModified = new StringBuilder();
+         string[] arrayString = new string[arrayDouble.GetLength(0)];
+         int row = 0;
+         int column = 0;
+         while (row < arrayDouble.GetLength(0))
+         {
+            while (column < arrayDouble.GetLength(1))
+            {
+               stringModified.Append(arrayDouble[row, column]);
 
-         //string[,] arrayString = 
+               column++;
+            }
+            string subLine = stringModified.ToString();
+            Console.Write(subLine);
+            stringModified.Clear();
+            Console.WriteLine();
+            column = 0;
+            row++;
+         }
 
          //string filePath = AppContext.BaseDirectory + "с.txt";
 
          // Specifying a file 
          string path = "file.txt";
-
          // Creating some string array to 
          // write into the file 
          string[] createText = { "GFG", "is a", "CS portal." };
-
          // Calling WriteAllLines() function to write 
          // the specified string array into the file 
          File.WriteAllLines(path, createText);
-
          // Reading the file contents 
          string[] readText = File.ReadAllLines(path);
          foreach (string s in readText)
