@@ -36,7 +36,7 @@ namespace CodeExperiment
             { 1, 2, 3, 4, 5, 6, 89, 8, 9, -10 },
          };
 
-         // Разделение строки на подстроки по пробелу и конвертация подстрок в double
+         // Объединение двухмерного массива double в одномерный массив строк для записи в файл
          Console.BackgroundColor = ConsoleColor.Magenta;
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
