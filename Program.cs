@@ -67,16 +67,16 @@ namespace CodeExperiment
             row++;
          }
 
+         Console.WriteLine();
+
          string filePath = AppContext.BaseDirectory + "с.txt";
          File.WriteAllLines(filePath, arrayString);
-         string[] readText = File.ReadAllLines(filePath);
+         string[] readFile = File.ReadAllLines(filePath);
          int i = 0;
-         while (i < readText.Length)
+         while (i < readFile.Length)
          {
-            string s = readText[i];
+            string s = readFile[i];
             Console.WriteLine(s);
-
-
             i++;
          }
 
