@@ -38,7 +38,7 @@ namespace CodeExperiment
 
          // Разделение строки на подстроки по пробелу и конвертация подстрок в double
          Console.BackgroundColor = ConsoleColor.Magenta;
-         Console.WriteLine("Двухмерный числовой массив");
+         Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[arrayDouble.GetLength(0)];
          int row = 0;
@@ -47,9 +47,16 @@ namespace CodeExperiment
          {
             while (column < arrayDouble.GetLength(1))
             {
-               stringModified.Append(arrayDouble[row, column]);
-
-               column++;
+               if (column != arrayDouble.GetLength(1) - 1)
+               {
+                  stringModified.Append(arrayDouble[row, column] + " ");
+                  column++;
+               }
+               else
+               {
+                  stringModified.Append(arrayDouble[row, column]);
+                  column++;
+               }
             }
             string subLine = stringModified.ToString();
             Console.Write(subLine);
