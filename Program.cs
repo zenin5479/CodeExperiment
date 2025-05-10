@@ -59,6 +59,7 @@ namespace CodeExperiment
                }
             }
             string subLine = stringModified.ToString();
+            arrayString[row] = subLine;
             Console.Write(subLine);
             stringModified.Clear();
             Console.WriteLine();
@@ -66,18 +67,9 @@ namespace CodeExperiment
             row++;
          }
 
-         //string filePath = AppContext.BaseDirectory + "с.txt";
-
-         // Specifying a file 
-         string path = "file.txt";
-         // Creating some string array to 
-         // write into the file 
-         string[] createText = { "GFG", "is a", "CS portal." };
-         // Calling WriteAllLines() function to write 
-         // the specified string array into the file 
-         File.WriteAllLines(path, createText);
-         // Reading the file contents 
-         string[] readText = File.ReadAllLines(path);
+         string filePath = AppContext.BaseDirectory + "с.txt";
+         File.WriteAllLines(filePath, arrayString);
+         string[] readText = File.ReadAllLines(filePath);
          foreach (string s in readText)
          {
             Console.WriteLine(s);
