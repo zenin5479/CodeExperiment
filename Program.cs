@@ -42,7 +42,7 @@ namespace CodeExperiment
          //string filePath = AppContext.BaseDirectory + "с.txt";
 
          // Specifying a file 
-         string path = @"file.txt";
+         string path = "file.txt";
 
          // Creating some string array to 
          // write into the file 
