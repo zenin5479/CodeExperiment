@@ -37,7 +37,7 @@ namespace CodeExperiment
          };
 
          // Объединение двухмерного массива double в одномерный массив строк для записи в файл
-         Console.BackgroundColor = ConsoleColor.Magenta;
+         //Console.BackgroundColor = ConsoleColor.Magenta;
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[arrayDouble.GetLength(0)];
@@ -70,9 +70,14 @@ namespace CodeExperiment
          string filePath = AppContext.BaseDirectory + "с.txt";
          File.WriteAllLines(filePath, arrayString);
          string[] readText = File.ReadAllLines(filePath);
-         foreach (string s in readText)
+         int i = 0;
+         while (i < readText.Length)
          {
+            string s = readText[i];
             Console.WriteLine(s);
+
+
+            i++;
          }
 
          Console.ReadKey();
