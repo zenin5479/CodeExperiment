@@ -84,7 +84,7 @@ namespace CodeExperiment
             i++;
          }
 
-
+         Console.ResetColor();
 
          Console.ReadKey();
       }
