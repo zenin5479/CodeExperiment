@@ -37,7 +37,7 @@ namespace CodeExperiment
          };
 
          // Объединение двухмерного массива double в одномерный массив строк для записи в файл
-         //Console.BackgroundColor = ConsoleColor.Magenta;
+         Console.BackgroundColor = ConsoleColor.DarkBlue;
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[arrayDouble.GetLength(0)];
