@@ -68,9 +68,11 @@ namespace CodeExperiment
             row++;
          }
 
+         Console.ResetColor();
          Console.WriteLine();
 
          Console.WriteLine("Чтение из файла массива строк");
+         Console.BackgroundColor = ConsoleColor.DarkMagenta;
          string filePath = AppContext.BaseDirectory + "с.txt";
          File.WriteAllLines(filePath, arrayString);
          string[] readFile = File.ReadAllLines(filePath);
@@ -81,6 +83,8 @@ namespace CodeExperiment
             Console.WriteLine(s);
             i++;
          }
+
+
 
          Console.ReadKey();
       }
