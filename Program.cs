@@ -70,6 +70,7 @@ namespace CodeExperiment
 
          Console.WriteLine();
 
+         Console.WriteLine("Чтение из файла массива строк");
          string filePath = AppContext.BaseDirectory + "с.txt";
          File.WriteAllLines(filePath, arrayString);
          string[] readFile = File.ReadAllLines(filePath);
