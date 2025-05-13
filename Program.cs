@@ -76,11 +76,12 @@ namespace CodeExperiment
 
          Console.ResetColor();
          Console.WriteLine();
-
-         Console.WriteLine("Чтение массива строк из файла");
-         Console.BackgroundColor = ConsoleColor.DarkMagenta;
+         // Запись массива строк в  файл
          string filePath = AppContext.BaseDirectory + "с.txt";
          File.WriteAllLines(filePath, arrayString);
+         Console.BackgroundColor = ConsoleColor.DarkMagenta;
+         // Чтение массива строк из файла
+         Console.WriteLine("Чтение массива строк из файла");
          string[] readFile = File.ReadAllLines(filePath);
          int i = 0;
          while (i < readFile.Length)
