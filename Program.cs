@@ -92,7 +92,6 @@ namespace CodeExperiment
          }
 
          Console.ResetColor();
-
          FileReadAllLines();
 
          Console.ReadKey();
@@ -100,9 +99,6 @@ namespace CodeExperiment
 
       private static void FileReadAllLines()
       {
-         // Переводит (,) в (.)
-         //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-
          //string filePath = AppContext.BaseDirectory + "a.txt";
          string filePath = AppContext.BaseDirectory + "b.txt";
          // Чтение файла за одну операцию
