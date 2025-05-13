@@ -240,19 +240,7 @@ namespace CodeExperiment
             }
 
             Console.ResetColor();
-            //Console.WriteLine();
-            // Проверка всех имеющихся элементов в строке
-            int lines = 2;
-            int range = arrayDouble.GetLength(1);
-            int iterator = 0;
-            while (iterator < range)
-            {
-               //Console.WriteLine("Элемент {0} строки по индексу {1} равен: {2}", lines, iterator, arrayDouble[lines, iterator]);
-               iterator++;
-            }
          }
-
-         Console.ReadKey();
       }
    }
 }
