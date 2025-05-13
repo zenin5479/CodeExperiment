@@ -93,7 +93,14 @@ namespace CodeExperiment
 
          Console.ResetColor();
 
+         FileReadAllLines();
+
          Console.ReadKey();
+      }
+
+      private static void FileReadAllLines()
+      {
+         
       }
    }
 }
