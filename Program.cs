@@ -228,7 +228,7 @@ namespace CodeExperiment
                   countCharacter = 0;
                }
 
-               Console.WriteLine();
+               //Console.WriteLine();
                column = 0;
                row++;
             }
