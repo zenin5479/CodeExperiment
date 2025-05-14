@@ -171,7 +171,7 @@ namespace CodeExperiment
 
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
-            Console.BackgroundColor = ConsoleColor.Magenta;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
             StringBuilder stringModified = new StringBuilder();
             double[,] arrayDouble = new double[arrayLines.Length, max];
             char spaceCharacter = ' ';
