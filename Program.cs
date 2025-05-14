@@ -97,8 +97,8 @@ namespace CodeExperiment
       private static void FileReadAllLines()
       {
          //string filePath = AppContext.BaseDirectory + "a.txt";
-         string filePath = AppContext.BaseDirectory + "b.txt";
-         //string filePath = AppContext.BaseDirectory + "с.txt";
+         //string filePath = AppContext.BaseDirectory + "b.txt";
+         string filePath = AppContext.BaseDirectory + "с.txt";
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(filePath);
          if (allLines == null)
