@@ -77,7 +77,7 @@ namespace CodeExperiment
          File.WriteAllLines(filePath, arrayString);
          // Чтение массива строк из файла
          Console.WriteLine("Чтение массива строк из файла");
-         Console.BackgroundColor = ConsoleColor.Magenta;
+         Console.BackgroundColor = ConsoleColor.DarkBlue;
          string[] readFile = File.ReadAllLines(filePath);
          int i = 0;
          while (i < readFile.Length)
@@ -164,21 +164,6 @@ namespace CodeExperiment
                }
 
                k++;
-            }
-
-            Console.ResetColor();
-            Console.WriteLine("Количество строк {0}", arrayLines.Length);
-            Console.WriteLine("Минимальное количество столбцов: {0}", min);
-            Console.WriteLine("Максимальное количество столбцов: {0}", max);
-            if (min == max)
-            {
-               Console.ForegroundColor = ConsoleColor.Green;
-               Console.WriteLine("Массив имеет одинаковое количество столбцов - прямоугольный");
-            }
-            else
-            {
-               Console.ForegroundColor = ConsoleColor.Red;
-               Console.WriteLine("Массив имеет разное количество столбцов - ступенчатый");
             }
 
             Console.ResetColor();
