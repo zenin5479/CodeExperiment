@@ -172,7 +172,7 @@ namespace CodeExperiment
             Console.WriteLine("Двухмерный числовой массив");
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             StringBuilder stringModified = new StringBuilder();
-            double[,] arrayDouble = new double[arrayLines.Length, max];
+            double[,] arrayDouble = new double[arrayLines.Length, arrayLines.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
