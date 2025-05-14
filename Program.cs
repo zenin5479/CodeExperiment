@@ -146,25 +146,6 @@ namespace CodeExperiment
                countSymbol = 0;
             }
 
-            // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
-            int min = sizeArray[0];
-            int max = sizeArray[0];
-            int k = 0;
-            while (k < sizeArray.Length)
-            {
-               if (sizeArray[k] < min)
-               {
-                  min = sizeArray[k];
-               }
-
-               if (sizeArray[k] > max)
-               {
-                  max = sizeArray[k];
-               }
-
-               k++;
-            }
-
             Console.ResetColor();
             Console.WriteLine();
 
@@ -172,7 +153,7 @@ namespace CodeExperiment
             Console.WriteLine("Двухмерный числовой массив");
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             StringBuilder stringModified = new StringBuilder();
-            double[,] arrayDouble = new double[arrayLines.Length, arrayLines.Length];
+            double[,] arrayDouble = new double[arrayLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
