@@ -135,7 +135,7 @@ namespace CodeExperiment
          {
             for (int j = 0; j < m; j++)
             {
-               outputArray[i, j] = inputArray[i,j];
+               outputArray[i, j] = inputArray[i, j];
                Console.Write("{0:f} ", outputArray[i, j]);
             }
             Console.WriteLine();
