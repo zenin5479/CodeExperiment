@@ -121,7 +121,7 @@ namespace CodeExperiment
             Console.ResetColor();
          }
 
-         double[,] hjkh = InputArray(arrayDoubleFile, n, m);
+         double[,] arrDoubl = InputArray(arrayDoubleFile, n, m);
 
          FileWriteAllLines(arrayDoubleFile);
          Console.ReadKey();
