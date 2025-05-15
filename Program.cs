@@ -199,9 +199,6 @@ namespace CodeExperiment
          }
 
          Console.ResetColor();
-        
-         Console.ReadKey();
       }
-
    }
 }
