@@ -19,8 +19,6 @@ namespace CodeExperiment
          string filePath = AppContext.BaseDirectory + "a.txt";
          // Двумерный массив вещественных чисел
          double[,] arrayDoubleFile = { };
-
-
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(filePath);
          if (allLines == null)
@@ -120,7 +118,6 @@ namespace CodeExperiment
             }
             Console.ResetColor();
          }
-
 
          Console.WriteLine();
          Console.WriteLine("Двухмерный числовой массив для проведения поиска");
