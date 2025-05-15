@@ -160,7 +160,7 @@ namespace CodeExperiment
          Console.WriteLine();
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "с.txt";
+         string filePath = AppContext.BaseDirectory + "b.txt";
          File.WriteAllLines(filePath, arrayString);
       }
    }
