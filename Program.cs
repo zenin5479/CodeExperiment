@@ -123,20 +123,20 @@ namespace CodeExperiment
 
          double[,] arrDoubl = InputArray(arrayDoubleFile, n, m);
 
-         FileWriteAllLines(arrayDoubleFile);
+         FileWriteAllLines(arrDoubl);
          Console.ReadKey();
       }
 
-      private static double[,] InputArray(double[,] a, int n, int m)
+      private static double[,] InputArray(double[,] arr, int n, int m)
       {
+         double[,] arrayDouble = arr;
          double[,] sizeArrayDouble = new double[n, m];
-
          for (int i = 0; i < n; i++)
          {
             for (int j = 0; j < m; j++)
             {
-
-               Console.Write("{0:f} ", a[i, j]);
+               sizeArrayDouble[i, j] = arrayDouble[i,j];
+               Console.Write("{0:f} ", sizeArrayDouble[i, j]);
             }
             Console.WriteLine();
          }
