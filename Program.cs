@@ -14,8 +14,6 @@ namespace CodeExperiment
    {
       static void Main()
       {
-
-
          //string filePath = AppContext.BaseDirectory + "a.txt";
          //string filePath = AppContext.BaseDirectory + "b.txt";
          string filePath = AppContext.BaseDirectory + "с.txt";
@@ -118,7 +116,7 @@ namespace CodeExperiment
                row++;
             }
 
-            arrDouble = arrayDouble;
+            arrDouble = arrayDouble; //
             Console.ResetColor();
          }
 
