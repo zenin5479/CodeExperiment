@@ -144,6 +144,8 @@ namespace CodeExperiment
             }
             Console.WriteLine();
          }
+
+         return new double[,] { };
       }
 
       public static int SizeRow()
