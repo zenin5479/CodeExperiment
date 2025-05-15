@@ -14,9 +14,7 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         //string filePath = AppContext.BaseDirectory + "a.txt";
-         //string filePath = AppContext.BaseDirectory + "b.txt";
-         string filePath = AppContext.BaseDirectory + "с.txt";
+         string filePath = AppContext.BaseDirectory + "a.txt";
          // Двумерный массив вещественных чисел
          double[,] arrayDouble = { };
          // Чтение файла за одну операцию
