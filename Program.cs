@@ -14,10 +14,8 @@ namespace CodeExperiment
    {
       static void Main()
       {
-
          int n = SizeRow();
          int m = SizeColumn();
-         double[,] sizeArrayDouble = new double[n, m];
          string filePath = AppContext.BaseDirectory + "a.txt";
          // Двумерный массив вещественных чисел
          double[,] arrayDoubleFile = { };
@@ -131,21 +129,19 @@ namespace CodeExperiment
 
       private static double[,] InputArray(double[,] a, int n, int m)
       {
-         //1 2 3 4 75 6 7 8 9 -10 1 2 3 4 5 6 87 8 9 -10
-         //1 2 3 4 5 6 7 8 9 10 1 2 3 4 5 6 7 8 9 10
+         double[,] sizeArrayDouble = new double[n, m];
 
          for (int i = 0; i < n; i++)
          {
             for (int j = 0; j < m; j++)
             {
 
-               //fscanf(f, "%lf", a[i, j]);
                Console.Write("{0:f} ", a[i, j]);
             }
             Console.WriteLine();
          }
 
-         return new double[,] { };
+         return sizeArrayDouble;
       }
 
       public static int SizeRow()
