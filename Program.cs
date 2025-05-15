@@ -14,6 +14,14 @@ namespace CodeExperiment
    {
       static void Main()
       {
+        
+         FileWriteAllLines();
+
+         Console.ReadKey();
+      }
+
+      private static void FileWriteAllLines()
+      {
          double[,] arrayDouble =
          {
             {3.61, 1.12, 9.60, 7.96, 8.65, -2.18, 7.36, -4.54, -2.30, 4.14, 1.52, 3.67, 3.13, 1.39, -7.26, -4.20, 6.88, -8.50, 9.19, 3.39},
@@ -90,9 +98,11 @@ namespace CodeExperiment
          Console.ResetColor();
          Console.WriteLine();
          FileReadAllLines();
+         FileWriteAllLines();
 
          Console.ReadKey();
       }
+
 
       private static void FileReadAllLines()
       {
