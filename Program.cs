@@ -17,7 +17,7 @@ namespace CodeExperiment
          //string filePath = AppContext.BaseDirectory + "a.txt";
          //string filePath = AppContext.BaseDirectory + "b.txt";
          string filePath = AppContext.BaseDirectory + "с.txt";
-         double[,] arrDouble = { };
+         double[,] arrayDouble = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(filePath);
          if (allLines == null)
@@ -71,7 +71,7 @@ namespace CodeExperiment
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
-            double[,] arrayDouble = new double[arrayLines.Length, sizeArray.Length];
+            //double[,] arrayDouble = new double[arrayLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
@@ -116,11 +116,11 @@ namespace CodeExperiment
                row++;
             }
 
-            arrDouble = arrayDouble; //
+            arrayDouble = arrayDouble; //
             Console.ResetColor();
          }
 
-         FileWriteAllLines(arrDouble);
+         FileWriteAllLines(arrayDouble);
          Console.ReadKey();
       }
 
