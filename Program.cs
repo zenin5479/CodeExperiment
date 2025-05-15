@@ -117,11 +117,8 @@ namespace CodeExperiment
 
             Console.ResetColor();
          }
-
-
         
-         FileWriteAllLines(double[,] arrayDouble);
-
+         FileWriteAllLines(arrayDouble);
          Console.ReadKey();
       }
 
