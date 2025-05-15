@@ -116,7 +116,6 @@ namespace CodeExperiment
                row++;
             }
 
-            arrayDouble = arrayDouble; //
             Console.ResetColor();
          }
 
