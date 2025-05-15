@@ -17,6 +17,7 @@ namespace CodeExperiment
          //string filePath = AppContext.BaseDirectory + "a.txt";
          //string filePath = AppContext.BaseDirectory + "b.txt";
          string filePath = AppContext.BaseDirectory + "с.txt";
+         // Двумерный массив вещественных чисел
          double[,] arrayDouble = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(filePath);
@@ -127,7 +128,6 @@ namespace CodeExperiment
       {
          // Объединение двухмерного массива double в одномерный массив строк для записи в файл
          Console.WriteLine("Одномерный массив строк");
-
          Console.BackgroundColor = ConsoleColor.DarkBlue;
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[arrayRealNumbers.GetLength(0)];
@@ -160,22 +160,10 @@ namespace CodeExperiment
 
          Console.ResetColor();
          Console.WriteLine();
-         // Запись массива строк в  файл
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл");
          string filePath = AppContext.BaseDirectory + "с.txt";
          File.WriteAllLines(filePath, arrayString);
-         // Чтение массива строк из файла
-         Console.WriteLine("Чтение массива строк из файла");
-         Console.BackgroundColor = ConsoleColor.DarkBlue;
-         string[] readFile = File.ReadAllLines(filePath);
-         int i = 0;
-         while (i < readFile.Length)
-         {
-            string s = readFile[i];
-            Console.WriteLine(s);
-            i++;
-         }
-
-         Console.ResetColor();
       }
    }
 }
