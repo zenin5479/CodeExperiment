@@ -123,27 +123,28 @@ namespace CodeExperiment
          Console.ReadKey();
       }
 
-      public static void FileWriteAllLines(double[,] arr)
+      public static void FileWriteAllLines(double[,] arrayRealNumbers)
       {
          // Объединение двухмерного массива double в одномерный массив строк для записи в файл
          Console.WriteLine("Одномерный массив строк");
+
          Console.BackgroundColor = ConsoleColor.DarkBlue;
          StringBuilder stringModified = new StringBuilder();
-         string[] arrayString = new string[arr.GetLength(0)];
+         string[] arrayString = new string[arrayRealNumbers.GetLength(0)];
          int row = 0;
          int column = 0;
-         while (row < arr.GetLength(0))
+         while (row < arrayRealNumbers.GetLength(0))
          {
-            while (column < arr.GetLength(1))
+            while (column < arrayRealNumbers.GetLength(1))
             {
-               if (column != arr.GetLength(1) - 1)
+               if (column != arrayRealNumbers.GetLength(1) - 1)
                {
-                  stringModified.Append(arr[row, column] + " ");
+                  stringModified.Append(arrayRealNumbers[row, column] + " ");
                   column++;
                }
                else
                {
-                  stringModified.Append(arr[row, column]);
+                  stringModified.Append(arrayRealNumbers[row, column]);
                   column++;
                }
             }
