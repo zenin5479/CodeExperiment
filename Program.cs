@@ -14,9 +14,15 @@ namespace CodeExperiment
    {
       static void Main()
       {
+
+         int n = SizeRow();
+         int m = SizeColumn();
+         double[,] sizeArrayDouble = new double[n, m];
          string filePath = AppContext.BaseDirectory + "a.txt";
          // Двумерный массив вещественных чисел
-         double[,] arrayDouble = { };
+         double[,] arrayDoubleFile = { };
+
+
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(filePath);
          if (allLines == null)
@@ -70,12 +76,12 @@ namespace CodeExperiment
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
-            arrayDouble = new double[arrayLines.Length, sizeArray.Length];
+            arrayDoubleFile = new double[arrayLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
             int countCharacter = 0;
-            while (row < arrayDouble.GetLength(0))
+            while (row < arrayDoubleFile.GetLength(0))
             {
                string line = arrayLines[row];
                while (column < sizeArray[row])
@@ -89,8 +95,8 @@ namespace CodeExperiment
                      else
                      {
                         string subLine = stringModified.ToString();
-                        arrayDouble[row, column] = Convert.ToDouble(subLine);
-                        Console.Write(arrayDouble[row, column] + " ");
+                        arrayDoubleFile[row, column] = Convert.ToDouble(subLine);
+                        Console.Write(arrayDoubleFile[row, column] + " ");
                         stringModified.Clear();
                         column++;
                      }
@@ -98,8 +104,8 @@ namespace CodeExperiment
                      if (countCharacter == line.Length - 1)
                      {
                         string subLine = stringModified.ToString();
-                        arrayDouble[row, column] = Convert.ToDouble(subLine);
-                        Console.Write(arrayDouble[row, column]);
+                        arrayDoubleFile[row, column] = Convert.ToDouble(subLine);
+                        Console.Write(arrayDoubleFile[row, column]);
                         stringModified.Clear();
                         column++;
                      }
@@ -114,12 +120,64 @@ namespace CodeExperiment
                column = 0;
                row++;
             }
-
             Console.ResetColor();
          }
 
-         FileWriteAllLines(arrayDouble);
+         double[,] hjkh = InputArray(sizeArrayDouble, n, m);
+
+         FileWriteAllLines(arrayDoubleFile);
          Console.ReadKey();
+      }
+
+      private static double[,] InputArray(double[,] a, int n, int m)
+      {
+         //1 2 3 4 75 6 7 8 9 -10 1 2 3 4 5 6 87 8 9 -10
+         //1 2 3 4 5 6 7 8 9 10 1 2 3 4 5 6 7 8 9 10
+
+         for (int i = 0; i < n; i++)
+         {
+            for (int j = 0; j < m; j++)
+            {
+
+               //fscanf(f, "%lf", a[i, j]);
+               Console.Write("{0:f} ", a[i, j]);
+            }
+            Console.WriteLine();
+         }
+      }
+
+      public static int SizeRow()
+      {
+         int n;
+         do
+         {
+            Console.WriteLine("Введите количество строк массива А");
+            int.TryParse(Console.ReadLine(), out n);
+            //n = Convert.ToInt32(Console.ReadLine());
+            if (n <= 0 || n >= 20)
+            {
+               Console.WriteLine("Введено не верное значение");
+            }
+         } while (n <= 0 || n >= 20);
+
+         return n;
+      }
+
+      public static int SizeColumn()
+      {
+         int m;
+         do
+         {
+            Console.WriteLine("Введите количество столбцов массива А");
+            int.TryParse(Console.ReadLine(), out m);
+            //m = Convert.ToInt32(Console.ReadLine());
+            if (m <= 0 || m >= 20)
+            {
+               Console.WriteLine("Введено не верное значение");
+            }
+         } while (m <= 0 || m >= 20);
+
+         return m;
       }
 
       public static void FileWriteAllLines(double[,] arrayRealNumbers)
