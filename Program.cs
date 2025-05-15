@@ -121,27 +121,30 @@ namespace CodeExperiment
             Console.ResetColor();
          }
 
-         double[,] arrDoubl = InputArray(arrayDoubleFile, n, m);
 
-         FileWriteAllLines(arrDoubl);
+         Console.WriteLine();
+         Console.WriteLine("Двухмерный числовой массив для проведения поиска");
+         double[,] arraySearch = InputArray(arrayDoubleFile, n, m);
+         Console.WriteLine();
+         FileWriteAllLines(arraySearch);
          Console.ReadKey();
       }
 
-      private static double[,] InputArray(double[,] arr, int n, int m)
+      private static double[,] InputArray(double[,] inputArray, int n, int m)
       {
-         double[,] arrayDouble = arr;
-         double[,] sizeArrayDouble = new double[n, m];
+         //double[,] arrayDouble = inputArray;
+         double[,] outputArray = new double[n, m];
          for (int i = 0; i < n; i++)
          {
             for (int j = 0; j < m; j++)
             {
-               sizeArrayDouble[i, j] = arrayDouble[i,j];
-               Console.Write("{0:f} ", sizeArrayDouble[i, j]);
+               outputArray[i, j] = inputArray[i,j];
+               Console.Write("{0:f} ", outputArray[i, j]);
             }
             Console.WriteLine();
          }
 
-         return sizeArrayDouble;
+         return outputArray;
       }
 
       public static int SizeRow()
