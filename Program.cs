@@ -17,7 +17,8 @@ namespace CodeExperiment
          int n = SizeRow();
          int m = SizeColumn();
          string filePath = AppContext.BaseDirectory + "a.txt";
-
+         // Двумерный массив вещественных чисел
+         double[,] arrayDoubleFile = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(filePath);
          if (allLines == null)
@@ -71,8 +72,7 @@ namespace CodeExperiment
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
-            // Двумерный массив вещественных чисел
-            double[,]arrayDoubleFile = new double[arrayLines.Length, sizeArray.Length];
+            arrayDoubleFile = new double[arrayLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
