@@ -123,28 +123,31 @@ namespace CodeExperiment
          double[,] arraySearch = InputArray(arrayDouble, n, m);
          Console.WriteLine();
 
-        // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
-         //int min = sizeArray[0];
-         //int max = sizeArray[0];
-         //int k = 0;
-         //while (k < sizeArray.Length)
-         //{
-         //   if (sizeArray[k] < min)
-         //   {
-         //      min = sizeArray[k];
-         //   }
+         // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
+         double min = arraySearch[0, 0];
+         double max = arraySearch[0, 0]; ;
+         int k = 0;
+         while (k < sizeArray.Length)
+         {
+            while (expression)
+            {
+               if (sizeArray[k] < min)
+               {
+                  min = sizeArray[k];
+               }
 
-         //   if (sizeArray[k] > max)
-         //   {
-         //      max = sizeArray[k];
-         //   }
+               if (sizeArray[k] > max)
+               {
+                  max = sizeArray[k];
+               }
 
-         //   k++;
-         //}
+               k++;
+            }
+         }
 
-         //Console.WriteLine("Количество строк {0}", arrayLines.Length);
-         //Console.WriteLine("Минимальное количество столбцов: {0}", min);
-         //Console.WriteLine("Максимальное количество столбцов: {0}", max);
+         Console.WriteLine("Количество строк {0}", arrayLines.Length);
+         Console.WriteLine("Минимальное количество столбцов: {0}", min);
+         Console.WriteLine("Максимальное количество столбцов: {0}", max);
 
          FileWriteArray(arraySearch);
          Console.ReadKey();
