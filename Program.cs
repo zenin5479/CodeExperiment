@@ -122,13 +122,12 @@ namespace CodeExperiment
          Console.WriteLine("Двухмерный числовой массив для проведения поиска");
          double[,] arraySearch = InputArray(arrayDouble, n, m);
          Console.WriteLine();
-         FileWriteAllLines(arraySearch);
+         FileWriteArray(arraySearch);
          Console.ReadKey();
       }
 
       private static double[,] InputArray(double[,] inputArray, int n, int m)
       {
-         //double[,] arrayDouble = inputArray;
          double[,] outputArray = new double[n, m];
          for (int i = 0; i < n; i++)
          {
@@ -177,7 +176,7 @@ namespace CodeExperiment
          return m;
       }
 
-      public static void FileWriteAllLines(double[,] arrayRealNumbers)
+      public static void FileWriteArray(double[,] arrayRealNumbers)
       {
          // Объединение двухмерного массива double в одномерный массив строк для записи в файл
          Console.WriteLine("Одномерный массив строк");
