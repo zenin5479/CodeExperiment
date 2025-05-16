@@ -123,7 +123,7 @@ namespace CodeExperiment
          double[,] arraySearch = InputArray(arrayDouble, n, m);
          Console.WriteLine();
 
-         // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
+        // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
          //int min = sizeArray[0];
          //int max = sizeArray[0];
          //int k = 0;
