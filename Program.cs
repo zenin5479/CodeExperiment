@@ -124,8 +124,7 @@ namespace CodeExperiment
          Console.WriteLine();
 
          // Поиск максимального элемента строки
-         //double max = arraySearch[0, 0];
-         double[] arraySea = new double[arraySearch.Length];
+         double[] arraySea = new double[arraySearch.GetLength(0)];
          bool fl = false;
          for (int i = 0; i < arraySearch.GetLength(0); i++)
          {
