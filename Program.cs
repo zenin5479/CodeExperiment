@@ -123,8 +123,7 @@ namespace CodeExperiment
          double[,] arraySearch = InputArray(arrayDouble, n, m);
          Console.WriteLine();
 
-         // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
-         double min = arraySearch[0, 0];
+         // Поиск максимального элемента строки
          double max = arraySearch[0, 0];
          int k = 0;
          int l = 0;
@@ -133,12 +132,6 @@ namespace CodeExperiment
 
             while (l < arraySearch.GetLength(1))
             {
-
-
-               if (arraySearch[k, l] < min)
-               {
-                  min = arraySearch[k, l];
-               }
 
                if (arraySearch[k, l] > max)
                {
@@ -153,7 +146,6 @@ namespace CodeExperiment
          }
 
          Console.WriteLine("Количество строк {0}", arraySearch.Length);
-         Console.WriteLine("Минимальное количество столбцов: {0}", min);
          Console.WriteLine("Максимальное количество столбцов: {0}", max);
 
          FileWriteArray(arraySearch);
