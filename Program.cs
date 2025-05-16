@@ -125,17 +125,18 @@ namespace CodeExperiment
 
          // Поиск максимального элемента строки
          double max = arraySearch[0, 0];
+         double[] arraySea = new double[arraySearch.Length];
          int k = 0;
          int l = 0;
          while (k < arraySearch.GetLength(0))
          {
-
             while (l < arraySearch.GetLength(1))
             {
-
                if (arraySearch[k, l] > max)
                {
                   max = arraySearch[k, l];
+                  arraySea[k] = max;
+                  l++;
                }
 
                l++;
@@ -145,9 +146,15 @@ namespace CodeExperiment
             k++;
          }
 
-         Console.WriteLine("Количество строк {0}", arraySearch.Length);
-         Console.WriteLine("Максимальное количество столбцов: {0}", max);
 
+         Console.WriteLine("Массив максимальных значений строк");
+         int xc = 0;
+         while (xc < arraySea.Length)
+         {
+            Console.Write("{0} ", arraySea[xc]);
+            xc++;
+         }
+         Console.WriteLine();
          FileWriteArray(arraySearch);
          Console.ReadKey();
       }
