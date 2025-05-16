@@ -29,21 +29,22 @@ namespace CodeExperiment
          {
             Console.WriteLine("Исходный массив строк");
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            string[] arrayLines = new string[allLines.Length];
+
+            //string[] allLines = new string[allLines.Length];
             for (int i = 0; i < allLines.Length; i++)
             {
-               arrayLines[i] = allLines[i];
-               Console.WriteLine(arrayLines[i]);
+               allLines[i] = allLines[i];
+               Console.WriteLine(allLines[i]);
             }
             // Разделение строки на подстроки по пробелу для определения количества столбцов в строке
-            int[] sizeArray = new int[arrayLines.Length];
+            int[] sizeArray = new int[allLines.Length];
             char symbolSpace = ' ';
             int countRow = 0;
             int countSymbol = 0;
             int countСolumn = 0;
-            while (countRow < arrayLines.Length)
+            while (countRow < allLines.Length)
             {
-               string line = arrayLines[countRow];
+               string line = allLines[countRow];
                while (countSymbol < line.Length)
                {
                   if (symbolSpace == line[countSymbol])
@@ -72,14 +73,14 @@ namespace CodeExperiment
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
-            arrayDoubleFile = new double[arrayLines.Length, sizeArray.Length];
+            arrayDoubleFile = new double[allLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
             int countCharacter = 0;
             while (row < arrayDoubleFile.GetLength(0))
             {
-               string line = arrayLines[row];
+               string line = allLines[row];
                while (column < sizeArray[row])
                {
                   while (countCharacter < line.Length)
