@@ -18,7 +18,7 @@ namespace CodeExperiment
          int m = SizeColumn();
          string filePath = AppContext.BaseDirectory + "a.txt";
          // Двумерный массив вещественных чисел
-         double[,] arrayDoubleFile = { };
+         double[,] arrayDouble = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(filePath);
          if (allLines == null)
@@ -71,12 +71,12 @@ namespace CodeExperiment
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
-            arrayDoubleFile = new double[allLines.Length, sizeArray.Length];
+            arrayDouble = new double[allLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
             int countCharacter = 0;
-            while (row < arrayDoubleFile.GetLength(0))
+            while (row < arrayDouble.GetLength(0))
             {
                string line = allLines[row];
                while (column < sizeArray[row])
@@ -90,8 +90,8 @@ namespace CodeExperiment
                      else
                      {
                         string subLine = stringModified.ToString();
-                        arrayDoubleFile[row, column] = Convert.ToDouble(subLine);
-                        Console.Write(arrayDoubleFile[row, column] + " ");
+                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        Console.Write(arrayDouble[row, column] + " ");
                         stringModified.Clear();
                         column++;
                      }
@@ -99,8 +99,8 @@ namespace CodeExperiment
                      if (countCharacter == line.Length - 1)
                      {
                         string subLine = stringModified.ToString();
-                        arrayDoubleFile[row, column] = Convert.ToDouble(subLine);
-                        Console.Write(arrayDoubleFile[row, column]);
+                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        Console.Write(arrayDouble[row, column]);
                         stringModified.Clear();
                         column++;
                      }
@@ -120,7 +120,7 @@ namespace CodeExperiment
 
          Console.WriteLine();
          Console.WriteLine("Двухмерный числовой массив для проведения поиска");
-         double[,] arraySearch = InputArray(arrayDoubleFile, n, m);
+         double[,] arraySearch = InputArray(arrayDouble, n, m);
          Console.WriteLine();
          FileWriteAllLines(arraySearch);
          Console.ReadKey();
