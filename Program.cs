@@ -29,8 +29,6 @@ namespace CodeExperiment
          {
             Console.WriteLine("Исходный массив строк");
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-
-            //string[] allLines = new string[allLines.Length];
             for (int i = 0; i < allLines.Length; i++)
             {
                allLines[i] = allLines[i];
