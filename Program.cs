@@ -125,27 +125,34 @@ namespace CodeExperiment
 
          // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
          double min = arraySearch[0, 0];
-         double max = arraySearch[0, 0]; ;
+         double max = arraySearch[0, 0];
          int k = 0;
-         while (k < sizeArray.Length)
+         int l = 0;
+         while (k < arraySearch.GetLength(0))
          {
-            while (expression)
+
+            while (l < arraySearch.GetLength(1))
             {
-               if (sizeArray[k] < min)
+
+
+               if (arraySearch[k, l] < min)
                {
-                  min = sizeArray[k];
+                  min = arraySearch[k, l];
                }
 
-               if (sizeArray[k] > max)
+               if (arraySearch[k, l] > max)
                {
-                  max = sizeArray[k];
+                  max = arraySearch[k, l];
                }
 
-               k++;
+               l++;
             }
+
+            l = 0;
+            k++;
          }
 
-         Console.WriteLine("Количество строк {0}", arrayLines.Length);
+         Console.WriteLine("Количество строк {0}", arraySearch.Length);
          Console.WriteLine("Минимальное количество столбцов: {0}", min);
          Console.WriteLine("Максимальное количество столбцов: {0}", max);
 
