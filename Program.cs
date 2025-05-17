@@ -124,53 +124,64 @@ namespace CodeExperiment
          Console.WriteLine();
 
          // Поиск максимального элемента строки
-         int a = 0;
-         int b = 0;
-         while (a < arraySearch.GetLength(0))
+         int row0 = 0;
+         int column0 = 0;
+         while (row0 < arraySearch.GetLength(0))
          {
             // Cчитаем, что максимум - это первый элемент строки
-            double max = arraySearch[a, 0];
-            double min = arraySearch[a, 0];
-            while (b < arraySearch.GetLength(1))
+            double max = arraySearch[row0, 0];
+            double min = arraySearch[row0, 0];
+            while (column0 < arraySearch.GetLength(1))
             {
-               if (max < arraySearch[a, b])
+               if (max < arraySearch[row0, column0])
                {
-                  max = arraySearch[a, b];
+                  max = arraySearch[row0, column0];
                }
 
-               if (min > arraySearch[a, b])
+               if (min > arraySearch[row0, column0])
                {
-                  min = arraySearch[a, b];
+                  min = arraySearch[row0, column0];
                }
 
-               b++;
+               column0++;
             }
 
-            Console.WriteLine($"Максимум в строке {a} равен {max}");
-            Console.WriteLine($"Минимум в строке {a} равен {min}");
-            b = 0;
-            a++;
+            Console.WriteLine($"Максимум в строке {row0} равен {max}");
+            Console.WriteLine($"Минимум в строке {row0} равен {min}");
+            column0 = 0;
+            row0++;
          }
 
          // Поиск максимального элемента строки
          double[] arrayOutput = new double[arraySearch.GetLength(0)];
          bool fl = false;
-         for (int i = 0; i < arraySearch.GetLength(0); i++)
+         int row1 = 0;
+         int column1 = 1;
+         while (row1 < arraySearch.GetLength(0))
          {
-            double max = arraySearch[i, 0];
-            for (int j = 1; j < arraySearch.GetLength(1); j++)
+            double max = arraySearch[row1, 0];
+
+            while (column1 < arraySearch.GetLength(1))
             {
-               if (arraySearch[i, j] > max)
+               if (arraySearch[row1, column1] > max)
                {
-                  max = arraySearch[i, j];
+                  max = arraySearch[row1, column1];
                   fl = true;
                }
+
+               column1++;
             }
             if (fl)
             {
-               arrayOutput[i] = max;
+               arrayOutput[row1] = max;
             }
+
+            Console.WriteLine($"Максимум в строке {row0} равен {max}");
+            //Console.WriteLine($"Минимум в строке {a} равен {min}");
+            column1 = 0;
+            row1++;
          }
+
          // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
          //int min = sizeArray[0];
          //int max = sizeArray[0];
@@ -201,36 +212,36 @@ namespace CodeExperiment
          double[] arrayResultMax = new double[arraySearch.GetLength(0)];
          //int r = 0;
          //int c = 0;
-         bool flOne = false;
-         bool flTwo = false;
-         for (int i = 0; i < arraySearch.GetLength(0); i++)
-         {
-            double maxOne = arraySearch[i, 0];
-            double minOne = arraySearch[i, 0];
-            for (int j = 1; j < arraySearch.GetLength(1); j++)
-            {
-               if (arraySearch[i, j] > maxOne)
-               {
-                  maxOne = arraySearch[i, j];
-                  flOne = true;
-               }
-               if (arraySearch[i, j] < minOne)
-               {
-                  minOne = arraySearch[i, j];
-                  flTwo = true;
-               }
-            }
-            if (flOne)
-            {
-               arrayResultMax[i] = maxOne;
-               flOne = false;
-            }
-            if (flTwo)
-            {
-               arrayResultMin[i] = minOne;
-               flTwo = false;
-            }
-         }
+         //bool flOne = false;
+         //bool flTwo = false;
+         //for (int i = 0; i < arraySearch.GetLength(0); i++)
+         //{
+         //   double maxOne = arraySearch[i, 0];
+         //   double minOne = arraySearch[i, 0];
+         //   for (int j = 1; j < arraySearch.GetLength(1); j++)
+         //   {
+         //      if (arraySearch[i, j] > maxOne)
+         //      {
+         //         maxOne = arraySearch[i, j];
+         //         flOne = true;
+         //      }
+         //      if (arraySearch[i, j] < minOne)
+         //      {
+         //         minOne = arraySearch[i, j];
+         //         flTwo = true;
+         //      }
+         //   }
+         //   if (flOne)
+         //   {
+         //      arrayResultMax[i] = maxOne;
+         //      flOne = false;
+         //   }
+         //   if (flTwo)
+         //   {
+         //      arrayResultMin[i] = minOne;
+         //      flTwo = false;
+         //   }
+         //}
          Console.WriteLine();
          //Console.WriteLine("Минимальный элемент строки: {0}", arrayResultMin[r]);
          //Console.WriteLine("Максимальный элемент строки: {0}", arrayResultMax[r]);
