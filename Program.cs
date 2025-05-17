@@ -124,42 +124,44 @@ namespace CodeExperiment
          Console.WriteLine();
 
          // Поиск максимального элемента строки
-         double[] arrayOutputMax = new double[arraySearch.GetLength(0)];
-         double[] arrayOutputMin = new double[arraySearch.GetLength(0)]; //
-         int row0 = 0;
-         int column0 = 0;
-         while (row0 < arraySearch.GetLength(0))
+         double[] arrayOutputMaxOne = new double[arraySearch.GetLength(0)];
+         double[] arrayOutputMinOne = new double[arraySearch.GetLength(0)];
+         int rowOne = 0;
+         int columnOne = 0;
+         while (rowOne < arraySearch.GetLength(0))
          {
             // Cчитаем, что максимум - это первый элемент строки
-            double max0 = arraySearch[row0, 0];
-            double min0 = arraySearch[row0, 0];
-            while (column0 < arraySearch.GetLength(1))
+            double maxOne = arraySearch[rowOne, 0];
+            // Cчитаем, что минимум - это первый элемент строки
+            double minOne = arraySearch[rowOne, 0];
+            while (columnOne < arraySearch.GetLength(1))
             {
-               if (max0 < arraySearch[row0, column0])
+               if (maxOne < arraySearch[rowOne, columnOne])
                {
-                  max0 = arraySearch[row0, column0];
+                  maxOne = arraySearch[rowOne, columnOne];
                   //
                }
 
-               if (min0 > arraySearch[row0, column0])
+               if (minOne > arraySearch[rowOne, columnOne])
                {
-                  min0 = arraySearch[row0, column0];
+                  minOne = arraySearch[rowOne, columnOne];
                   //
                }
 
-               column0++;
+               columnOne++;
             }
 
-            arrayOutputMax[row0] = max0;
-            arrayOutputMin[row0] = min0;
-            Console.WriteLine("Максимум в строке {0} равен: {1}", row0, max0);
-            Console.WriteLine("Минимум в строке {0} равен: {1}", row0, min0);
-            column0 = 0;
-            row0++;
+            arrayOutputMaxOne[rowOne] = maxOne;
+            arrayOutputMinOne[rowOne] = minOne;
+            Console.WriteLine("Максимум в строке {0} равен: {1}", rowOne, maxOne);
+            Console.WriteLine("Минимум в строке {0} равен: {1}", rowOne, minOne);
+            columnOne = 0;
+            rowOne++;
          }
 
          // Поиск максимального элемента строки
          double[] arrayOutput1 = new double[arraySearch.GetLength(0)];
+
          bool fl = false;
          int row1 = 0;
          int column1 = 1;
