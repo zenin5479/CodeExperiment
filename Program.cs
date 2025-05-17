@@ -124,8 +124,8 @@ namespace CodeExperiment
          Console.WriteLine();
 
          // Поиск максимального элемента строки
-         double minOne = arraySearch[0, 0];
-         double maxOne = arraySearch[0, 0];
+         //double minOne = arraySearch[0, 0];
+         //double maxOne = arraySearch[0, 0];
          double[] arrayResultMin = new double[arraySearch.GetLength(0)];
          double[] arrayResultMax = new double[arraySearch.GetLength(0)];
          //int r = 0;
@@ -134,9 +134,15 @@ namespace CodeExperiment
          //bool flTwo = false;
          for (int i = 0; i < arraySearch.GetLength(0); i++)
          {
-            double max = arraySearch[i, 0];
+            double maxOne = arraySearch[i, 0];
+            double minOne = arraySearch[i, 0];
             for (int j = 1; j < arraySearch.GetLength(1); j++)
             {
+               if (arraySearch[i, j] > max)
+               {
+                  max = arraySearch[i, j];
+                  flOne = true;
+               }
                if (arraySearch[i, j] > max)
                {
                   max = arraySearch[i, j];
