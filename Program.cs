@@ -123,7 +123,6 @@ namespace CodeExperiment
          double[,] arraySearch = InputArray(arrayDouble, n, m);
          Console.WriteLine();
 
-
          // Поиск максимального элемента строки
          double minOne = arraySearch[0, 0];
          double maxOne = arraySearch[0, 0];
