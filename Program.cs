@@ -124,6 +124,8 @@ namespace CodeExperiment
          Console.WriteLine();
 
          // Поиск максимального элемента строки
+         double[] arrayOutputMax = new double[arraySearch.GetLength(0)];
+         double[] arrayOutputMin = new double[arraySearch.GetLength(0)]; //
          int row0 = 0;
          int column0 = 0;
          while (row0 < arraySearch.GetLength(0))
@@ -136,16 +138,20 @@ namespace CodeExperiment
                if (max0 < arraySearch[row0, column0])
                {
                   max0 = arraySearch[row0, column0];
+                  //
                }
 
                if (min0 > arraySearch[row0, column0])
                {
                   min0 = arraySearch[row0, column0];
+                  //
                }
 
                column0++;
             }
 
+            arrayOutputMax[row0] = max0;
+            arrayOutputMin[row0] = min0;
             Console.WriteLine("Максимум в строке {0} равен: {1}", row0, max0);
             Console.WriteLine("Минимум в строке {0} равен: {1}", row0, min0);
             column0 = 0;
@@ -153,7 +159,7 @@ namespace CodeExperiment
          }
 
          // Поиск максимального элемента строки
-         double[] arrayOutput = new double[arraySearch.GetLength(0)];
+         double[] arrayOutput1 = new double[arraySearch.GetLength(0)];
          bool fl = false;
          int row1 = 0;
          int column1 = 1;
@@ -173,7 +179,7 @@ namespace CodeExperiment
             }
             if (fl)
             {
-               arrayOutput[row1] = max1;
+               arrayOutput1[row1] = max1;
             }
 
             Console.WriteLine("Максимум в строке {0} равен: {1}", row1, max1);
@@ -223,9 +229,9 @@ namespace CodeExperiment
 
          Console.WriteLine("Массив максимальных значений строк");
          int xc = 0;
-         while (xc < arrayOutput.Length)
+         while (xc < arrayOutput1.Length)
          {
-            Console.Write("{0} ", arrayOutput[xc]);
+            Console.Write("{0} ", arrayOutput1[xc]);
             xc++;
          }
          Console.WriteLine();
