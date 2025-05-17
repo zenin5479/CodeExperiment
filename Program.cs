@@ -124,6 +124,21 @@ namespace CodeExperiment
          Console.WriteLine();
 
          // Поиск максимального элемента строки
+
+         for (int a = 0; a < arraySearch.GetLength(0); a++)
+         {
+            double max = arraySearch[a, 0];//считаем, что максимум - это первый элемент строки
+            for (int b = 0; b < arraySearch.GetLength(1); b++)
+            {
+               if (max < arraySearch[a, b])
+               {
+                  max = arraySearch[a, b];
+               }
+            }
+            Console.WriteLine($"Максимум в строке {a + 1} равен {max}");
+         }
+
+
          // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
          //int min = sizeArray[0];
          //int max = sizeArray[0];
