@@ -155,7 +155,6 @@ namespace CodeExperiment
          //Console.WriteLine("Минимальный элемент строки: {0}", arrayResultMin[r]);
          //Console.WriteLine("Максимальный элемент строки: {0}", arrayResultMax[r]);
 
-
          // Поиск максимального элемента строки
          double[] arrayOutput = new double[arraySearch.GetLength(0)];
          bool fl = false;
@@ -175,10 +174,6 @@ namespace CodeExperiment
                arrayOutput[i] = max;
             }
          }
-
-
-
-
 
          Console.WriteLine("Массив максимальных значений строк");
          int xc = 0;
