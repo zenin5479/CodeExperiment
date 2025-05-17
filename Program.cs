@@ -128,28 +128,29 @@ namespace CodeExperiment
          double maxOne = arraySearch[0, 0];
          double[] arrayResultMin = new double[arraySearch.GetLength(0)];
          double[] arrayResultMax = new double[arraySearch.GetLength(0)];
-         int r = 0;
-         int c = 0;
-         //bool flOne = false;
-         while (r < arraySearch.GetLength(0))
+         //int r = 0;
+         //int c = 0;
+         bool flOne = false;
+         //bool flTwo = false;
+         for (int i = 0; i < arraySearch.GetLength(0); i++)
          {
-            while (c < arraySearch.GetLength(1))
+            double max = arraySearch[i, 0];
+            for (int j = 1; j < arraySearch.GetLength(1); j++)
             {
-               if (arraySearch[r, c] < minOne)
+               if (arraySearch[i, j] > max)
                {
-                  minOne = arraySearch[r, c];
-                  arrayResultMin[r] = minOne;
-               }
-               if (arraySearch[r, c] > maxOne)
-               {
-                  maxOne = arraySearch[r, c];
-                  arrayResultMax[r] = maxOne;
+                  max = arraySearch[i, j];
+                  flOne = true;
                }
 
-               c++;
+
+
             }
-            c = 0;
-            r++;
+            if (flOne)
+            {
+               arrayResultMin[i] = max;
+               flOne = false;
+            }
          }
          Console.WriteLine();
          //Console.WriteLine("Минимальный элемент строки: {0}", arrayResultMin[r]);
@@ -169,7 +170,7 @@ namespace CodeExperiment
                   fl = true;
                }
             }
-            if (fl == true)
+            if (fl)
             {
                arrayOutput[i] = max;
             }
