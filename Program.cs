@@ -196,8 +196,8 @@ namespace CodeExperiment
                arrayOutputMinTwo[rowTwo] = minTwo;
             }
 
-            Console.WriteLine("Максимум в строке {0} равен: {1}", rowTwo, maxTwo);
-            Console.WriteLine("Минимум в строке {0} равен: {1}", rowTwo, minTwo);
+            //Console.WriteLine("Максимум в строке {0} равен: {1}", rowTwo, maxTwo);
+            //Console.WriteLine("Минимум в строке {0} равен: {1}", rowTwo, minTwo);
             columnTwo = 0;
             rowTwo++;
          }
@@ -250,7 +250,9 @@ namespace CodeExperiment
             index++;
          }
          Console.WriteLine();
-         FileWriteArray(arraySearch);
+         //FileWriteArray(arraySearch);
+         FileWriteArray(arrayOutputMaxOne);
+         FileWriteArray(arrayOutputMinOne);
          Console.ReadKey();
       }
 
@@ -316,22 +318,22 @@ namespace CodeExperiment
          int row = 0;
          while (row < arrayRealNumbers.GetLength(0))
          {
-            if (row != arrayRealNumbers.GetLength(1) - 1)
+            if (row != arrayRealNumbers.GetLength(0) - 1)
             {
                stringModified.Append(arrayRealNumbers[row] + " ");
-               row++;
+               //row++;
             }
             else
             {
                stringModified.Append(arrayRealNumbers[row]);
-               row++;
+               //row++;
             }
 
             string subLine = stringModified.ToString();
-            arrayString[row] = subLine;
+            arrayString[row] = subLine; // ????
             Console.Write(subLine);
-            stringModified.Clear();
-            Console.WriteLine();
+            stringModified.Clear(); // ???
+            //Console.WriteLine();
             row++;
          }
 
