@@ -123,6 +123,39 @@ namespace CodeExperiment
          double[,] arraySearch = InputArray(arrayDouble, n, m);
          Console.WriteLine();
 
+
+         // Поиск максимального элемента строки
+         double minOne = arraySearch[0,0];
+         double maxOne = arraySearch[0,0];
+         int r = 0;
+
+         while ()
+         {
+            while (r < sizeArray.Length)
+            {
+               if (sizeArray[r] < minOne)
+               {
+                  minOne = sizeArray[r];
+               }
+
+               if (sizeArray[r] > maxOne)
+               {
+                  maxOne = sizeArray[r];
+               }
+
+               r++;
+            }
+         }
+
+
+
+         Console.ResetColor();
+         //Console.WriteLine();
+         Console.WriteLine("Количество строк {0}", listOne.Count);
+         Console.WriteLine("Минимальное количество столбцов: {0}", minOne);
+         Console.WriteLine("Максимальное количество столбцов: {0}", maxOne);
+
+
          // Поиск максимального элемента строки
          double[] arraySea = new double[arraySearch.GetLength(0)];
          bool fl = false;
@@ -142,6 +175,10 @@ namespace CodeExperiment
                arraySea[i] = max;
             }
          }
+
+
+
+
 
          Console.WriteLine("Массив максимальных значений строк");
          int xc = 0;
