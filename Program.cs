@@ -195,6 +195,7 @@ namespace CodeExperiment
             }
 
             Console.WriteLine("Максимум в строке {0} равен: {1}", rowTwo, maxTwo);
+            Console.WriteLine("Минимум в строке {0} равен: {1}", rowTwo, minTwo);
             columnTwo = 0;
             rowTwo++;
          }
