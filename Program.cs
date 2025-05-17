@@ -131,31 +131,33 @@ namespace CodeExperiment
          //int r = 0;
          //int c = 0;
          bool flOne = false;
-         //bool flTwo = false;
+         bool flTwo = false;
          for (int i = 0; i < arraySearch.GetLength(0); i++)
          {
             double maxOne = arraySearch[i, 0];
             double minOne = arraySearch[i, 0];
             for (int j = 1; j < arraySearch.GetLength(1); j++)
             {
-               if (arraySearch[i, j] > max)
+               if (arraySearch[i, j] > maxOne)
                {
-                  max = arraySearch[i, j];
+                  maxOne = arraySearch[i, j];
                   flOne = true;
                }
-               if (arraySearch[i, j] > max)
+               if (arraySearch[i, j] < minOne)
                {
-                  max = arraySearch[i, j];
-                  flOne = true;
+                  minOne = arraySearch[i, j];
+                  flTwo = true;
                }
-
-
-
             }
             if (flOne)
             {
-               arrayResultMin[i] = max;
+               arrayResultMax[i] = maxOne;
                flOne = false;
+            }
+            if (flTwo)
+            {
+               arrayResultMin[i] = minOne;
+               flTwo = false;
             }
          }
          Console.WriteLine();
