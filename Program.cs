@@ -160,33 +160,43 @@ namespace CodeExperiment
          }
 
          // Поиск максимального элемента строки
-         double[] arrayOutput1 = new double[arraySearch.GetLength(0)];
-
-         bool fl = false;
-         int row1 = 0;
-         int column1 = 1;
-         while (row1 < arraySearch.GetLength(0))
+         double[] arrayOutputMaxTwo = new double[arraySearch.GetLength(0)];
+         double[] arrayOutputMinTwo = new double[arraySearch.GetLength(0)];
+         bool flMax = false;
+         bool flMin = false;
+         int rowTwo = 0;
+         int columnTwo = 1;
+         while (rowTwo < arraySearch.GetLength(0))
          {
-            double max1 = arraySearch[row1, 0];
-
-            while (column1 < arraySearch.GetLength(1))
+            double maxTwo = arraySearch[rowTwo, 0];
+            double minTwo = arraySearch[rowTwo, 0];
+            while (columnTwo < arraySearch.GetLength(1))
             {
-               if (arraySearch[row1, column1] > max1)
+               if (arraySearch[rowTwo, columnTwo] > maxTwo)
                {
-                  max1 = arraySearch[row1, column1];
-                  fl = true;
+                  maxTwo = arraySearch[rowTwo, columnTwo];
+                  flMax = true;
+               }
+               if (arraySearch[rowTwo, columnTwo] < minTwo)
+               {
+                  minTwo = arraySearch[rowTwo, columnTwo];
+                  flMin = true;
                }
 
-               column1++;
+               columnTwo++;
             }
-            if (fl)
+            if (flMax)
             {
-               arrayOutput1[row1] = max1;
+               arrayOutputMaxTwo[rowTwo] = maxTwo;
+            }
+            if (flMin)
+            {
+               arrayOutputMinTwo[rowTwo] = minTwo;
             }
 
-            Console.WriteLine("Максимум в строке {0} равен: {1}", row1, max1);
-            column1 = 0;
-            row1++;
+            Console.WriteLine("Максимум в строке {0} равен: {1}", rowTwo, maxTwo);
+            columnTwo = 0;
+            rowTwo++;
          }
 
          //double minOne = arraySearch[0, 0];
@@ -231,9 +241,9 @@ namespace CodeExperiment
 
          Console.WriteLine("Массив максимальных значений строк");
          int xc = 0;
-         while (xc < arrayOutput1.Length)
+         while (xc < arrayOutputMaxTwo.Length)
          {
-            Console.Write("{0} ", arrayOutput1[xc]);
+            Console.Write("{0} ", arrayOutputMaxTwo[xc]);
             xc++;
          }
          Console.WriteLine();
