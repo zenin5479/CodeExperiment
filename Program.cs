@@ -127,11 +127,13 @@ namespace CodeExperiment
          // Поиск максимального элемента строки
          double minOne = arraySearch[0,0];
          double maxOne = arraySearch[0,0];
-         int r = 0;
 
-         while ()
+         int r = 0;
+         int c = 0;
+
+         while (r < arraySearch.GetLength(0))
          {
-            while (r < sizeArray.Length)
+            while (c < arraySearch.GetLength(1))
             {
                if (sizeArray[r] < minOne)
                {
@@ -157,7 +159,7 @@ namespace CodeExperiment
 
 
          // Поиск максимального элемента строки
-         double[] arraySea = new double[arraySearch.GetLength(0)];
+         double[] arrayoutput = new double[arraySearch.GetLength(0)];
          bool fl = false;
          for (int i = 0; i < arraySearch.GetLength(0); i++)
          {
@@ -172,7 +174,7 @@ namespace CodeExperiment
             }
             if (fl == true)
             {
-               arraySea[i] = max;
+               arrayoutput[i] = max;
             }
          }
 
@@ -182,9 +184,9 @@ namespace CodeExperiment
 
          Console.WriteLine("Массив максимальных значений строк");
          int xc = 0;
-         while (xc < arraySea.Length)
+         while (xc < arrayoutput.Length)
          {
-            Console.Write("{0} ", arraySea[xc]);
+            Console.Write("{0} ", arrayoutput[xc]);
             xc++;
          }
          Console.WriteLine();
