@@ -130,6 +130,7 @@ namespace CodeExperiment
          {
             // Cчитаем, что максимум - это первый элемент строки
             double max = arraySearch[a, 0];
+            double min = arraySearch[a, 0];
             while (b < arraySearch.GetLength(1))
             {
                if (max < arraySearch[a, b])
@@ -137,10 +138,16 @@ namespace CodeExperiment
                   max = arraySearch[a, b];
                }
 
+               if (min > arraySearch[a, b])
+               {
+                  min = arraySearch[a, b];
+               }
+
                b++;
             }
 
-            Console.WriteLine($"Максимум в строке {a + 1} равен {max}");
+            Console.WriteLine($"Максимум в строке {a} равен {max}");
+            Console.WriteLine($"Минимум в строке {a} равен {min}");
             b = 0;
             a++;
          }
