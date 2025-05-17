@@ -130,7 +130,7 @@ namespace CodeExperiment
          double[] arrayResult = new double[arraySearch.GetLength(0)];
          int r = 0;
          int c = 0;
-         bool flOne = false;
+         //bool flOne = false;
          while (r < arraySearch.GetLength(0))
          {
             while (c < arraySearch.GetLength(1))
@@ -152,10 +152,6 @@ namespace CodeExperiment
             Console.WriteLine("Минимальный элемент строки: {0}", minOne);
             Console.WriteLine("Максимальный элемент строки: {0}", maxOne);
          }
-
-
-
-
 
          // Поиск максимального элемента строки
          double[] arrayOutput = new double[arraySearch.GetLength(0)];
