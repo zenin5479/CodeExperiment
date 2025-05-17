@@ -159,7 +159,7 @@ namespace CodeExperiment
 
 
          // Поиск максимального элемента строки
-         double[] arrayoutput = new double[arraySearch.GetLength(0)];
+         double[] arrayOutput = new double[arraySearch.GetLength(0)];
          bool fl = false;
          for (int i = 0; i < arraySearch.GetLength(0); i++)
          {
@@ -174,7 +174,7 @@ namespace CodeExperiment
             }
             if (fl == true)
             {
-               arrayoutput[i] = max;
+               arrayOutput[i] = max;
             }
          }
 
@@ -184,9 +184,9 @@ namespace CodeExperiment
 
          Console.WriteLine("Массив максимальных значений строк");
          int xc = 0;
-         while (xc < arrayoutput.Length)
+         while (xc < arrayOutput.Length)
          {
-            Console.Write("{0} ", arrayoutput[xc]);
+            Console.Write("{0} ", arrayOutput[xc]);
             xc++;
          }
          Console.WriteLine();
