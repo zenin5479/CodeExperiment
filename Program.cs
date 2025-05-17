@@ -127,7 +127,7 @@ namespace CodeExperiment
          // Поиск максимального элемента строки
          double minOne = arraySearch[0,0];
          double maxOne = arraySearch[0,0];
-         double[] arrayO = new double[arraySearch.GetLength(0)];
+         double[] arrayResult = new double[arraySearch.GetLength(0)];
          int r = 0;
          int c = 0;
          bool flOne = false;
