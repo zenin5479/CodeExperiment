@@ -220,9 +220,7 @@ namespace CodeExperiment
          Console.WriteLine();
          //Console.WriteLine("Минимальный элемент строки: {0}", arrayResultMin[r]);
          //Console.WriteLine("Максимальный элемент строки: {0}", arrayResultMax[r]);
-
-
-
+         
          Console.WriteLine("Массив максимальных значений строк");
          int xc = 0;
          while (xc < arrayOutput.Length)
@@ -274,7 +272,9 @@ namespace CodeExperiment
             for (int j = 0; j < m; j++)
             {
                outputArray[i, j] = inputArray[i, j];
-               Console.Write("{0:f2} ", outputArray[i, j]);
+               //Console.Write("{0:f2} ", outputArray[i, j]);
+               //Console.Write("{0:f} ", outputArray[i, j]);
+               Console.Write("{0} ", outputArray[i, j]);
             }
             Console.WriteLine();
          }
