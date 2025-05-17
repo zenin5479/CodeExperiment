@@ -220,7 +220,7 @@ namespace CodeExperiment
          Console.WriteLine();
          //Console.WriteLine("Минимальный элемент строки: {0}", arrayResultMin[r]);
          //Console.WriteLine("Максимальный элемент строки: {0}", arrayResultMax[r]);
-         
+
          Console.WriteLine("Массив максимальных значений строк");
          int xc = 0;
          while (xc < arrayOutput.Length)
@@ -232,37 +232,6 @@ namespace CodeExperiment
          FileWriteArray(arraySearch);
          Console.ReadKey();
       }
-
-      //void find_max(double*& y, double** a, int n, int m, bool fl)
-      //{
-      //   fl = false;
-      //   y = new double[n];
-      //   for (int i = 0; i < n; i++)
-      //   {
-      //      double max = a[i][0];
-      //      for (int j = 1; j < m; j++)
-      //      {
-      //         if (a[i][j] > max)
-      //         {
-      //            max = a[i][j];
-      //            fl = true;
-      //         }
-      //      }
-      //      if (fl == true)
-      //      {
-      //         y[i] = max;
-      //      }
-      //   }
-      //}
-
-      //void vivod_vector(double* x, int n, FILE* f)
-      //{
-      //   for (int i = 0; i < n; i++)
-      //   {
-      //      fprintf(f, "%lf ", x[i]);
-      //   }
-      //   printf("%s", "\n");
-      //}
 
       private static double[,] InputArray(double[,] inputArray, int n, int m)
       {
