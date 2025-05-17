@@ -145,6 +145,25 @@ namespace CodeExperiment
             a++;
          }
 
+         // Поиск максимального элемента строки
+         double[] arrayOutput = new double[arraySearch.GetLength(0)];
+         bool fl = false;
+         for (int i = 0; i < arraySearch.GetLength(0); i++)
+         {
+            double max = arraySearch[i, 0];
+            for (int j = 1; j < arraySearch.GetLength(1); j++)
+            {
+               if (arraySearch[i, j] > max)
+               {
+                  max = arraySearch[i, j];
+                  fl = true;
+               }
+            }
+            if (fl)
+            {
+               arrayOutput[i] = max;
+            }
+         }
          // Проверка количества столбцов для определения размерности двухмерного массива (прямоугольный/ступенчатый)
          //int min = sizeArray[0];
          //int max = sizeArray[0];
@@ -209,25 +228,7 @@ namespace CodeExperiment
          //Console.WriteLine("Минимальный элемент строки: {0}", arrayResultMin[r]);
          //Console.WriteLine("Максимальный элемент строки: {0}", arrayResultMax[r]);
 
-         // Поиск максимального элемента строки
-         double[] arrayOutput = new double[arraySearch.GetLength(0)];
-         bool fl = false;
-         for (int i = 0; i < arraySearch.GetLength(0); i++)
-         {
-            double max = arraySearch[i, 0];
-            for (int j = 1; j < arraySearch.GetLength(1); j++)
-            {
-               if (arraySearch[i, j] > max)
-               {
-                  max = arraySearch[i, j];
-                  fl = true;
-               }
-            }
-            if (fl)
-            {
-               arrayOutput[i] = max;
-            }
-         }
+
 
          Console.WriteLine("Массив максимальных значений строк");
          int xc = 0;
