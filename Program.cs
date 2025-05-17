@@ -145,9 +145,10 @@ namespace CodeExperiment
                   maxOne = arraySearch[r, c];
                   arrayResultMax[r] = maxOne;
                }
+
                c++;
             }
-
+            c = 0;
             r++;
          }
          Console.WriteLine();
