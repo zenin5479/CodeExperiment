@@ -153,8 +153,8 @@ namespace CodeExperiment
 
             arrayOutputMaxOne[rowOne] = maxOne;
             arrayOutputMinOne[rowOne] = minOne;
-            Console.WriteLine("Максимум в строке {0} равен: {1}", rowOne, maxOne);
-            Console.WriteLine("Минимум в строке {0} равен: {1}", rowOne, minOne);
+            //Console.WriteLine("Максимум в строке {0} равен: {1}", rowOne, maxOne);
+            //Console.WriteLine("Минимум в строке {0} равен: {1}", rowOne, minOne);
             columnOne = 0;
             rowOne++;
          }
@@ -176,11 +176,13 @@ namespace CodeExperiment
                {
                   maxTwo = arraySearch[rowTwo, columnTwo];
                   flMax = true;
+                  //
                }
                if (arraySearch[rowTwo, columnTwo] < minTwo)
                {
                   minTwo = arraySearch[rowTwo, columnTwo];
                   flMin = true;
+                  //
                }
 
                columnTwo++;
@@ -241,11 +243,11 @@ namespace CodeExperiment
          //Console.WriteLine("Максимальный элемент строки: {0}", arrayResultMax[r]);
 
          Console.WriteLine("Массив максимальных значений строк");
-         int xc = 0;
-         while (xc < arrayOutputMaxTwo.Length)
+         int index = 0;
+         while (index < arrayOutputMaxOne.Length)
          {
-            Console.Write("{0} ", arrayOutputMaxTwo[xc]);
-            xc++;
+            Console.Write("{0} ", arrayOutputMaxOne[index]);
+            index++;
          }
          Console.WriteLine();
          FileWriteArray(arraySearch);
@@ -302,6 +304,43 @@ namespace CodeExperiment
          } while (m <= 0 || m > 20);
 
          return m;
+      }
+
+      public static void FileWriteArray(double[] arrayRealNumbers)
+      {
+         // Объединение двухмерного массива double в одномерный массив строк для записи в файл
+         Console.WriteLine("Одномерный массив строк");
+         Console.BackgroundColor = ConsoleColor.DarkBlue;
+         StringBuilder stringModified = new StringBuilder();
+         string[] arrayString = new string[arrayRealNumbers.GetLength(0)];
+         int row = 0;
+         while (row < arrayRealNumbers.GetLength(0))
+         {
+            if (row != arrayRealNumbers.GetLength(1) - 1)
+            {
+               stringModified.Append(arrayRealNumbers[row] + " ");
+               row++;
+            }
+            else
+            {
+               stringModified.Append(arrayRealNumbers[row]);
+               row++;
+            }
+
+            string subLine = stringModified.ToString();
+            arrayString[row] = subLine;
+            Console.Write(subLine);
+            stringModified.Clear();
+            Console.WriteLine();
+            row++;
+         }
+
+         Console.ResetColor();
+         Console.WriteLine();
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл");
+         string filePath = AppContext.BaseDirectory + "b.txt";
+         File.WriteAllLines(filePath, arrayString);
       }
 
       public static void FileWriteArray(double[,] arrayRealNumbers)
