@@ -146,8 +146,8 @@ namespace CodeExperiment
                column0++;
             }
 
-            Console.WriteLine($"Максимум в строке {row0} равен {max}");
-            Console.WriteLine($"Минимум в строке {row0} равен {min}");
+            Console.WriteLine("Максимум в строке {0} равен: {1}", row0, max);
+            Console.WriteLine("Минимум в строке {0} равен: {1}", row0, min);
             column0 = 0;
             row0++;
          }
@@ -176,7 +176,7 @@ namespace CodeExperiment
                arrayOutput[row1] = max;
             }
 
-            Console.WriteLine($"Максимум в строке {row0} равен {max}");
+            Console.WriteLine($"Максимум в строке {row1} равен {max}");
             //Console.WriteLine($"Минимум в строке {a} равен {min}");
             column1 = 0;
             row1++;
@@ -299,7 +299,7 @@ namespace CodeExperiment
             for (int j = 0; j < m; j++)
             {
                outputArray[i, j] = inputArray[i, j];
-               Console.Write("{0:f} ", outputArray[i, j]);
+               Console.Write("{0:f2} ", outputArray[i, j]);
             }
             Console.WriteLine();
          }
