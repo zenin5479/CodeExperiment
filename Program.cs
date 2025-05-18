@@ -123,7 +123,7 @@ namespace CodeExperiment
          double[,] arraySearch = InputArray(arrayDouble, n, m);
          Console.WriteLine();
 
-         // Поиск максимального элемента строки
+         // Поиск максимального и минимального элемента строки (без флагов bool)
          double[] arrayOutputMaxOne = new double[arraySearch.GetLength(0)];
          double[] arrayOutputMinOne = new double[arraySearch.GetLength(0)];
          int rowOne = 0;
@@ -157,7 +157,7 @@ namespace CodeExperiment
             rowOne++;
          }
 
-         // Поиск максимального элемента строки
+         // Поиск максимального и минимального элемента строки (с флагами bool)
          double[] arrayOutputMaxTwo = new double[arraySearch.GetLength(0)];
          double[] arrayOutputMinTwo = new double[arraySearch.GetLength(0)];
          bool flMax = false;
