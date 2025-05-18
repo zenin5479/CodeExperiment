@@ -139,7 +139,6 @@ namespace CodeExperiment
                if (maxOne < arraySearch[rowOne, columnOne])
                {
                   maxOne = arraySearch[rowOne, columnOne];
-                  //
                }
 
                if (minOne > arraySearch[rowOne, columnOne])
