@@ -278,12 +278,10 @@ namespace CodeExperiment
             if (row != arrayRealNumbers.GetLength(0) - 1)
             {
                stringModified.Append(arrayRealNumbers[row] + " ");
-               //row++;
             }
             else
             {
                stringModified.Append(arrayRealNumbers[row]);
-               //row++;
             }
 
             string subLine = stringModified.ToString();
