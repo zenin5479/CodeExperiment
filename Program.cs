@@ -208,7 +208,6 @@ namespace CodeExperiment
             index++;
          }
          Console.WriteLine();
-         //FileWriteArray(arraySearch);
          FileWriteArray(arrayOutputMaxOne);
          FileWriteArray(arrayOutputMinOne);
          Console.ReadKey();
