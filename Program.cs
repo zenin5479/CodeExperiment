@@ -144,7 +144,6 @@ namespace CodeExperiment
                if (minOne > arraySearch[rowOne, columnOne])
                {
                   minOne = arraySearch[rowOne, columnOne];
-                  //
                }
 
                columnOne++;
