@@ -285,9 +285,9 @@ namespace CodeExperiment
             }
 
             string subLine = stringModified.ToString();
-            arrayString[row] = subLine; // ????
+            arrayString[row] = subLine;
             Console.Write(subLine);
-            stringModified.Clear(); // ???
+            stringModified.Clear();
             //Console.WriteLine();
             row++;
          }
