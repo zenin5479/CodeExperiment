@@ -2,11 +2,11 @@
 using System.IO;
 using System.Text;
 
-// 1 Получаем количество строк и количество столбцов двумерного массива из консоли
-// 2 Читаем файл полностью конвертируем полученный двумерный массив в double и заполняем нужный двумерный массив, печатаем его в консоль
-// 3 Создаем одномерный массив размерности равный количеству строк
-// 4 Проводим поиск наибольшего элемента строки двухмерного массива и заполняем одномерный массив результатами
-// 5 Сохраняем полученный одномерный массив в файл (распечатываем его в консоль)
+// 1 Получаем количество строк и количество столбцов двумерного массива из консоли +
+// 2 Читаем файл полностью конвертируем полученный двумерный массив в double и заполняем нужный двумерный массив, печатаем его в консоль +
+// 3 Создаем одномерный массив размерности равный количеству строк +
+// 4 Проводим поиск наибольшего элемента строки двухмерного массива и заполняем одномерный массив результатами +
+// 5 Сохраняем полученный одномерный массив в файл (распечатываем его в консоль) +
 
 namespace CodeExperiment
 {
@@ -119,21 +119,18 @@ namespace CodeExperiment
          }
 
          Console.WriteLine();
-         Console.WriteLine("Двухмерный числовой массив для проведения поиска");
+         Console.WriteLine("Двумерный числовой массив для проведения поиска");
          double[,] arraySearch = InputArray(arrayDouble, n, m);
          Console.WriteLine();
 
-         // Поиск максимального и минимального элемента строки (без флагов bool)
+         // Поиск максимального элемента строки (без флагов bool)
          double[] arrayMax = new double[arraySearch.GetLength(0)];
-         double[] arrayMin = new double[arraySearch.GetLength(0)];
          int rowOut = 0;
          int columnOut = 0;
          while (rowOut < arraySearch.GetLength(0))
          {
             // Cчитаем, что максимум - это первый элемент строки
             double maxOut = arraySearch[rowOut, 0];
-            // Cчитаем, что минимум - это первый элемент строки
-            double minOut = arraySearch[rowOut, 0];
             while (columnOut < arraySearch.GetLength(1))
             {
                if (maxOut < arraySearch[rowOut, columnOut])
@@ -141,18 +138,11 @@ namespace CodeExperiment
                   maxOut = arraySearch[rowOut, columnOut];
                }
 
-               if (minOut > arraySearch[rowOut, columnOut])
-               {
-                  minOut = arraySearch[rowOut, columnOut];
-               }
-
                columnOut++;
             }
 
             arrayMax[rowOut] = maxOut;
-            arrayMin[rowOut] = minOut;
             //Console.WriteLine("Максимум в строке {0} равен: {1}", rowOut, maxOut);
-            //Console.WriteLine("Минимум в строке {0} равен: {1}", rowOut, minOut);
             columnOut = 0;
             rowOut++;
          }
@@ -167,18 +157,7 @@ namespace CodeExperiment
 
          Console.WriteLine();
 
-         //Console.WriteLine("Массив минимальных значений строк");
-         //int indexMin = 0;
-         //while (indexMin < arrayMin.Length)
-         //{
-         //   Console.Write("{0} ", arrayMin[indexMin]);
-         //   indexMin++;
-         //}
-
-         //Console.WriteLine();
-
          FileWriteArray(arrayMax);
-         //FileWriteArray(arrayMin);
          Console.ReadKey();
       }
 
