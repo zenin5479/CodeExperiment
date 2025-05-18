@@ -167,15 +167,15 @@ namespace CodeExperiment
 
          Console.WriteLine();
 
-         Console.WriteLine("Массив минимальных значений строк");
-         int indexMin = 0;
-         while (indexMin < arrayMin.Length)
-         {
-            Console.Write("{0} ", arrayMin[indexMin]);
-            indexMin++;
-         }
+         //Console.WriteLine("Массив минимальных значений строк");
+         //int indexMin = 0;
+         //while (indexMin < arrayMin.Length)
+         //{
+         //   Console.Write("{0} ", arrayMin[indexMin]);
+         //   indexMin++;
+         //}
 
-         Console.WriteLine();
+         //Console.WriteLine();
 
          FileWriteArray(arrayMax);
          //FileWriteArray(arrayMin);
