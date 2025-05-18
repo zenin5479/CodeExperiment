@@ -170,7 +170,6 @@ namespace CodeExperiment
             sw.Write(rt);
             sw.Close();
          }
-
          using (StreamReader sr = File.OpenText(path))
          {
             string s = "";
