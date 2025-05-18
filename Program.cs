@@ -198,8 +198,6 @@ namespace CodeExperiment
             rowTwo++;
          }
 
-         Console.WriteLine();
-
          Console.WriteLine("Массив максимальных значений строк");
          int index = 0;
          while (index < arrayOutputMaxOne.Length)
@@ -209,7 +207,7 @@ namespace CodeExperiment
          }
          Console.WriteLine();
          FileWriteArray(arrayOutputMaxOne);
-         FileWriteArray(arrayOutputMinOne);
+         //FileWriteArray(arrayOutputMinOne);
          Console.ReadKey();
       }
 
