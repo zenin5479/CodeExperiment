@@ -165,11 +165,12 @@ namespace CodeExperiment
          string path = AppContext.BaseDirectory + "c.txt"; ;
          using (StreamWriter sw = new StreamWriter(path))
          {
-            string rt = "9,6 8,83 9,86 8,51 9,07 8,47 9,61 8,54 9,61 6,74 9,7 9,97 9,17 9,83 9,36 9,68 7,29 9,76 9,66 9,31";
-            sw.WriteLine(rt);
-            sw.Write(rt);
+            string stroka = "9,6 8,83 9,86 8,51 9,07 8,47 9,61 8,54 9,61 6,74 9,7 9,97 9,17 9,83 9,36 9,68 7,29 9,76 9,66 9,31";
+            sw.WriteLine(stroka);
+            sw.Write(stroka);
             sw.Close();
          }
+
          using (StreamReader sr = File.OpenText(path))
          {
             string s = "";
