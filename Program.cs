@@ -163,7 +163,8 @@ namespace CodeExperiment
          bool flMax = false;
          bool flMin = false;
          int rowTwo = 0;
-         int columnTwo = 1;
+         // Начало отсчета столбцов изменено на 0 (взамен 1)
+         int columnTwo = 0;
          while (rowTwo < arraySearch.GetLength(0))
          {
             double maxTwo = arraySearch[rowTwo, 0];
@@ -207,7 +208,7 @@ namespace CodeExperiment
          }
          Console.WriteLine();
          FileWriteArray(arrayOutputMaxOne);
-         //FileWriteArray(arrayOutputMinOne);
+         FileWriteArray(arrayOutputMinOne);
          Console.ReadKey();
       }
 
