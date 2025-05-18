@@ -160,7 +160,8 @@ namespace CodeExperiment
 
          Console.WriteLine();
 
-         FileWriteArray(arrayMax);
+         //FileWriteArray(arrayMax);
+         FileWriteString(arrayMax);
 
          string path = AppContext.BaseDirectory + "c.txt"; ;
          using (StreamWriter sw = new StreamWriter(path))
@@ -233,6 +234,44 @@ namespace CodeExperiment
          } while (m <= 0 || m > 20);
 
          return m;
+      }
+
+      public static void FileWriteString(double[] arrayRealNumbers)
+      {
+         // Объединение двухмерного массива double в одномерный массив строк для записи в файл
+         Console.WriteLine("Одномерный массив строк");
+         Console.BackgroundColor = ConsoleColor.DarkBlue;
+         StringBuilder stringModified = new StringBuilder();
+         string[] arrayString = new string[arrayRealNumbers.GetLength(0)];
+         int row = 0;
+         while (row < arrayRealNumbers.GetLength(0))
+         {
+            if (row != arrayRealNumbers.GetLength(0) - 1)
+            {
+               stringModified.Append(arrayRealNumbers[row] + " ");
+            }
+            else
+            {
+               stringModified.Append(arrayRealNumbers[row]);
+            }
+
+            string subLine = stringModified.ToString();
+            arrayString[row] = subLine;
+            //Console.WriteLine(subLine);
+            //stringModified.Clear();
+            //Console.WriteLine();
+            row++;
+         }
+
+         Console.Write(stringModified);
+         Console.ResetColor();
+         Console.WriteLine();
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл");
+         string filePath = AppContext.BaseDirectory + "b.txt";
+         string[] arrayStr = { stringModified.ToString() };
+
+         File.WriteAllLines(filePath, arrayStr);
       }
 
       public static void FileWriteArray(double[] arrayRealNumbers)
