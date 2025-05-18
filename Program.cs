@@ -179,7 +179,6 @@ namespace CodeExperiment
                {
                   minTwo = arraySearch[rowTwo, columnTwo];
                   flMin = true;
-                  //
                }
 
                columnTwo++;
@@ -199,45 +198,7 @@ namespace CodeExperiment
             rowTwo++;
          }
 
-         //double minOne = arraySearch[0, 0];
-         //double maxOne = arraySearch[0, 0];
-         double[] arrayResultMin = new double[arraySearch.GetLength(0)];
-         double[] arrayResultMax = new double[arraySearch.GetLength(0)];
-         //int r = 0;
-         //int c = 0;
-         //bool flOne = false;
-         //bool flTwo = false;
-         //for (int i = 0; i < arraySearch.GetLength(0); i++)
-         //{
-         //   double maxOne = arraySearch[i, 0];
-         //   double minOne = arraySearch[i, 0];
-         //   for (int j = 1; j < arraySearch.GetLength(1); j++)
-         //   {
-         //      if (arraySearch[i, j] > maxOne)
-         //      {
-         //         maxOne = arraySearch[i, j];
-         //         flOne = true;
-         //      }
-         //      if (arraySearch[i, j] < minOne)
-         //      {
-         //         minOne = arraySearch[i, j];
-         //         flTwo = true;
-         //      }
-         //   }
-         //   if (flOne)
-         //   {
-         //      arrayResultMax[i] = maxOne;
-         //      flOne = false;
-         //   }
-         //   if (flTwo)
-         //   {
-         //      arrayResultMin[i] = minOne;
-         //      flTwo = false;
-         //   }
-         //}
          Console.WriteLine();
-         //Console.WriteLine("Минимальный элемент строки: {0}", arrayResultMin[r]);
-         //Console.WriteLine("Максимальный элемент строки: {0}", arrayResultMax[r]);
 
          Console.WriteLine("Массив максимальных значений строк");
          int index = 0;
