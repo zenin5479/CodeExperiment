@@ -29,11 +29,14 @@ namespace CodeExperiment
          {
             Console.WriteLine("Исходный массив строк");
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            for (int i = 0; i < allLines.Length; i++)
+            int indexLines = 0;
+            while (indexLines < allLines.Length)
             {
-               allLines[i] = allLines[i];
-               Console.WriteLine(allLines[i]);
+               allLines[indexLines] = allLines[indexLines];
+               Console.WriteLine(allLines[indexLines]);
+               indexLines++;
             }
+
             // Разделение строки на подстроки по пробелу для определения количества столбцов в строке
             int[] sizeArray = new int[allLines.Length];
             char symbolSpace = ' ';
