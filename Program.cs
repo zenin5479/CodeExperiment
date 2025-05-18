@@ -175,7 +175,6 @@ namespace CodeExperiment
                {
                   maxTwo = arraySearch[rowTwo, columnTwo];
                   flMax = true;
-                  //
                }
                if (arraySearch[rowTwo, columnTwo] < minTwo)
                {
