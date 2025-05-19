@@ -145,7 +145,7 @@ namespace CodeExperiment
             }
 
             arrayMax[rowOut] = maxOut;
-            Console.WriteLine("Максимум в строке {0} равен: {1}", rowOut, maxOut);
+            //Console.WriteLine("Максимум в строке {0} равен: {1}", rowOut, maxOut);
             columnOut = 0;
             rowOut++;
          }
