@@ -264,13 +264,13 @@ namespace CodeExperiment
          int row = 0;
          while (row < arrayRealNumbers.GetLength(0))
          {
-            if (row != arrayRealNumbers.GetLength(0) - 1)
+            if (row == arrayRealNumbers.GetLength(0) - 1)
             {
-               stringModified.Append(arrayRealNumbers[row] + " ");
+               stringModified.Append(arrayRealNumbers[row]);
             }
             else
             {
-               stringModified.Append(arrayRealNumbers[row]);
+               stringModified.Append(arrayRealNumbers[row] + " ");
             }
 
             string subLine = stringModified.ToString();
