@@ -277,7 +277,7 @@ namespace CodeExperiment
             arrayString[row] = subLine;
             Console.Write(subLine);
             stringModified.Clear();
-            //Console.WriteLine();
+            Console.WriteLine();
             row++;
          }
 
