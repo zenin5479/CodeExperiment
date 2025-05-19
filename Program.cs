@@ -160,7 +160,8 @@ namespace CodeExperiment
 
          Console.WriteLine();
 
-         //FileWriteArray(arrayMax);
+         FileWriteArray(arrayMax);
+         FileWriteArray(arrayDouble);
          FileWriteString(arrayMax);
 
          Console.ReadKey();
@@ -284,7 +285,7 @@ namespace CodeExperiment
          Console.WriteLine();
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "b.txt";
+         string filePath = AppContext.BaseDirectory + "c.txt";
          File.WriteAllLines(filePath, arrayString);
       }
 
@@ -326,7 +327,7 @@ namespace CodeExperiment
          Console.WriteLine();
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "b.txt";
+         string filePath = AppContext.BaseDirectory + "d.txt";
          File.WriteAllLines(filePath, arrayString);
       }
    }
