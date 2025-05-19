@@ -160,9 +160,9 @@ namespace CodeExperiment
 
          Console.WriteLine();
 
-         //FileWriteArray(arrayDouble);
-         FileWriteArray(arrayMax);
-         //FileWriteString(arrayMax);
+         //FileWriteArray(arrayDouble); // ?
+         //FileWriteArray(arrayMax); +
+         FileWriteString(arrayMax); // ?
 
          Console.ReadKey();
       }
@@ -225,7 +225,7 @@ namespace CodeExperiment
          Console.WriteLine("Одномерный массив строк");
          Console.BackgroundColor = ConsoleColor.DarkBlue;
          StringBuilder stringModified = new StringBuilder();
-         string[] arrayString = new string[arrayRealNumbers.GetLength(0)];
+         //string[] arrayString = new string[arrayRealNumbers.GetLength(0)]; // -
          int row = 0;
          while (row < arrayRealNumbers.GetLength(0))
          {
@@ -238,8 +238,8 @@ namespace CodeExperiment
                stringModified.Append(arrayRealNumbers[row]);
             }
 
-            string subLine = stringModified.ToString();
-            arrayString[row] = subLine;
+            //string subLine = stringModified.ToString();// -
+            //arrayString[row] = subLine; // -
             row++;
          }
 
@@ -249,9 +249,9 @@ namespace CodeExperiment
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
          string filePath = AppContext.BaseDirectory + "b.txt";
-         string[] arrayStr = { stringModified.ToString() };
+         string[] arrayString = { stringModified.ToString() };
 
-         File.WriteAllLines(filePath, arrayStr);
+         File.WriteAllLines(filePath, arrayString);
       }
 
       public static void FileWriteArray(double[] arrayRealNumbers)
