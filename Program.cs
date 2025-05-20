@@ -267,7 +267,6 @@ namespace CodeExperiment
             row++;
          }
 
-         //Console.WriteLine();
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
          string filePath = AppContext.BaseDirectory + "c.txt";
