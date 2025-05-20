@@ -267,7 +267,6 @@ namespace CodeExperiment
             row++;
          }
 
-         Console.ResetColor(); // -
          Console.WriteLine();
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
