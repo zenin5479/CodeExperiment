@@ -160,8 +160,8 @@ namespace CodeExperiment
 
          Console.WriteLine();
 
-         //FileWriteArray(arrayDouble); // ?
-         FileWriteArray(arrayMax); // +
+         FileWriteArray(arrayDouble); // ?
+         //FileWriteArray(arrayMax); // -
          //FileWriteString(arrayMax); // +
 
          Console.ReadKey();
