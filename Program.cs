@@ -160,8 +160,8 @@ namespace CodeExperiment
 
          Console.WriteLine();
 
-         //FileWriteArray(arrayMax);
-         FileWriteString(arrayMax);
+         FileWriteArray(arrayMax);
+         //FileWriteString(arrayMax);
 
          Console.ReadKey();
       }
@@ -221,7 +221,7 @@ namespace CodeExperiment
       public static void FileWriteString(double[] arrayRealNumbers)
       {
          // Объединение одномерного массива максимальных значений строк double[]
-         // в одномерный массив строк для записи в файл (одну строку массива)
+         // в одномерный массив строк string[] для записи в файл (в одну строку массива)
          Console.WriteLine("Одномерный массив строк");
          Console.BackgroundColor = ConsoleColor.DarkBlue;
          StringBuilder stringModified = new StringBuilder();
@@ -253,7 +253,8 @@ namespace CodeExperiment
 
       public static void FileWriteArray(double[] arrayRealNumbers)
       {
-         // Объединение двухмерного массива double в одномерный массив строк для записи в файл
+         // Объединение одномерного массива максимальных значений строк double[]
+         // в одномерный массив строк string[] для записи в файл
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[arrayRealNumbers.GetLength(0)];
