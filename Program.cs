@@ -225,7 +225,6 @@ namespace CodeExperiment
          Console.WriteLine("Одномерный массив строк");
          Console.BackgroundColor = ConsoleColor.DarkBlue;
          StringBuilder stringModified = new StringBuilder();
-         //string[] arrayString = new string[arrayRealNumbers.GetLength(0)]; // -
          int row = 0;
          while (row < arrayRealNumbers.GetLength(0))
          {
