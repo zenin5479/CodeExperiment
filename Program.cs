@@ -266,7 +266,6 @@ namespace CodeExperiment
             arrayString[row] = subLine;
             Console.WriteLine(subLine);
             stringModified.Clear();
-            //Console.WriteLine();
             row++;
          }
 
