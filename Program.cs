@@ -237,7 +237,6 @@ namespace CodeExperiment
                stringModified.Append(arrayRealNumbers[row]);
             }
 
-            //string subLine = stringModified.ToString();// -
             //arrayString[row] = subLine; // -
             row++;
          }
