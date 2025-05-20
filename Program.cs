@@ -160,7 +160,6 @@ namespace CodeExperiment
 
          Console.WriteLine();
 
-         FileWriteArray(arrayDouble); // ?
          //FileWriteArray(arrayMax); // -
          //FileWriteString(arrayMax); // +
 
@@ -274,48 +273,6 @@ namespace CodeExperiment
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
          string filePath = AppContext.BaseDirectory + "c.txt";
-         File.WriteAllLines(filePath, arrayString);
-      }
-
-      public static void FileWriteArray(double[,] arrayRealNumbers)
-      {
-         // Объединение двухмерного массива double в одномерный массив строк для записи в файл
-         Console.WriteLine("Одномерный массив строк");
-         Console.BackgroundColor = ConsoleColor.DarkBlue;
-         StringBuilder stringModified = new StringBuilder();
-         string[] arrayString = new string[arrayRealNumbers.GetLength(0)];
-         int row = 0;
-         int column = 0;
-         while (row < arrayRealNumbers.GetLength(0))
-         {
-            while (column < arrayRealNumbers.GetLength(1))
-            {
-               if (column != arrayRealNumbers.GetLength(1) - 1)
-               {
-                  stringModified.Append(arrayRealNumbers[row, column] + " ");
-                  column++;
-               }
-               else
-               {
-                  stringModified.Append(arrayRealNumbers[row, column]);
-                  column++;
-               }
-            }
-
-            string subLine = stringModified.ToString();
-            arrayString[row] = subLine;
-            Console.Write(subLine);
-            stringModified.Clear();
-            Console.WriteLine();
-            column = 0;
-            row++;
-         }
-
-         Console.ResetColor();
-         Console.WriteLine();
-         // Запись массива строк в файл
-         Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "d.txt";
          File.WriteAllLines(filePath, arrayString);
       }
    }
