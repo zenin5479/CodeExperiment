@@ -254,7 +254,7 @@ namespace CodeExperiment
       {
          // Объединение двухмерного массива double в одномерный массив строк для записи в файл
          Console.WriteLine("Одномерный массив строк");
-         //Console.BackgroundColor = ConsoleColor.DarkBlue; // -
+         Console.BackgroundColor = ConsoleColor.DarkBlue; // -
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[arrayRealNumbers.GetLength(0)];
          int row = 0;
@@ -268,7 +268,7 @@ namespace CodeExperiment
             row++;
          }
 
-         //Console.ResetColor(); // -
+         Console.ResetColor(); // -
          Console.WriteLine();
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
