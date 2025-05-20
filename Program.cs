@@ -161,7 +161,7 @@ namespace CodeExperiment
          Console.WriteLine();
 
          //FileWriteArray(arrayMax); // -
-         //FileWriteString(arrayMax); // +
+         FileWriteString(arrayMax);
 
          Console.ReadKey();
       }
