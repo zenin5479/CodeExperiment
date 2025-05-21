@@ -72,7 +72,7 @@ namespace CodeExperiment
             Console.WriteLine();
 
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-            Console.WriteLine("Двухмерный числовой массив"); //
+            Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
             arrayDouble = new double[allLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
