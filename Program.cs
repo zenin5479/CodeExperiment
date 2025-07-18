@@ -19,8 +19,6 @@ namespace CodeExperiment
          Console.WriteLine("До вызова: \tx={0}; y ={1}; a ={2}; b ={3}", x, y, a, b);
          Add(x, y, out a, out b);
          Console.WriteLine("После вызова: \tx={0}; y ={1}; a ={2}; b ={3}", x, y, a, b);
-
-
          Console.ReadKey();
       }
 
