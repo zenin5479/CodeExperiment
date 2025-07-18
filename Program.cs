@@ -13,8 +13,7 @@ namespace CodeExperiment
          double myDr, mySqr, mySqrt, myD = 12.987;
          i = TrNumber(myD, out myDr, out mySqr, out mySqrt);
 
-         Console.WriteLine(
-            "Исходное число: {0}\nЦелая часть числа: {1}\nДробная часть числа: {2}\nКвадрат числа: {3}\nКвадратный корень числа: {4}",
+         Console.WriteLine("Исходное число: {0}\nЦелая часть числа: {1}\nДробная часть числа: {2}\nКвадрат числа: {3}\nКвадратный корень числа: {4}",
             myD,
             i,
             myDr,
