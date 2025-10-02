@@ -17,17 +17,15 @@ namespace CodeExperiment
 
          int x = 1, y = 2, a = 3, b = 4;
          Console.WriteLine("До вызова: \tx={0}; y ={1}; a ={2}; b ={3}", x, y, a, b);
-         Add(x, y, out a, out b);
+         Add(out a, out b);
          Console.WriteLine("После вызова: \tx={0}; y ={1}; a ={2}; b ={3}", x, y, a, b);
          Console.ReadKey();
       }
 
       // Выходные параметры, представленные значением
-      public static int Add(int x, int y, out int a, out int b)
+      public static void Add(out int a, out int b)
       {
-         int answer = x + y;
-         x = 10; y = 20; a = 30; b = 40;
-         return answer;
+         a = 30; b = 40;
       }
 
       // Метод возвращающий целую и дробную части числа, квадрат и корень числа
