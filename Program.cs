@@ -9,12 +9,11 @@ namespace CodeExperiment
    {
       static void Main()
       {
-         int z;
          double myDr, mySqr, mySqrt, myD = 12.987;
-         z = TrNumber(myD, out myDr, out mySqr, out mySqrt);
+         int z = TrNumber(myD, out myDr, out mySqr, out mySqrt);
          Console.WriteLine("Исходное число: {0}\nЦелая часть числа: {1}\nДробная часть числа: {2}\nКвадрат числа: {3}\nКвадратный корень числа: {4}",
             myD, z, myDr, mySqr, mySqrt);
-         
+
          Console.ReadKey();
       }
 
